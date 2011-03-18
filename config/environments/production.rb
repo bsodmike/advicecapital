@@ -1,5 +1,4 @@
 Advicecapital::Application.configure do
-  require 'rack/ssl'
   config.middleware.use Rack:SSL
 
   config.middleware.insert_before ActionDispatch::Cookies, Rack::SSL
