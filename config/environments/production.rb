@@ -1,6 +1,8 @@
 Advicecapital::Application.configure do
   require 'rack/ssl'
   config.middleware.use Rack:SSL
+
+  config.middleware.insert_before ActionDispatch::Cookies, Rack::SSL
   # Settings specified here will take precedence over those in config/application.rb
 
   # The production environment is meant for finished, "live" apps.
