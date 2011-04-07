@@ -1,4 +1,12 @@
-body
-{
-	background-color: #eee;
+body {
+	background-color: #fff;
+}
+section .content {
+        
+}
+
+header {
+        background: url(/images/top_banner.png);
+        width: 1000px;
+        height: 103px;
 }
