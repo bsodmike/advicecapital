@@ -1,8 +1,8 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.4'
-gem 'rack-ssl', :require => 'rack/ssl'
+gem 'rails', '3.0.6'
 gem 'haml'
+#gem 'sqlite3-ruby', :require => 'sqlite3'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
