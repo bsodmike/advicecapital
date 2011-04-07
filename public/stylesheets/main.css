@@ -6,6 +6,8 @@ section .content {
 }
 
 header {
+        margin: 0;
+        padding: 0;
         background: url(/images/top_banner.png);
         width: 1000px;
         height: 103px;
