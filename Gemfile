@@ -1,13 +1,13 @@
+# AdviceCapital
 source 'http://rubygems.org'
 
 gem 'rails', '3.0.6'
-gem 'haml'
-#gem 'sqlite3-ruby', :require => 'sqlite3'
+gem 'rake', '0.8.7'
+gem 'haml', '3.0.25'
+gem 'sqlite3-ruby', :require => 'sqlite3'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-
-gem 'sqlite3'
 
 # Use unicorn as the web server
 # gem 'unicorn'
