@@ -3,10 +3,9 @@ body {
 }
 
 header {
-        margin: 0 auto;
         background: url(/images/top_banner.png) repeat-x;
         height: 96px;
-        width: 100%;
+        width: 1000px;
 }
 header #logo {
         background: url(/images/ac_logo.png);
@@ -27,7 +26,7 @@ footer {
         text-align: center;
         background: url(/images/footer_bg.png) repeat-x;
         height: 49px;
-        width: 100%;
+        width: 1000px;
         color: #fff;
         padding-top: 15px;
 }
@@ -43,26 +42,38 @@ nav ul li {
 /* HEADER */
 /* Top Navigation */
 header nav {
-        margin-top: 40px;
+        margin-top: 0px;
         float: left;
 }
 header nav a {
-        color: #fff;
+        color: #000;
         text-decoration: none;
 }
-header nav ul li .btn a {
-        
-        color: #fff;
+header nav ul {
+        display: inline;
+}
+header nav ul li a {
         text-decoration: none;
 }
-header nav ul li .btn {
-        width: 100px;
-        height: 65px;
+header nav ul li {
+  
 }
-header nav ul li .btn:hover {
-        background: url(/images/btn_background.png);
-        width: 72px;
-        height: 65px;
+header nav ul ul {
+        display: none;
+}
+header nav ul li ul li {
+        display: none;
+
+}
+header nav ul li:hover ul {
+        display: inline !important;
+}
+header nav ul li:hover ul li {
+        display: inline !important;
+}
+header nav ul li:hover ul li a {
+        color: #000 !important;
+        border: 1px solid #000;
 }
 header nav.second {
         float: right;
