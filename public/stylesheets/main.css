@@ -65,9 +65,12 @@ header nav ul li ul li {
         display: none;
 
 }
-header nav ul li:hover ul {
+header nav ul li ul.hover {
+		position: absolute;
+		display: block;
 }
-header nav ul li:hover ul li {
+header nav ul li ul.hover li {
+		display: block;
 }
 header nav ul li:hover ul li a {
         color: #000 !important;

@@ -1,2 +1,15 @@
-// Place your application-specific JavaScript functions and classes here
-// This file is automatically included by javascript_include_tag :defaults
+(function ($) {
+	$(function () {
+		$('nav ul li a').mouseover(function () {
+			$(this).siblings('li ul').addClass('hover');
+			
+			$(this).parent().hover(
+				function () {},
+				function () {
+					$(this).children('ul').removeClass('hover');
+				})
+		},
+		function () {
+		})
+	});
+})(jQuery);
