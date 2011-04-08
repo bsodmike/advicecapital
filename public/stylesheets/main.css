@@ -12,3 +12,15 @@ header {
         width: 1000px;
         height: 103px;
 }
+
+/* Default Navigation */
+nav ul {
+        list-style-type: none;
+}
+nav ul li {
+        display: inline;
+}
+
+/* Top Navigation */
+
+/* Menu Navigation */
