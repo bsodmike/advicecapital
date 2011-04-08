@@ -1,16 +1,28 @@
 body {
 	background-color: #fff;
 }
-section .content {
-        
-}
 
 header {
-        margin: 0;
+        margin: 0 auto;
+        background: url(/images/top_banner.png) repeat-x;
+        height: 96px;
+        width: 100%px;
+}
+
+section {
+        margin: 0 auto;
+        background: url(/images/center_bg.png) repeat-y;
+        width: 894px;
+        min-height: 400px;
+}
+
+footer {
+        background: url(/images/footer_bg.png) repeat-x;
+        height: 49px;
+        width: 100%px;
+}
+footer .content {
         padding: 0;
-        background: url(/images/top_banner.png);
-        width: 1000px;
-        height: 103px;
 }
 
 /* Default Navigation */
@@ -22,5 +34,10 @@ nav ul li {
 }
 
 /* Top Navigation */
-
+header nav {
+        float: left;
+}
+header nav.second {
+        float: right !important;
+}
 /* Menu Navigation */
