@@ -16,7 +16,7 @@ header #logo {
 }
 
 section {
-        margin: 0 auto;
+        margin: auto;
         background: url(/images/center_bg.png) repeat-y;
         width: 894px;
         min-height: 465px;
@@ -42,21 +42,21 @@ nav ul li {
 /* HEADER */
 /* Top Navigation */
 header nav {
-        margin-top: 0px;
+        margin-top: 60px;
         float: left;
 }
 header nav a {
-        color: #000;
+        color: #fff;
         text-decoration: none;
 }
 header nav ul {
         display: inline;
 }
 header nav ul li a {
+        padding-left: 10px;
         text-decoration: none;
 }
 header nav ul li {
-  
 }
 header nav ul ul {
         display: none;
@@ -66,16 +66,18 @@ header nav ul li ul li {
 
 }
 header nav ul li:hover ul {
-        display: inline !important;
 }
 header nav ul li:hover ul li {
-        display: inline !important;
 }
 header nav ul li:hover ul li a {
         color: #000 !important;
         border: 1px solid #000;
 }
-header nav.second {
-        float: right;
-}
 /* Menu Navigation */
+
+/* INDEX */
+#slider {
+        background: url(/images/imgSlider_bg.png);
+        width: 854px;
+        height: 100px;
+}
