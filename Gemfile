@@ -4,7 +4,14 @@ source 'http://rubygems.org'
 gem 'rails', '3.0.6'
 gem 'rake', '0.8.7'
 gem 'haml', '3.0.25'
-gem 'sqlite3-ruby', :require => 'sqlite3'
+
+#group :production, :staging do
+ # gem "pg"
+#end
+
+group :development, :test do
+  gem "sqlite3-ruby", :require => "sqlite3"
+end
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
