@@ -1,5 +1,6 @@
 body {
   background-color: #ffffff;
+  font-family:Arial, Helvetica, sans-serif;
 }
 
 header {
@@ -41,7 +42,10 @@ nav ul li {
 header nav {
   margin-top: 60px;
   float: left; }
-
+header #generic nav {
+  float: right;
+  margin: 0;
+}
 header nav a {
   color: #fff;
   text-decoration: none; }
