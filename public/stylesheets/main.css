@@ -63,6 +63,17 @@ header nav ul ul {
 header nav ul li ul li {
   display: none; }
 
+<<<<<<< HEAD
+}
+header nav ul li ul.hover {
+		position: absolute;
+		display: block;
+}
+header nav ul li ul.hover li {
+		display: block;
+}
+=======
+>>>>>>> 3fc9d6c2f6cd28c47d12c6d86efdb697d90b64a5
 header nav ul li:hover ul li a {
   color: #000 !important;
   border: 1px solid #000; }
