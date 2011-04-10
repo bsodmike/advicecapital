@@ -6,10 +6,12 @@ body {
 header {
   background: url(/images/top_banner.png) repeat-x;
   height: 96px;
-  width: 1000px; }
+  width: 930px; }
 
 header #logo {
   background: url(/images/ac_logo.png);
+  margin-left: 700px;
+    position: absolute;
   width: 104px;
   height: 91px;
   float: right; }
@@ -54,7 +56,10 @@ header nav a {
 
 header nav ul {
   display: block; 
-  float: left;}
+  float: left;
+  
+  margin-left: 10px;
+}
 
 header nav ul li a {
   padding-left: 10px;
@@ -70,11 +75,16 @@ header nav ul li ul li {
 
 header nav ul li ul.hover {
   position: absolute;
-  display: inline;
+  display: block;
+  margin-top: -3px;
+  
+  height: 32px;
+  
+  padding-top: 20px;
 }
 header nav ul li ul.hover li {
 		display: inline;
-		float: none;
+		/*float: none;*/
 }
 
 header nav ul li:hover ul li a {
@@ -130,3 +140,9 @@ header nav ul li:hover ul li a {
   width: 861px;
   height: 27px;
   margin-top: 400px; }
+
+  ul.subnav {
+  	float: left;
+	margin-left: -17px;
+	width: 940px;
+  }
