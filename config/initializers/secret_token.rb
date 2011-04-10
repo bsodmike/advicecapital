@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-Advicecapital::Application.config.secret_token = '557ffa19af1e551b569371e40fad5e22c296ea750311509131d1b39026872638788e5d5bc1c62501a55e9a9856af2c400b33d416ca6eb1975639488337ecf3ce'
+Advicecapital::Application.config.secret_token = 'f4e40a8836123eee6be81c62adc59d761439fd031643bfa977747d8ecd994d5bc287f74fc99f7a6628c232c31b019e359c5aeb644f8051945168994b4509eecf'
