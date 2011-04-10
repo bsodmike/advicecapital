@@ -27,10 +27,11 @@ section {
 footer {
   text-align: center;
   background: url(/images/footer_bg.png) repeat-x;
-  height: 49px;
-  width: 1000px;
+  height: 35px;
+  width: 100%;
   color: #fff;
-  padding-top: 15px; }
+  padding-top: 15px; 
+  margin-bottom: 0}
 
 /* Default Navigation */
 nav ul {
