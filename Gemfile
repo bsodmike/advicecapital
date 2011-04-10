@@ -1,24 +1,12 @@
-# AdviceCapital
 source 'http://rubygems.org'
 
 gem 'rails', '3.0.6'
-gem 'rake', '0.8.7'
-gem 'haml', '3.0.25'
-gem 'sqlite3-ruby', :require => 'sqlite3'
-
-group :test do
-  gem 'webrat', '0.7.1'
-end
-#group :production, :staging do
- # gem "pg"
-#end
-
-group :development, :test do
-  gem "sqlite3-ruby", :require => "sqlite3"
-end
+gem 'haml'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
+
+gem 'sqlite3-ruby', :require => 'sqlite3'
 
 # Use unicorn as the web server
 # gem 'unicorn'
@@ -28,7 +16,7 @@ end
 
 # To use debugger (ruby-debug for Ruby 1.8.7+, ruby-debug19 for Ruby 1.9.2+)
 # gem 'ruby-debug'
-# gem 'ruby-debug19'
+# gem 'ruby-debug19', :require => 'ruby-debug'
 
 # Bundle the extra gems:
 # gem 'bj'
