@@ -42,7 +42,6 @@ nav ul li {
 /* HEADER */
 /* Top Navigation */
 header nav {
-  margin-top: 60px;
   float: left; }
 header nav#generic {
   float: right;
@@ -56,13 +55,15 @@ header nav a {
 
 header nav ul {
   display: block; 
-  float: left;
-  
+  float: left; 
   margin-left: 10px;
 }
+header nav ul#top li:hover {
+  background: url(/images/btn_background.png) repeat-x;
+  padding: 20px;
+}
 
-header nav ul li a {
-  padding-left: 10px;
+header nav ul#top li {
   text-decoration: none; }
 
 header nav ul ul {
