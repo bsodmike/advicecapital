@@ -12,8 +12,8 @@ header #logo {
   background: url(/images/ac_logo.png);
   margin-left: 700px;
     position: absolute;
-  width: 104px;
-  height: 91px;
+  width: 131px;
+  height: 94px;
   float: right; }
 
 section {
@@ -47,7 +47,7 @@ header nav {
 header nav#generic {
   float: right;
 }
-header nav#top {
+header nav {
   float:left;
 }
 header nav a {
@@ -58,10 +58,12 @@ header nav ul {
   display: block; 
   float: left; 
   margin-left: 10px;
+  margin-top: 50px;
+}
+header nav ul li {
 }
 header nav ul#top li:hover {
   background: url(/images/btn_background.png) repeat-x;
-  padding: 20px;
 }
 
 header nav ul#top li {
@@ -79,9 +81,7 @@ header nav ul li ul.hover {
   position: absolute;
   display: block;
   margin-top: -3px;
-  
   height: 32px;
-  
   padding-top: 20px;
 }
 header nav ul li ul.hover li {
