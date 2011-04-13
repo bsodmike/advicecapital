@@ -36,6 +36,10 @@ class PagesController < ApplicationController
       @page_title = "Strategi"
     end
 
+    def we_choosed_ac
+      
+    end
+
   # About Advice Invest
   def about_ai
     @page_title = "Om Advice Invest"

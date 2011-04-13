@@ -3,6 +3,11 @@ Advicecapital::Application.routes.draw do
   # Main Menu
   match '/about_ac', :to => 'pages#about_ac'
   match '/about_ai', :to => 'pages#about_ai'
+  match '/organisation', :to => 'pages#organisation'
+  match '/investor_login', :to => 'pages#investor_login'
+  match '/invest_universe', :to => 'pages#invest_universe'
+  match '/become_customer', :to => 'pages#become_customer'
+  match '/news', :to => 'pages#news'
 
   match '/', :to => 'pages#index'
   match '/contact', :to => 'pages#contact'
