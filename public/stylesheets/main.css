@@ -4,7 +4,6 @@ body {
 }
 
 header {
-  /*background: url(/images/top_banner.png) repeat-x;*/
   height: 96px;
   width: 930px; }
 
@@ -38,7 +37,7 @@ nav ul {
   list-style-type: none; }
 
 nav ul li {
-  display: inline-blocks;
+  display: inline-block;
   float:left; }
 
 /* HEADER */
@@ -58,10 +57,14 @@ header nav a {
 header nav ul {
   display: block; 
   float: left; 
-  margin-left: 10px;
-  margin-top: 50px;
 }
-header nav ul li {
+header nav ul#top li {
+  height: 67px;
+  margin: 15px 0 0 5px;
+  padding: 20px 5px 40px 5px;
+}
+header nav ul#top li a:hover {
+  color: #fff;
 }
 header nav ul#top li:hover {
   background: url(/images/btn_background.png) repeat-x;
@@ -72,10 +75,11 @@ header nav ul#top li {
 
 header nav ul ul {
   display: none; 
-  margin-top: 30px;
+  margin-top: 15px;
 }
 
 header nav ul li ul li {
+  background: none;
   display: none; }
 
 header nav ul li ul.hover {
@@ -83,9 +87,10 @@ header nav ul li ul.hover {
   display: block;
   margin-top: -3px;
   height: 32px;
-  padding-top: 20px;
+  padding: 10px 0 0 0;
 }
 header nav ul li ul.hover li {
+    background: none;
 		display: inline;
 		/*float: none;*/
 }
