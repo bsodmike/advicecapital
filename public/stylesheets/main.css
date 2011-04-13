@@ -11,7 +11,7 @@ header {
 header #logo {
   background: url(/images/ac_logo.png);
   margin-left: 700px;
-    position: absolute;
+  position: absolute;
   width: 131px;
   height: 94px;
   float: right; }
@@ -38,7 +38,8 @@ nav ul {
   list-style-type: none; }
 
 nav ul li {
-  display: inline; }
+  display: inline-blocks;
+  float:left; }
 
 /* HEADER */
 /* Top Navigation */
