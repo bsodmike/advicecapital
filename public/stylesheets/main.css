@@ -16,7 +16,7 @@ header #logo {
   float: right; }
 
 section {
-  padding-left: 22px;
+  padding-left: 18px;
   margin: auto;
   padding-top: 20px;
   background: url(/images/center_bg.png) repeat-y;
@@ -59,7 +59,7 @@ header nav ul {
   float: left; 
 }
 header nav ul#top li {
-  margin: 15px 0 0 5px;
+  margin: 20px 0 0 5px;
   padding: 20px 5px 40px 5px;
 }
 header nav ul#top li a {
@@ -101,7 +101,9 @@ header nav ul li:hover ul li a {
   color: #000 !important; }
 
 /* SECTION */
-.content {}
+section .content {
+  width: 850px
+}
 
 /* INDEX */
 #slider {
