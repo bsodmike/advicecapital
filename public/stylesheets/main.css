@@ -59,9 +59,11 @@ header nav ul {
   float: left; 
 }
 header nav ul#top li {
-  height: 67px;
   margin: 15px 0 0 5px;
   padding: 20px 5px 40px 5px;
+}
+header nav ul#top li a {
+  display: block;
 }
 header nav ul#top li a:hover {
   color: #fff;
@@ -78,7 +80,7 @@ header nav ul ul {
   margin-top: 15px;
 }
 
-header nav ul li ul li {
+header nav ul#top > li > ul > li {
   background: none;
   display: none; }
 
@@ -87,9 +89,9 @@ header nav ul li ul.hover {
   display: block;
   margin-top: -3px;
   height: 32px;
-  padding: 10px 0 0 0;
+  padding: 10px 0 0 10px;
 }
-header nav ul li ul.hover li {
+header nav ul#top > li > ul.hover > li {
     background: none;
 		display: inline;
 		/*float: none;*/
