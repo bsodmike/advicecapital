@@ -1,5 +1,9 @@
 Advicecapital::Application.routes.draw do
 
+  # Main Menu
+  match '/about_ac', :to => 'pages#about_ac'
+  match '/about_ai', :to => 'pages#about_ai'
+
   match '/', :to => 'pages#index'
   match '/contact', :to => 'pages#contact'
 
