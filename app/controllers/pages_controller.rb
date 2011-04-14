@@ -6,7 +6,7 @@ class PagesController < ApplicationController
 
   def show
     @page_title = @page[:title]
-    @page = Page.find_by_path(request.path)
+    @page = Pages.find_by_path(request.path)
 
     #Page.find_by_path(request.path) and will return {:page_title => 'title', :template=> '/pages/about/things.html'}
   end

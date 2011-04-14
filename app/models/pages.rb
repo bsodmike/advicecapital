@@ -30,6 +30,17 @@ class Pages < ActiveRecord::Base
       :title => 'Bliv kunde',
       :template => '/pages/become_customer.html.haml'
     },
+
+    '/organisation' => {
+      :title => 'Organisation',
+      :template => '/pages/organisation.html.haml'
+    },
+      '/organisation/employees' => {
+        :title => 'Medarbejdere',
+        :template => '/pages/organisation/employees.html.haml'
+      },
+
+
     '/investor_login' => {
       :title => 'Investor login',
       :template => '/pages/investor_login.html.haml'
@@ -40,6 +51,6 @@ class Pages < ActiveRecord::Base
     Pages[path]
   end
 
-  puts Page.find_by_path('/about/')
+  puts Pages.find_by_path('/about/')
   # {:title=>"About", :template=>"/pages/about/index.html.erb"}
 end
