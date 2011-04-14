@@ -60,9 +60,25 @@ header nav ul {
 }
 header nav ul#top li {
   padding: 40px 5px 0 5px;
+  height: 43px;
+}
+header nav ul#top li ul li
+{
+	height: auto;
 }
 header nav ul#top li a {
   display: block;
+  height: 48px;
+  margin-bottom: -30px;
+  margin-top: -30px;
+  padding-top: 30px;
+}
+header nav ul#top li ul.subnav li a
+{
+  height: auto;
+  padding-top: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 header nav ul#top li a:hover {
   color: #fff;
