@@ -21,7 +21,7 @@ section {
   padding-top: 20px;
   background: url(/images/center_bg.png) repeat-y;
   width: 894px;
-  min-height: 450px; }
+  min-height: 200px; }
 
 footer {
   text-align: center;
@@ -69,7 +69,7 @@ header nav ul#top li a:hover {
 }
 header nav ul#top li:hover {
   background: url(/images/btn_background.png) repeat-x;
-  height: 50px;
+  height: 40px;
 }
 
 header nav ul#top li {
