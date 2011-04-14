@@ -29,6 +29,10 @@ class Pages < ActiveRecord::Base
     '/become_customer' => {
       :title => 'Bliv kunde',
       :template => '/pages/become_customer.html.haml'
+    },
+    '/investor_login' => {
+      :title => 'Investor login',
+      :template => '/pages/investor_login.html.haml'
     }
   }
 
