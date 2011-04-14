@@ -1,10 +1,16 @@
-= @employees.each do |employee|
+- @employees.each do |employees|
 
-  %div= image_tag '#{@employee.image}'
-  %div
-    = @employee.name
-    = @employee.title
+  %span{:style=>"float:left;margin-right:20px;"}= image_tag employees.image
+  %div{:style=>"float:left;margin-top:30px;"}
+    = employees.name
+    ,
+    = employees.title
     %br/
-    = @employee.email
-    = @employee.phone
+    %br/
+    = mail_to employees.email
+    %br/
+    %br/
+    = employees.phone
 
+
+= link_to 'New Employee', new_employee_path

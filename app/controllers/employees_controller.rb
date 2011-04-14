@@ -2,7 +2,7 @@ class EmployeesController < ApplicationController
   # GET /employees
   # GET /employees.xml
   def index
-    @employees = Employee.all
+    @employees = Employees.all
   end
 
   # GET /employees/1
@@ -19,7 +19,7 @@ class EmployeesController < ApplicationController
   # GET /employees/new
   # GET /employees/new.xml
   def new
-    @employee = Employee.new
+    @employees = Employees.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -29,21 +29,21 @@ class EmployeesController < ApplicationController
 
   # GET /employees/1/edit
   def edit
-    @employee = Employee.find(params[:id])
+    @employees = Employees.find(params[:id])
   end
 
   # POST /employees
   # POST /employees.xml
   def create
-    @employee = Employee.new(params[:employee])
+    @employees = Employees.new(params[:employee])
 
     respond_to do |format|
-      if @employee.save
-        format.html { redirect_to(@employee, :notice => 'Employee was successfully created.') }
-        format.xml  { render :xml => @employee, :status => :created, :location => @employee }
+      if @employees.save
+        format.html { redirect_to(@employees, :notice => 'Employee was successfully created.') }
+        format.xml  { render :xml => @employees, :status => :created, :location => @employees }
       else
         format.html { render :action => "new" }
-        format.xml  { render :xml => @employee.errors, :status => :unprocessable_entity }
+        format.xml  { render :xml => @employees.errors, :status => :unprocessable_entity }
       end
     end
   end
@@ -51,15 +51,15 @@ class EmployeesController < ApplicationController
   # PUT /employees/1
   # PUT /employees/1.xml
   def update
-    @employee = Employee.find(params[:id])
+    @employees = Employees.find(params[:id])
 
     respond_to do |format|
-      if @employee.update_attributes(params[:employee])
-        format.html { redirect_to(@employee, :notice => 'Employee was successfully updated.') }
+      if @employees.update_attributes(params[:employees])
+        format.html { redirect_to(@employees, :notice => 'Employee was successfully updated.') }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
-        format.xml  { render :xml => @employee.errors, :status => :unprocessable_entity }
+        format.xml  { render :xml => @employees.errors, :status => :unprocessable_entity }
       end
     end
   end
@@ -67,8 +67,8 @@ class EmployeesController < ApplicationController
   # DELETE /employees/1
   # DELETE /employees/1.xml
   def destroy
-    @employee = Employee.find(params[:id])
-    @employee.destroy
+    @employees = Employees.find(params[:id])
+    @employees.destroy
 
     respond_to do |format|
       format.html { redirect_to(employees_url) }
