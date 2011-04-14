@@ -27,9 +27,9 @@ class Pages < ActiveRecord::Base
       :template => '/pages/about_ai.html.haml'
     },
     '/become_customer' => {
-      :title => 'Bliv kunde'
+      :title => 'Bliv kunde',
       :template => '/pages/become_customer.html.haml'
-    },
+    }
   }
 
   def self.find_by_path(path)
