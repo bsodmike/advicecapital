@@ -23,7 +23,7 @@ class EmployeesController < ApplicationController
 
     respond_to do |format|
       format.html # new.html.erb
-      format.xml  { render :xml => @employee }
+      format.xml  { render :xml => @employees }
     end
   end
 
