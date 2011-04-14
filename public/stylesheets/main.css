@@ -21,7 +21,7 @@ section {
   padding-top: 20px;
   background: url(/images/center_bg.png) repeat-y;
   width: 894px;
-  min-height: 200px; }
+  min-height: 400px; }
 
 footer {
   text-align: center;
@@ -80,6 +80,7 @@ header nav ul ul {
 }
 
 header nav ul#top > li > ul > li {
+  padding: 30px 5px 0 0;
   background: none;
   display: none; }
 
@@ -88,7 +89,7 @@ header nav ul li ul.hover {
   display: block;
   margin-top: -3px;
   height: 32px;
-  padding: 10px 0 0 10px;
+  padding: 10px 0 0 20px;
 }
 header nav ul#top > li > ul.hover > li {
     background: none;
