@@ -1,0 +1,10 @@
+= @employees.each do |employee|
+
+  %div= image_tag '#{@employee.image}'
+  %div
+    = @employee.name
+    = @employee.title
+    %br/
+    = @employee.email
+    = @employee.phone
+

@@ -1,5 +1,7 @@
 Advicecapital::Application.routes.draw do
 
+  resources :employees
+
   # Main Menu
   match '/about_ac', :to => 'pages#about_ac'
   match '/about_ai', :to => 'pages#about_ai'
@@ -8,6 +10,8 @@ Advicecapital::Application.routes.draw do
   match '/invest_universe', :to => 'pages#invest_universe'
   match '/become_customer', :to => 'pages#become_customer'
   match '/news', :to => 'pages#news'
+
+  match '/organisation/employees', :to => 'employees#index'
 
   match '/', :to => 'pages#index'
   match '/contact', :to => 'pages#contact'
@@ -71,5 +75,5 @@ Advicecapital::Application.routes.draw do
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id(.:format)))'
 
-  match '*path' => 'page#show'
+  #match '*path' => 'page#show'
 end
