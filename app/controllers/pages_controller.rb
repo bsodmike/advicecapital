@@ -102,7 +102,11 @@ class PagesController < ApplicationController
     @page_title = "Investor login"
   end
 
-    def rapport
-      @page_title = "Modtag Advice Invest kvartalsrapport"
-    end
+  def rapport
+    @page_title = "Modtag Advice Invest kvartalsrapport"
+  end
+  
+  def disclaimer
+    @page_title = "Disclaimer"
+  end
 end

@@ -9,6 +9,7 @@ Advicecapital::Application.routes.draw do
   match '/investor_login', :to => 'pages#investor_login'
   match '/invest_universe', :to => 'pages#invest_universe'
   match '/become_customer', :to => 'pages#become_customer'
+  match '/disclaimer', :to => 'pages#disclaimer'
   match '/news', :to => 'pages#news'
 
   match '/organisation/employees', :to => 'employees#index'
