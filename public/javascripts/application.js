@@ -12,4 +12,12 @@
 		function () {
 		})
 	});
+  $(".carousel").jCarouselLite({
+      auto: 1,
+      visible: 5,
+      btnNext: "#arrow_right",
+      btnPrev: "#arrow_left"
+  });
 })(jQuery);
+
+  

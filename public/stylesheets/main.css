@@ -22,7 +22,7 @@ header #logo {
 section {
   padding-left: 18px;
   margin: auto;
-  padding-top: 20px;
+  padding-top: 40px;
   background: url(/images/center_bg.png) repeat-y;
   width: 894px;
   min-height: 400px; }
@@ -75,7 +75,7 @@ header nav ul#top li a {
   height: 48px;
   margin-bottom: -30px;
   margin-top: -30px;
-  padding-top: 30px;
+  padding-top: 40px;
 }
 header nav ul#top li ul.subnav li a
 {
@@ -100,7 +100,7 @@ header nav ul ul {
 }
 
 header nav ul#top > li > ul > li {
-  padding: 30px 5px 0 0;
+  padding: 20px 5px 0 0;
   background: none;
   display: none; }
 
@@ -131,6 +131,14 @@ section .content {
   width: 854px;
   height: 100px;
   margin-bottom: 20px; }
+#slider ul {
+  list-style: none;
+  display: inline-block;
+}
+#slider ul li {
+  float: left;
+  margin-right: 5px;
+}
 #slider .arrows {
   margin: 40px 5px auto 5px; }
 #slider #arrow_left {
