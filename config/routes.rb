@@ -1,7 +1,7 @@
 Advicecapital::Application.routes.draw do
 
+  resources :news
   resources :boards
-
   resources :employees
 
 
@@ -13,7 +13,7 @@ Advicecapital::Application.routes.draw do
   match '/invest_universe', :to => 'pages#invest_universe'
   match '/become_customer', :to => 'pages#become_customer'
   match '/disclaimer', :to => 'pages#disclaimer'
-  match '/news', :to => 'pages#news'
+  match '/news', :to => 'news#index'
 
   match '/organisation/employees', :to => 'employees#index'
   match '/organisation/board', :to => 'boards#index'
