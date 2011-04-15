@@ -2,6 +2,8 @@ Advicecapital::Application.routes.draw do
 
   resources :employees
 
+  resources :employees
+
   # Main Menu
   match '/about_ac', :to => 'pages#about_ac'
   match '/about_ai', :to => 'pages#about_ai'

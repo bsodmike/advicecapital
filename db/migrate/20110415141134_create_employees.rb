@@ -5,6 +5,7 @@ class CreateEmployees < ActiveRecord::Migration
       t.string :title
       t.string :email
       t.string :phone
+      t.string :image
 
       t.timestamps
     end
