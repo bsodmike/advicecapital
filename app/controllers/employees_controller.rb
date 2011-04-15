@@ -1,6 +1,5 @@
 class EmployeesController < ApplicationController
-  # GET /employees
-  # GET /employees.xml
+  
   def index
     @employees = Employees.all
   end
@@ -20,11 +19,6 @@ class EmployeesController < ApplicationController
   # GET /employees/new.xml
   def new
     @employees = Employees.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @employees }
-    end
   end
 
   # GET /employees/1/edit
@@ -37,17 +31,13 @@ class EmployeesController < ApplicationController
   def create
     @employees = Employees.new(params[:employee])
 
-    respond_to do |format|
-      if @employees.save
-        format.html { redirect_to(@employees, :notice => 'Employee was successfully created.') }
-        format.xml  { render :xml => @employees, :status => :created, :location => @employees }
-      else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @employees.errors, :status => :unprocessable_entity }
-      end
+    if @employees.save
+      redirect_to employees_path
+    else
+      render :new
     end
   end
-
+  
   # PUT /employees/1
   # PUT /employees/1.xml
   def update

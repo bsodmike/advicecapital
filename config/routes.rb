@@ -17,7 +17,6 @@ Advicecapital::Application.routes.draw do
   match '/', :to => 'pages#index'
   match '/contact', :to => 'pages#contact'
   
-  resources :employees
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
