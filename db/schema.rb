@@ -17,9 +17,9 @@ ActiveRecord::Schema.define(:version => 20110414200609) do
     t.string   "title"
     t.string   "email"
     t.string   "phone"
-    t.string   "image"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "image"
   end
 
   create_table "pages", :force => true do |t|

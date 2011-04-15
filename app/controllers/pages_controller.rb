@@ -25,7 +25,7 @@ class PagesController < ApplicationController
     end
 
     def concept
-      @page_title = "Det står vi for / Vores koncept"
+      @page_title = "Det star vi for / Vores koncept"
     end
 
     def results
@@ -68,7 +68,7 @@ class PagesController < ApplicationController
     end
 
     def individual_invest_advice
-      @page_title = "Individuel investeringsrådgivning"
+      @page_title = "Individuel investeringsradgivning"
     end
 
   # Invest Universe
