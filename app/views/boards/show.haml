@@ -1,0 +1,18 @@
+%p#notice= notice
+%p
+  = image_tag @board.image
+%p
+  %b Name:
+  = @board.name
+%p
+  %b Title:
+  = @board.title
+%p
+  %b Email:
+  = @board.email
+%p
+  %b Phone:
+  = @board.phone
+= link_to 'Edit', edit_employee_path(@board)
+|
+= link_to 'Back', employees_path
