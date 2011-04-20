@@ -1,4 +1,4 @@
-class Employee < ActiveRecord::Base
+class Employees < ActiveRecord::Base
   email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i # full regex
 
   validates :name, :presence => true
