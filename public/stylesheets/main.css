@@ -187,6 +187,7 @@ section .content {
   }
     li {
       float: left;
+      padding-right: 10px;
 
   ul.subnav {
   	float: left;
