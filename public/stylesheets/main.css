@@ -190,8 +190,8 @@ section .content {
       float: left;
       padding-right: 15px;
     }
-    li:last-child {
-      padding: 0;
+    ul li:last-child {
+      padding-right: 0px !important;
     }
   ul.subnav {
   	float: left;
