@@ -180,6 +180,13 @@ section .content {
   width: 861px;
   height: 27px;
   margin-top: 400px; }
+  
+  ul {
+    list-style: none;
+    display: inline-block;
+  }
+    li {
+      float: left;
 
   ul.subnav {
   	float: left;
