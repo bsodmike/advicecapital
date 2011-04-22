@@ -182,12 +182,13 @@ section .content {
   margin-top: 400px; }
   
   ul {
+    margin-top: 4px;
     list-style: none;
     display: inline-block;
   }
     li {
       float: left;
-      padding-right: 10px;
+      padding-right: 15px;
 
   ul.subnav {
   	float: left;
