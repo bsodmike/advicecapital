@@ -20,7 +20,7 @@ header #logo {
   float: right; }
 
 section {
-  padding-left: 12px;
+  padding-left: 13px;
   margin: auto;
   padding-top: 40px;
   background: url(/images/center_bg.png) repeat-y;
@@ -179,7 +179,8 @@ section .content {
   background: url(/images/bottom_bg.png);
   width: 861px;
   height: 27px;
-  margin-top: 400px; }
+  margin-top: 400px;
+  margin-bottom:4px;}
 
   ul.subnav {
   	float: left;
