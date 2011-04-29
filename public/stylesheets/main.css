@@ -128,26 +128,35 @@ section .content {
 /* INDEX */
 #slider {
   background: url(/images/imgSlider_bg.png);
-  width: 854px;
+  min-width: 854px;
   height: 100px;
+  margin-left: 5px;
   margin-bottom: 20px; }
 #slider ul {
   list-style: none;
   display: inline-block;
+  float:left;
+  margin-left: 10px;
+  width: 600px;
 }
 #slider ul li {
   float: left;
   margin-right: 5px;
 }
+#slider ul li img {
+  width: 135px;
+  height: 97px;
+}
 #slider .arrows {
-  margin: 40px 5px auto 5px; }
-#slider #arrow_left {
+  /*margin: 40px 5px auto 5px; */
+}
+.arrow_left {
   background: url(/images/imgSlider/arrow_left.png);
   width: 23px;
   height: 21px;
   float: left; }
 
-#slider #arrow_right {
+.arrow_right {
   background: url(/images/imgSlider/arrow_right.png);
   width: 23px;
   height: 21px;

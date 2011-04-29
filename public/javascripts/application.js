@@ -10,14 +10,15 @@
 				})
 		},
 		function () {
-		})
-	});
-  $(".carousel").jCarouselLite({
+		});
+    $("#slider").jCarouselLite({
       auto: 1,
+      speed: 1800,
       visible: 5,
-      btnNext: "#arrow_right",
-      btnPrev: "#arrow_left"
-  });
+      btnNext: ".arrow_right",
+      btnPrev: ".arrow_left"
+    });
+	});
 })(jQuery);
 
   
