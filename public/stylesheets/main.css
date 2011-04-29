@@ -141,11 +141,11 @@ section .content {
 }
 #slider ul li {
   float: left;
-  margin-right: 5px;
+  margin-right: 20px;
 }
 #slider ul li img {
-  width: 135px;
-  height: 97px;
+  width: 115px;
+  height: 77px;
 }
 #slider .arrows {
   /*margin: 40px 5px auto 5px; */

@@ -14,7 +14,7 @@
     $("#slider").jCarouselLite({
       auto: 1,
       speed: 1800,
-      visible: 5,
+      visible: 2,
       btnNext: ".arrow_right",
       btnPrev: ".arrow_left"
     });
