@@ -20,7 +20,7 @@ header #logo {
   float: right; }
 
 section {
-  padding-left: 12px;
+  padding-left: 13px;
   margin: auto;
   padding-top: 40px;
   background: url(/images/center_bg.png) repeat-y;
@@ -128,26 +128,35 @@ section .content {
 /* INDEX */
 #slider {
   background: url(/images/imgSlider_bg.png);
-  width: 854px;
+  min-width: 854px;
   height: 100px;
+  margin-left: 5px;
   margin-bottom: 20px; }
 #slider ul {
   list-style: none;
   display: inline-block;
+  float:left;
+  margin-left: 10px;
+  width: 600px;
 }
 #slider ul li {
   float: left;
-  margin-right: 5px;
+  margin-right: 20px;
+}
+#slider ul li img {
+  width: 115px;
+  height: 77px;
 }
 #slider .arrows {
-  margin: 40px 5px auto 5px; }
-#slider #arrow_left {
+  /*margin: 40px 5px auto 5px; */
+}
+.arrow_left {
   background: url(/images/imgSlider/arrow_left.png);
   width: 23px;
   height: 21px;
   float: left; }
 
-#slider #arrow_right {
+.arrow_right {
   background: url(/images/imgSlider/arrow_right.png);
   width: 23px;
   height: 21px;
@@ -179,10 +188,24 @@ section .content {
   background: url(/images/bottom_bg.png);
   width: 861px;
   height: 27px;
+  margin-top: 400px;
+  margin-bottom:4px;
   margin-top: 400px; }
-
+  
+  ul {
+    margin-top: 4px;
+    list-style: none;
+    display: inline-block;
+  }
+    li {
+      float: left;
+      padding-right: 10px;
+    }
+    ul li:last-child {
+      padding-right: 0px !important;
+    }
   ul.subnav {
   	float: left;
-	margin-left: -17px;
-	width: 940px;
+	  margin-left: -17px;
+	  width: 940px;
   }
