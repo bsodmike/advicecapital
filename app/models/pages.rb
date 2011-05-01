@@ -48,11 +48,8 @@ class Pages < ActiveRecord::Base
   }
 
   #def self.find_by_path(path)
-<<<<<<< HEAD
   #  Pages[path]
-=======
     #Pages[path]
->>>>>>> 01d821f2bdd9858fa4a5cad9ed4af53968cc6833
   #end
 
   #puts Pages.find_by_path('/about/')
