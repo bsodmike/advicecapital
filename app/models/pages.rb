@@ -11,7 +11,7 @@ class Pages < ActiveRecord::Base
       },
       '/about_ac/history' => {
         :title => 'Historie',
-        :template => '/pages/about_ac/strategy.html.haml'
+        :template => '/pages/about_ac/history.haml'
       },
       '/about_ac/results' => {
         :title => 'Resultater',
