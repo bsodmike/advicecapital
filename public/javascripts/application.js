@@ -26,6 +26,21 @@
       speed: 1000,
       visible: 10
     });
+
+    // Organisation, employees slider
+    $(".slider ul.employees li img").hover(function() {
+      $(".employees_info").show();
+    }, function() {
+      $(".employees_info").hide();
+    });
+    
+    // Organisation_box
+    $(".organisation_box ul li").hover(function() {
+      $(".employees_info").show();
+    }, function() {
+      $(".employees_info").hide();
+    });
+
   });
 })(jQuery);
 

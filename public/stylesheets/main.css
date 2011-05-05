@@ -147,6 +147,15 @@ section .content {
   float: left;
   margin-right: 20px;
 }
+.slider ul.employees li {
+  margin: 4px !important;
+  margin-right: 10px !important;
+}
+.slider ul.employees li img {
+  width: 100px;
+  height: 90px;
+  cursor: pointer;
+}
 .slider ul li img {
   width: 115px;
   height: 77px;
@@ -170,6 +179,33 @@ section .content {
   list-style: none;
 }
 
+.submenu_box {
+  position: fixed;
+  top: 10;
+  left: 0;
+  width: 120px;
+  height: 200px;
+  border: 1px solid gray;
+  margin-left: 50px;
+  padding: 5px;
+}
+.organisation_box {
+  position: fixed;
+  top: 10;
+  left: 0;
+  width: 120px;
+  height: 200px;
+  border: 1px solid gray;
+  margin-left: 50px;
+}
+.organisation_box ul li:hover {
+  cursor: pointer;
+}
+ul.employees_info {
+  display: none;
+  list-style: none;
+}
+ul.employees_info {}
 
 #bottom {
   background: url(/images/bottom_bg.png);
@@ -196,3 +232,4 @@ section .content {
 	  margin-left: -17px;
 	  width: 940px;
   }
+
