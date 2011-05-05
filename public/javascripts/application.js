@@ -33,7 +33,7 @@
     });
 
     // Organisation, employees slider
-    $(".slider ul.employees li img").hover(function() {
+    $(".slider_custom ul.employees li img").hover(function() {
       $(".employees_info").show();
     }, function() {
       $(".employees_info").hide();
