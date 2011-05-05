@@ -19,11 +19,16 @@
       btnNext: ".arrow_right",
       btnPrev: ".arrow_left"
     });
+    $(".slider_custom").jCarouselLite({
+      auto: 1,
+      speed: 1800,
+      visible: 6
+    });
 
     $(".news_ticker").jCarouselLite({
       vertical: true,
-      auto: 800,
-      speed: 2000,
+      auto: 1,
+      speed: 1000,
       visible: 10
     });
 
