@@ -251,6 +251,6 @@ ul.employees_info {}
   ul.subnav {
   	float: left;
 	  margin-left: -17px;
-	  width: 940px;
+	  width: auto;
   }
 
