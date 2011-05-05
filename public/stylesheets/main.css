@@ -151,8 +151,8 @@ section .content {
   width: 115px;
   height: 77px;
 }
-.slider .arrows {
-  /*margin: 40px 5px auto 5px; */
+.arrows:hover {
+  cursor: pointer;
 }
 .arrow_left {
   background: url(/images/imgSlider/arrow_left.png);

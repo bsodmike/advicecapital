@@ -22,8 +22,8 @@
 
     $(".news_ticker").jCarouselLite({
       vertical: true,
-      auto: 800,
-      speed: 2000,
+      auto: 1,
+      speed: 1000,
       visible: 10
     });
   });
