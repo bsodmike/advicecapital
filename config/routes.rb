@@ -86,4 +86,8 @@ Advicecapital::Application.routes.draw do
   # match ':controller(/:action(/:id(.:format)))'
 
   #match '*path' => 'page#show'
+  
+  AdvicePages.get_pages.each do |key, value|
+    match key, :to => "pages#show"
+  end
 end

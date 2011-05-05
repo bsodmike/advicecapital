@@ -1,13 +1,14 @@
 class PagesController < ApplicationController
-
+  
   def index
     @page_title = "Advice Capital A/S - Index"
   end
 
   def show
+    @page = AdvicePages.find_by_path(request.path)
     @page_title = @page[:title]
-    @page = Pages.find_by_path(request.path)
-
+    
+    render @page[:template]
     #Page.find_by_path(request.path) and will return {:page_title => 'title', :template=> '/pages/about/things.html'}
   end
 
