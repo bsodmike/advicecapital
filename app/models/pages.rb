@@ -11,7 +11,7 @@ class Pages < ActiveRecord::Base
       },
       '/about_ac/history' => {
         :title => 'Historie',
-        :template => '/pages/about_ac/strategy.html.haml'
+        :template => '/pages/about_ac/history.haml'
       },
       '/about_ac/results' => {
         :title => 'Resultater',
@@ -47,10 +47,11 @@ class Pages < ActiveRecord::Base
     }
   }
 
-  def self.find_by_path(path)
-    Pages[path]
-  end
+  #def self.find_by_path(path)
+  #  Pages[path]
+    #Pages[path]
+  #end
 
-  puts Pages.find_by_path('/about/')
+  #puts Pages.find_by_path('/about/')
   # {:title=>"About", :template=>"/pages/about/index.html.erb"}
 end

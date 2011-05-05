@@ -20,9 +20,9 @@ class PagesController < ApplicationController
     @page_title = "Om Advice Capital"
   end
 
-    def history
-      @page_title = "Historie"
-    end
+  def history
+    @page_title = "Historie"
+  end
 
     def concept
       @page_title = "Det star vi for / Vores koncept"
@@ -42,8 +42,12 @@ class PagesController < ApplicationController
 
   # About Advice Invest
   def about_ai
-    @page_title = "Om Advice Invest"
+    @page_title = "Advice Invest"
   end
+
+    def purpose
+      @page_title = "Form&aring;l"
+    end
 
   # Organisation
   def organisation
