@@ -16,11 +16,6 @@ class PagesController < ApplicationController
     @page_title = "Advice Capital A/S - Contact"
   end
 
-  # About Advice Capital
-  def about_ac
-    @page_title = "Om Advice Capital"
-  end
-
   def history
     @page_title = "Historie"
   end

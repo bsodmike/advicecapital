@@ -2,8 +2,8 @@ class AdvicePages < ActiveRecord::Base
     @@pages = {
     # Main pages
     '/about_ac' => {
-      :title => 'About',
-      :template => '/pages/about_ac.html.haml'
+      :title => '',
+      :template => '/pages/about_ac/index.haml'
     },
       '/about_ac/concept' => {
         :title => 'Koncept',
