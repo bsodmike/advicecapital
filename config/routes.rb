@@ -6,11 +6,11 @@ Advicecapital::Application.routes.draw do
 
 
   # Main Menu
-  match '/about_ac', :to => 'pages#about_ac'
-  match '/about_ac/history', :to => 'pages#history'
+  #match '/about_ac', :to => 'pages#about_ac'
+  #match '/about_ac/history', :to => 'pages#history'
 
-  match '/about_ai', :to => 'pages#about_ai'
-  match '/about_ai/purpose', :to => 'pages#purpose'
+  #match '/about_ai', :to => 'pages#about_ai'
+  #match '/about_ai/purpose', :to => 'pages#purpose'
 
   match '/organisation', :to => 'pages#organisation'
   match '/investor_login', :to => 'pages#investor_login'
@@ -23,8 +23,9 @@ Advicecapital::Application.routes.draw do
   match '/organisation/board', :to => 'boards#index'
 
   match '/', :to => 'pages#index'
+
   match '/contact', :to => 'pages#contact'
-  
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
