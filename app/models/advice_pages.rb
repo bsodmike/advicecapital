@@ -24,8 +24,18 @@ class AdvicePages < ActiveRecord::Base
       
     '/about_ai' => {
       :title => '',
-      :template => '/pages/about_ai.haml'
+      :template => '/pages/about_ai/index.haml'
     },
+      '/about_ai/purpose' => {
+        :title => 'Form&aring;l',
+        :template => '/pages/about_ai/purpose.haml'
+      },
+      '/about_ai/we_choosed_ai' => {
+        :title => 'Derfor valgte vi Advice Invest',
+        :template => '/pages/about_ai/we_choosed_ai.haml'
+      },
+
+
     '/become_customer' => {
       :title => 'Bliv kunde',
       :template => '/pages/become_customer.haml'

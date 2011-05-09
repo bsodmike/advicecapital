@@ -16,34 +16,7 @@ class PagesController < ApplicationController
     @page_title = "Advice Capital A/S - Contact"
   end
 
-  def history
-    @page_title = "Historie"
-  end
-
-    def concept
-      @page_title = "Det star vi for / Vores koncept"
-    end
-
-    def results
-      @page_title = "Resultater"
-    end
-
-    def strategy
-      @page_title = "Strategi"
-    end
-
-    def we_choosed_ac
-      
-    end
-
-  # About Advice Invest
-  def about_ai
-    @page_title = "Advice Invest"
-  end
-
-    def purpose
-      @page_title = "Form&aring;l"
-    end
+  
 
   # Organisation
   def organisation
