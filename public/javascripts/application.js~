@@ -45,23 +45,7 @@
     }, function() {
       $(".employees_info").hide();
     });
-    
-	  var getId = function (self) {
-		return self.attr('id').replace(/(image|employee)_/, '');
-	  };
 
-    // Organisation Info
-    $(".employeeNames li, .employeeImages li").hover(function () {
-      var self = $(this);    
-      var id = getId(self);
-      
-        $('#info_' + id).css({display: 'block'});
-    }, function () {
-      var self = $(this);
-      var id = getId(self);
-
-        $('#info_' + id).css({display: 'none'});
-	});
   });
 })(jQuery);
 

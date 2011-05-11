@@ -254,14 +254,3 @@ ul.employees_info {}
 	  width: auto;
   }
 
-.employeeNames li {
-  float: none;
-}
-
-.employeeInfo {
-  display: none;
-}
-
-.employeeImages img {
- cursor: pointer;
-}
