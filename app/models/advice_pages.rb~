@@ -41,13 +41,10 @@ class AdvicePages < ActiveRecord::Base
       :template => '/pages/become_customer.haml'
     },
 
-=begin
     '/organisation' => {
       :title => 'Organisation',
       :template => '/pages/organisation.haml'
     },
-=end
-
       '/organisation/employees' => {
         :title => 'Medarbejdere',
         :template => '/pages/organisation/employees.html.haml'
