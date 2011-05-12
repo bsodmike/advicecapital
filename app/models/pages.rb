@@ -33,7 +33,7 @@ class Pages < ActiveRecord::Base
 
     '/organisation' => {
       :title => 'Organisation',
-      :template => '/pages/organisation.html.haml'
+      :template => '/pages/organisation.haml'
     },
       '/organisation/employees' => {
         :title => 'Medarbejdere',

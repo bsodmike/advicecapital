@@ -17,12 +17,6 @@ class PagesController < ApplicationController
   end
 
   
-
-  # Organisation
-  def organisation
-    @page_title = "Organisation"
-  end
-
     def employees
       @page_title = "Medarbejdere"
     end
