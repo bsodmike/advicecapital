@@ -1,5 +1,5 @@
 body {
-  background: #ffffff url(/images/top_banner.png) repeat-x;
+  background: #ffffff url(/images/top_bannerEXT.png) repeat-x;
   font-family:Arial, Helvetica, sans-serif;
 }
 
@@ -8,7 +8,8 @@ p {
 }
 
 header {
-  height: 96px;
+  /*height: 96px;*/
+  height: 134px;
   width: 930px; }
 
 header #logo {
@@ -81,7 +82,7 @@ header nav ul#top li a {
   height: 48px;
   margin-bottom: -30px;
   margin-top: -30px;
-  padding-top: 40px;
+  padding-top: 60px;
 }
 header nav ul#top li ul.subnav li a
 {
