@@ -9,12 +9,13 @@ p {
 
 header {
   /*height: 96px;*/
-  height: 134px;
+  height: 135px;
   width: 930px; }
 
 header #logo {
   background: url(/images/ac_logo.png);
-  margin-left: 630px;
+  margin-left: 400px;
+  margin-top: 5px;
   position: absolute;
   width: 131px;
   height: 94px;
@@ -82,7 +83,7 @@ header nav ul#top li a {
   height: 48px;
   margin-bottom: -30px;
   margin-top: -30px;
-  padding-top: 60px;
+  padding-top: 75px;
 }
 header nav ul#top li ul.subnav li a
 {
@@ -120,8 +121,8 @@ header nav ul li ul.hover {
 }
 header nav ul#top > li > ul.hover > li {
     background: none;
-		display: inline;
-		/*float: none;*/
+    display: inline;
+    /*float: none;*/
 }
 
 header nav ul li:hover ul li a {
