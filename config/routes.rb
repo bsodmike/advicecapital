@@ -13,8 +13,8 @@ Advicecapital::Application.routes.draw do
   
   match '/organisation', :to => 'org#index'
 
-  match '/organisation/employees', :to => 'employees#index'
-  match '/organisation/board', :to => 'boards#index'
+  #match '/organisation/employees', :to => 'employees#index'
+  #match '/organisation/board', :to => 'boards#index'
 
   match '/', :to => 'pages#index'
 
