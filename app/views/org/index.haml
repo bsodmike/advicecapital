@@ -1,7 +1,7 @@
 .organisation_box
   %ul.employeeNames
     - @employees.each do |employee|
-      %li[employee]= employee.name.split(' ', 2)[0]
+      %li[employee]= link_to employee.name.split(' ', 2)[0], "/employees/#{employee.id}"
     
 
 .slider_custom
@@ -11,7 +11,7 @@
   .slider_center
     %ul.employeeImages
       - @employees.each do |employee|
-        %li{:id => "image_#{employee.id}"}= image_tag "/images/employees/#{employee.image}"
+        %li{:id => "image_#{employee.id}"}= link_to ( image_tag "/images/employees/#{employee.image}" ), "/employees/#{employee.id}"
        
   .slider_bottom
 
@@ -20,12 +20,10 @@
       %h2= employee.name
       %h3= employee.title
       %p
-        %strong
-          Email:
+        %b Email:
         = employee.email
 
       %p  
-        %strong
-          Phone: 
+        %b Phone:
         = employee.phone
 		
