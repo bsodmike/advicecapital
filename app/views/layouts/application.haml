@@ -20,3 +20,10 @@
 
     = render 'layouts/footer'
 
+    %nav
+      - if signed_in?
+        %ul
+          %li= link_to 'Profile', current_user
+          %li= link_to 'Settings', edit_user_path(current_user)
+          %li= link_to 'Signout', signout_path, :method => :delete
+
