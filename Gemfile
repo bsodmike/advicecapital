@@ -1,9 +1,21 @@
 source 'http://rubygems.org'
 
 gem 'rails'
-gem 'haml'
 gem 'rake', '0.8.7'
+gem 'haml'
+gem 'sass'
 gem 'meta_search'
+
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'annotate-models'
+end
+
+group :test do
+  gem 'rspec'
+  gem 'webrat'
+  gem 'factory_girl_rails'
+end
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

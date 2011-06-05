@@ -6,8 +6,8 @@ class SessionsController < ApplicationController
 
   def create
     # Use the authenticate method from the User model along with the parametres of :session to validate the user login
-    #user = User.authenticate(params[:session][:email], params[:session][:password])
-    user = User.authenticate(params[:email], params[:password])
+    user = User.authenticate(params[:session][:email], params[:session][:password])
+    #user = User.authenticate(params[:email], params[:password])
 
     if user.nil?
       flash.now[:error] = "Invalid email/password combination"
