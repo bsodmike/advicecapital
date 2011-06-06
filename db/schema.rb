@@ -55,6 +55,7 @@ ActiveRecord::Schema.define(:version => 20110606163311) do
     t.string   "password_salt"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "admin",         :default => false
   end
 
 end

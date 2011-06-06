@@ -12,20 +12,20 @@ module SessionsHelper
     user == current_user
   end
 
-  def sign_in(user)
-    cookies.permanent.signed[:remember_token] = [user.id, user.salt]
-    self.current_user = user # Sets the current_user object to the user object
-  end
+#  def sign_in(user)
+#    cookies.permanent.signed[:remember_token] = [user.id, user.salt]
+#    self.current_user = user # Sets the current_user object to the user object
+#  end
 
 #  def current_user=(user)
 #    @current_user = user
 #  end
 
   # Signs the user out
-  def sign_out
-    cookies.delete(:remember_token) # Deletes the cookie :remember_token
-    self.current_user = nil # sets the current_user object to nil
-  end
+#  def sign_out
+#    cookies.delete(:remember_token) # Deletes the cookie :remember_token
+#    self.current_user = nil # sets the current_user object to nil
+#  end
 
   def signed_in?
     !current_user.nil?
@@ -50,15 +50,15 @@ module SessionsHelper
 
   private
 
-    def user_from_remember_token
-      User.authenticate_with_salt(*remember_token)
-    end
-
-    def remember_token
-      cookies.signed[:remember_token] || [nil, nil]
-    end
-
-    def clear_return_to
-      session[:return_to] = nil
-    end
+#    def user_from_remember_token
+#      User.authenticate_with_salt(*remember_token)
+#    end
+#
+#    def remember_token
+#      cookies.signed[:remember_token] || [nil, nil]
+#    end
+#
+#    def clear_return_to
+#      session[:return_to] = nil
+#    end
 end

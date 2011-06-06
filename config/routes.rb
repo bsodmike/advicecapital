@@ -14,6 +14,7 @@ Advicecapital::Application.routes.draw do
   match '/news', :to => 'news#index'
   match 'signin', :to => 'sessions#new'
   match 'signout', :to => 'sessions#destroy'
+  match 'sessions/new', :to => 'sessions#new'
   
   match '/organisation', :to => 'org#index'
 

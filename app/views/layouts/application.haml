@@ -22,16 +22,13 @@
 
     %nav
       /- if signed_in?
-      = debug signed_in?
+      /= debug signed_in?
       - if current_user
-        test
         %ul
           %li= link_to 'Profile', current_user
           %li= link_to 'Settings', edit_user_path(current_user)
           %li= link_to 'Signout', signout_path, :method => :delete
+      /- if admin_user
 
-<<<<<<< HEAD
-      = debug session
-=======
-      = debug current_user().nil?
->>>>>>> 092eb4368287747d95061eccca4a3821a50cebd8
+      /= debug session
+      /= debug current_user().nil?

@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
     if user
       session[:user_id] = user.id
       #sign_in user # Signs in the User
-      redirect_to current_user, :notice => "Signed in"
+      redirect_to root_url, :notice => "Signed in"
       
     else
       flash.now[:error] = "Invalid email/password combination"
