@@ -71,5 +71,5 @@ PLATFORMS
 
 DEPENDENCIES
   haml
-  rails (= 3.0.7)
+  rails
   sqlite3
