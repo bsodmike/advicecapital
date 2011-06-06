@@ -12,8 +12,9 @@ Advicecapital::Application.routes.draw do
   match '/become_customer', :to => 'pages#become_customer'
   match '/disclaimer', :to => 'pages#disclaimer'
   match '/news', :to => 'news#index'
-  match '/signin', :to => 'sessions#new'
-  match '/signout', :to => 'sessions#destroy'
+  match 'signin', :to => 'sessions#new', :as => 'signin'
+  match 'signout', :to => 'sessions#destroy'
+  match 'sessions/new', :to => 'sessions#new'
   
   match '/organisation', :to => 'org#index'
 

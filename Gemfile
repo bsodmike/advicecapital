@@ -5,6 +5,7 @@ gem 'rake', '0.8.7'
 gem 'haml'
 gem 'sass'
 gem 'meta_search'
+gem 'bcrypt-ruby', :require => 'bcrypt'
 
 group :development, :test do
   gem 'rspec-rails'

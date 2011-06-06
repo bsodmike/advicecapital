@@ -9,20 +9,23 @@ class SessionsController < ApplicationController
     user = User.authenticate(params[:session][:email], params[:session][:password])
     #user = User.authenticate(params[:email], params[:password])
 
-    if user.nil?
+    if user
+      session[:user_id] = user.id
+      #sign_in user # Signs in the User
+      redirect_to users_url, :notice => "Signed in"
+      
+    else
       flash.now[:error] = "Invalid email/password combination"
       @title = "Sign in"
       render 'new'
-    else
-      sign_in user # Signs in the User
-      redirect_back_or user
     end
 
   end
 
   def destroy
-    sign_out
-    redirect_to root_path
+    session[:user_id] = nil
+    #sign_out
+    redirect_to root_path, :notice => 'Signed out!'
   end
 
 end
