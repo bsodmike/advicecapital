@@ -4,16 +4,17 @@ class ApplicationController < ActionController::Base
 
   private
   
-    def signed_in_user
-      if current_user.nil?
-        redirect_to signin_path, :notice => "Please sign in to access this page"
-      end
+  def signed_in_user
+    if current_user.nil?
+      redirect_to signin_path, :notice => "Please sign in to access this page"
     end
+  end
 
-    def admin_user
-      if current_user.admin?
-        flash[:error] = "You don't have permission to view users"
-        redirect_to(root_path) #unless current_user.admin?
-      end
-    end
+  def admin_user
+    #if current_user.admin?
+    flash[:error] = "You don't have permission to view users"
+    redirect_to(root_path) unless current_user.admin?
+    #end
+  end
+
 end

@@ -48,6 +48,18 @@ module SessionsHelper
     clear_return_to
   end
 
+  def logged_in?
+    session[:user_id].present?
+  end
+
+  def get_user_id
+    session[:user_id] if logged_in?
+  end
+
+  def admin?
+    User.find_by_id(get_user_id).admin? if logged_in?
+  end
+
   private
 
 #    def user_from_remember_token

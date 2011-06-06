@@ -28,7 +28,11 @@
           %li= link_to 'Profile', current_user
           %li= link_to 'Settings', edit_user_path(current_user)
           %li= link_to 'Signout', signout_path, :method => :delete
-      /- if admin_user
 
+      - if admin?
+        test
+
+      = debug current_user
+      = debug admin?
       /= debug session
       /= debug current_user().nil?
