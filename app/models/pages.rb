@@ -1,5 +1,10 @@
 class Pages < ActiveRecord::Base
   Pages = {
+    # Secret
+    '/login' => {
+      :title => 'Login',
+      :template => '/sessions/new.haml'
+    },
     # Main pages
     '/about_ac' => {
       :title => 'About',

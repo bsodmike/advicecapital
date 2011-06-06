@@ -1,8 +1,10 @@
 Advicecapital::Application.routes.draw do
 
+  resources :users
   resources :news
   resources :boards
   resources :employees
+  resources :sessions, :only => [:new, :create, :destroy]
 
 #  match '/organisation', :to => 'pages#organisation'
   match '/investor_login', :to => 'pages#investor_login'
@@ -10,6 +12,8 @@ Advicecapital::Application.routes.draw do
   match '/become_customer', :to => 'pages#become_customer'
   match '/disclaimer', :to => 'pages#disclaimer'
   match '/news', :to => 'news#index'
+  match '/signin', :to => 'sessions#new'
+  match '/signout', :to => 'sessions#destroy'
   
   match '/organisation', :to => 'org#index'
 
