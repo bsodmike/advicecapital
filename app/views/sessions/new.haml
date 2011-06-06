@@ -3,7 +3,11 @@
 
 %h3 Sign in
 
+<<<<<<< HEAD
 = form_for :session, :action => :create do |f|
+=======
+= form_for :session , :url => {:action => :create} do |f|
+>>>>>>> 092eb4368287747d95061eccca4a3821a50cebd8
   .field
     = f.label :email
     %br/

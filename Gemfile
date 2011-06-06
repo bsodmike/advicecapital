@@ -1,7 +1,11 @@
 source 'http://rubygems.org'
 
 gem 'rails'
+<<<<<<< HEAD
 gem 'rake'#, '0.8.7'
+=======
+gem 'rake' #, '0.8.7'
+>>>>>>> 092eb4368287747d95061eccca4a3821a50cebd8
 gem 'haml'
 gem 'sass'
 gem 'meta_search'

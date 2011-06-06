@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   #before_filter :authenticate, :only => [:index, :show, :edit, :update, :destroy]
   #before_filter :correct_user, :only => [:edit, :update]
   #before_filter :admin_user,   :only => [:index, :destroy]
-  before_filter :signed_in_user, :only => [:new, :show, :create, :edit, :update, :destroy]
+  before_filter :signed_in_user, :only => [:new, :show, :create, :edit, :update, :destroy, :index]
 
   # GET /users
   # GET /users.xml
@@ -93,6 +93,12 @@ class UsersController < ApplicationController
       #@user = User.find(params[:id])
       #redirect_to(root_path) unless current_user?(@user)
     #end
+    
+    def signed_in_user
+      if current_user.nil?
+        redirect_to signin_path, :notice => "Please sign in to access this page" 
+      end
+    end
 
     def admin_user
       flash[:error] = "You don't have permission to view users"
