@@ -21,9 +21,18 @@
     = render 'layouts/footer'
 
     %nav
-      - if signed_in?
+      /- if signed_in?
+      /= debug signed_in?
+      - if current_user
         %ul
           %li= link_to 'Profile', current_user
           %li= link_to 'Settings', edit_user_path(current_user)
           %li= link_to 'Signout', signout_path, :method => :delete
 
+      - if admin?
+        test
+
+      = debug current_user
+      = debug admin?
+      /= debug session
+      /= debug current_user().nil?

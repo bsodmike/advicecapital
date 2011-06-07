@@ -1,10 +1,9 @@
 class UsersController < ApplicationController
-  include SessionsHelper
 
-  before_filter :authenticate, :only => [:index, :show, :edit, :update, :destroy]
-  before_filter :correct_user, :only => [:edit, :update]
+  #before_filter :authenticate, :only => [:index, :show, :edit, :update, :destroy]
+  #before_filter :correct_user, :only => [:edit, :update]
   before_filter :admin_user,   :only => [:index, :destroy]
-  before_filter :signed_in_user, :only => [:new, :create]
+  before_filter :signed_in_user, :only => [:new, :show, :create, :edit, :update, :destroy, :index]
 
   # GET /users
   # GET /users.xml
@@ -50,7 +49,7 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
 
     if @user.save
-      sign_in @user
+      #sign_in @user
       flash[:success] = "User created successfully!"
       redirect_to @user
     else
@@ -90,13 +89,10 @@ class UsersController < ApplicationController
   private
 
     # Private from Users_controller
-    def correct_user
-      @user = User.find(params[:id])
-      redirect_to(root_path) unless current_user?(@user)
-    end
-
-    def admin_user
-      flash[:error] = "You don't have permission to view users"
-      redirect_to(root_path) unless current_user.admin?
-    end
+    #def correct_user
+      #@user = User.find(params[:id])
+      #redirect_to(root_path) unless current_user?(@user)
+    #end
+    
+    
 end

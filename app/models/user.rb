@@ -1,9 +1,9 @@
-require 'digest'
-
 class User < ActiveRecord::Base
-  attr_accessor :password # creates a virtual password attribute, only to use in memory
-  attr_accessible :name, :email, :password, :password_confirmation  # enables the :name and :email attribute to be accessible
+  attr_accessible :name, :email, :password, :password_confirmation
 
+  attr_accessor :password # creates a virtual password attribute, only to use in memory
+  before_save :encrypt_password
+  
   email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i # full regex
 
   validates :name, :length => { :maximum => 50 },
@@ -14,47 +14,24 @@ class User < ActiveRecord::Base
                     :presence => true
 
   validates :password, :presence => true,
+                       :on => :create,
                        :confirmation => true, # it needs a confirmation
                        :length => { :within => 6..40 }  # the length has to be WITHIN 6-40 characters
 
-  before_save :encrypt_password
-
-  # Return true if the submitted password matches the users password
-  def has_password?(submitted_password)
-    # Compare the encrypted_password with the encrypted version of submitted_password
-    encrypted_password == encrypt(submitted_password)
-  end
-
-  # Authenticate with email and password combination
-  def self.authenticate(email, submitted_password)
+  def self.authenticate(email, password)
     user = find_by_email(email)
-    return nil if user.nil?
-    return user if user.has_password?(submitted_password)
+    if user && user.password_hash == BCrypt::Engine.hash_secret(password, user.password_salt)
+      user
+    else
+      nil
+    end
   end
 
-  # authenticates the user again, if a cookie is saved
-  def self.authenticate_with_salt(id, cookie_salt)
-    user = find_by_id(id)
-    return nil if user.nil?
-    (user && user.salt == cookie_salt) ? user : nil
+  def encrypt_password
+    if password.present?
+      self.password_salt = BCrypt::Engine.generate_salt
+      self.password_hash = BCrypt::Engine.hash_secret(password, password_salt)
+    end
   end
 
-  private
-
-    def encrypt_password
-      self.salt = make_salt if new_record?
-      self.encrypted_password = encrypt(password)
-    end
-
-    def encrypt(string)
-      secure_hash("#{salt}--#{string}")
-    end
-
-    def make_salt
-      secure_hash("#{Time.now.utc}--#{password}")
-    end
-
-    def secure_hash(string)
-      Digest::SHA2.hexdigest(string)
-    end
 end

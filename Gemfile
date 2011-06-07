@@ -1,10 +1,16 @@
 source 'http://rubygems.org'
 
+<<<<<<< HEAD
 gem 'rails', '3.1.0.rc1'
+=======
+gem 'rails'
+#gem 'rake'#, '0.8.7'
+>>>>>>> d6c87e3dd1a0f8e45731b24c1ea7392301cee9aa
 gem 'rake', '0.8.7'
 gem 'haml'
 gem 'sass'
 gem 'meta_search'
+gem 'bcrypt-ruby', :require => 'bcrypt'
 
 group :development, :test do
   #gem 'rspec-rails'

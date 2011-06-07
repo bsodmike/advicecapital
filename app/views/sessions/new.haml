@@ -1,8 +1,10 @@
+= debug params
 = flash[:error]
 
 %h3 Sign in
 
-- form_for(:session, :url => sessions_path) do |f|
+/ form_for :session, :action => :create do |f|
+= form_for :session , :url => {:action => :create} do |f|
   .field
     = f.label :email
     %br/
