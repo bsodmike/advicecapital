@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   include SessionsHelper
 
   private
-  
+
   def signed_in_user
     if current_user.nil?
       redirect_to signin_path, :notice => "Please sign in to access this page"
