@@ -1,16 +1,14 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.1.0.rc1'
-
-# Bundle edge Rails instead:
-# gem 'rails',     :git => 'git://github.com/rails/rails.git'
-
+gem 'rake', '0.8.7'
 gem 'sqlite3'
 
 # Asset template engines
 gem 'sass'
 gem 'coffee-script'
 gem 'uglifier'
+#gem 'sprockets'
 
 gem 'jquery-rails'
 

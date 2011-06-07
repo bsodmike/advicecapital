@@ -50,3 +50,23 @@ Employee.create([
       :image => 'jesper_thaning.jpg'
     }
 ])
+
+
+n = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+
+for news in [1..10]
+  puts news
+end
+
+News.create([
+    { :content => n },
+    { :content => n },
+    { :content => n },
+    { :content => n },
+    { :content => n },
+    { :content => n },
+])
+
+Users.create([
+    
+])

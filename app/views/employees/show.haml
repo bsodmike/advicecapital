@@ -13,6 +13,7 @@
 %p
   %b Phone:
   = @employee.phone
-= link_to 'Edit', edit_employee_path(@employee)
-|
-= link_to 'Back', employees_path
+
+- if current_user
+  = link_to 'Edit', edit_employee_path(@employee), :style => 'color: black;'
+  = link_to 'Destroy', @employee, :confirm => 'Are you sure?', :method => :delete, :style => 'color: black;'

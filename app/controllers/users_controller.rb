@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   #before_filter :authenticate, :only => [:index, :show, :edit, :update, :destroy]
   #before_filter :correct_user, :only => [:edit, :update]
   before_filter :admin_user,   :only => [:index, :destroy]
-  before_filter :signed_in_user, :only => [:new, :show, :create, :edit, :update, :destroy, :index]
+  before_filter :signed_in_user, :only => [ :show,  :edit, :update, :destroy, :index]
 
   # GET /users
   # GET /users.xml

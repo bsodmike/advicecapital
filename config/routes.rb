@@ -18,6 +18,8 @@ Advicecapital::Application.routes.draw do
   
   match '/organisation', :to => 'org#index'
 
+  match '/employees', :redirect => ('/organisation')
+
   #match '/organisation/employees', :to => 'employees#index'
   #match '/organisation/board', :to => 'boards#index'
 

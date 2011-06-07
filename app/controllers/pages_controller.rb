@@ -2,6 +2,7 @@ class PagesController < ApplicationController
   
   def index
     @page_title = "Advice Capital A/S - Index"
+    @news = News.all
   end
 
   def show
