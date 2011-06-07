@@ -1,18 +1,18 @@
 source 'http://rubygems.org'
 
-gem 'rails'
+gem 'rails', '3.1.0.rc1'
 gem 'rake', '0.8.7'
 gem 'haml'
 gem 'sass'
 gem 'meta_search'
 
 group :development, :test do
-  gem 'rspec-rails'
+  #gem 'rspec-rails'
   gem 'annotate-models'
 end
 
 group :test do
-  gem 'rspec'
+  #gem 'rspec'
   gem 'webrat'
   gem 'factory_girl_rails'
 end
