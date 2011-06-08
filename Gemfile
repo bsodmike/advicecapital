@@ -3,23 +3,23 @@ source 'http://rubygems.org'
 gem 'rails', '3.1.0.rc2'
 gem 'rake', '0.8.7'
 gem 'sqlite3'
-gem 'rack-ssl'
+#gem 'rack-ssl'
 
 # Asset template engines
 gem 'sass'
 gem 'coffee-script'
 gem 'uglifier'
-#gem 'sprockets'
-
+gem 'sprockets'
 gem 'jquery-rails'
 
-
+gem 'carrierwave'
 gem 'haml'
 gem 'meta_search'
 gem 'bcrypt-ruby', :require => 'bcrypt'
 
 # Use unicorn as the web server
-# gem 'unicorn'
+gem 'kgio'
+gem 'unicorn'
 
 # Deploy with Capistrano
 # gem 'capistrano'

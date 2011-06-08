@@ -1,4 +1,4 @@
-require 'rack/ssl'
+#require 'rack/ssl'
 
 Advicecapital::Application.configure do
 
@@ -24,7 +24,6 @@ Advicecapital::Application.configure do
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
   #config.force_ssl = true
-  config.middleware.use Rack::SSL
 
   # See everything in the log (default is :info)
   # config.log_level = :debug
