@@ -7,6 +7,8 @@ require 'rails/all'
 Bundler.require(:default, Rails.env) if defined?(Bundler)
 
 module Advicecapital
+
+  require 'rack/ssl'
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
@@ -46,7 +48,7 @@ module Advicecapital
     # Enable the asset pipeline
     config.assets.enabled = true
 
-    #config.force_ssl
+    config.force_ssl
 
   end
 end
