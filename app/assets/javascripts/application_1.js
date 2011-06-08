@@ -51,7 +51,7 @@
 	  };
 
     // Organisation Info
-    $(".employeeNames li, .employeeImages li").hover(function () {
+    $(".employee_names li, .employee_images li").hover(function () {
       var self = $(this);    
       var id = getId(self);
       
