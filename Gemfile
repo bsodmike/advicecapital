@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.0.rc2'
+gem 'rails', '3.1.0.rc3'
 gem 'rake', '0.8.7'
 gem 'sqlite3'
 #gem 'rack-ssl'
@@ -18,8 +18,7 @@ gem 'meta_search'
 gem 'bcrypt-ruby', :require => 'bcrypt'
 
 # Use unicorn as the web server
-gem 'kgio'
-gem 'unicorn'
+# gem 'unicorn'
 
 # Deploy with Capistrano
 # gem 'capistrano'
