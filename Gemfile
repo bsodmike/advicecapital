@@ -1,15 +1,12 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.0.rc2'
-gem 'rake', '0.8.7'
-gem 'sqlite3'
-gem 'rack-ssl'
+gem 'rails', '3.1.0.rc4'
 
 # Asset template engines
 gem 'sass'
 gem 'coffee-script'
 gem 'uglifier'
-#gem 'sprockets'
+gem 'sprockets', "2.0.0.beta.10"
 
 gem 'jquery-rails'
 
@@ -38,4 +35,5 @@ end
 group :development, :test do
   #gem 'rspec-rails'
   gem 'annotate-models'
+  gem 'sqlite3'
 end
