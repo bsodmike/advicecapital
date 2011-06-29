@@ -1,8 +1,11 @@
 require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
+<<<<<<< HEAD
 #require 'rack/ssl'
 
+=======
+>>>>>>> 70a26e94311e1b42df9aff62e1e06b63ec480d1a
 # If you have a Gemfile, require the gems listed there, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env) if defined?(Bundler)
@@ -47,7 +50,10 @@ module Advicecapital
     # Enable the asset pipeline
     config.assets.enabled = true
 
+<<<<<<< HEAD
     config.force_ssl = false
+=======
+>>>>>>> 70a26e94311e1b42df9aff62e1e06b63ec480d1a
 
   end
 end

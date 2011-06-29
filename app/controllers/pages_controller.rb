@@ -27,9 +27,9 @@ class PagesController < ApplicationController
     end
 
   # Become Client/Customer?
-  def become_customer
-    @page_title = "Bliv kunde"
-  end
+  #def become_customer
+    #@page_title = "Bliv kunde"
+  #end
 
     def invest_advice
       @page_title = "Investering i Advice Invest A/S"
