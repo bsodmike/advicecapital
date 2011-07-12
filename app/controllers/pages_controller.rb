@@ -17,7 +17,6 @@ class PagesController < ApplicationController
     @page_title = "Advice Capital A/S - Contact"
   end
 
-  
     def employees
       @page_title = "Medarbejdere"
     end
