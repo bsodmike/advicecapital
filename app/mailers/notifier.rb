@@ -18,6 +18,8 @@ class Notifier < ActionMailer::Base
   #   en.notifier.order_shipped.subject
   #
   def order_shipped
+    
+  end
   #   en.notifier.notification.subject
   #
   def notification
