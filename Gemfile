@@ -10,19 +10,15 @@ gem 'sprockets', "2.0.0.beta.10"
 
 gem 'jquery-rails'
 
-
+gem 'carrierwave'
 gem 'haml'
 gem 'meta_search'
 gem 'bcrypt-ruby', :require => 'bcrypt'
 
-# Use unicorn as the web server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'
+group :production do
+  gem 'therubyracer-heroku'
+  gem 'pg'
+end
 
 group :test do
   # Pretty printed test output
