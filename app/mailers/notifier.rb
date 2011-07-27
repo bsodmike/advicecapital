@@ -4,7 +4,6 @@ class Notifier < ActionMailer::Base
   # Subject can be set in your I18n file at config/locales/en.yml
   # with the following lookup:
   #
-<<<<<<< HEAD
   #   en.notifier.order_received.subject
   #
   def order_received
@@ -19,20 +18,11 @@ class Notifier < ActionMailer::Base
   #   en.notifier.order_shipped.subject
   #
   def order_shipped
-<<<<<<< HEAD
-<<<<<<< HEAD
     
   end
-=======
-=======
->>>>>>> parent of e6a9ef4... update
-=======
-=======
->>>>>>> parent of e6a9ef4... update
   #   en.notifier.notification.subject
   #
   def notification
->>>>>>> 3469d2a4e2d06ad6f5f39de8d87e6553f41b892f
     @greeting = "Hi"
 
     mail :to => "to@example.org"
