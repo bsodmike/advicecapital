@@ -20,8 +20,12 @@ class Notifier < ActionMailer::Base
   #
   def order_shipped
 <<<<<<< HEAD
+<<<<<<< HEAD
     
   end
+=======
+=======
+>>>>>>> parent of e6a9ef4... update
 =======
 =======
 >>>>>>> parent of e6a9ef4... update
