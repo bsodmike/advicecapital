@@ -3,56 +3,59 @@ body {
   font-family:Arial, Helvetica, sans-serif;
 }
 
-p {
-  width: 97%;
-}
-
+/* LINKS */
 a, a:hover, a:visited, a:active {
   color: #fff;
   text-decoration: none;
 }
-
 a.link_black {
   color: #000;
 }
+/* LINKS _END_ */
 
+/* HEADER */
 header {
   /*height: 96px;*/
   height: 135px;
-  width: 930px; }
+  width: 930px; 
 
-header #logo {
-  background: url('ac_logo.png');
-  margin-left: 400px;
-  margin-top: 5px;
-  position: absolute;
-  width: 131px;
-  height: 94px;
-  float: right; 
+  #logo {
+    background: url('ac_logo.png');
+    margin-left: 400px;
+    margin-top: 5px;
+    position: absolute;
+    width: 131px;
+    height: 94px;
+    float: right; 
+  }
+  #search_button {
+    border: 1px solid #1c2831;
+    background: #283641;
+    color: #fff;
+  }
+  #search_field {
+    border: 1px solid #283641;
+    background: #fff;
+    color: #000;
+  }
 }
+/* HEADER _END_ */
 
-header #search_button {
-  border: 1px solid #1c2831;
-  background: #283641;
-  color: #fff;
-}
-header #search_field {
-  border: 1px solid #283641;
-  background: #fff;
-  color: #000;
-}
 /* SECTION */
 section {
-  padding-left: 13px;
+  /*padding-left: 13px;*/
   margin: auto;
   padding-top: 40px;
   background: url('center_bg.png') repeat-y;
   width: 894px;
-}
-#main_content {
-  min-height: 300px;
+
+  #main_content {
+    min-height: 300px;
+  }
 }
 /* SECTION _END_ */
+
+/* FOOTER */
 footer {
   text-align: center;
   background: url('footer_bg.png') repeat-x;
@@ -61,44 +64,59 @@ footer {
   color: #fff;
   padding-top: 15px;
   margin-bottom: 0}
+/* FOOTER _END_ */
 
 /* Default Navigation */
-nav ul {
-  list-style-type: none; }
+nav {
+ 
+  ul {
+    list-style-type: none; 
+    
+    li {
+      display: inline-block;
+      float:left; 
+    }
+  }
+}
 
-nav ul li {
-  display: inline-block;
-  float:left; }
-
-/* HEADER */
+/* HEADER NAVIGATION */
 /* Top Navigation */
-header nav {
-  float: left;
+header {
+  nav {
+    float: left;
+    
+    ul {
+      display: block;
+      float: left;
+
+      #top {
+        li {
+          padding: 43px 5px 0 5px;
+          height: 43px;
+        }
+      }
+    }
+
+    #generic {
+      float: right;
+      margin-top: 45px;
+      margin-right: 10px;
+      
+      ul {
+      
+        li {
+          height: 40px;
+          padding: 43px 0 0 0;
+
+          .liLink { padding: 43px 5px 0 0; }
+        }
+      }
+    }
+  }
 }
 
-header nav ul {
-  display: block;
-  float: left;
-}
-header nav#generic {
-  float: right;
-  margin-top: 45px;
-  margin-right: 10px;
-}
-header nav#generic ul li {
-  /*background: url(/images/btn_background.png) repeat-x;*/
-  height: 40px;
-  padding: 43px 0 0 0;
-}
-header nav#generic ul li.liLink { padding: 43px 5px 0 0; }
-
-
-header nav ul#top li {
-  padding: 43px 5px 0 5px;
-  height: 43px;
-}
-header nav ul#top li ul li
-{
+header nav ul
+header nav ul#top li ul li {
     height: auto;
 }
 header nav ul#top li a {
@@ -133,7 +151,8 @@ header nav ul ul {
 header nav ul#top > li > ul > li {
   padding: 20px 5px 0 0;
   background: none;
-  display: none; }
+  display: none; 
+}
 
 header nav ul li ul.hover {
   position: absolute;
@@ -289,37 +308,37 @@ ul.employees_info {}
 
 /* Error Messages */
 .field_with_errors {
-	margin-top: 10px;
-	padding: 2px;
-	background-color: red;
-	display: table;
+  margin-top: 10px;
+  padding: 2px;
+  background-color: red;
+  display: table;
 }
 .field_with_errors label {
-	color: #fff;
+  color: #fff;
 }
 #error_explanation {
-	width: 400px;
-	border: 2px solid red;
-	padding: 7px;
-	padding-bottom: 12px;
-	margin-bottom: 20px;
-	background-color: #f0f0f0;
+  width: 400px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
 }
 #error_explanation h2 {
-	text-align: left;
-	font-weight: bold;
-	padding: 5px 5px 5px 15px;
-	font-size: 12px;
-	margin: -7px;
-	background: #c00;
-	color: #fff;
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  background: #c00;
+  color: #fff;
 }
 #error_explanation p {
-	color: #333;
-	margin-bottom: 0;
-	padding: 5px;
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
 }
 #error_explanation ul li {
-	font-size: 12px;
-	list-style: square;
+  font-size: 12px;
+  list-style: square;
 }
