@@ -149,9 +149,8 @@ header nav ul#top > li > ul.hover > li {
 }
 
 header nav ul li:hover ul li a {
-  color: #000 !important; }
-
-
+  color: #000 !important; 
+}
 
 .slider {
   background: url('imgSlider_bg.png');
