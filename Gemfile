@@ -15,6 +15,11 @@ gem 'haml'
 gem 'meta_search'
 gem 'bcrypt-ruby', :require => 'bcrypt'
 
+group :development do
+  gem 'thin'
+  gem 'eventmachine', '1.0.0.beta.3'
+end
+
 group :production do
   gem 'therubyracer-heroku'
   gem 'pg'
@@ -30,6 +35,5 @@ end
 
 group :development, :test do
   #gem 'rspec-rails'
-  gem 'annotate-models'
   gem 'sqlite3'
 end

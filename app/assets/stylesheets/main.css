@@ -1,5 +1,5 @@
 body {
-  background: #ffffff url(/images/top_bannerEXT.png) repeat-x;
+  background: #ffffff url(top_bannerEXT.png) repeat-x;
   font-family:Arial, Helvetica, sans-serif;
 }
 
@@ -22,7 +22,7 @@ header {
   width: 930px; }
 
 header #logo {
-  background: url(/images/ac_logo.png);
+  background: url(ac_logo.png);
   margin-left: 400px;
   margin-top: 5px;
   position: absolute;
@@ -45,7 +45,7 @@ section {
   padding-left: 13px;
   margin: auto;
   padding-top: 40px;
-  background: url(/images/center_bg.png) repeat-y;
+  background: url(center_bg.png) repeat-y;
   width: 894px;
 }
 #main_content {
@@ -54,7 +54,7 @@ section {
 /* SECTION _END_ */
 footer {
   text-align: center;
-  background: url(/images/footer_bg.png) repeat-x;
+  background: url(footer_bg.png) repeat-x;
   height: 35px;
   width: 100%;
   color: #fff;
@@ -118,7 +118,7 @@ header nav ul#top li a:hover {
   color: #fff;
 }
 header nav ul#top li:hover {
-  background: url(/images/btn_background.png) repeat-x;
+  background: url(btn_background.png) repeat-x;
   height: 40px;
 }
 
@@ -153,7 +153,7 @@ header nav ul li:hover ul li a {
 
 
 .slider {
-  background: url(/images/imgSlider_bg.png);
+  background: url(imgSlider_bg.png);
   min-width: 854px;
   height: 100px;
   margin-left: 5px;
@@ -166,17 +166,17 @@ header nav ul li:hover ul li a {
   margin-bottom: 20px;
 }
   .slider_top {
-    background: url(/images/slider_bg_top.png);
+    background: url(slider_bg_top.png);
     height: 1px;
     width: 854px;
   }
   .slider_center {
-    background: url(/images/slider_bg_center.png) repeat-y;
+    background: url(slider_bg_center.png) repeat-y;
     min-height: 100px;
     width: 854px;
   }
   .slider_bottom {
-    background: url(/images/slider_bg_bottom.png);
+    background: url(slider_bg_bottom.png);
     height: 1px;
     width: 854px;
   }
@@ -206,13 +206,13 @@ header nav ul li:hover ul li a {
   cursor: pointer;
 }
 .arrow_left {
-  background: url(/images/imgSlider/arrow_left.png);
+  background: url(/imgSlider/arrow_left.png);
   width: 23px;
   height: 21px;
   float: left; }
 
 .arrow_right {
-  background: url(/images/imgSlider/arrow_right.png);
+  background: url(/imgSlider/arrow_right.png);
   width: 23px;
   height: 21px;
   float: right; }
@@ -250,7 +250,7 @@ ul.employees_info {
 ul.employees_info {}
 
 #bottom {
-  background: url(/images/bottom_bg.png);
+  background: url(bottom_bg.png);
   width: 861px;
   height: 27px;
   margin-top: 400px;
