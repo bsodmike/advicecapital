@@ -1,5 +1,4 @@
 source 'http://rubygems.org'
-=begin
 gem 'rails', '3.1.0.rc5'
 
 # Asset template engines
@@ -11,9 +10,7 @@ gem 'sprockets', "2.0.0.beta.12"
 gem 'jquery-rails'
 
 gem 'carrierwave'
-=end
-gem 'rails'
-gem 'rake'#, '0.8.7'
+
 gem 'haml'
 gem 'meta_search'
 gem 'bcrypt-ruby', :require => 'bcrypt'
