@@ -3,7 +3,7 @@ source 'http://rubygems.org'
 gem 'rails', '3.1.0.rc5'
 
 # Asset template engines
-gem 'sass'
+gem 'sass-rails'
 gem 'coffee-script'
 gem 'uglifier'
 gem 'sprockets', "2.0.0.beta.12"
