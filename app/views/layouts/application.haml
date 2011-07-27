@@ -25,8 +25,9 @@
 
     %nav
       /- if signed_in?
-      /= debug signed_in?
+      = debug signed_in?
       - if current_user
+        test
         %ul
           %li= link_to 'Profile', current_user
           %li= link_to 'Settings', edit_user_path(current_user)
@@ -39,3 +40,4 @@
       = debug admin?
       /= debug session
       /= debug current_user().nil?
+
