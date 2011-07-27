@@ -6,7 +6,7 @@ gem 'rails', '3.1.0.rc5'
 gem 'sass'
 gem 'coffee-script'
 gem 'uglifier'
-gem 'sprockets', "2.0.0.beta.10"
+gem 'sprockets', "2.0.0.beta.12"
 
 gem 'jquery-rails'
 
