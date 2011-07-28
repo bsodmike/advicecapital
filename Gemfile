@@ -1,19 +1,26 @@
 source 'http://rubygems.org'
-
 gem 'rails', '3.1.0.rc5'
 
 # Asset template engines
-gem 'sass-rails'
-gem 'coffee-script'
-gem 'uglifier'
-gem 'sprockets', "2.0.0.beta.12"
+group :assets do
+  gem 'sass-rails', "~> 3.1.0.rc"
+  gem 'coffee-script'
+  gem 'uglifier'
+end
+
 
 gem 'jquery-rails'
 
 gem 'carrierwave'
+
 gem 'haml'
 gem 'meta_search'
 gem 'bcrypt-ruby', :require => 'bcrypt'
+
+group :development do
+  gem 'thin'
+  gem 'eventmachine', '1.0.0.beta.3'
+end
 
 group :production do
   gem 'therubyracer-heroku'
@@ -35,6 +42,5 @@ end
 
 group :development, :test do
   #gem 'rspec-rails'
-  gem 'annotate-models'
   gem 'sqlite3'
 end

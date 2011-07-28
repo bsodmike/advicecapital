@@ -4,5 +4,19 @@ require 'rake/dsl_definition'
 # for example lib/tasks/capistrano.rake, and they will automatically be available to Rake.
 
 require File.expand_path('../config/application', __FILE__)
+<<<<<<< HEAD
+=======
+require 'rake'
+
+module::Advicecapital
+  class Application
+    include Rake::DSL
+  end
+end
+
+module::RakeFileUtils
+  extend Rake::FileUtilsExt
+end
+>>>>>>> parent of cff1c9b... updated auth
 
 Advicecapital::Application.load_tasks
