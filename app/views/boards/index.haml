@@ -1,0 +1,15 @@
+- @boards.each do |board|
+
+  .span-11
+    %span{:style=>"float:left;margin-right:10px;"}= image_tag board.image
+    %div{:style=>"float:left;margin-top:30px;"}
+      = board.name
+      %br/
+      = board.title
+      %br/
+      %br/
+      = mail_to board.email
+      %br/
+      %br/
+      = board.phone
+

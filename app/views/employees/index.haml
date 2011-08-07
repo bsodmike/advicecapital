@@ -1,0 +1,29 @@
+.organisation_box
+  %ul.employee_names
+    - @employees.each do |employee|
+      %li[employee]= link_to employee.name.split(' ', 2)[0], "/employees/#{employee.id}"
+
+
+.slider_custom
+
+  .slider_top
+
+  .slider_center
+    %ul.employee_images
+      - @employees.each do |employee|
+        %li{:id => "image_#{employee.id}"}= link_to ( image_tag "/images/employees/#{employee.image}" ), "/employees/#{employee.id}"
+
+  .slider_bottom
+
+  - @employees.each do |employee|
+    .employee_info{ :id => "info_#{employee.id}"}
+      %h2= employee.name
+      %h3= employee.title
+      %p
+        %b Email:
+        = employee.email
+
+      %p
+        %b Phone:
+        = employee.phone
+

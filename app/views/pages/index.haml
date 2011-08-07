@@ -1,0 +1,64 @@
+#main_content
+  .slider
+    .arrows
+      .arrow_left
+      .arrow_right
+    %ul
+      %li= image_tag 'imgSlider/img100per.png'
+      %li= image_tag 'imgSlider/img100per.png'
+      %li= image_tag 'imgSlider/img100per.png'
+      %li= image_tag 'imgSlider/img100per.png'
+      %li= image_tag 'imgSlider/img100per.png'
+      %li= image_tag 'imgSlider/img100per.png'
+
+
+  #content
+    .span-12{:style=>"margin-bottom:15px;"}
+      %h3 Advice Capital A/S
+      .news_ticker
+        %ul
+          - @news.each do |news|
+            %li
+              %b= news.created_at
+            %li
+              = news.content
+    .span-9
+      %h3 TEST
+
+    .span-9
+      %h3 Nyheder fra Advice Capital/Advice Invest
+
+      Nyhed 1
+      %br/
+      %br/
+      Nyhed 2
+      %br/
+      %br/
+      Nyhed 3
+
+#bottom
+  %ul
+    %li
+      Dantisco
+      %span{:style=>"color:green;"}0,1%
+    %li
+      Danske Bank
+      %span{:style=>"color:red;"}-1,2%
+    %li
+      Pandora
+      %span{:style=>"color:red;"}-2,8%
+    %li
+      Sydbank
+      %span{:style=>"color:red;"}-0,2%
+    %li
+      Tryg A/S
+      %span{:style=>"color:green;"}8,1%
+    %li
+      DSV
+      %span{:style=>"color:red;"}-0,2%
+    %li
+      Novo Nordisk
+      %span{:style=>"color:green;"}8,1%
+    %li
+      A.P.Møller - Mærsk A
+      %span{:style=>"color:grey;"}0,0%
