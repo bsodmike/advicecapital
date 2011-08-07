@@ -43,8 +43,6 @@ header {
 
 /* SECTION */
 #wrapper {
-  /*padding-left: 13px;*/
-  margin: auto;
   padding-top: 40px;
   background: url('center_bg.png') repeat-y;
   width: 894px;
@@ -69,10 +67,8 @@ footer {
 
 /* Default Navigation */
 nav {
- 
   ul {
     list-style-type: none; 
-    
     li {
       display: inline-block;
       float:left; 
@@ -90,62 +86,57 @@ header {
       display: block;
       float: left;
 
-      #generic {
-        float: right;
-        margin-top: 45px;
-        margin-right: 10px;
+      ul {
+        display: none;
+        li {
+          height: 40px;
+          padding: 43px 0 0 0;
 
-        ul {
+          .liLink { padding: 43px 5px 0 0; }
+        }
+      }
+      ul#top {
+        li {
+          text-decoration: none;
 
-          li {
-            height: 40px;
-            padding: 43px 0 0 0;
-
-            .liLink { padding: 43px 5px 0 0; }
+          ul {
+            li {
+              height: auto;
+              padding: 20px 5px 0 0;
+              background: none;
+              display: none; 
+            }
           }
+          ul.subnav {
+            li {
+              a {
+                height: auto;
+                padding-top: 0;
+                margin-top: 0;
+                margin-bottom: 0;
+              }
+            }
+          }
+          a {
+            display: block;
+            height: 48px;
+            margin-bottom: -30px;
+            margin-top: -30px;
+            padding-top: 75px;
+          }
+          a:hover {
+            color: #fff;
+          }
+        }
+        li:hover {
+          background: url('btn_background.png') repeat-x;
+          height: 40px;
         }
       }
     }
   }
 }
 
-header nav ul#top li ul li {
-    height: auto;
-}
-header nav ul#top li a {
-  display: block;
-  height: 48px;
-  margin-bottom: -30px;
-  margin-top: -30px;
-  padding-top: 75px;
-}
-header nav ul#top li ul.subnav li a
-{
-  height: auto;
-  padding-top: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-header nav ul#top li a:hover {
-  color: #fff;
-}
-header nav ul#top li:hover {
-  background: url('btn_background.png') repeat-x;
-  height: 40px;
-}
-
-header nav ul#top li {
-  text-decoration: none; }
-
-header nav ul ul {
-  display: none;
-}
-
-header nav ul#top > li > ul > li {
-  padding: 20px 5px 0 0;
-  background: none;
-  display: none; 
-}
 
 header nav ul li ul.hover {
   position: absolute;
@@ -169,7 +160,25 @@ header nav ul li:hover ul li a {
   min-width: 854px;
   height: 100px;
   margin-left: 5px;
-  margin-bottom: 20px; }
+  margin-bottom: 20px; 
+  
+  ul {
+    list-style: none;
+    display: inline-block;
+    float:left;
+
+    li {
+      float: left;
+      margin-right: 20px;
+
+      img {
+        width: 115px;
+        height: 77px;
+      }
+    }
+  }
+
+}
 
 .slider_custom {
   width: 854px;
@@ -192,39 +201,30 @@ header nav ul li:hover ul li a {
     height: 1px;
     width: 854px;
   }
-.slider ul {
-  list-style: none;
-  display: inline-block;
-  float:left;
-}
-.slider ul li {
-  float: left;
-  margin-right: 20px;
-}
-.slider_custom ul.employees li {
-  margin: 4px !important;
-  margin-right: 10px !important;
-}
-.slider_custom ul.employees li img {
-  width: 115px;
-  height: 128px;
-  cursor: pointer;
-}
-.slider ul li img {
-  width: 115px;
-  height: 77px;
+
+.slider_custom ul.employees {
+  li {
+    margin: 4px !important;
+    margin-right: 10px !important;
+
+    img {
+      width: 115px;
+      height: 128px;
+      cursor: pointer;
+    }
+  }
 }
 .arrows:hover {
   cursor: pointer;
 }
 .arrow_left {
-  background: url('/imgSlider/arrow_left.png');
+  background: url('imgSlider/arrow_left.png');
   width: 23px;
   height: 21px;
   float: left; }
 
 .arrow_right {
-  background: url('/imgSlider/arrow_right.png');
+  background: url('imgSlider/arrow_right.png');
   width: 23px;
   height: 21px;
   float: right; }
@@ -251,15 +251,17 @@ header nav ul li:hover ul li a {
   height: 200px;
   border: 1px solid gray;
   margin-left: 50px;
-}
-.organisation_box ul li:hover {
-  cursor: pointer;
+
+  ul {
+    li:hover {
+      cursor: pointer;
+    }
+  }
 }
 ul.employees_info {
   display: none;
   list-style: none;
 }
-ul.employees_info {}
 
 #bottom {
   background: url('bottom_bg.png');

@@ -1,5 +1,5 @@
-%nav#generic
-  %ul
+%nav
+  %ul#generic
     %li.liLink
       = link_to 'Forside', root_path
     %li.liLink
@@ -8,55 +8,55 @@
       = search_field_tag :search_field, nil, :size => 10
     %li
       = button_to 'Søg', '', :id => 'search_button'
-  %nav
-    %ul#top
-      %li 
-        = link_to 'Om Advice Capital', '/about_ac'
-        %ul.subnav
-          %li
-            = link_to 'Historie', '/about_ac/history'
-          %li
-            = link_to 'Det står vi for / Vores koncept', '/about_ac/concept'
-          %li
-            = link_to 'Resultater', '/about_ac/results'
-          %li
-            = link_to 'Strategi', '/about_ac/strategy'
 
-      %li
-        = link_to 'Advice Invest', '/about_ai'
-        %ul.subnav
-          %li
-            = link_to 'Formål', '/about_ai/purpose'
-          %li
-            = link_to 'Derfor valgte vi Advice Invest', '/about_ai/we_choosed_ai'
+  %ul#main
+    %li 
+      = link_to 'Om Advice Capital', '/about_ac'
+      %ul.subnav
+        %li
+          = link_to 'Historie', '/about_ac/history'
+        %li
+          = link_to 'Det står vi for / Vores koncept', '/about_ac/concept'
+        %li
+          = link_to 'Resultater', '/about_ac/results'
+        %li
+          = link_to 'Strategi', '/about_ac/strategy'
 
-      %li
-        = link_to 'Organisation', organisation_path
+    %li
+      = link_to 'Advice Invest', '/about_ai'
+      %ul.subnav
+        %li
+          = link_to 'Formål', '/about_ai/purpose'
+        %li
+          = link_to 'Derfor valgte vi Advice Invest', '/about_ai/we_choosed_ai'
 
-      %li
-        = link_to 'Bliv kunde', become_customer_path
-        %ul.subnav
-          %li
-            = link_to 'Investering i Advice Invest A/S', '/become_client/invest_advice'
-          %li
-            = link_to 'Individuel investeringsrådgivning', '/become_client/individual_invest_advice'
+    %li
+      = link_to 'Organisation', organisation_path
 
-      %li
-        = link_to 'Investeringsunivers', invest_universe_path
-        %ul.subnav
-          %li
-            = link_to 'Aktier', '/invest_universe/stocks'
-          %li
-            = link_to 'Virksomhedsobligationer', '/invest_universe/company_bonds'
-          %li
-            = link_to 'Obligationer', '/invest_universe/bonds'
-          %li
-            = link_to 'Valuta', '/invest_universe/valuta'
+    %li
+      = link_to 'Bliv kunde', become_customer_path
+      %ul.subnav
+        %li
+          = link_to 'Investering i Advice Invest A/S', '/become_client/invest_advice'
+        %li
+          = link_to 'Individuel investeringsrådgivning', '/become_client/individual_invest_advice'
 
-      %li
-        = link_to 'Nyheder', '/news'
-      %li
-        = link_to 'Investor login', investor_login_path
-        %ul.subnav
-          %li
-            = link_to 'Modtag Advice Invest', '/investor_login/get_repport'
+    %li
+      = link_to 'Investeringsunivers', invest_universe_path
+      %ul.subnav
+        %li
+          = link_to 'Aktier', '/invest_universe/stocks'
+        %li
+          = link_to 'Virksomhedsobligationer', '/invest_universe/company_bonds'
+        %li
+          = link_to 'Obligationer', '/invest_universe/bonds'
+        %li
+          = link_to 'Valuta', '/invest_universe/valuta'
+
+    %li
+      = link_to 'Nyheder', '/news'
+    %li
+      = link_to 'Investor login', investor_login_path
+      %ul.subnav
+        %li
+          = link_to 'Modtag Advice Invest', '/investor_login/get_repport'
