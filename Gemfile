@@ -10,12 +10,10 @@ end
 
 
 gem 'jquery-rails'
-
 gem 'carrierwave'
 
 gem 'haml'
 gem 'meta_search'
-gem 'bcrypt-ruby', :require => 'bcrypt'
 
 group :development do
   gem 'thin'
