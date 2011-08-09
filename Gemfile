@@ -23,6 +23,7 @@ end
 group :production do
   gem 'therubyracer-heroku'
   gem 'pg'
+  gem 'arel', '2.1.4'
 end
 
 group :test do
