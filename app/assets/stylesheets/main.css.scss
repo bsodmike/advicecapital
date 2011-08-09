@@ -25,6 +25,9 @@ header {
     ul#generic {
       float: right;
       li {
+        a {
+          text-decoration: none;
+        }
         ul.hover {
           position: absolute;
           display: block;
@@ -48,12 +51,13 @@ header {
       margin-top: 20px;
 
       li {
+        cursor: pointer;
+        height: 70px;
+        padding: 70px 5px 2px 5px;
+
         a {
           text-decoration: none;
           height: 48px;
-          margin-bottom: -30px;
-          margin-top: -30px;
-          padding-top: 75px;
         }
         a:hover {
           color: #fff;
@@ -83,14 +87,16 @@ header {
             }
           }
         }
-        
-      }
-      li:hover {
-        background: url('btn_background.png') repeat-x;
-        height: 40px;
       }
     }
+    li:hover {
+      background: url('btn_background.png') repeat-x;
+      height: 70px;
+    }
   }
+  
+
+        
 
   #logo {
     background: url('ac_logo.png');
@@ -156,46 +162,68 @@ nav {
   margin-left: 5px;
   margin-bottom: 20px; 
   
-  ul {
-    list-style: none;
-    display: inline-block;
-    float:left;
+  #slider_content {
+    width: 800px;
 
-    li {
+    ul {
+      list-style: none;
+      display: inline-block;
       float: left;
-      margin-right: 20px;
 
-      img {
-        width: 115px;
-        height: 77px;
+      li {
+        float: left;
+        margin-right: 20px;
+
+        img {
+          width: 115px;
+          height: 77px;
+        }
       }
     }
   }
+  .arrows {
+    clear: both;
+    width: 23px;
+    height: 90px;
+  }
+  .arrow_left {
+    background: url('imgSlider/arrow_left.png');
+    width: 23px;
+    height: 21px;
+    float: left; 
+  }
 
+  .arrow_right {
+    background: url('imgSlider/arrow_right.png');
+    width: 23px;
+    height: 21px;
+    float: right; 
+  }
+  .arrows:hover {
+    cursor: pointer;
+  }
 }
-
-.slider_top {
-  background: url('slider_bg_top.png');
-  height: 1px;
-  width: 854px;
-}
-.slider_center {
-  background: url('slider_bg_center.png') repeat-y;
-  min-height: 100px;
-  width: 854px;
-}
-.slider_bottom {
-  background: url('slider_bg_bottom.png');
-  height: 1px;
-  width: 854px;
-}
-
 .slider_custom {
   width: 854px !important;
   min-height: 100px;
   margin-left: 5px;
   margin-bottom: 20px;
 
+  .slider_top {
+    background: url('slider_bg_top.png');
+    height: 1px;
+    width: 854px;
+  }
+  .slider_center {
+    background: url('slider_bg_center.png') repeat-y;
+    min-height: 100px;
+    width: 854px;
+  }
+  .slider_bottom {
+    background: url('slider_bg_bottom.png');
+    height: 1px;
+    width: 854px;
+  }
   ul.employee_images {
 
     li {
@@ -225,22 +253,8 @@ nav {
     list-style: none;
   }
 }
-.arrows:hover {
-  cursor: pointer;
-}
-.arrow_left {
-  background: url('imgSlider/arrow_left.png');
-  width: 23px;
-  height: 21px;
-  float: left; 
-}
 
-.arrow_right {
-  background: url('imgSlider/arrow_right.png');
-  width: 23px;
-  height: 21px;
-  float: right; 
-}
+
 .news_ticker ul {
   list-style: none;
 }
