@@ -11,12 +11,12 @@
   .slider_center
     %ul.employee_images
       - @employees.each do |employee|
-        %li{:id => "image_#{employee.id}"}= link_to ( image_tag "/images/employees/#{employee.image}" ), "/employees/#{employee.id}"
+        %li{:id => "image_#{employee.id}"}= link_to ( image_tag "employees/#{employee.image}" ), "/employees/#{employee.id}"
 
   .slider_bottom
 
   - @employees.each do |employee|
-    .employee_info{ :id => "info_#{employee.id}"}
+    .employee_info{ :id => "info_#{employee.id}" }
       %h2= employee.name
       %h3= employee.title
       %p

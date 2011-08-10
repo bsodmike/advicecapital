@@ -5,27 +5,25 @@ class SessionsController < ApplicationController
   end
 
   def create
-    # Use the authenticate method from the User model along with the parametres of :session to validate the user login
-    user = User.authenticate(params[:session][:email], params[:session][:password])
-    #user = User.authenticate(params[:email], params[:password])
-    
-    if user
-      session[:user_id] = user.id
-      #sign_in user # Signs in the User
-      redirect_to current_user, :notice => "Signed in"
+    user = User.find_by_email(params[:email])
+    if user && user.authenticate(params[:password])
+      if params[:remember_me]
+        cookies.permanent[:auth_token] = user.auth_token
+      else
+        cookies[:auth_token] = user.auth_token
+      end
       
     else
-      flash.now[:error] = "Invalid email/password combination"
+      render :new, :error => "Invalid email/password combination"
       @title = "Sign in"
-      render 'new'
     end
   
   end
 
   def destroy
-    session[:user_id] = nil
+    cookies.delete(:auth_token)
     #sign_out
-    redirect_to root_path, :notice => 'Signed out!'
+    redirect_to root_url, :notice => 'Signed out!'
   end
 
 end

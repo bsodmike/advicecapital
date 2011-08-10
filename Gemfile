@@ -10,12 +10,10 @@ end
 
 
 gem 'jquery-rails'
-
 gem 'carrierwave'
 
 gem 'haml'
 gem 'meta_search'
-gem 'bcrypt-ruby', :require => 'bcrypt'
 
 group :development do
   gem 'thin'
@@ -25,11 +23,7 @@ end
 group :production do
   gem 'therubyracer-heroku'
   gem 'pg'
-end
-
-group :development do
-  gem 'thin'
-  gem 'eventmachine', '1.0.0.beta.3'
+  gem 'arel', '2.1.4'
 end
 
 group :test do
