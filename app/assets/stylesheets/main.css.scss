@@ -15,16 +15,19 @@ a.link_black {
 
 /* HEADER */
 header {
-  height: 150px;
-  width: 930px; 
+  height: 131px;
+  width: 100%;
+  padding: 0 !important;
+
 
   /* HEADER NAVIGATION */
   /* Top Navigation */
 
   nav {
     ul#generic {
+      margin: 0;
       float: right;
-      margin-top: 70px;
+
       li {
         padding-right: 4px;
         a {
@@ -32,6 +35,7 @@ header {
         }
       }
     }
+
     ul#main {
       float: left;
       margin-top: 20px;
@@ -39,14 +43,11 @@ header {
       li {
         cursor: pointer;
         height: 70px;
-        padding: 70px 5px 2px 5px;
+        padding: 70px 2px 2px 2px;
 
         a {
           text-decoration: none;
           height: 48px;
-        }
-        a:hover {
-          color: #fff;
         }
 
         ul {
@@ -59,27 +60,25 @@ header {
             }
           }
         }
+      }
+
+      li:hover {
+        background: url('btn_background.png') repeat-x;
+        padding: 70px 2px 2px 2px;
+
         ul.hover {
-          position: absolute;
-          display: inline-block;
-          padding: 10px 0 0 20px;
-          
           li {
-            display: inline-block;
+            background: #fff;
+            display: inline;
           }
         }
       }
-      li:hover {
-        background: url('btn_background.png') repeat-x;
-        height: 70px;
-      }
     }
-    
   }
   #logo {
     background: url('ac_logo.png');
     margin-left: 400px;
-    margin-top: 5px;
+    margin-top: 2px;
     position: absolute;
     width: 131px;
     height: 94px;
@@ -95,79 +94,6 @@ header {
     background: #fff;
     color: #000;
   }
-<<<<<<< HEAD
-
-  /* HEADER NAVIGATION */
-  /* Top Navigation */
-  nav {
-    float: left;
-    
-    ul {
-      display: block;
-      float: left;
-
-      ul {
-        display: none;
-        li {
-          height: 40px;
-          padding: 43px 0 0 0;
-
-          .liLink { padding: 43px 5px 0 0; }
-        }
-      }
-      ul#top {
-        li {
-          text-decoration: none;
-
-          ul {
-            li {
-              height: auto;
-              padding: 20px 5px 0 0;
-              background: none;
-              display: none; 
-            }
-          }
-          ul.subnav {
-            li {
-              a {
-                height: auto;
-                padding-top: 0;
-                margin-top: 0;
-                margin-bottom: 0;
-              }
-            }
-          }
-          a {
-            display: block;
-            height: 48px;
-            margin-bottom: -30px;
-            margin-top: -30px;
-            padding-top: 75px;
-          }
-          a:hover {
-            color: #fff;
-          }
-        }
-        li:hover {
-          background: url('btn_background.png') repeat-x;
-          height: 40px;
-        }
-      }
-    }
-  }
-}
-/* HEADER _END_ */
-
-/* SECTION */
-#wrapper {
-  padding-top: 40px;
-  background: url('center_bg.png') repeat-y;
-  width: 884px;
-
-  #main_content {
-    width: 100%;
-    padding-right: 15px;
-=======
 }
 /* HEADER _END_ */
 
@@ -177,11 +103,10 @@ header {
   padding-left: 10px;
   background: url('center_bg.png') repeat-y;
   width: 894px;
-  margin: 0;
+  min-height: 500px;
 
   #main_content {
->>>>>>> 6fa84c97d603d8ad86933c425e875048a7e86d82
-    min-height: 300px;
+    min-height: 500px;
   }
 }
 /* SECTION _END_ */
@@ -194,10 +119,7 @@ footer {
   width: 100%;
   color: #fff;
   padding-top: 15px;
-<<<<<<< HEAD
   margin-bottom: 0
-=======
->>>>>>> 6fa84c97d603d8ad86933c425e875048a7e86d82
 }
 /* FOOTER _END_ */
 
@@ -211,7 +133,6 @@ nav {
     }
   }
 }
-<<<<<<< HEAD
 
 header nav ul li ul.hover {
   position: absolute;
@@ -230,14 +151,13 @@ header nav ul li:hover ul li a {
   color: #000 !important; 
 }
 
-=======
->>>>>>> 6fa84c97d603d8ad86933c425e875048a7e86d82
 .slider {
   background: url('imgSlider_bg.png');
   min-width: 854px;
   height: 100px;
   margin-left: 5px;
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
+  float: left;
   
   #slider_content {
 
@@ -258,8 +178,6 @@ header nav ul li:hover ul li a {
       }
     }
   }
-<<<<<<< HEAD
-=======
   .arrows {
     clear: both;
     width: 23px;
@@ -281,7 +199,6 @@ header nav ul li:hover ul li a {
   .arrows:hover {
     cursor: pointer;
   }
->>>>>>> 6fa84c97d603d8ad86933c425e875048a7e86d82
 }
 .slider_custom {
   width: 854px !important;
@@ -373,17 +290,23 @@ header nav ul li:hover ul li a {
     }
   }
 }
+.admin_box {
+  position: fixed;
+  top: 10;
+  left: 0;
+  width: 120px;
+  height: 200px;
+  border: 1px solid gray;
+  margin-left: 20px;
+}
 #bottom {
   background: url('bottom_bg.png');
-  width: 861px;
+  width: 865px;
   height: 27px;
   margin-bottom:4px;
-<<<<<<< HEAD
   margin-right: 10px;
-}
-=======
-  margin-top: 400px;
->>>>>>> 6fa84c97d603d8ad86933c425e875048a7e86d82
+  padding: 0 !important;
+  text-align: center;
 
   ul {
     padding-top: 4px;

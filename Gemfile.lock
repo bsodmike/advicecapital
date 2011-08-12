@@ -131,10 +131,7 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
-<<<<<<< HEAD
   arel (= 2.1.4)
-=======
->>>>>>> work_local
   carrierwave
   coffee-script
   eventmachine (= 1.0.0.beta.3)
