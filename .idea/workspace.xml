@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4c860ec-770e-4b95-877c-49627b30794d" name="Default" comment="">
+<<<<<<< HEAD
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/projectCodeStyle.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/advicecapital.iml" afterPath="$PROJECT_DIR$/.idea/advicecapital.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
@@ -10,6 +11,36 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/main.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/main.css.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/_footer.haml" afterPath="$PROJECT_DIR$/app/views/layouts/_footer.haml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/_menu.haml" afterPath="$PROJECT_DIR$/app/views/layouts/_menu.haml" />
+=======
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/advicecapital.iml" />
+      <change type="DELETED" beforePath="C:\Users\Daniel\advicecapital\app\assets\stylesheets\blueprint\plugins\buttons\icons\cross.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Daniel\advicecapital\app\assets\stylesheets\blueprint\plugins\buttons\icons\key.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Daniel\advicecapital\app\assets\stylesheets\blueprint\plugins\buttons\icons\tick.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Daniel\advicecapital\app\assets\stylesheets\blueprint\plugins\buttons\readme.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Daniel\advicecapital\app\assets\stylesheets\blueprint\plugins\buttons\screen.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Daniel\advicecapital\app\assets\stylesheets\blueprint\plugins\fancy-type\readme.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Daniel\advicecapital\app\assets\stylesheets\blueprint\plugins\fancy-type\screen.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Daniel\advicecapital\app\assets\stylesheets\blueprint\plugins\link-icons\icons\doc.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Daniel\advicecapital\app\assets\stylesheets\blueprint\plugins\link-icons\icons\email.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Daniel\advicecapital\app\assets\stylesheets\blueprint\plugins\link-icons\icons\external.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Daniel\advicecapital\app\assets\stylesheets\blueprint\plugins\link-icons\icons\feed.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Daniel\advicecapital\app\assets\stylesheets\blueprint\plugins\link-icons\icons\im.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Daniel\advicecapital\app\assets\stylesheets\blueprint\plugins\link-icons\icons\pdf.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Daniel\advicecapital\app\assets\stylesheets\blueprint\plugins\link-icons\icons\visited.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Daniel\advicecapital\app\assets\stylesheets\blueprint\plugins\link-icons\icons\xls.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Daniel\advicecapital\app\assets\stylesheets\blueprint\plugins\link-icons\readme.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Daniel\advicecapital\app\assets\stylesheets\blueprint\plugins\link-icons\screen.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Daniel\advicecapital\app\assets\stylesheets\blueprint\plugins\rtl\readme.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Daniel\advicecapital\app\assets\stylesheets\blueprint\plugins\rtl\screen.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Daniel\advicecapital\app\assets\stylesheets\blueprint\src\forms.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Daniel\advicecapital\app\assets\stylesheets\blueprint\src\grid.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Daniel\advicecapital\app\assets\stylesheets\blueprint\src\grid.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Daniel\advicecapital\app\assets\stylesheets\blueprint\src\ie.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Daniel\advicecapital\app\assets\stylesheets\blueprint\src\print.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Daniel\advicecapital\app\assets\stylesheets\blueprint\src\reset.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Daniel\advicecapital\app\assets\stylesheets\blueprint\src\typography.css" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+>>>>>>> work_local
     </list>
     <ignored path="advicecapital.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,10 +67,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+<<<<<<< HEAD
       <file leaf-file-name="main.css.scss" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/main.css.scss">
           <provider selected="true" editor-type-id="text-editor">
             <state line="70" column="36" selection-start="1128" selection-end="1128" vertical-scroll-proportion="0.42307693">
+=======
+      <file leaf-file-name="main.css.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/main.css.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="73" selection-start="456" selection-end="456" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="print.css" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/blueprint/print.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+>>>>>>> work_local
               <folding />
             </state>
           </provider>
@@ -57,7 +104,11 @@
       <file leaf-file-name="application.haml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/application.haml">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state line="33" column="26" selection-start="785" selection-end="812" vertical-scroll-proportion="0.0">
+=======
+            <state line="30" column="26" selection-start="785" selection-end="792" vertical-scroll-proportion="0.0">
+>>>>>>> work_local
               <folding />
             </state>
           </provider>
@@ -66,7 +117,11 @@
       <file leaf-file-name="_footer.haml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/_footer.haml">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state line="5" column="40" selection-start="273" selection-end="273" vertical-scroll-proportion="0.0">
+=======
+            <state line="4" column="40" selection-start="227" selection-end="227" vertical-scroll-proportion="0.0">
+>>>>>>> work_local
               <folding />
             </state>
           </provider>
@@ -84,7 +139,11 @@
       <file leaf-file-name="_menu.haml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/_menu.haml">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state line="62" column="51" selection-start="1737" selection-end="1737" vertical-scroll-proportion="0.0">
+=======
+            <state line="61" column="73" selection-start="1785" selection-end="1785" vertical-scroll-proportion="0.0">
+>>>>>>> work_local
               <folding />
             </state>
           </provider>
@@ -180,10 +239,13 @@
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+<<<<<<< HEAD
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+=======
+>>>>>>> work_local
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -199,11 +261,19 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+<<<<<<< HEAD
               <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="pages" />
+=======
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stylesheets" />
+>>>>>>> work_local
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -220,6 +290,21 @@
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+<<<<<<< HEAD
+=======
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stylesheets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blueprint" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+>>>>>>> work_local
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -416,14 +501,22 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+<<<<<<< HEAD
     <editor active="true" />
+=======
+    <editor active="false" />
+>>>>>>> work_local
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20849128" sideWeight="0.67085713" order="0" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20849128" sideWeight="0.67085713" order="0" side_tool="false" content_ui="tabs" />
+>>>>>>> work_local
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32914287" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -500,6 +593,7 @@
         <state line="5" column="59" selection-start="147" selection-end="147" vertical-scroll-proportion="0.10023585" />
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/views/password_resets/edit.haml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
@@ -515,6 +609,8 @@
         <state line="23" column="5" selection-start="705" selection-end="705" vertical-scroll-proportion="0.4610849" />
       </provider>
     </entry>
+=======
+>>>>>>> work_local
     <entry file="file://$PROJECT_DIR$/app/models/user.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="32" column="5" selection-start="1222" selection-end="1222" vertical-scroll-proportion="0.0" />
@@ -539,14 +635,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.haml">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state line="33" column="26" selection-start="785" selection-end="812" vertical-scroll-proportion="0.0">
+=======
+        <state line="30" column="26" selection-start="785" selection-end="792" vertical-scroll-proportion="0.0">
+>>>>>>> work_local
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/_footer.haml">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state line="5" column="40" selection-start="273" selection-end="273" vertical-scroll-proportion="0.0">
+=======
+        <state line="4" column="40" selection-start="227" selection-end="227" vertical-scroll-proportion="0.0">
+>>>>>>> work_local
           <folding />
         </state>
       </provider>
@@ -560,14 +664,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/_menu.haml">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state line="62" column="51" selection-start="1737" selection-end="1737" vertical-scroll-proportion="0.0">
+=======
+        <state line="61" column="73" selection-start="1785" selection-end="1785" vertical-scroll-proportion="0.0">
+>>>>>>> work_local
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/main.css.scss">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state line="70" column="36" selection-start="1128" selection-end="1128" vertical-scroll-proportion="0.42307693">
+=======
+        <state line="26" column="73" selection-start="456" selection-end="456" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/blueprint/print.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+>>>>>>> work_local
           <folding />
         </state>
       </provider>
