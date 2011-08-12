@@ -12,10 +12,10 @@ class SessionsController < ApplicationController
       else
         cookies[:auth_token] = user.auth_token
       end
-      
+
+      redirect_to root_url, :notice => "Du er logget ind"
     else
-      render :new, :error => "Invalid email/password combination"
-      @title = "Sign in"
+      render "new", :error => "Forkert email eller kodeord."
     end
   
   end

@@ -18,6 +18,15 @@
       = render 'layouts/header'
 
       #wrapper
+        - flash.each do |key, value|
+          = content_tag(:div, value, :class => "flash #{key}")
+
+        - if current_user
+          .admin_box
+            %ul
+              %li= link_to 'Admin Index', 'admin#index'
+
+
 
         = yield
 
@@ -25,7 +34,6 @@
 
     %nav
       - if current_user
-        test
         %ul
           %li= link_to 'Profile', current_user
           %li= link_to 'Settings', edit_user_path(current_user)
