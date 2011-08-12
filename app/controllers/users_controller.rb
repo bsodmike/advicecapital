@@ -26,10 +26,10 @@ class UsersController < ApplicationController
 
     if @user.save
       #sign_in @user
-      flash[:success] = "User created successfully!"
-      redirect_to @user
+      cookies[:auth_token] = @user.auth_token
+      redirect_to @user, :success => "Brugeren er oprettet!"
     else
-      render 'new'
+      render 'new', :error => "Brugeren kunne ikke oprettes"
     end
   end
 

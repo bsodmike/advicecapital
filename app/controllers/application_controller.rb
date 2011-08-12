@@ -3,6 +3,8 @@ class ApplicationController < ActionController::Base
 
   private
 
+  helper_method :current_user, :signed_in_user, :admin_user
+
     def signed_in_user
       if current_user.nil?
         redirect_to signin_path, :notice => "Please sign in to access this page"
