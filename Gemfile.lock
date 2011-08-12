@@ -141,7 +141,6 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
-  bcrypt-ruby
   carrierwave
   coffee-script
   eventmachine (= 1.0.0.beta.3)

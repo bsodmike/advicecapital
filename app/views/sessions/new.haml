@@ -3,11 +3,7 @@
 
 %h3 Sign in
 
-<<<<<<< HEAD
 = form_for :session, :action => :create do |f|
-=======
-= form_for :session , :url => {:action => :create} do |f|
->>>>>>> 092eb4368287747d95061eccca4a3821a50cebd8
   .field
     = f.label :email
     %br/
@@ -18,6 +14,7 @@
     = f.password_field :password
   .actions
     = f.submit "Sign In"
-/
+
   %p
-    New user? =link_to 'Sign Up now!', signup_path
+    New user?
+    = #link_to 'Sign Up now!', signup_path
