@@ -15,16 +15,19 @@ a.link_black {
 
 /* HEADER */
 header {
-  height: 150px;
-  width: 930px; 
+  height: 131px;
+  width: 100%;
+  padding: 0 !important;
+
 
   /* HEADER NAVIGATION */
   /* Top Navigation */
 
   nav {
     ul#generic {
+      margin: 0;
       float: right;
-      margin-top: 70px;
+
       li {
         padding-right: 4px;
         a {
@@ -32,6 +35,7 @@ header {
         }
       }
     }
+
     ul#main {
       float: left;
       margin-top: 20px;
@@ -39,14 +43,11 @@ header {
       li {
         cursor: pointer;
         height: 70px;
-        padding: 70px 5px 2px 5px;
+        padding: 70px 2px 2px 2px;
 
         a {
           text-decoration: none;
           height: 48px;
-        }
-        a:hover {
-          color: #fff;
         }
 
         ul {
@@ -59,27 +60,25 @@ header {
             }
           }
         }
+      }
+
+      li:hover {
+        background: url('btn_background.png') repeat-x;
+        padding: 70px 2px 2px 2px;
+
         ul.hover {
-          position: absolute;
-          display: inline-block;
-          padding: 10px 0 0 20px;
-          
           li {
-            display: inline-block;
+            background: #fff;
+            display: inline;
           }
         }
       }
-      li:hover {
-        background: url('btn_background.png') repeat-x;
-        height: 70px;
-      }
     }
-    
   }
   #logo {
     background: url('ac_logo.png');
     margin-left: 400px;
-    margin-top: 5px;
+    margin-top: 2px;
     position: absolute;
     width: 131px;
     height: 94px;
@@ -104,10 +103,10 @@ header {
   padding-left: 10px;
   background: url('center_bg.png') repeat-y;
   width: 894px;
-  margin: 0;
+  min-height: 500px;
 
   #main_content {
-    min-height: 300px;
+    min-height: 500px;
   }
 }
 /* SECTION _END_ */
@@ -120,6 +119,7 @@ footer {
   width: 100%;
   color: #fff;
   padding-top: 15px;
+  margin-bottom: 0
 }
 /* FOOTER _END_ */
 
@@ -133,12 +133,31 @@ nav {
     }
   }
 }
+
+header nav ul li ul.hover {
+  position: absolute;
+  display: block;
+  margin-top: -3px;
+  height: 32px;
+  padding: 10px 0 0 20px;
+}
+header nav ul#top > li > ul.hover > li {
+    background: none;
+    display: inline;
+    /*float: none;*/
+}
+
+header nav ul li:hover ul li a {
+  color: #000 !important; 
+}
+
 .slider {
   background: url('imgSlider_bg.png');
   min-width: 854px;
   height: 100px;
   margin-left: 5px;
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
+  float: left;
   
   #slider_content {
 
@@ -271,12 +290,23 @@ nav {
     }
   }
 }
+.admin_box {
+  position: fixed;
+  top: 10;
+  left: 0;
+  width: 120px;
+  height: 200px;
+  border: 1px solid gray;
+  margin-left: 20px;
+}
 #bottom {
   background: url('bottom_bg.png');
-  width: 861px;
+  width: 865px;
   height: 27px;
   margin-bottom:4px;
-  margin-top: 400px;
+  margin-right: 10px;
+  padding: 0 !important;
+  text-align: center;
 
   ul {
     padding-top: 4px;

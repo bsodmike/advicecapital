@@ -8,6 +8,7 @@ group :assets do
   gem 'uglifier'
 end
 
+gem ''
 
 gem 'jquery-rails'
 gem 'carrierwave'
