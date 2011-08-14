@@ -308,13 +308,22 @@ header nav ul li:hover ul li a {
   padding: 0 !important;
   text-align: center;
 
-  ul {
+  #stocks {
+    margin-left: 10px;
     padding-top: 4px;
+    width: 850px !important;
+    height: 15px !important;
+
+    ul {
     list-style-type: none;
-    li {
-      display: inline-block;
+      li {
+        padding-right: 4px;
+        display: inline-block;
+      }
     }
   }
+
+
 }
 
 

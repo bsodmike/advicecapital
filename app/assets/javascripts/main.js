@@ -32,6 +32,11 @@
       visible: 10
     });
 
+    $("#stocks").jCarouselLite({
+      auto: 1,
+      speed: 1000
+    });
+
     // Organisation, employees slider
     $(".slider_custom ul.employees li img").hover(function() {
       $(".employees_info").show();

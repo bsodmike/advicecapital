@@ -8,7 +8,7 @@ group :assets do
   gem 'uglifier'
 end
 
-gem ''
+gem 'ystock'
 
 gem 'jquery-rails'
 gem 'carrierwave'
