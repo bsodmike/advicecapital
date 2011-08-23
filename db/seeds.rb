@@ -51,7 +51,7 @@ Employee.create([
     }
 ])
 
-
+t = 'test'
 n = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
 
 for news in [1..10]
@@ -59,10 +59,10 @@ for news in [1..10]
 end
 
 News.create([
-    { :content => n },
-    { :content => n },
-    { :content => n },
-    { :content => n },
-    { :content => n },
-    { :content => n },
+    { :title => t, :content => n },
+    { :title => t, :content => n },
+    { :title => t, :content => n },
+    { :title => t, :content => n },
+    { :title => t, :content => n },
+    { :title => t, :content => n },
 ])

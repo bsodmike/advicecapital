@@ -113,6 +113,7 @@ header {
   background: url('center_bg.png') repeat-y;
   width: 884px;
   padding-left: 10px;
+  min-height: 300px;
 
   #main_content {
     min-height: 500px;
@@ -210,7 +211,7 @@ header nav ul li:hover ul li a {
 }
 .slider_custom {
   width: 854px !important;
-  min-height: 100px;
+  min-height: 128px;
   margin-left: 5px;
   margin-bottom: 20px;
 
@@ -221,7 +222,7 @@ header nav ul li:hover ul li a {
   }
   .slider_center {
     background: url('slider_bg_center.png') repeat-y;
-    min-height: 100px;
+    min-height: 200px;
     width: 854px;
   }
   .slider_bottom {
@@ -230,7 +231,6 @@ header nav ul li:hover ul li a {
     width: 854px;
   }
   ul.employee_images {
-
     li {
       margin-top: 6px;
       margin-left: 6px;
@@ -303,6 +303,16 @@ header nav ul li:hover ul li a {
   height: 200px;
   border: 1px solid gray;
   margin-left: 20px;
+
+  ul {
+    list-style-type: none;
+
+    li {
+      a {
+        color: #000;
+      }
+    }
+  }
 }
 #bottom {
   background: url('bottom_bg.png');
