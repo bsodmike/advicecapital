@@ -103,37 +103,19 @@ header {
     border: 1px solid #283641;
     background: #fff;
     color: #000;
-<<<<<<< HEAD
-  }  
-=======
   }
->>>>>>> ef9f8bbb5fbc1c000a4adf6e07c6c9663f8326ff
 }
 /* HEADER _END_ */
 
 /* SECTION */
 #wrapper {
   padding-top: 40px;
-<<<<<<< HEAD
   background: url('center_bg.png') repeat-y;
   width: 884px;
-
-  #main_content {
-    padding-right: 15px;
-    padding-left: 10px;
-    background: url('center_bg.png') repeat-y;
-    width: 894px;
-    margin: 0;
-    min-height: 300px;
-=======
   padding-left: 10px;
-  background: url('center_bg.png') repeat-y;
-  width: 894px;
-  min-height: 500px;
 
   #main_content {
     min-height: 500px;
->>>>>>> ef9f8bbb5fbc1c000a4adf6e07c6c9663f8326ff
   }
 }
 /* SECTION _END_ */
@@ -149,8 +131,6 @@ footer {
   margin-bottom: 0
 }
 /* FOOTER _END_ */
-<<<<<<< HEAD
-=======
 
 /* Default Navigation */
 nav {
@@ -163,7 +143,6 @@ nav {
   }
 }
 
->>>>>>> ef9f8bbb5fbc1c000a4adf6e07c6c9663f8326ff
 header nav ul li ul.hover {
   position: absolute;
   display: block;
@@ -179,10 +158,7 @@ header nav ul#top > li > ul.hover > li {
 header nav ul li:hover ul li a {
   color: #000 !important; 
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> ef9f8bbb5fbc1c000a4adf6e07c6c9663f8326ff
 .slider {
   background: url('imgSlider_bg.png');
   min-width: 854px;
@@ -334,11 +310,8 @@ header nav ul li:hover ul li a {
   height: 27px;
   margin-bottom:4px;
   margin-right: 10px;
-<<<<<<< HEAD
-=======
   padding: 0 !important;
   text-align: center;
->>>>>>> ef9f8bbb5fbc1c000a4adf6e07c6c9663f8326ff
 
   #stocks {
     margin-left: 10px;
@@ -354,8 +327,6 @@ header nav ul li:hover ul li a {
       }
     }
   }
-
-
 }
 .employeeInfo {
   display: none;
