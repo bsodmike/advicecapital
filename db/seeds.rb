@@ -66,7 +66,3 @@ News.create([
     { :content => n },
     { :content => n },
 ])
-
-Users.create([
-    
-])

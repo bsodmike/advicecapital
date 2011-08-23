@@ -26,16 +26,19 @@ nav {
 
 /* HEADER */
 header {
-  height: 150px;
-  width: 930px; 
+  height: 131px;
+  width: 100%;
+  padding: 0 !important;
+
 
   /* HEADER NAVIGATION */
   /* Top Navigation */
 
   nav {
     ul#generic {
+      margin: 0;
       float: right;
-      margin-top: 70px;
+
       li {
         padding-right: 4px;
         a {
@@ -43,20 +46,18 @@ header {
         }
       }
     }
+
     ul#main {
       float: left;
 
       li {
         cursor: pointer;
         height: 70px;
-        padding: 70px 5px 2px 5px;
+        padding: 70px 2px 2px 2px;
 
         a {
           text-decoration: none;
           height: 48px;
-        }
-        a:hover {
-          color: #fff;
         }
 
         ul {
@@ -69,26 +70,25 @@ header {
             }
           }
         }
-        ul.hover {
-          position: absolute;
-          display: inline-block;
-          padding: 10px 0 0 20px;
-          
-          li {
-            display: inline-block;
-          }
-        }
       }
+
       li:hover {
         background: url('btn_background.png') repeat-x;
-        height: 70px;
+        padding: 70px 2px 2px 2px;
+
+        ul.hover {
+          li {
+            background: #fff;
+            display: inline;
+          }
+        }
       }
     }
   }
   #logo {
     background: url('ac_logo.png');
     margin-left: 400px;
-    margin-top: 5px;
+    margin-top: 2px;
     position: absolute;
     width: 131px;
     height: 94px;
@@ -103,13 +103,18 @@ header {
     border: 1px solid #283641;
     background: #fff;
     color: #000;
+<<<<<<< HEAD
   }  
+=======
+  }
+>>>>>>> ef9f8bbb5fbc1c000a4adf6e07c6c9663f8326ff
 }
 /* HEADER _END_ */
 
 /* SECTION */
 #wrapper {
   padding-top: 40px;
+<<<<<<< HEAD
   background: url('center_bg.png') repeat-y;
   width: 884px;
 
@@ -120,6 +125,15 @@ header {
     width: 894px;
     margin: 0;
     min-height: 300px;
+=======
+  padding-left: 10px;
+  background: url('center_bg.png') repeat-y;
+  width: 894px;
+  min-height: 500px;
+
+  #main_content {
+    min-height: 500px;
+>>>>>>> ef9f8bbb5fbc1c000a4adf6e07c6c9663f8326ff
   }
 }
 /* SECTION _END_ */
@@ -135,6 +149,21 @@ footer {
   margin-bottom: 0
 }
 /* FOOTER _END_ */
+<<<<<<< HEAD
+=======
+
+/* Default Navigation */
+nav {
+  ul {
+    list-style-type: none; 
+    li {
+      display: inline-block;
+      float:left; 
+    }
+  }
+}
+
+>>>>>>> ef9f8bbb5fbc1c000a4adf6e07c6c9663f8326ff
 header nav ul li ul.hover {
   position: absolute;
   display: block;
@@ -150,12 +179,17 @@ header nav ul#top > li > ul.hover > li {
 header nav ul li:hover ul li a {
   color: #000 !important; 
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> ef9f8bbb5fbc1c000a4adf6e07c6c9663f8326ff
 .slider {
   background: url('imgSlider_bg.png');
   min-width: 854px;
   height: 100px;
   margin-left: 5px;
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
+  float: left;
   
   #slider_content {
 
@@ -285,20 +319,43 @@ header nav ul li:hover ul li a {
     }
   }
 }
+.admin_box {
+  position: fixed;
+  top: 10;
+  left: 0;
+  width: 120px;
+  height: 200px;
+  border: 1px solid gray;
+  margin-left: 20px;
+}
 #bottom {
   background: url('bottom_bg.png');
-  width: 861px;
+  width: 865px;
   height: 27px;
   margin-bottom:4px;
   margin-right: 10px;
+<<<<<<< HEAD
+=======
+  padding: 0 !important;
+  text-align: center;
+>>>>>>> ef9f8bbb5fbc1c000a4adf6e07c6c9663f8326ff
 
-  ul {
+  #stocks {
+    margin-left: 10px;
     padding-top: 4px;
+    width: 850px !important;
+    height: 15px !important;
+
+    ul {
     list-style-type: none;
-    li {
-      display: inline-block;
+      li {
+        padding-right: 4px;
+        display: inline-block;
+      }
     }
   }
+
+
 }
 .employeeInfo {
   display: none;

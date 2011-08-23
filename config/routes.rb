@@ -4,7 +4,7 @@ Advicecapital::Application.routes.draw do
   resources :news
   resources :boards
   resources :employees
-  resources :sessions, :only => [:new, :create, :destroy]
+  resources :sessions
 
 #  match '/organisation', :to => 'pages#organisation'
   match 'investor_login', :to => 'pages#investor_login'
@@ -24,14 +24,14 @@ Advicecapital::Application.routes.draw do
 
   match '/contact', :to => 'pages#contact'
 
+  match '/admin', :to => 'admin#index'
+
 
   root :to => "pages#index"
-
-
-
-  #match '*path' => 'page#show'
   
   AdvicePages.get_pages.each do |key, value|
     match key, :to => "pages#show"
   end
+
+
 end

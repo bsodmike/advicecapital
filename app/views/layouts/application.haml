@@ -4,7 +4,7 @@
     %title= @page_title
     = stylesheet_link_tag "application"
     = render 'layouts/stylesheets' 
-    = javascript_include_tag '//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js'
+    = javascript_include_tag '//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js', '//gsgd.co.uk/sandbox/jquery/easing/jquery.easing.1.3.js'
     = javascript_include_tag 'application'
     = javascript_include_tag 'jcarousellite_1.0.1.min'
     /[if lt IE 9]
@@ -18,6 +18,15 @@
       = render 'layouts/header'
 
       #wrapper
+        - flash.each do |key, value|
+          = content_tag(:div, value, :class => "flash #{key}")
+
+        - if current_user
+          .admin_box
+            %ul
+              %li= link_to 'Admin Index', 'admin#index'
+
+
 
         = yield
 
@@ -25,11 +34,12 @@
 
     %nav
       - if current_user
-        test
         %ul
           %li= link_to 'Profile', current_user
           %li= link_to 'Settings', edit_user_path(current_user)
           %li= link_to 'Signout', signout_path, :method => :delete
+
+      = debug current_user
 
       - if admin?
         test

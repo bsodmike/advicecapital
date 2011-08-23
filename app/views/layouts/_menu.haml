@@ -1,13 +1,4 @@
 %nav
-  %ul#generic
-    %li.liLink
-      = link_to 'Forside', root_path
-    %li.liLink
-      = link_to 'Kontakt', contact_path
-    %li
-      = search_field_tag :search_field, nil, :size => 10
-    %li
-      = button_to 'Søg', '', :id => 'search_button'
 
   %ul#main
     %li 
@@ -60,3 +51,13 @@
       %ul
         %li
           = link_to 'Modtag Advice Invest', '/investor_login/get_repport'
+
+  %ul#generic
+    %li
+      = link_to 'Forside', root_path
+    %li
+      = link_to 'Kontakt', contact_path
+    %li
+      = search_field_tag :search_field, nil, :size => 10
+    %li
+      = button_to 'Søg', '', :id => 'search_button'
