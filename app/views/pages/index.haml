@@ -23,7 +23,7 @@
         %ul
           - @news.each do |news|
             %li
-              %b= news.created_at
+              %b= news.created_at.strftime('%d/%m/%y - %H:%M:%S')
             %li
               = news.content
     .span-9

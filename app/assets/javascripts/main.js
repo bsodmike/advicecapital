@@ -14,21 +14,21 @@
     
     $(".slider").jCarouselLite({
       auto: 1,
-      speed: 1800,
+      speed: 3000,
       visible: 2,
       btnNext: ".arrow_right",
       btnPrev: ".arrow_left"
     });
     $(".slider_custom").jCarouselLite({
       auto: 1,
-      speed: 1800,
+      speed: 3000,
       visible: 6
     });
 
     $(".news_ticker").jCarouselLite({
       vertical: true,
       auto: 1,
-      speed: 1000,
+      speed: 3000,
       visible: 10
     });
 
