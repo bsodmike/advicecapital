@@ -13,6 +13,17 @@ a.link_black {
 }
 /* LINKS _END_ */
 
+/* Default Navigation */
+nav {
+  ul {
+    list-style-type: none; 
+    li {
+      display: inline-block;
+      float: left; 
+    }
+  }
+}
+
 /* HEADER */
 header {
   height: 150px;
@@ -34,7 +45,6 @@ header {
     }
     ul#main {
       float: left;
-      margin-top: 20px;
 
       li {
         cursor: pointer;
@@ -74,7 +84,6 @@ header {
         height: 70px;
       }
     }
-    
   }
   #logo {
     background: url('ac_logo.png');
@@ -94,90 +103,22 @@ header {
     border: 1px solid #283641;
     background: #fff;
     color: #000;
-  }
-<<<<<<< HEAD
-
-  /* HEADER NAVIGATION */
-  /* Top Navigation */
-  nav {
-    float: left;
-    
-    ul {
-      display: block;
-      float: left;
-
-      ul {
-        display: none;
-        li {
-          height: 40px;
-          padding: 43px 0 0 0;
-
-          .liLink { padding: 43px 5px 0 0; }
-        }
-      }
-      ul#top {
-        li {
-          text-decoration: none;
-
-          ul {
-            li {
-              height: auto;
-              padding: 20px 5px 0 0;
-              background: none;
-              display: none; 
-            }
-          }
-          ul.subnav {
-            li {
-              a {
-                height: auto;
-                padding-top: 0;
-                margin-top: 0;
-                margin-bottom: 0;
-              }
-            }
-          }
-          a {
-            display: block;
-            height: 48px;
-            margin-bottom: -30px;
-            margin-top: -30px;
-            padding-top: 75px;
-          }
-          a:hover {
-            color: #fff;
-          }
-        }
-        li:hover {
-          background: url('btn_background.png') repeat-x;
-          height: 40px;
-        }
-      }
-    }
-  }
-=======
->>>>>>> 6753a45de821db9ab50e706e942fdd49d7b1dcec
+  }  
 }
 /* HEADER _END_ */
 
 /* SECTION */
 #wrapper {
   padding-top: 40px;
-<<<<<<< HEAD
   background: url('center_bg.png') repeat-y;
   width: 884px;
 
   #main_content {
-    width: 100%;
     padding-right: 15px;
-=======
-  padding-left: 10px;
-  background: url('center_bg.png') repeat-y;
-  width: 894px;
-  margin: 0;
-
-  #main_content {
->>>>>>> 6753a45de821db9ab50e706e942fdd49d7b1dcec
+    padding-left: 10px;
+    background: url('center_bg.png') repeat-y;
+    width: 894px;
+    margin: 0;
     min-height: 300px;
   }
 }
@@ -191,25 +132,9 @@ footer {
   width: 100%;
   color: #fff;
   padding-top: 15px;
-<<<<<<< HEAD
   margin-bottom: 0
-=======
->>>>>>> 6753a45de821db9ab50e706e942fdd49d7b1dcec
 }
 /* FOOTER _END_ */
-
-/* Default Navigation */
-nav {
-  ul {
-    list-style-type: none; 
-    li {
-      display: inline-block;
-<<<<<<< HEAD
-      float: left; 
-    }
-  }
-}
-
 header nav ul li ul.hover {
   position: absolute;
   display: block;
@@ -222,17 +147,9 @@ header nav ul#top > li > ul.hover > li {
     display: inline;
     /*float: none;*/
 }
-
 header nav ul li:hover ul li a {
   color: #000 !important; 
 }
-
-=======
-      float:left; 
-    }
-  }
-}
->>>>>>> 6753a45de821db9ab50e706e942fdd49d7b1dcec
 .slider {
   background: url('imgSlider_bg.png');
   min-width: 854px;
@@ -259,8 +176,6 @@ header nav ul li:hover ul li a {
       }
     }
   }
-<<<<<<< HEAD
-=======
   .arrows {
     clear: both;
     width: 23px;
@@ -282,7 +197,6 @@ header nav ul li:hover ul li a {
   .arrows:hover {
     cursor: pointer;
   }
->>>>>>> 6753a45de821db9ab50e706e942fdd49d7b1dcec
 }
 .slider_custom {
   width: 854px !important;
@@ -334,12 +248,9 @@ header nav ul li:hover ul li a {
     list-style: none;
   }
 }
-
-
 .news_ticker ul {
   list-style: none;
 }
-
 .submenu_box {
   position: fixed;
   top: 10;
@@ -379,12 +290,7 @@ header nav ul li:hover ul li a {
   width: 861px;
   height: 27px;
   margin-bottom:4px;
-<<<<<<< HEAD
   margin-right: 10px;
-}
-=======
-  margin-top: 400px;
->>>>>>> 6753a45de821db9ab50e706e942fdd49d7b1dcec
 
   ul {
     padding-top: 4px;
@@ -394,13 +300,9 @@ header nav ul li:hover ul li a {
     }
   }
 }
-
-
 .employeeInfo {
   display: none;
 }
-
-
 /* Error Messages */
 .field_with_errors {
   margin-top: 10px;
