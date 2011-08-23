@@ -17,7 +17,6 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-<<<<<<< HEAD
     <orderEntry type="library" scope="PROVIDED" name="treetop (v1.4.10, ruby-1.9.2-p180) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sqlite3 (v1.3.4, ruby-1.9.2-p180) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="hike (v1.2.0, ruby-1.9.2-p180) [gem]" level="application" />
@@ -69,7 +68,6 @@
     <orderEntry type="library" scope="PROVIDED" name="mime-types (v1.16, ruby-1.9.2-p180) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack-cache (v1.0.2, ruby-1.9.2-p180) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="i18n (v0.6.0, ruby-1.9.2-p180) [gem]" level="application" />
-=======
     <orderEntry type="library" scope="PROVIDED" name="treetop (v1.4.10, ruby-1.9.2-p290) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sqlite3 (v1.3.4, ruby-1.9.2-p290) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="hike (v1.2.0, ruby-1.9.2-p290) [gem]" level="application" />
@@ -103,17 +101,14 @@
     <orderEntry type="library" scope="PROVIDED" name="daemons (v1.1.4, ruby-1.9.2-p290) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activeresource (v3.1.0.rc5, ruby-1.9.2-p290) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activerecord (v3.1.0.rc5, ruby-1.9.2-p290) [gem]" level="application" />
-<<<<<<< HEAD
     <orderEntry type="library" scope="PROVIDED" name="rack-mount (v0.8.2, ruby-1.9.2-p290) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="meta_search (v0.5.4, ruby-1.9.2-p290) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activesupport (v3.1.0.rc5, ruby-1.9.2-p290) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="tzinfo (v0.3.29, ruby-1.9.2-p290) [gem]" level="application" />
-=======
     <orderEntry type="library" scope="PROVIDED" name="meta_search (v0.5.4, ruby-1.9.2-p290) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activesupport (v3.1.0.rc5, ruby-1.9.2-p290) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="tzinfo (v0.3.29, ruby-1.9.2-p290) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack-mount (v0.8.1, ruby-1.9.2-p290) [gem]" level="application" />
->>>>>>> work_local
     <orderEntry type="library" scope="PROVIDED" name="thor (v0.14.6, ruby-1.9.2-p290) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bundler (v1.0.11, ruby-1.9.2-p290) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack-test (v0.6.1, ruby-1.9.2-p290) [gem]" level="application" />
@@ -130,7 +125,6 @@
     <orderEntry type="library" scope="PROVIDED" name="rack-cache (v1.0.2, ruby-1.9.2-p290) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="i18n (v0.6.0, ruby-1.9.2-p290) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="pg (v0.11.0, ruby-1.9.2-p290) [gem]" level="application" />
->>>>>>> 541fdaedf41f9272fa7a66f2a9b4bb55bfccbc8a
   </component>
   <component name="RModuleSettingsStorage">
     <LOAD_PATH number="0" />
