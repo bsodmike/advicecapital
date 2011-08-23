@@ -1,7 +1,9 @@
 !!!
 %html
   %head
-    %title= @page_title
+    %title
+      Advice Capital A/S -
+      = @page_title
     = stylesheet_link_tag "application"
     = render 'layouts/stylesheets' 
     = javascript_include_tag '//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js', '//gsgd.co.uk/sandbox/jquery/easing/jquery.easing.1.3.js'
@@ -24,7 +26,11 @@
         - if current_user
           .admin_box
             %ul
-              %li= link_to 'Admin Index', 'admin#index'
+              %li Admin Genveje
+              %li= link_to 'Admin Index', '/admin'
+              %li= link_to 'Opret nyhed', new_news_path
+              %li= link_to 'Log ud', '/signout'
+
 
 
 

@@ -34,8 +34,7 @@
 
     $("#stocks").jCarouselLite({
       auto: 1,
-      speed: 2000,
-      easing: 'easeInSine'
+      speed: 2000
     });
 
     // Organisation, employees slider

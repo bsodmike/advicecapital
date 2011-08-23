@@ -1,0 +1,15 @@
+%h3 Administration
+
+%p
+  Du er logget ind som:
+  = current_user.name
+  \-
+  = current_user.email
+
+%p
+  Seneste nyhed:
+  = @latest_news_written.title
+  %br/
+  %br/
+  Antal medarbejdere:
+  = @total_employees

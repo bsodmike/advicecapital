@@ -1,3 +1,4 @@
+# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -10,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110712103141) do
+ActiveRecord::Schema.define(:version => 20110823124426) do
 
   create_table "advice_pages", :force => true do |t|
     t.datetime "created_at"
@@ -41,6 +42,7 @@ ActiveRecord::Schema.define(:version => 20110712103141) do
     t.string   "content"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "title"
   end
 
   create_table "pages", :force => true do |t|
@@ -51,8 +53,7 @@ ActiveRecord::Schema.define(:version => 20110712103141) do
   create_table "users", :force => true do |t|
     t.string   "name"
     t.string   "email"
-    t.string   "password_hash"
-    t.string   "password_salt"
+    t.string   "password_digest"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "auth_token"

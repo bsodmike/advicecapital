@@ -13,6 +13,17 @@ a.link_black {
 }
 /* LINKS _END_ */
 
+/* Default Navigation */
+nav {
+  ul {
+    list-style-type: none; 
+    li {
+      display: inline-block;
+      float: left; 
+    }
+  }
+}
+
 /* HEADER */
 header {
   height: 131px;
@@ -38,7 +49,6 @@ header {
 
     ul#main {
       float: left;
-      margin-top: 20px;
 
       li {
         cursor: pointer;
@@ -100,10 +110,10 @@ header {
 /* SECTION */
 #wrapper {
   padding-top: 40px;
-  padding-left: 10px;
   background: url('center_bg.png') repeat-y;
-  width: 894px;
-  min-height: 500px;
+  width: 884px;
+  padding-left: 10px;
+  min-height: 300px;
 
   #main_content {
     min-height: 500px;
@@ -146,7 +156,6 @@ header nav ul#top > li > ul.hover > li {
     display: inline;
     /*float: none;*/
 }
-
 header nav ul li:hover ul li a {
   color: #000 !important; 
 }
@@ -202,7 +211,7 @@ header nav ul li:hover ul li a {
 }
 .slider_custom {
   width: 854px !important;
-  min-height: 100px;
+  min-height: 128px;
   margin-left: 5px;
   margin-bottom: 20px;
 
@@ -213,7 +222,7 @@ header nav ul li:hover ul li a {
   }
   .slider_center {
     background: url('slider_bg_center.png') repeat-y;
-    min-height: 100px;
+    min-height: 200px;
     width: 854px;
   }
   .slider_bottom {
@@ -222,7 +231,6 @@ header nav ul li:hover ul li a {
     width: 854px;
   }
   ul.employee_images {
-
     li {
       margin-top: 6px;
       margin-left: 6px;
@@ -250,12 +258,9 @@ header nav ul li:hover ul li a {
     list-style: none;
   }
 }
-
-
 .news_ticker ul {
   list-style: none;
 }
-
 .submenu_box {
   position: fixed;
   top: 10;
@@ -298,6 +303,16 @@ header nav ul li:hover ul li a {
   height: 200px;
   border: 1px solid gray;
   margin-left: 20px;
+
+  ul {
+    list-style-type: none;
+
+    li {
+      a {
+        color: #000;
+      }
+    }
+  }
 }
 #bottom {
   background: url('bottom_bg.png');
@@ -322,16 +337,10 @@ header nav ul li:hover ul li a {
       }
     }
   }
-
-
 }
-
-
 .employeeInfo {
   display: none;
 }
-
-
 /* Error Messages */
 .field_with_errors {
   margin-top: 10px;
