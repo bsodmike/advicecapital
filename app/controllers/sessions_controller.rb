@@ -1,7 +1,7 @@
 class SessionsController < ApplicationController
 
   def new
-    @title = 'Sign In'
+    @title = 'Log ind'
   end
 
   def create
@@ -13,7 +13,7 @@ class SessionsController < ApplicationController
         cookies[:auth_token] = user.auth_token
       end
 
-      redirect_to root_url, :notice => "Du er logget ind"
+      redirect_to root_url, :notice => "Du er nu logget ind"
     else
       render "new", :error => "Forkert email eller kodeord."
     end
