@@ -6,14 +6,11 @@ Advicecapital::Application.routes.draw do
   resources :employees
   resources :sessions
 
-#  match '/organisation', :to => 'pages#organisation'
-  match 'investor_login', :to => 'pages#investor_login'
-  match 'invest_universe', :to => 'pages#invest_universe'
-  match 'become_customer', :to => 'pages#become_customer'
   match 'disclaimer', :to => 'pages#disclaimer'
   match 'news', :to => 'news#index'
   match 'signin', :to => 'sessions#new'
   match 'signout', :to => 'sessions#destroy'
+  match '/sessions/new', :to => 'sessions#new'
   
   match 'organisation', :to => 'employees#index'
 
@@ -22,9 +19,8 @@ Advicecapital::Application.routes.draw do
   #match '/organisation/employees', :to => 'employees#index'
   #match '/organisation/board', :to => 'boards#index'
 
-  match '/contact', :to => 'pages#contact'
-
-  match '/admin', :to => 'admin#index'
+  match 'contact', :to => 'pages#contact'
+  match 'admin', :to => 'admin#index'
 
 
   root :to => "pages#index"

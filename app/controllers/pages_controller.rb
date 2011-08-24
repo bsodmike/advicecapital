@@ -88,9 +88,6 @@ class PagesController < ApplicationController
     end
 
   # Invest Universe
-  def invest_universe
-    @page_title = "Investeringsunivers"
-  end
 
     def stocks
       @page_title = "Aktier"
@@ -108,21 +105,7 @@ class PagesController < ApplicationController
       @page_title = "Valuta"
     end
 
-  # News
-  def news
-    @page_title = "Nyheder"
-  end
-
-  # Investor Login
-  def investor_login
-    @page_title = "Investor login"
-  end
-
   def rapport
     @page_title = "Modtag Advice Invest kvartalsrapport"
-  end
-  
-  def disclaimer
-    @page_title = "Disclaimer"
   end
 end
