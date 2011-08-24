@@ -3,7 +3,7 @@ body {
   font-family:Arial, Helvetica, sans-serif;
 }
 
-/* LINKS */
+/**************** LINKS ****************/
 a, a:hover, a:visited, a:active {
   color: #fff;
   text-decoration: none;
@@ -11,9 +11,9 @@ a, a:hover, a:visited, a:active {
 a.link_black {
   color: #000;
 }
-/* LINKS _END_ */
+/**************** LINKS _END_ ****************/
 
-/* Default Navigation */
+/**************** Default Navigation ****************/
 nav {
   ul {
     list-style-type: none; 
@@ -24,15 +24,14 @@ nav {
   }
 }
 
-/* HEADER */
+/**************** HEADER ****************/
 header {
   height: 131px;
   width: 100%;
   padding: 0 !important;
 
-
-  /* HEADER NAVIGATION */
-  /* Top Navigation */
+/**************** HEADER NAVIGATION ****************/
+/**************** Top Navigation ****************/
 
   nav {
     ul#generic {
@@ -52,8 +51,9 @@ header {
 
       li {
         cursor: pointer;
+        margin-top: 30px;
         height: 70px;
-        padding: 70px 2px 2px 2px;
+        padding: 60px 4px 10px 4px;
 
         a {
           text-decoration: none;
@@ -74,7 +74,7 @@ header {
 
       li:hover {
         background: url('btn_background.png') repeat-x;
-        padding: 70px 2px 2px 2px;
+        padding: 60px 4px 10px 4px;
 
         ul.hover {
           li {
@@ -105,9 +105,9 @@ header {
     color: #000;
   }
 }
-/* HEADER _END_ */
+/**************** HEADER _END_ *****************/
 
-/* SECTION */
+/**************** SECTION ****************/
 #wrapper {
   padding-top: 40px;
   background: url('center_bg.png') repeat-y;
@@ -119,9 +119,9 @@ header {
     min-height: 500px;
   }
 }
-/* SECTION _END_ */
+/**************** SECTION _END_ ****************/
 
-/* FOOTER */
+/**************** FOOTER ****************/
 footer {
   text-align: center;
   background: url('footer_bg.png') repeat-x;
@@ -131,18 +131,7 @@ footer {
   padding-top: 15px;
   margin-bottom: 0
 }
-/* FOOTER _END_ */
-
-/* Default Navigation */
-nav {
-  ul {
-    list-style-type: none; 
-    li {
-      display: inline-block;
-      float:left; 
-    }
-  }
-}
+/**************** FOOTER _END_ ****************/
 
 header nav ul li ul.hover {
   position: absolute;
@@ -233,7 +222,8 @@ header nav ul li:hover ul li a {
   ul.employee_images {
     li {
       margin-top: 6px;
-      margin-left: 6px;
+      margin-left: 8px;
+      margin-right: 9px;
       
       img {
         cursor: pointer;
@@ -242,6 +232,7 @@ header nav ul li:hover ul li a {
   }
 
   ul.employees {
+
     li {
       margin: 4px !important;
       margin-right: 10px !important;
@@ -272,6 +263,9 @@ header nav ul li:hover ul li a {
   padding: 5px;
 }
 .organisation_box {
+  -moz-box-shadow: 0 0 4px 1px #eee;
+  -webkit-box-shadow: 0 0 4px 1px #eee;
+  box-shadow: 0 0 4px 1px #eee;
   position: fixed;
   top: 10;
   left: 0;
@@ -280,29 +274,31 @@ header nav ul li:hover ul li a {
   border: 1px solid gray;
   margin-left: 20px;
 
-  ul {
-    li:hover {
-      cursor: pointer;
-    }
-  }
-
   ul.employee_names {
+    list-style-type: none;
+
     li {
       float: none;
       a {
         color: #000;
       }
     }
+    li:hover {
+      cursor: pointer;
+    }
   }
 }
 .admin_box {
+  -moz-box-shadow: 0 0 4px 1px #eee;
+  -webkit-box-shadow: 0 0 4px 1px #eee;
+  box-shadow: 0 0 4px 1px #888;
   position: fixed;
   top: 10;
   left: 0;
   width: 120px;
   height: 200px;
   border: 1px solid gray;
-  margin-left: 20px;
+  margin: 10px 0 10px 20px;
 
   ul {
     list-style-type: none;
