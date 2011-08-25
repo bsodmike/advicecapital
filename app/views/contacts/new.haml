@@ -1,6 +1,6 @@
 %h3 Kontakt os
-
-= form_for @contact_form, :url => send_email_path do |f|
+= debug ContactsController::send_email
+= form_for @contact_form, :url => root_path do |f|
 
   .field
     = f.label :name

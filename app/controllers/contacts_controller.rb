@@ -1,6 +1,8 @@
 class ContactsController < ApplicationController
+  respond_to :html, :xml, :json
+
   def new
-    @contact_form = ContactForm.new
+    respond_with(@contact_form = ContactForm.new)
   end
 
   def send_email
