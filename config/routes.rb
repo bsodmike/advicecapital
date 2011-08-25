@@ -5,12 +5,12 @@ Advicecapital::Application.routes.draw do
   resources :boards
   resources :employees
   resources :sessions
+  resources :contacts
 
   match 'disclaimer', :to => 'pages#disclaimer'
   match 'news', :to => 'news#index'
   match 'signin', :to => 'sessions#new'
   match 'signout', :to => 'sessions#destroy'
-  match '/sessions/new', :to => 'sessions#new'
   
   match 'organisation', :to => 'employees#index'
 
@@ -19,7 +19,7 @@ Advicecapital::Application.routes.draw do
   #match '/organisation/employees', :to => 'employees#index'
   #match '/organisation/board', :to => 'boards#index'
 
-  match 'contact', :to => 'pages#contact'
+  match 'contact', :to => 'contacts#new'
   match 'admin', :to => 'admin#index'
 
 

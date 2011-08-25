@@ -1,20 +1,21 @@
 class NewsController < ApplicationController
   before_filter :signed_in_user, :only => [:new, :create, :edit, :update, :destroy]
+  respond_to :html, :json, :xml
 
   def index
-    @news = News.all
+    respond_with(@news = News.all)
   end
 
   def show
-    @news = News.find(params[:id])
+    respond_with(@news = News.find(params[:id]))
   end
 
   def new
-    @news = News.new
+    respond_with(@news = News.new)
   end
 
   def edit
-    @news = News.find(params[:id])
+    respond_with(@news = News.find(params[:id]))
   end
 
   def create
