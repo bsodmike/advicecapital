@@ -20,6 +20,7 @@ Advicecapital::Application.routes.draw do
   #match '/organisation/board', :to => 'boards#index'
 
   match '/contact', :to => 'contacts#new'
+  match '/contact/send_email', :to => 'contacts#send_email'
   match '/admin', :to => 'admin#index'
 
 

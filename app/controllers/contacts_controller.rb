@@ -5,7 +5,7 @@ class ContactsController < ApplicationController
     respond_with(@contact_form = ContactForm.new)
   end
 
-  def send_email
+  def create
     @contact_form = ContactForm.new(params[:contact_form])
 
     if @contact_form.valid?
