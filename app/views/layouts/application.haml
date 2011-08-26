@@ -10,7 +10,7 @@
     = javascript_include_tag 'application'
     = javascript_include_tag 'jcarousellite_1.0.1.min'
     /[if lt IE 9]
-    = javascript_include_tag 'http://html5shiv.googlecode.com/svn/trunk/html5.js'
+      = javascript_include_tag 'http://html5shiv.googlecode.com/svn/trunk/html5.js'
     = csrf_meta_tag
 
   %body
@@ -42,6 +42,7 @@
           %li= link_to 'Settings', edit_user_path(current_user)
           %li= link_to 'Signout', signout_path, :method => :delete
 
+      = debug params
       = debug current_user
 
       - if admin?

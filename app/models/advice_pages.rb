@@ -1,7 +1,9 @@
 #encoding UTF-8
 
 class AdvicePages < ActiveRecord::Base
-    @@pages = {
+  attr_accessor :pages
+  
+  @pages = {
     # Main pages
     '/about_ac' => {
       :title => '',
@@ -41,7 +43,6 @@ class AdvicePages < ActiveRecord::Base
         :template => '/pages/about_ai/investment_philosophy.haml'
       },
 
-
     '/become_customer' => {
       :title => 'Bliv kunde',
       :template => '/pages/become_customer.haml'
@@ -53,13 +54,11 @@ class AdvicePages < ActiveRecord::Base
       :template => '/pages/organisation.haml'
     },
 =end
-
-      '/organisation/employees' => {
-        :title => 'Medarbejdere',
-        :template => '/pages/organisation/employees.haml'
-      },
-
-
+    
+    '/organisation/employees' => {
+      :title => 'Medarbejdere',
+      :template => '/pages/organisation/employees.haml'
+    },
     '/investor_login' => {
       :title => 'Investor login',
       :template => '/pages/investor_login.haml'
@@ -75,11 +74,10 @@ class AdvicePages < ActiveRecord::Base
   }
 
   def self.find_by_path(path)
-    @@pages[path]
-    #Pages[path]
+    @pages[path]
   end
   
   def self.get_pages
-    @@pages
+    @pages
   end
 end
