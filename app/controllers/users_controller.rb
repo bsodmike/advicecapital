@@ -1,21 +1,21 @@
 class UsersController < ApplicationController
-
+  respond_to :html, :xml, :json
   before_filter :signed_in_user, :only => [ :show, :edit, :update, :destroy, :index]
 
   def index
-    @users = User.all
+    respond_with(@users = User.all)
   end
 
   def show
-    @user = User.find(params[:id])
+    respond_with(@user = User.find(params[:id]))
   end
 
   def new
-    @user = User.new
+    respond_with(@user = User.new)
   end
 
   def edit
-    @user = User.find(params[:id])
+    respond_with(@user = User.find(params[:id]))
   end
 
   def create
@@ -26,14 +26,14 @@ class UsersController < ApplicationController
       cookies[:auth_token] = @user.auth_token
       redirect_to @user, :success => "Brugeren er oprettet!"
     else
-      render 'new', :error => "Brugeren kunne ikke oprettes"
+      render :new, :error => "Brugeren kunne ikke oprettes"
     end
   end
 
   def update
     @user = User.find(params[:id])
 
-    respond_to do |format|
+    respond_with @user do |format|
       if @user.update_attributes(params[:user])
         format.html { redirect_to(@user, :notice => 'User was successfully updated.') }
         format.xml  { head :ok }

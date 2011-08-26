@@ -22,9 +22,11 @@ class NewsController < ApplicationController
     @news = News.new(params[:news])
 
     if @news.save
-      redirect_to(@news, :notice => 'News was successfully created.')
+      respond_with(@news) do |format|
+        format.html { redirect_to(@news, :notice => 'News was successfully created.') }
+      end
     else
-      render :action => "new"
+      render :new
     end
   end
 

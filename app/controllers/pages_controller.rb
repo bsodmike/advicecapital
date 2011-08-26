@@ -1,6 +1,7 @@
 # encode UTF-8
 class PagesController < ApplicationController
-  
+  respond_to :html, :json, :xml
+
   def index
     @page_title = "Advice Capital A/S - Index"
     @news = News.all
