@@ -1,15 +1,19 @@
 class ContactsController < ApplicationController
-  respond_to :html, :xml, :json
+  respond_to :html
+
+  def index
+    redirect_to new_contact_path
+  end
 
   def new
-    respond_with(@contact_form = ContactForm.new)
+    @contact = Contact.new
   end
 
   def create
-    @contact_form = ContactForm.new(params[:contact_form])
+    @contact = Contact.new(params[:contact])
 
-    if @contact_form.valid?
-      Notifications.contact(@contact_form).deliver
+    if @contact.valid?
+      Notifier.contact(@contact).deliver
       redirect_to root_path, :notice => "Email sendt, vi kontakter dig."
     else
       render :new

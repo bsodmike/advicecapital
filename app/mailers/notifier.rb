@@ -1,5 +1,12 @@
 class Notifier < ActionMailer::Base
-  default :from => "from@example.com"
+  default :to => "contact@advicecapital.dk"
+
+  def contact(message)
+    @message = message
+    mail(:from => @message.email, :subject => "[Contact AC]")  
+  end
+
+# TO BE REVIEWED #
 
   # Subject can be set in your I18n file at config/locales/en.yml
   # with the following lookup:
