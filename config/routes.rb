@@ -5,7 +5,7 @@ Advicecapital::Application.routes.draw do
   resources :boards
   resources :employees
   resources :sessions
-  resources :contacts, :only => [:index, :new, :create]
+  resource :contacts, :only => [:show, :new, :create]
 
   match '/disclaimer', :to => 'pages#disclaimer'
   match '/news', :to => 'news#index'

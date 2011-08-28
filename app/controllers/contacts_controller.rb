@@ -1,8 +1,8 @@
 class ContactsController < ApplicationController
   respond_to :html
 
-  def index
-    redirect_to new_contact_path
+  def show
+    redirect_to new_contacts_path
   end
 
   def new
