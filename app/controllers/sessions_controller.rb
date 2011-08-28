@@ -1,5 +1,12 @@
 class SessionsController < ApplicationController
 
+<<<<<<< HEAD
+=======
+  def index
+    redirect_to signin_path
+  end
+
+>>>>>>> a7fc166... login sessions, admin, and news updates
   def new
     @title = 'Log ind'
   end
@@ -12,17 +19,15 @@ class SessionsController < ApplicationController
       else
         cookies[:auth_token] = user.auth_token
       end
-
       redirect_to root_url, :notice => "Du er nu logget ind"
     else
-      render "new", :error => "Forkert email eller kodeord."
+      flash[:error] = "Forkert email eller kodeord."
+      render "new"
     end
-  
   end
 
   def destroy
     cookies.delete(:auth_token)
-    #sign_out
     redirect_to root_url, :notice => 'Signed out!'
   end
 

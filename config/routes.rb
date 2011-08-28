@@ -1,32 +1,24 @@
 Advicecapital::Application.routes.draw do
 
+  match '/signin', :to => 'sessions#new'
+  match '/signout', :to => 'sessions#destroy'
+  resources :sessions
+  
   resources :users
   resources :news
   resources :boards
   resources :employees
-  resources :sessions
   resource :contacts, :only => [:show, :new, :create]
 
+  match '/admin', :to => 'admin#index' 
+  
+  root :to => "pages#index"  
+  
   match '/disclaimer', :to => 'pages#disclaimer'
-  match '/news', :to => 'news#index'
-  match '/signin', :to => 'sessions#new'
-  match '/signout', :to => 'sessions#destroy'
-  
   match '/organisation', :to => 'employees#index'
-
-  #match '/employees', :redirect => ('/organisation')
-
-  #match '/organisation/employees', :to => 'employees#index'
-  #match '/organisation/board', :to => 'boards#index'
-  
-  match '/admin', :to => 'admin#index'
-
-
-  root :to => "pages#index"
   
   AdvicePages.get_pages.each do |key, value|
     match key, :to => "pages#show"
   end
-
 
 end

@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  ROLES = %w(visitor investor admin super_admin) 
+  
   attr_accessible :name, :email, :password, :password_confirmation
   
   email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i # full regex
@@ -18,6 +20,10 @@ class User < ActiveRecord::Base
   before_create { generate_token(:auth_token) }
 
   has_secure_password
+
+  def admin?
+    ['admin', 'super_admin'].include? self.role
+  end
 
   def send_password_reset
     generate_token(:password_reset_token)

@@ -11,7 +11,7 @@
 
 %p
   Seneste nyhed:
-  = @latest_news_written.title
+  = @latest_news_written.title unless @latest_news_written.nil?
   %br/
   %br/
   Antal medarbejdere:
