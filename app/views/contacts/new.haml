@@ -1,6 +1,15 @@
 %h3 Kontakt os
 = form_for @contact do |f|
 
+  - unless @contact.errors.empty?
+    #error_explanation
+      Please correct the following:
+    
+      %ul
+        - @contact.errors.full_messages.each do |err|
+          %li
+            %strong= err 
+
   .field
     = f.label :name
     %br/
