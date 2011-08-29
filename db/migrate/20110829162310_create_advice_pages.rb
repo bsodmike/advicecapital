@@ -1,9 +1,6 @@
 class CreateAdvicePages < ActiveRecord::Migration
   def self.up
-    create_table :advice_pages do |t|
-
-      t.timestamps
-    end
+    create_table :advice_pages
   end
 
   def self.down
