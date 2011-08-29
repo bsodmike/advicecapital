@@ -23,13 +23,12 @@
         - flash.each do |key, value|
           = content_tag(:div, value, :class => "flash #{key}")
 
-        - if current_user && current_user.admin?
-          .admin_box
-            %ul
-              %li Admin Genveje
-              %li= link_to 'Admin Index', '/admin'
-              %li= link_to 'Opret nyhed', new_news_path
-              %li= link_to 'Log ud', '/signout'
+        - if current_user
+          - if current_user.role["admin"]
+            = render 'layouts/admin_menu'
+          - elsif current_user.role["super_admin"]
+            = render 'layouts/super_admin_menu'
+
 
         = yield
 

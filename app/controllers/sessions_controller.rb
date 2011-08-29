@@ -1,12 +1,9 @@
 class SessionsController < ApplicationController
 
-<<<<<<< HEAD
-=======
   def index
     redirect_to signin_path
   end
 
->>>>>>> a7fc166... login sessions, admin, and news updates
   def new
     @title = 'Log ind'
   end

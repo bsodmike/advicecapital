@@ -11,21 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(:version => 20110826111916) do
-
-  create_table "advice_pages", :force => true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "content"
-=======
 ActiveRecord::Schema.define(:version => 20110829162334) do
 
   create_table "advice_pages", :force => true do |t|
     t.string "title"
     t.string "template"
     t.text   "content"
+<<<<<<< HEAD
 >>>>>>> 6f8f41c... added advicepages
+=======
+>>>>>>> 4834a14... updated admin
   end
 
   create_table "boards", :force => true do |t|
@@ -34,11 +29,6 @@ ActiveRecord::Schema.define(:version => 20110829162334) do
     t.string   "email"
     t.string   "phone"
     t.string   "image"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "contact_forms", :force => true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -58,11 +48,6 @@ ActiveRecord::Schema.define(:version => 20110829162334) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "title"
-  end
-
-  create_table "notifications", :force => true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
   end
 
   create_table "users", :force => true do |t|
