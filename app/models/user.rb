@@ -28,6 +28,10 @@ class User < ActiveRecord::Base
   def admin?
     ['admin', 'super_admin'].include? self.role
   end
+  
+  def super_admin?
+    self.role == 'super_admin'
+  end
 
   def send_password_reset
     generate_token(:password_reset_token)
