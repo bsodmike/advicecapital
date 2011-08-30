@@ -11,16 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110829162334) do
+ActiveRecord::Schema.define(:version => 20110829162310) do
 
   create_table "advice_pages", :force => true do |t|
-    t.string "title"
-    t.string "template"
-    t.text   "content"
-<<<<<<< HEAD
->>>>>>> 6f8f41c... added advicepages
-=======
->>>>>>> 4834a14... updated admin
+    t.string   "title"
+    t.string   "template"
+    t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "boards", :force => true do |t|
@@ -59,7 +57,7 @@ ActiveRecord::Schema.define(:version => 20110829162334) do
     t.string   "auth_token"
     t.string   "password_reset_token"
     t.datetime "password_reset_sent_at"
-    t.string   "role"
+    t.string   "role",                   :default => "visitor"
   end
 
 end
