@@ -12,17 +12,16 @@ class Ability
     # :manage, :all
     # :manage, Model
 
-    user ||= User.new # guest user
-
-    if user.role? :super_admin
+    if user.admin?
       can :manage, :all
-    elsif user.role? :admin
-      can :manage, User
-      can :manage, News
+      can [:read, :update], User, :id => user.id
     elsif user.role? :investor
+      can :read, News
+      can [:read, :update], User, :id => user.id
+    else # default role for newly created account, "visitor"
+      can :read, News
       can [:read, :update], User, :id => user.id
     end
-
 
     # Define abilities for the passed in user here. For example:
     #
