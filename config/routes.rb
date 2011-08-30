@@ -1,5 +1,9 @@
 Advicecapital::Application.routes.draw do
 
+  get "advice_pages/edit"
+
+  get "advice_pages/update"
+
   match '/signin', :to => 'sessions#new'
   match '/signout', :to => 'sessions#destroy'
   resources :sessions
