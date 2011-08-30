@@ -15,7 +15,7 @@ class Ability
     if user.admin?
       can :manage, :all
       can [:read, :update], User, :id => user.id
-    elsif user.role? :investor
+    elsif user.investor?
       can :read, News
       can [:read, :update], User, :id => user.id
     else # default role for newly created account, "visitor"
