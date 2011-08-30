@@ -9,13 +9,4 @@ class AdminController < ApplicationController
     @total_employees = Employee.count
   end
 
-  def edit
-    respond_with(@pages = AdvicePages.find(params[:id]))
-  end
-
-  def update
-    @page = AdvicePages.find(params[:id])
-
-
-  end
 end
