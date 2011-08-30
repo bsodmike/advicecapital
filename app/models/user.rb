@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
   ROLES = %w(visitor investor admin super_admin) 
   
-  attr_accessible :name, :email, :password, :password_confirmation
+  attr_accessible :name, :email, :password, :password_confirmation, :role
   
   email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i # full regex
 
