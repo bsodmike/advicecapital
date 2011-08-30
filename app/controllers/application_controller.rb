@@ -1,9 +1,13 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
   force_ssl
+  rescue_from CanCan::AccessDenied do |exception|
+    flash[:error] = "Du har ikke rettigheder til dette."
+    redirect_to root_url
+  end
 
   private
-  helper_method :current_user, :signed_in_user, :admin_user
+  helper_method :current_user, :signed_in_user
 
   def signed_in_user
     if current_user.nil?
@@ -13,11 +17,6 @@ class ApplicationController < ActionController::Base
   
   def current_user
     @current_user ||= User.find_by_auth_token!(cookies[:auth_token]) if cookies[:auth_token]
-  end
-
-  def admin_user
-    flash[:error] = "You don't have permission to view users"
-    redirect_to(root_path) unless current_user.admin?
   end
 
 end
