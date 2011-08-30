@@ -62,7 +62,6 @@ header {
 
         ul {
           li {
-            background: none;
             display: none;
 
             a {
@@ -75,6 +74,22 @@ header {
       li:hover {
         background: url('btn_background.png') repeat-x;
         padding: 60px 4px 10px 4px;
+
+        ul {
+          padding: 0;
+          margin: 0;
+          position: fixed;
+          li {
+            padding: 0;
+            margin-right: 5px;
+            background: none;
+            display: inline;
+
+          }
+          li:hover {
+            background: none;
+          }
+        }
 
         ul.hover {
           li {
