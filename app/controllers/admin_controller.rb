@@ -1,12 +1,10 @@
 class AdminController < ApplicationController
-  respond_to :html, :json, :xml
-  before_filter :signed_in_user, :only => [:index]
-  #before_filter :super_admin, :only => [:edit, :update]
+  before_filter :signed_in_user
+  before_filter do 
+    redirect_to '/' unless current_user && ['investor', 'admin', 'super_admin'].include?(current_user.role)
+  end
 
   def index
-    @page_title = "Admin"
-    @latest_news_written = News.last
-    @total_employees = Employee.count
   end
 
 end

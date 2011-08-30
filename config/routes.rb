@@ -14,7 +14,9 @@ Advicecapital::Application.routes.draw do
   resources :employees
   resource :contacts, :only => [:show, :new, :create]
 
-  match '/admin', :to => 'admin#index' 
+  namespace :admin do
+    root :to => 'dashboard#index'
+  end
   
   root :to => "pages#index"  
   
