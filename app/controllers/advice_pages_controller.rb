@@ -8,8 +8,8 @@ class AdvicePagesController < ApplicationController
   def update
     @page = AdvicePage.find(params[:id])
 
-    if AdvicePage.where( :slug => @page.slug).updateattributes(params[:form_data])
-      redirect_to(@page, :notice => 'Page was successfully updated.')
+    if AdvicePage.where(:slug => @page.slug).update_attributes(params[:page])
+      redirect_to(edit_advice_page_path, :notice => 'Page was successfully updated.')
     else
       render :edit
     end
