@@ -56,7 +56,7 @@ class PagesController < ApplicationController
   end
 
   def show
-    @page = AdvicePages.find_by_path(request.path)
+    @page = AdvicePage.find_by_path(request.path)
     @page_title = @page[:title]
     
     render @page[:template]

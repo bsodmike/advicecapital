@@ -21,7 +21,7 @@ Advicecapital::Application.routes.draw do
   match '/disclaimer', :to => 'pages#disclaimer'
   match '/organisation', :to => 'employees#index'
   
-  AdvicePages.get_pages.each do |key, value|
+  AdvicePage.get_pages.each do |key, value|
     match key, :to => "pages#show"
   end
 

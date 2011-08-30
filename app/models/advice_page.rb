@@ -1,6 +1,6 @@
 #encoding UTF-8
 
-class AdvicePages < ActiveRecord::Base
+class AdvicePage < ActiveRecord::Base
   attr_accessor :pages
   
   @pages = {

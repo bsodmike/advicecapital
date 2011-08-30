@@ -1,15 +1,14 @@
 class AdvicePagesController < ApplicationController
   before_filter :signed_in_user, :only => [:edit, :update]
-  before_filter :super_admin, :only => [:edit, :update]
 
   def edit
-    @page = AdvicePages.find(params[:id])
+    @page = AdvicePage.find(params[:id])
   end
 
   def update
-    @page = AdvicePages.find(params[:id])
+    @page = AdvicePage.find(params[:id])
 
-    if @page.update_attributes(params[:page])
+    if AdvicePage.where( :slug => @page.slug).updateattributes(params[:form_data])
       redirect_to(@page, :notice => 'Page was successfully updated.')
     else
       render :edit
