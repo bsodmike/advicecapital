@@ -21,6 +21,10 @@ class User < ActiveRecord::Base
 
   has_secure_password
 
+  def role?(role)
+    current_user.role
+  end
+
   def admin?
     ['admin', 'super_admin'].include? self.role
   end
