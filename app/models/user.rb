@@ -22,7 +22,7 @@ class User < ActiveRecord::Base
   has_secure_password
 
   def role?(role)
-    current_user.role
+    current_user.role.include? role.to_s
   end
 
   def admin?
