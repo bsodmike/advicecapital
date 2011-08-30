@@ -1,2 +1,15 @@
-<h1>AdvicePages#edit</h1>
-<p>Find me in app/views/advice_pages/edit.html.erb</p>
+%h3 Rediger side
+
+= form_for @page do |f|
+  .field
+    = f.label :title
+    = f.text_field :title
+  .field
+    = f.label :template
+    = f.text_field :template
+  .field
+    = f.label :content
+    = f.text_area :content
+
+  .action
+    = f.submit "Gem"
