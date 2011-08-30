@@ -8,6 +8,8 @@ group :assets do
   gem 'uglifier'
 end
 
+gem 'cancan'
+
 gem 'ystock'
 
 gem 'jquery-rails'
