@@ -1,9 +1,5 @@
 Advicecapital::Application.routes.draw do
 
-  get "advice_pages/edit"
-
-  get "advice_pages/update"
-
   match '/signin', :to => 'sessions#new'
   match '/signout', :to => 'sessions#destroy'
   resources :sessions
@@ -13,6 +9,7 @@ Advicecapital::Application.routes.draw do
   resources :boards
   resources :employees
   resource :contacts, :only => [:show, :new, :create]
+  resources :advice_pages
 
   namespace :admin do
     root :to => 'dashboard#index'
@@ -23,7 +20,7 @@ Advicecapital::Application.routes.draw do
   match '/disclaimer', :to => 'pages#disclaimer'
   match '/organisation', :to => 'employees#index'
   
-  AdvicePages.get_pages.each do |key, value|
+  AdvicePage.get_pages.each do |key, value|
     match key, :to => "pages#show"
   end
 
