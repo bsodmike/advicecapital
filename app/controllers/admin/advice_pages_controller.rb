@@ -1,4 +1,12 @@
 class Admin::AdvicePagesController < AdminController
+  
+  def index
+    @pages = AdvicePage.all
+  end
+  
+  def show
+    @page = AdvicePage.find(params[:id])
+  end
 
   def edit
     @page = AdvicePage.find(params[:id])
@@ -7,10 +15,10 @@ class Admin::AdvicePagesController < AdminController
   def update
     @page = AdvicePage.find(params[:id])
 
-    if AdvicePage.where(:slug => @page.slug).update_attributes(params[:page])
-      redirect_to(edit_advice_page_path, :notice => 'Page was successfully updated.')
+    if @page.update_attributes(params[:advice_page])
+      redirect_to admin_advice_pages_path, :notice => 'Page was successfully updated.'
     else
-      render :edit
+      redirect_to edit_admin_advice_page(@page.id)
     end
   end
 

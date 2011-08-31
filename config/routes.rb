@@ -12,7 +12,7 @@ Advicecapital::Application.routes.draw do
 
   namespace :admin do
     root :to => 'dashboard#index'
-    resource :advice_pages
+    resources :advice_pages
   end
   
   root :to => "pages#index"  
@@ -22,6 +22,10 @@ Advicecapital::Application.routes.draw do
   
   AdvicePage.get_pages.each do |key, value|
     match key, :to => "pages#show"
+  end
+  
+  AdvicePage.all.each do |r|
+    match r.slug, :to => "pages#show_from_db"
   end
 
 end

@@ -1,0 +1,6 @@
+%h3= @page.title
+
+= raw @page.content
+
+- if Rails.env.development?
+  = @path

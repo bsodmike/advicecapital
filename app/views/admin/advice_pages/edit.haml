@@ -1,15 +1,17 @@
 %h3 Rediger side
 
-= form_for :page do |f|
+= form_for [:admin, @page] do |f|
   .field
     = f.label :title
     = f.text_field :title
+  .field
+    = f.label :slug
+    = f.text_field :slug
   .field
     = f.label :template
     = f.text_field :template
   .field
     = f.label :content
     = f.text_area :content
-
   .action
     = f.submit "Gem"

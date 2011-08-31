@@ -5,10 +5,10 @@ class AdvicePage < ActiveRecord::Base
   
   @pages = {
     # Main pages
-    '/about_ac' => {
-      :title => '',
-      :template => '/pages/about_ac/index.haml'
-    },
+    # '/about_ac' => {
+    #   :title => '',
+    #   :template => '/pages/about_ac/index.haml'
+    # },
       '/about_ac/concept' => {
         :title => 'Koncept',
         :template => '/pages/about_ac/concept.haml'

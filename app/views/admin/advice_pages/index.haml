@@ -1,0 +1,10 @@
+%h3 AdvicePages#show
+
+#wrapper
+  - @pages.each do |r|
+    %table
+      %tr
+        %td= r.title
+        %td= r.slug
+        %td= r.template
+        %td= link_to "Edit", edit_admin_advice_page_path(r)
