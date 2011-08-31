@@ -56,14 +56,6 @@ class PagesController < ApplicationController
   end
 
   def show
-    @page = AdvicePage.find_by_path(request.path)
-    @page_title = @page[:title]
-    
-    render @page[:template]
-    #Page.find_by_path(request.path) and will return {:page_title => 'title', :template=> '/pages/about/things.html'}
-  end
-
-  def show_from_db
     @page = AdvicePage.where(:slug => request.path).last
     @path = request.path
   end

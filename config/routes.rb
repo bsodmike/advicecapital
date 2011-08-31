@@ -21,7 +21,7 @@ Advicecapital::Application.routes.draw do
   match '/organisation', :to => 'employees#index'
     
   AdvicePage.all.each do |r|
-    match r.slug, :to => "pages#show_from_db"
+    match r.slug, :to => "pages#show"
   end
 
 end
