@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
-  respond_to :html, :xml, :json
-  before_filter :signed_in_user, :only => [ :show, :edit, :update, :destroy, :index]
+  load_and_authorize_resource
+  respond_to :html
+  before_filter :authenticate_user!, :only => [ :show, :edit, :update, :destroy, :index]
 
   def index
     respond_with(@users = User.all)

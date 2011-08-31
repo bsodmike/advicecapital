@@ -1,6 +1,6 @@
 class NewsController < ApplicationController
-  before_filter :signed_in_user, :only => [:new, :create, :edit, :update, :destroy]
-  respond_to :html, :json, :xml
+  before_filter :authenticate_user!, :only => [:new, :create, :edit, :update, :destroy]
+  respond_to :html
 
   def index
     respond_with(@news = News.all)

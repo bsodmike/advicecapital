@@ -7,9 +7,9 @@ class ApplicationController < ActionController::Base
   end
 
   private
-  helper_method :current_user, :signed_in_user
+  helper_method :current_user, :authenticate_user!
 
-  def signed_in_user
+  def authenticate_user!
     if current_user.nil?
       redirect_to signin_path, :notice => "Please sign in to access this page"
     end
