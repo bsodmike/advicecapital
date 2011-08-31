@@ -9,10 +9,10 @@ Advicecapital::Application.routes.draw do
   resources :boards
   resources :employees
   resource :contacts, :only => [:show, :new, :create]
-  resources :advice_pages
 
   namespace :admin do
     root :to => 'dashboard#index'
+    resource :advice_pages
   end
   
   root :to => "pages#index"  

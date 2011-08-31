@@ -1,5 +1,4 @@
-class AdvicePagesController < ApplicationController
-  before_filter :signed_in_user, :only => [:edit, :update]
+class Admin::AdvicePagesController < AdminController
 
   def edit
     @page = AdvicePage.find(params[:id])
