@@ -1,10 +1,10 @@
 %h3 AdvicePages#show
 
-#wrapper
-  - @pages.each do |r|
-    %table
+#table-wrapper
+  %table
+    - @pages.each do |r|
       %tr
-        %td= r.title
+        %td= r.title.empty? ? "No Title Set" : r.title
         %td= r.slug
         %td= r.template
         %td= link_to "Edit", edit_admin_advice_page_path(r)
