@@ -1,15 +1,14 @@
 source 'http://rubygems.org'
-gem 'rails', '3.1.0.rc8'
+gem 'rails', '3.1.0'
 
 # Asset template engines
 group :assets do
-  gem 'sass-rails', "~> 3.1.0.rc"
+  gem 'sass-rails'
   gem 'coffee-script'
   gem 'uglifier'
 end
 
 gem 'cancan'
-
 gem 'ystock'
 
 gem 'jquery-rails'
