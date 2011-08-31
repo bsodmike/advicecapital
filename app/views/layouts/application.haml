@@ -23,7 +23,7 @@
         - flash.each do |key, value|
           = content_tag(:div, value, :class => "flash #{key}")
 
-        - if current_user.admin?
+        - if current_user && current_user.admin?
           = render 'layouts/admin_menu'
 
         = yield
