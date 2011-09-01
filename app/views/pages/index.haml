@@ -44,4 +44,5 @@
   #stocks
     %ul
       =# render :partial => "default_ystock"
+      - Resque.enqueue(FetchStocks)
 
