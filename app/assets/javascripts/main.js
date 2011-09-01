@@ -3,38 +3,37 @@
     $('nav ul li a').mouseover(function () {
       $(this).siblings('li ul').addClass('hover');
 
-      $(this).parent().hover(
-        function () {},
-        function () {
-          $(this).children('ul').removeClass('hover');
-        })
-      },
-      function () {
+      $(this).parent().hover(function () {
+        $(this).children('ul').removeClass('hover');
       });
+    });
     
-    $(".slider").jCarouselLite({
-      auto: 1,
-      speed: 3000,
-      visible: 2,
-      btnNext: ".arrow_right",
-      btnPrev: ".arrow_left"
-    });
-    $(".slider_custom").jCarouselLite({
-      auto: 1,
-      speed: 3000,
-      visible: 6
-    });
+    // $(".slider_custom").jCarouselLite({
+    //   auto: 1,
+    //   speed: 3000,
+    //   visible: 6
+    // });
+    // 
+    // $(".news_ticker").jCarouselLite({
+    //   vertical: true,
+    //   auto: 1,
+    //   speed: 3000,
+    //   visible: 10
+    // });
 
-    $(".news_ticker").jCarouselLite({
-      vertical: true,
-      auto: 1,
-      speed: 3000,
-      visible: 10
-    });
-
-    $("#stocks").jCarouselLite({
-      auto: 1,
-      speed: 2000
+    $(document).ready(function(){
+      $("#stocks").jCarouselLite({
+        auto: 1,
+        speed: 2000
+      });
+      
+      $(".slider").jCarouselLite({
+        auto: 1,
+        speed: 3000,
+        visible: 2,
+        btnNext: ".arrow_right",
+        btnPrev: ".arrow_left"
+      });      
     });
 
     // Organisation, employees slider
