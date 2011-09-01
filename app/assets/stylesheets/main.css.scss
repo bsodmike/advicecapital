@@ -54,7 +54,7 @@ header {
       li {
         cursor: pointer;
         margin-top: 30px;
-        height: 70px;
+        height: 90px;
         padding: 60px 4px 10px 4px;
 
         a {
@@ -75,6 +75,7 @@ header {
 
       li:hover {
         background: url('btn_background.png') repeat-x;
+        height: 90px;
         padding: 60px 4px 10px 4px;
 
         ul {
@@ -90,13 +91,6 @@ header {
           }
           li:hover {
             background: none;
-          }
-        }
-
-        ul.hover {
-          li {
-            background: #fff;
-            display: inline;
           }
         }
       }

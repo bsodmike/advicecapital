@@ -15,7 +15,7 @@ gem 'jquery-rails'
 gem 'carrierwave'
 
 gem 'haml'
-gem 'meta_search'
+gem 'ransack'
 
 group :development do
   gem 'thin'

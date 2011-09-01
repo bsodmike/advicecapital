@@ -3,6 +3,10 @@ class PagesController < ApplicationController
   respond_to :html
 
   def index
+
+    #@q = News.search(params[:q])
+    #@news_search = @q.result(:distinct => true)
+
     @page_title = "Advice Capital A/S - Index"
     @news = News.all
 
