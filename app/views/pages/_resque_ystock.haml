@@ -1,7 +1,7 @@
 - @stocks_n = (['A.P. Moeller Maersk','Carlsberg','Chr. Hansen Holding','Coloplast','D/S Norden','Danske Bank','DSV','FLSmidth & Co','GN Store Nord','H. Lundbeck','NKT Holding','Novo Nordisk','Novozymes','Pandora A/S','Sydbank','TDC','Topdanmark','Tryg','Vestas Wind Systems','William Demant Holding'])
 
 - StockData.all.each_with_index do |stock_hash, index|
-  %li{:style => "width:200px"}
+  %li{:style => "width:250px"}
     %span{:style => "font-size:14px;font-weight:bold"}
       = @stocks_n[index]
     - if stock_hash[:change].first == "+"
