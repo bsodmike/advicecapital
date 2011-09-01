@@ -47,17 +47,15 @@ header {
     }
 
     ul#main {
+      $padding: 80px 4px 0 4px;
       float: left;
 
       li {
         cursor: pointer;
-        margin-top: 30px;
         height: 90px;
-        padding: 60px 4px 10px 4px;
 
         a {
           text-decoration: none;
-          height: 48px;
         }
 
         ul {
@@ -74,18 +72,16 @@ header {
       li:hover {
         background: url('btn_background.png') repeat-x;
         height: 90px;
-        padding: 60px 4px 10px 4px;
 
         ul {
           padding: 0;
-          margin: 0;
+          margin: 10px 0 0 0;
           position: fixed;
           li {
+            height: 10px;
             padding: 0;
-            margin-right: 5px;
-            background: none;
+            margin: 0 5px 0 0;
             display: inline;
-
           }
           li:hover {
             background: none;
@@ -118,12 +114,13 @@ header {
 
 /**************** SECTION ****************/
 .stay-clear{clear:both;}
+.container {padding: 0 !important;}
 
 #wrapper {
   padding-top: 10px;
+  padding-left: 10px;
   background: url('center_bg.png') repeat-y;
   width: 874px;
-  padding-left: 10px;
   min-height: 300px;
 
   #main_content {
@@ -140,11 +137,15 @@ header {
 footer {
   text-align: center;
   background: url('footer_bg.png') repeat-x;
-  height: 35px;
+  height: 49px;
   width: 100%;
   color: #fff;
-  padding-top: 15px;
-  margin-bottom: 0
+  margin: 0;
+  padding: 0 !important;
+
+  .content {
+    padding-top: 15px;
+  }
 }
 /**************** FOOTER _END_ ****************/
 
