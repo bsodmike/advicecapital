@@ -11,9 +11,14 @@ These instructions are in reference to the following commits:
 
 ### Setup - IMPORTANT!
 
-* Install Resque as per the railscast (use homebrew)
-* Ensure all the migrations are complete
-* Run the server: `redis-server /usr/local/etc/redis.conf`
-* `rake stock_table:setup` // this will setup the table correctly
+* Install Redis as per the railscast (use homebrew)
+* Run `bundle` to install the `Resque` gem.
+* Run `rake db:migrate`
+* Run `rake stock_table:setup`
+
+> *IMPORTANT*
+> The rake task will configure the table correctly, it does some important stuff.
+
+* Start Redis: `redis-server /usr/local/etc/redis.conf`
 * Start a worker: `rake resque:work QUEUE='*'`
 * Start the web interface: 'resque-web'
