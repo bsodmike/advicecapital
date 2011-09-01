@@ -1,7 +1,7 @@
 class FetchStocks
   @queue = :stocks_queue
   def self.perform()
-    @stocks = Ystock.find([
+    stock_data = Ystock.find([
       'MAERSK-B.CO', # A.P. Møller Mærsk
       'CARL-B.CO',   # Carlsberg
       'CRTSF.PK',    # Chr. Hansen Holding
@@ -23,6 +23,11 @@ class FetchStocks
       'VWS.CO',      # Vestas
       'WDH.CO'       # William Demant Holding
     ])
-    puts "processed job"
+    
+    stock_data.each do |hash|
+      StockData.where(:symbol => hash[:symbol]).last.update_attributes(:price => hash[:price], :change => hash[:change],:volume => hash[:volume])
+    end
+    
+    puts "StockData updated at #{Time.now.strftime("%D @ %H%M %z")}"
   end
 end
