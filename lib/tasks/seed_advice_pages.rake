@@ -1,3 +1,4 @@
+# encoding: utf-8
 namespace :pages do
   desc "Empty advice_pages table of all records"
   task :clear_table  => :environment do
