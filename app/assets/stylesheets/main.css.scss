@@ -1,15 +1,25 @@
+/**************** VARS ****************/
+  $white: #fff;
+  $black: #000;
+  $dark-gray: #888;
+  $box-shadow: 0 0 4px 1px #eee;
+
+/**************** VARS _END_ ****************/
+
+
+
 body {
-  background: #fff url('top_bannerEXT.png') repeat-x;
-  font-family:Arial, Helvetica, sans-serif;
+  background: $white url('top_bannerEXT.png') repeat-x;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /**************** LINKS ****************/
 a, a:hover, a:visited, a:active {
-  color: #fff;
+  color: $white;
   text-decoration: none;
 }
 a.link_black {
-  color: #000;
+  color: $black;
 }
 /**************** LINKS _END_ ****************/
 
@@ -34,6 +44,9 @@ header {
 /**************** Top Navigation ****************/
 
   nav {
+    font-family: Arial, sans-serif;
+    font-weight: none;
+
     ul#generic {
       margin: 0;
       float: right;
@@ -47,12 +60,14 @@ header {
     }
 
     ul#main {
-      $padding: 80px 4px 0 4px;
       float: left;
+      margin-top: 30px;
+      height: 60px;
 
       li {
+        margin: 0;
+        padding: 65px 10px 0 10px;
         cursor: pointer;
-        height: 90px;
 
         a {
           text-decoration: none;
@@ -63,7 +78,7 @@ header {
             display: none;
 
             a {
-              color: #000;
+              color: $dark-gray;
             }
           }
         }
@@ -72,15 +87,19 @@ header {
       li:hover {
         background: url('btn_background.png') repeat-x;
         height: 90px;
+        margin: 0;
+        padding: 65px 10px 0 10px;
 
         ul {
           padding: 0;
-          margin: 10px 0 0 0;
+          margin: 0;
           position: fixed;
+
           li {
-            height: 10px;
+            margin-top: 20px;
+            margin-right: 5px;
             padding: 0;
-            margin: 0 5px 0 0;
+            background: none;
             display: inline;
           }
           li:hover {
@@ -92,8 +111,7 @@ header {
   }
   #logo {
     background: url('ac_logo.png');
-    margin-left: 400px;
-    margin-top: 2px;
+    margin: 2px 0 0 400px;
     position: absolute;
     width: 131px;
     height: 94px;
@@ -102,12 +120,12 @@ header {
   #search_button {
     border: 1px solid #1c2831;
     background: #283641;
-    color: #fff;
+    color: $white;
   }
   #search_field {
     border: 1px solid #283641;
-    background: #fff;
-    color: #000;
+    background: $white;
+    color: $black;
   }
 }
 /**************** HEADER _END_ *****************/
@@ -117,19 +135,20 @@ header {
 .container {padding: 0 !important;}
 
 #wrapper {
-  padding-top: 10px;
-  padding-left: 10px;
+  padding: 10px 10px 0 15px;
   background: url('center_bg.png') repeat-y;
   width: 874px;
   min-height: 300px;
+  margin: 0;
 
   #main_content {
+    margin-top: 20px;
     min-height: 500px;
   }
 }
 
 #table-wrapper a, #table-wrapper a:hover, #table-wrapper a:visited, #table-wrapper a:active {
-  color:#000;
+  color: $black;
 }
 /**************** SECTION _END_ ****************/
 
@@ -139,37 +158,20 @@ footer {
   background: url('footer_bg.png') repeat-x;
   height: 49px;
   width: 100%;
-  color: #fff;
-  margin: 0;
-  padding: 0 !important;
 
   .content {
-    padding-top: 15px;
+    height: 20px;
+    clear: both;
+    padding-top: 20px;
+    color: $white;
   }
 }
 /**************** FOOTER _END_ ****************/
-
-header nav ul li ul.hover {
-  position: absolute;
-  display: block;
-  margin-top: -3px;
-  height: 32px;
-  padding: 10px 0 0 20px;
-}
-header nav ul#top > li > ul.hover > li {
-    background: none;
-    display: inline;
-    /*float: none;*/
-}
-header nav ul li:hover ul li a {
-  color: #000 !important; 
-}
 
 .slider {
   background: url('imgSlider_bg.png');
   min-width: 854px;
   height: 100px;
-  margin-left: 5px;
   margin-bottom: 20px;
   float: left;
   
@@ -279,9 +281,9 @@ header nav ul li:hover ul li a {
   padding: 5px;
 }
 .organisation_box {
-  -moz-box-shadow: 0 0 4px 1px #eee;
-  -webkit-box-shadow: 0 0 4px 1px #eee;
-  box-shadow: 0 0 4px 1px #eee;
+  -moz-box-shadow: $box-shadow;
+  -webkit-box-shadow: $box-shadow;
+  box-shadow: $box-shadow;
   position: fixed;
   top: 10;
   left: 0;
@@ -296,7 +298,7 @@ header nav ul li:hover ul li a {
     li {
       float: none;
       a {
-        color: #000;
+        color: $black;
       }
     }
     li:hover {
@@ -305,9 +307,9 @@ header nav ul li:hover ul li a {
   }
 }
 .admin_box {
-  -moz-box-shadow: 0 0 4px 1px #eee;
-  -webkit-box-shadow: 0 0 4px 1px #eee;
-  box-shadow: 0 0 4px 1px #888;
+  -moz-box-shadow: $box-shadow;
+  -webkit-box-shadow: $box-shadow;
+  box-shadow: $box-shadow;
   position: fixed;
   top: 10;
   left: 0;
@@ -321,14 +323,14 @@ header nav ul li:hover ul li a {
 
     li {
       a {
-        color: #000;
+        color: $black;
       }
     }
   }
 }
 #bottom {
   background: url('bottom_bg.png');
-  width: 865px;
+  width: 854px;
   height: 27px;
   margin-bottom:4px;
   margin-right: 10px;
@@ -361,7 +363,7 @@ header nav ul li:hover ul li a {
   display: table;
 
   label {
-    color: #fff;
+    color: $white;
   }
 }
 
@@ -380,7 +382,7 @@ header nav ul li:hover ul li a {
     font-size: 12px;
     margin: -7px;
     background: #c00;
-    color: #fff;
+    color: $white;
   }
   p {
     color: #333;
