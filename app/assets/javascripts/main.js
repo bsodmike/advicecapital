@@ -21,19 +21,15 @@
     //   visible: 10
     // });
 
-    $(document).ready(function(){
-      $("#stocks").jCarouselLite({
-        auto: 1,
-        speed: 2000
-      });
-      
-      $(".slider").jCarouselLite({
-        auto: 1,
-        speed: 3000,
-        visible: 2,
-        btnNext: ".arrow_right",
-        btnPrev: ".arrow_left"
-      });      
+
+    $("#stocks").jCarouselLite({
+    auto: 1,
+    speed: 2000
+    });
+
+    $(".slider").nivoSlider({
+        effect: 'random',
+        pauseOnHover: true
     });
 
     // Organisation, employees slider
