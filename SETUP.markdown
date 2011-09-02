@@ -22,3 +22,14 @@ These instructions are in reference to the following commits:
 * Start Redis: `redis-server /usr/local/etc/redis.conf`
 * Start a worker: `rake resque:work QUEUE='*'`
 * Start the web interface: 'resque-web'
+
+### Foreman
+02/09/2011
+
+Run `bundle` to install the foreman gem.  A Procfile has been created to start Redis and a worker process as well.  To start, simply run `foreman start` and to enable multiple workers `foreman -c worker=2`.  
+
+Here's some example output of foreman in action:
+
+    18:08:46 redis.1   | [87228] 02 Sep 18:08:46 - 2 clients connected (0 slaves), 940672 bytes in use
+    18:08:49 worker.1  | StockData updated at 09/02/11 @ 1808 +0300
+
