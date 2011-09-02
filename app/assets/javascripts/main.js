@@ -30,10 +30,8 @@
     $("#slider").nivoSlider({
       effect: 'sliceUp',
       pauseOnHover: true,
-      slices: 20,
-      animSpeed: 300,
-      pauseTime: 300,
-      startSlide: 0,
+      animSpeed: 500,
+      pauseTime: 3000,
       captionOpacity: 0.8,
       manualAdvance: false
 
