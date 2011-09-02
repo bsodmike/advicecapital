@@ -181,8 +181,8 @@ footer {
 
   .nivoSlider {
     position:relative;
-    width:115px; /* Change this to your images width */
-    height:77px; /* Change this to your images height */
+    width:854px; /* Change this to your images width */
+    height:100px; /* Change this to your images height */
     background:url(images/loading.gif) no-repeat 50% 50%;
 
     img {
@@ -196,7 +196,7 @@ footer {
       display:block;
     }
   }
-  ul {
+  /*ul {
     width: 600px;
     list-style: none;
     display: inline-block;
@@ -211,7 +211,7 @@ footer {
         height: 77px;
       }
     }
-  }
+  }*/
 
   .arrows {
     clear: both;

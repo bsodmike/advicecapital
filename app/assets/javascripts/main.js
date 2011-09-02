@@ -28,10 +28,14 @@
     });
 
     $("#slider").nivoSlider({
-        effect: 'sliceUp',
-        pauseOnHover: true,
-        slices: 8,
-        animSpeed: 2000
+      effect: 'sliceUp',
+      pauseOnHover: true,
+      slices: 20,
+      animSpeed: 300,
+      pauseTime: 300,
+      startSlide: 0,
+      captionOpacity: 0.8,
+      manualAdvance: false
 
     });
 
