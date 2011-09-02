@@ -27,9 +27,12 @@
     speed: 2000
     });
 
-    $(".slider").nivoSlider({
-        effect: 'random',
-        pauseOnHover: true
+    $("#slider").nivoSlider({
+        effect: 'sliceUp',
+        pauseOnHover: true,
+        slices: 8,
+        animSpeed: 2000
+
     });
 
     // Organisation, employees slider

@@ -168,49 +168,51 @@ footer {
 }
 /**************** FOOTER _END_ ****************/
 
-.slider {
-  background: url('imgSlider_bg.png');
+#slider {
+  background: #dfe0e2;
+  border: 1px solid #888;
   min-width: 854px;
   height: 100px;
   margin-bottom: 20px;
   float: left;
+  -moz-box-shadow: $box-shadow;
+  -webkit-box-shadow: $box-shadow;
+  box-shadow: $box-shadow;
 
   .nivoSlider {
     position:relative;
-    width:618px; /* Change this to your images width */
-    height:246px; /* Change this to your images height */
+    width:115px; /* Change this to your images width */
+    height:77px; /* Change this to your images height */
     background:url(images/loading.gif) no-repeat 50% 50%;
-    }
-    .nivoSlider img {
-        position:absolute;
-        top:0px;
-        left:0px;
-        display:none;
-    }
-    .nivoSlider a {
-        border:0;
-        display:block;
-    }
-  
-  #slider_content {
 
-    ul {
-      width: 600px;
-      list-style: none;
-      display: inline-block;
+    img {
+      position:absolute;
+      top:0px;
+      left:0px;
+      display:none;
+    }
+    a {
+      border:0;
+      display:block;
+    }
+  }
+  ul {
+    width: 600px;
+    list-style: none;
+    display: inline-block;
+    float: left;
+
+    li {
       float: left;
+      margin-right: 20px;
 
-      li {
-        float: left;
-        margin-right: 20px;
-
-        img {
-          width: 115px;
-          height: 77px;
-        }
+      img {
+        width: 115px;
+        height: 77px;
       }
     }
   }
+
   .arrows {
     clear: both;
     width: 23px;
