@@ -11,15 +11,15 @@ namespace :pages do
     pages = {
       '/about_ac' => {
         :title => "",
-        :content => "<div class=\"span-20\">\r\n  <img src=\"/images/stock1.jpg\"/>\r\n  <p>But I must explain to you how all this mistaken idea of denouncing pleasure\r\n      and praising pain was born and I will give you a complete account of the\r\n      system, and expound the actual teachings of the great explorer of the truth,\r\n      the master-builder of human happiness.</p>\r\n</div>"
+        :content => "But I must explain to you how all this mistaken idea of denouncing pleasure\r\n      and praising pain was born and I will give you a complete account of the\r\n      system, and expound the actual teachings of the great explorer of the truth,\r\n      the master-builder of human happiness."
       },
       '/about_ac/concept' => {
         :title => 'Koncept',
-        :content => "<div class=\"span-20\">\r\n  <img src=\"/images/stock2.jpg\"/>\r\n  <p>Hos Advice Capital A/S fokuserer vi på, at kundernes formue vokser og forrentes forsvarligt.\r\n   Vi skal levere økonomisk fremgang og tryghed for, at næste generation er sikret. Vort forretningskoncept er at kunne tilbyde vore kunder et valg mellem ydelser, alt efter hvilken grad af involvering de selv ønsker at have. Vor portefølje strækker sig således fra traditionel investeringsrådgivning til vort investeringsselskab, hvor vi selv investerer på lige fod med andre investorer.\r\n Fælles for vore ydelser er, at vi ikke har forkærlighed for én bestemt aktivklasse.\r\n Vor succes er bygget på en fleksibilitet til at bevæge sig mellem aktier, obligationer, virksomhedsobligationer og valuta. </p>\r\n</div>"
+        :content => "Hos Advice Capital A/S fokuserer vi på, at kundernes formue vokser og forrentes forsvarligt.\r\n   Vi skal levere økonomisk fremgang og tryghed for, at næste generation er sikret. Vort forretningskoncept er at kunne tilbyde vore kunder et valg mellem ydelser, alt efter hvilken grad af involvering de selv ønsker at have. Vor portefølje strækker sig således fra traditionel investeringsrådgivning til vort investeringsselskab, hvor vi selv investerer på lige fod med andre investorer.\r\n Fælles for vore ydelser er, at vi ikke har forkærlighed for én bestemt aktivklasse.\r\n Vor succes er bygget på en fleksibilitet til at bevæge sig mellem aktier, obligationer, virksomhedsobligationer og valuta. \r\n"
       },
       '/about_ac/history' => {
         :title => 'Historie',
-        :content => "<div class=\"span-20\">\r\n  <p>Selskabet er etableret i 2009 af Lars Fetterlein, som har mere end 20 års investeringserfaring fra såvel Danmark som internationalt. Lars Fetterleins brede baggrund spænder fra en stilling som Group Treasurer hos medicinalselskabet H. Lundbeck A/S til corporate og private banking poster hos SEB Bank i London og Carnegie Bank i København, hertil kommer en position som CFO i formueforvaltningsselskabet Hvista ApS. Grundlaget for etableringen af Advice Capital er et udtalt behov hos kunder for: \r\nUafhængig rådgivning, som ikke influeres af kurtage betalinger, men som honoreres i.f.t. afkast på investeringen. \r\nInteressesammefald mellem kunden og rådgiver \r\nTæt og kontinuerlig relation mellem kunde og en let tilgængelig rådgiver \r\nEnkel og transparant prisstruktur, hvor aflønning er relateret til afkastet på den investerede formue</p></div>"
+        :content => "Selskabet er etableret i 2009 af Lars Fetterlein, som har mere end 20 års investeringserfaring fra såvel Danmark som internationalt. Lars Fetterleins brede baggrund spænder fra en stilling som Group Treasurer hos medicinalselskabet H. Lundbeck A/S til corporate og private banking poster hos SEB Bank i London og Carnegie Bank i København, hertil kommer en position som CFO i formueforvaltningsselskabet Hvista ApS. Grundlaget for etableringen af Advice Capital er et udtalt behov hos kunder for: \r\nUafhængig rådgivning, som ikke influeres af kurtage betalinger, men som honoreres i.f.t. afkast på investeringen. \r\nInteressesammefald mellem kunden og rådgiver \r\nTæt og kontinuerlig relation mellem kunde og en let tilgængelig rådgiver \r\nEnkel og transparant prisstruktur, hvor aflønning er relateret til afkastet på den investerede formue"
       },
       '/about_ac/results' => {
         :title => 'Resultater',
@@ -27,7 +27,7 @@ namespace :pages do
       },
       '/about_ac/strategy' => {
         :title => 'Strategi',
-        :content => "<div class=\"span-20\">\r\n <img src=\"/images/stock3.jpg\">"
+        :content => ""
       },
       '/about_ai' => {
         :title => 'Investeringsfilosofi',
