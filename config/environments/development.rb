@@ -27,5 +27,9 @@ Advicecapital::Application.configure do
   # this allows WEBrick to handle pipe symbols in query parameters
   #URI::DEFAULT_PARSER = :development
   #URI::Parser.new(:UNRESERVED => URI::REGEXP::PATTERN::UNRESERVED + '|')
+
+
+  ENV['SIMPLE_WORKER_ACCESS_KEY'] = 'e9d39ae783f7c3a03f0a8e63b443dea1'
+  ENV['SIMPLE_WORKER_SECRET_KEY'] = '61e614e929b34c9adba24cda6e2535e9'
   
 end

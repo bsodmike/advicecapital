@@ -19,6 +19,8 @@ gem 'haml'
 gem 'ransack'
 
 group :development do
+  gem 'taps'
+  gem 'heroku'
   gem 'thin'
   gem 'eventmachine', '1.0.0.beta.3'
   gem 'foreman'
