@@ -23,8 +23,8 @@
 
 
     $("#stocks").jCarouselLite({
-    auto: 1,
-    speed: 2000
+      auto: 1,
+      speed: 2000
     });
 
     $("#slider").nivoSlider({

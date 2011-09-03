@@ -1,17 +1,18 @@
 - @stocks_n = (['A.P. Moeller Maersk','Carlsberg','Chr. Hansen Holding','Coloplast','D/S Norden','Danske Bank','DSV','FLSmidth & Co','GN Store Nord','H. Lundbeck','NKT Holding','Novo Nordisk','Novozymes','Pandora A/S','Sydbank','TDC','Topdanmark','Tryg','Vestas Wind Systems','William Demant Holding'])
+= @stocks_r = @stocks_n.shuffle
 
 - StockData.all.each_with_index do |stock_hash, index|
-  %li{:style => "width:220px"}
-    %span{:style => "font-size:16px;font-weight:bold;color:#293641"}
+  %li{:style => "width:140px"}
+    %span{:style => "font-size:12px;font-weight:bold;color:#293641"}
       = @stocks_n[index]
     %br
     - if stock_hash[:change].first == "+"
       %span{:style => "color:green;"}
-        = stock_hash[:change]
+        = stock_hash[:change] + '%'
     - elsif stock_hash[:change].first == "-"
       %span{:style => "color:red;"}
-        = stock_hash[:change]
+        = stock_hash[:change] + '%'
     - else
       %span{:style => "color:gray;"}
-        = stock_hash[:change]
+        = stock_hash[:change] + '%'
     = stock_hash[:price]
