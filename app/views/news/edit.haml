@@ -1,6 +1,9 @@
-<h1>Editing news</h1>
+%h3 Rediger nyhed
 
-<%= render 'form' %>
+= render 'form'
 
-<%= link_to 'Show', @news %> |
-<%= link_to 'Back', news_index_path %>
+- if current_user && current_user.admin?
+  .link_black
+    = link_to 'Vis', @news
+    |
+    = link_to 'Tilbage', news_index_path

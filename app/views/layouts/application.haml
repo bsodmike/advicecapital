@@ -9,8 +9,8 @@
     = javascript_include_tag 'jcarousellite_1.0.1.min'
     = javascript_include_tag 'jquery.nivo.slider'
     = javascript_include_tag 'jquery.nivo.slider.pack'
-    = javascript_include_tag 'tiny_mce/jquery.tiny_mce'
-    = javascript_include_tag 'tiny_mce/tiny_mce'
+    = javascript_include_tag 'tiny_mce/jquery.tinymce.js'
+    = javascript_include_tag 'tiny_mce/tiny_mce.js'
     /[if lt IE 9]
       = javascript_include_tag 'http://html5shiv.googlecode.com/svn/trunk/html5.js'
     = csrf_meta_tag
@@ -33,18 +33,5 @@
         = yield
 
     = render 'layouts/footer'
-
-    %nav
-      - if current_user
-        %ul
-          %li= link_to 'Profile', current_user
-          %li= link_to 'Settings', edit_user_path(current_user)
-          %li= link_to 'Signout', signout_path, :method => :delete
-
-      = debug params
-      = debug current_user
-
-      - if admin?
-        test
 
 

@@ -3,6 +3,7 @@
   $black: #000;
   $dark-gray: #888;
   $box-shadow: 0 0 4px 1px #eee;
+  $box-dark-shadow: 0 0 6px 4px #888;
 
 /**************** VARS _END_ ****************/
 
@@ -326,19 +327,19 @@ footer {
   }
 }
 .admin_box {
-  -moz-box-shadow: $box-shadow;
-  -webkit-box-shadow: $box-shadow;
-  box-shadow: $box-shadow;
+  -moz-box-shadow: $box-dark-shadow;
+  -webkit-box-shadow: $box-dark-shadow;
+  box-shadow: $box-dark-shadow;
   position: fixed;
   top: 10;
   left: 0;
   width: 120px;
   height: 200px;
-  border: 1px solid gray;
   margin: 10px 0 10px 20px;
 
   ul {
-    list-style-type: none;
+    margin: 8px 0 0 0;
+    list-style-type: disc;
 
     li {
       a {
