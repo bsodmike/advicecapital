@@ -1,7 +1,11 @@
 %p
-  %b Content:
-  = @news.content
+  %b Titel:
+  = @news.title
+%p
+  %b Indhold:
+  = raw(@news.content)
 
-
-= link_to 'Edit', edit_news_path(@news) |
-= link_to 'Back', news_index_path
+- if current_user && current_user.admin?
+  .link_black
+    = link_to 'Edit', edit_news_path(@news) |
+    = link_to 'Back', news_index_path

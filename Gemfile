@@ -18,8 +18,7 @@ gem 'carrierwave'
 gem 'haml'
 gem 'ransack'
 gem 'thin'  # added for heroku
-
-#gem 'RedCloth'
+gem 'kaminari'
 
 group :development do
   gem 'taps'

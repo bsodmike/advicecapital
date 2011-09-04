@@ -18,7 +18,7 @@ a, a:hover, a:visited, a:active {
   color: $white;
   text-decoration: none;
 }
-a.link_black {
+a.link_black, .link_black a {
   color: $black;
 }
 /**************** LINKS _END_ ****************/

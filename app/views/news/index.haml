@@ -7,14 +7,20 @@
         %td
           %b= news.created_at.strftime('%D - %H:%m')
           \-
-          = news.content
-        - if current_user
+          = raw(truncate(news.content, :length => 50))
+        - if current_user && current_user.admin?
           %td
-            = link_to 'Show', news
-            = link_to 'Edit', edit_news_path(news)
-            = link_to 'Destroy', news, :confirm => 'Are you sure?', :method => :delete
+            .link_black
+              = link_to 'Show', news
+              = link_to 'Edit', edit_news_path(news)
+              = link_to 'Destroy', news, :confirm => 'Are you sure?', :method => :delete
+
+        %td
+
+    = paginate @news
 
 %br/
 %br/
-- if current_user
-  = link_to 'Opret nyhed', new_news_path
+- if current_user && current_user.admin?
+  .link_black
+    = link_to 'Opret nyhed', new_news_path

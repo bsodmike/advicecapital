@@ -3,7 +3,7 @@ class NewsController < ApplicationController
   respond_to :html
 
   def index
-    respond_with(@news = News.all)
+    respond_with(@news = News.order("updated_at").page(params[:page]).per(10))
   end
 
   def show
