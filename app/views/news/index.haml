@@ -5,7 +5,7 @@
     - @news.each do |news|
       %tr
         %td
-          %b= news.created_at
+          %b= news.created_at.strftime('%D - %H:%m')
           \-
           = news.content
         - if current_user

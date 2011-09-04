@@ -1,6 +1,9 @@
-%h3= @page.title
+.span-20
+  %h3= @page.title
 
-= raw @page.content
+  %p
 
-- if Rails.env.development?
-  = @path
+    = raw(RedCloth.new(@page.content).to_html)
+
+    - if Rails.env.development?
+      = @path

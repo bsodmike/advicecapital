@@ -17,8 +17,14 @@ gem 'carrierwave'
 
 gem 'haml'
 gem 'ransack'
+<<<<<<< HEAD
 gem 'thin'  # added for heroku
   
+=======
+
+gem 'RedCloth'
+
+>>>>>>> todays_work
 group :development do
   gem 'taps'
   gem 'heroku'
