@@ -17,11 +17,11 @@ gem 'carrierwave'
 
 gem 'haml'
 gem 'ransack'
-
+gem 'thin'  # added for heroku
+  
 group :development do
   gem 'taps'
   gem 'heroku'
-  gem 'thin'
   gem 'eventmachine', '1.0.0.beta.3'
   gem 'foreman'
 end
