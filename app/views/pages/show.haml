@@ -3,7 +3,8 @@
 
   %p
 
-    = raw(RedCloth.new(@page.content).to_html)
+    = #raw(RedCloth.new(@page.content).to_html)
+    = raw(@page.content)
 
     - if Rails.env.development?
       = @path

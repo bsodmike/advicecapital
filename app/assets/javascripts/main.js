@@ -7,6 +7,11 @@
         $(this).children('ul').removeClass('hover');
       });
     });
+
+    tinyMCE.init({
+        mode : "textareas",
+        theme: "simple"
+    });
     
     // $(".slider_custom").jCarouselLite({
     //   auto: 1,
