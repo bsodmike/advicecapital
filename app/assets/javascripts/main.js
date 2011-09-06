@@ -24,11 +24,11 @@
         skin_variant : "silver"
     });
     
-    // $(".slider_custom").jCarouselLite({
-    //   auto: 1,
-    //   speed: 3000,
-    //   visible: 6
-    // });
+    $(".slider_custom").jCarouselLite({
+      auto: 1,
+      speed: 3000,
+      visible: 6
+    });
     // 
     // $(".news_ticker").jCarouselLite({
     //   vertical: true,
