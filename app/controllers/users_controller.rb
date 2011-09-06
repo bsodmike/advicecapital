@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  load_and_authorize_resource
+  #load_and_authorize_resource
   respond_to :html
   before_filter :authenticate_user!, :only => [ :show, :edit, :update, :destroy, :index]
 
