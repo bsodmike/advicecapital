@@ -7,5 +7,6 @@
 
 - if current_user && current_user.admin?
   .link_black
-    = link_to 'Edit', edit_news_path(@news) |
-    = link_to 'Back', news_index_path
+    = link_to 'Rediger', edit_news_path(@news)
+    |
+    = link_to 'Tilbage', news_index_path
