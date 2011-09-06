@@ -4,11 +4,8 @@ class PagesController < ApplicationController
 
   def index
 
-    #@q = News.search(params[:q])
-    #@news_search = @q.result(:distinct => true)
-
     @page_title = "Advice Capital A/S - Index"
-    @news = News.all
+    @news = News.limit(5).all
 
   end
 
