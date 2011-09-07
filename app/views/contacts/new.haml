@@ -1,6 +1,8 @@
+%div{:style => "clear:both;float:right;margin-right:260px;"}
+  %h3 Vores beliggenhed
+#map{:style => "clear:both;float:right;width:400px;height:300px;margin-right: 10px;"}
 %h3 Kontakt os
 = form_for @contact do |f|
-
   - unless @contact.errors.empty?
     #error_explanation
       Please correct the following:
@@ -28,4 +30,4 @@
   .action
     = f.submit "Send"
 
-  #maps{:style => "float:right;width:500px;height:300px"}
+
