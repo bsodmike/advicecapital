@@ -74,6 +74,5 @@
     %li
       = link_to 'Kontakt', new_contacts_path
     %li
-      //= search_form_for @q do |f|
-      //= f.text_field :search_field, nil, :size => 10
-      //= f.submit 'Søg', '', :id => 'search_button'
+      = text_field_tag :search_field, nil, :size => 15
+      = button_tag 'Søg', :disabled => true, :id => 'search_button'
