@@ -11,9 +11,10 @@ class Ability
 
     # :manage, :all
     # :manage, Model
-
-    if user.admin?
+    if user.super_admin?
       can :manage, :all
+    elsif user.admin?
+      can :manage, :news
       can [:read, :update], User, :id => user.id
     elsif user.investor?
       can :read, News
