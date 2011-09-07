@@ -8,7 +8,7 @@ group :assets do
   gem 'uglifier'
 end
 
-#gem 'resque', :require => "resque/server"
+gem 'resque', :require => "resque/server"
 gem 'cancan'
 gem 'ystock'
 
