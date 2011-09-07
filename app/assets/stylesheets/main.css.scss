@@ -307,15 +307,14 @@ footer {
   padding: 5px;
 }
 .organisation_box {
-  -moz-box-shadow: $box-shadow;
-  -webkit-box-shadow: $box-shadow;
-  box-shadow: $box-shadow;
+  -moz-box-shadow: $box-dark-shadow;
+  -webkit-box-shadow: $box-dark-shadow;
+  box-shadow: $box-dark-shadow;
   position: fixed;
   top: 10;
   left: 0;
   width: 120px;
   height: 200px;
-  border: 1px solid gray;
   margin-left: 20px;
 
   ul.employee_names {
