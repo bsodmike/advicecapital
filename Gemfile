@@ -23,7 +23,7 @@ gem 'kaminari'
 group :development do
   gem 'taps'
   gem 'heroku'
-  gem 'eventmachine', '1.0.0.beta.3'
+  #gem 'eventmachine', '~> 1.0.0.beta.3'
   gem 'foreman'
 end
 
