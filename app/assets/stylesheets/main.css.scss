@@ -4,6 +4,7 @@
   $dark-gray: #888;
   $box-shadow: 0 0 4px 1px #eee;
   $box-dark-shadow: 0 0 6px 4px #888;
+  $wrapper-shadow: 5px 5px 5px #606060;
 
 /**************** VARS _END_ ****************/
 
@@ -143,8 +144,13 @@ header {
 
 #wrapper {
   padding: 20px 20px 0 15px;
-  background: url('center_bg.png') repeat-y;
-  width: 864px;
+  background: url('center_bg2.png') repeat-y;
+  /*
+  box-shadow: $wrapper-shadow;
+  -webkit-box-shadow: $wrapper-shadow;
+  -moz-box-shadow: $wrapper-shadow;
+  */
+  width: 960px;
   min-height: 300px;
 
   #main_content {
