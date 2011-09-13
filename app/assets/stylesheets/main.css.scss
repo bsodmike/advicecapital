@@ -4,6 +4,7 @@
   $dark-gray: #888;
   $box-shadow: 0 0 4px 1px #eee;
   $box-dark-shadow: 0 0 6px 4px #888;
+  $wrapper-shadow: 5px 5px 5px #606060;
 
 /**************** VARS _END_ ****************/
 
@@ -143,8 +144,13 @@ header {
 
 #wrapper {
   padding: 20px 20px 0 15px;
-  background: url('center_bg.png') repeat-y;
-  width: 864px;
+  background: url('center_bg2.png') repeat-y;
+  /*
+  box-shadow: $wrapper-shadow;
+  -webkit-box-shadow: $wrapper-shadow;
+  -moz-box-shadow: $wrapper-shadow;
+  */
+  width: 950px;
   min-height: 300px;
 
   #main_content {
@@ -177,7 +183,7 @@ footer {
 #slider {
   background: #dfe0e2;
   border: 1px solid #888;
-  min-width: 854px;
+  min-width: 930px;
   height: 100px;
   margin-bottom: 20px;
   float: left;
@@ -357,7 +363,7 @@ footer {
   -webkit-box-shadow: $box-shadow;
   box-shadow: $box-shadow;
   background: #eaebed;
-  width: 854px;
+  width: 940px;
   height: 50px;
   margin-bottom:4px;
   margin-right: 10px;
@@ -366,7 +372,7 @@ footer {
 
   #stocks {
     padding-top: 4px;
-    width: 850px !important;
+    width: 935px !important;
     height: 45px !important;
 
     ul {
