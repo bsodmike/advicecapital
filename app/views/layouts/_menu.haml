@@ -2,14 +2,14 @@
 
   %ul#main
     %li 
-      = link_to 'Om Advice Capital', '/about_ac'
+      = link_to 'Advice Capital', '/about_ac'
       %ul
         %li
           = link_to 'Historie', '/about_ac/history'
         %li
           |
         %li
-          = link_to 'Det står vi for / Vores koncept', '/about_ac/concept'
+          = link_to 'Koncept', '/about_ac/concept'
         %li
           |
         %li
@@ -31,16 +31,19 @@
 
     %li
       = link_to 'Organisation', organisation_path
-
-    %li
-      = link_to 'Bliv kunde', become_customer_path
       %ul
         %li
-          = link_to 'Investering i Advice Invest A/S', '/become_client/invest_advice'
+          = link_to 'Hvem er vi?', '#'
         %li
           |
         %li
-          = link_to 'Individuel investeringsrådgivning', '/become_client/individual_invest_advice'
+          = link_to 'Organisationssturktur', '#'
+
+    %li
+      = link_to 'Bliv kunde', become_customer_path
+
+      //= link_to 'Investering i Advice Invest A/S', '/become_client/invest_advice'
+      //= link_to 'Individuel investeringsrådgivning', '/become_client/individual_invest_advice'
 
     %li
       = link_to 'Investeringsunivers', invest_universe_path
@@ -50,11 +53,11 @@
         %li
           |
         %li
-          = link_to 'Virksomhedsobligationer', '/invest_universe/company_bonds'
+          = link_to 'Obligationer', '/invest_universe/bonds'
         %li
           |
         %li
-          = link_to 'Obligationer', '/invest_universe/bonds'
+          = link_to 'Virksomhedsobligationer', '/invest_universe/company_bonds'
         %li
           |
         %li
@@ -62,6 +65,11 @@
 
     %li
       = link_to 'Nyheder', '/news'
+      %ul
+        %li
+          = link_to 'Modtag nyheder', '#'
+    %li
+      = link_to 'Video-arkiv', '#'
     %li
       = link_to 'Investor login', investor_login_path
       %ul
