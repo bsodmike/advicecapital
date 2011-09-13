@@ -1,0 +1,21 @@
+%h3 Modtag nyheder fra Advice Capital
+
+
+%p
+  Indtast dit fornavn, efternavn og email, og du vil løbende modtage nyheder fra Advice Capital
+
+%p
+  .field
+    = label_tag :firstname, 'Fornavn'
+    %br/
+    = text_field_tag :firstname
+  .field
+    = label_tag :lastname, 'Efternavn'
+    %br/
+    = text_field_tag :lastname
+  .field
+    = label_tag :email, 'Email'
+    %br/
+    = text_field_tag :email
+  .action
+    = submit_tag 'Send'

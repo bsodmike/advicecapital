@@ -15,7 +15,9 @@ Advicecapital::Application.routes.draw do
     resources :advice_pages
   end
   
-  root :to => "pages#index"  
+  root :to => "pages#index"
+
+  match '/receive_news', :to => 'pages#receive_news'
   
   match '/disclaimer', :to => 'pages#disclaimer'
   match '/organisation', :to => 'employees#index'

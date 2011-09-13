@@ -3,10 +3,8 @@ class PagesController < ApplicationController
   respond_to :html
 
   def index
-
     @page_title = "Advice Capital A/S - Index"
     @news = News.limit(5).all
-
   end
 
   def show
