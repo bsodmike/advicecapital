@@ -299,9 +299,33 @@ footer {
     list-style: none;
   }
 }
-.news_ticker ul {
-  list-style: none;
+#employees_index {
+  float: left;
+  width: 120px;
+  height: 150px;
+  background: none;
+
+  .nivoSlider {
+    img {
+      width: 120px;
+      height: 150px;
+    }
+  }
+
+  #employees_index_info {
+    margin-left: 10px;
+    float: left;
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+
+      li {
+      }
+    }
+  }
 }
+
 .submenu_box {
   position: fixed;
   top: 10;

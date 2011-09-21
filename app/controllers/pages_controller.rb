@@ -5,6 +5,7 @@ class PagesController < ApplicationController
   def index
     @page_title = "Advice Capital A/S - Index"
     @news = News.limit(5).all
+    @employees = Employee.all
   end
 
   def show

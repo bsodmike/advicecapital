@@ -41,14 +41,17 @@
       speed: 3000,
       visible: 6
     });
-    // 
-    // $(".news_ticker").jCarouselLite({
-    //   vertical: true,
-    //   auto: 1,
-    //   speed: 3000,
-    //   visible: 10
-    // });
 
+    $("#employees_index").nivoSlider({
+      effect: 'fade',
+      pauseOnHover: true,
+      animSpeed: 1000,
+      pauseTime: 5000,
+      directionNav: false,
+      controlNav: false,
+      keyboardNav: false,
+      captionOpacity: 1
+    });
 
     $("#stocks").jCarouselLite({
       auto: 1,
