@@ -2,6 +2,10 @@
 %html
   %head
     %title= @page_title
+    = stylesheet_link_tag 'blueprint/screen', :media => "screen, projection"
+    = stylesheet_link_tag 'blueprint/print', :media => "print"
+    /[if lt IE8]
+      = stylesheet_link_tag 'blueprint/ie'
     = stylesheet_link_tag "application"
     = render 'layouts/stylesheets'
     = javascript_include_tag 'application'
