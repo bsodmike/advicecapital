@@ -5,8 +5,9 @@
     %meta{:"http-equiv" => "Content-Type", :"content" => "text/html; charset=utf-8"}
     = stylesheet_link_tag 'blueprint/screen', :media => "screen, projection"
     = stylesheet_link_tag 'blueprint/print', :media => "print"
-    /[if lt IE8]
+    /[if lt IE 8]
       = stylesheet_link_tag 'blueprint/ie'
+
     = stylesheet_link_tag "application"
     = javascript_include_tag 'application'
     = javascript_include_tag '//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js', '//ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js'
