@@ -1,8 +1,8 @@
 !!!
 %html
   %head
-    %meta{:"content"}
     %title= @page_title
+    %meta{:"http-equiv" => "Content-Type", :"content" => "text/html; charset=utf-8"}
     = stylesheet_link_tag "application"
     = render 'layouts/stylesheets'
     = javascript_include_tag 'application'
