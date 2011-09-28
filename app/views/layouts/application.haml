@@ -2,10 +2,18 @@
 %html
   %head
     %title= @page_title
+<<<<<<< HEAD
     %meta{:"http-equiv" => "Content-Type", :"content" => "text/html; charset=utf-8"}
+=======
+    = stylesheet_link_tag 'blueprint/screen', :media => "screen, projection"
+    = stylesheet_link_tag 'blueprint/print', :media => "print"
+    /[if lt IE8]
+      = stylesheet_link_tag 'blueprint/ie'
+>>>>>>> 22e40b3abbd048b231dcb5cc8d1e0e439900bc16
     = stylesheet_link_tag "application"
     = render 'layouts/stylesheets'
     = javascript_include_tag 'application'
+    = javascript_include_tag '//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js', '//ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js'
     = javascript_include_tag 'http://gsgd.co.uk/sandbox/jquery/easing/jquery.easing.1.3.js'
     = javascript_include_tag 'http://maps.google.com/maps?file=api&amp;v=3&amp;key=ABQIAAAASK8Pro_gmHn7Es4JWtxDaRSb-IRhU3-s1z54ijxt-DewA5k8gxTHW-y-1W9BiTqbwycTVUFdSyLzEg'
     = javascript_include_tag 'http://gmap.nurtext.de/js/jquery.gmap-1.1.0-min.js'
