@@ -42,7 +42,7 @@
       visible: 6
     });
 
-    $("#employees_index").update("<%= escape_javascript(render(@employees)) %>");
+    // $("#employees_index").update("<%= escape_javascript(render(@employees)) %>");
 
     //$("#employees_index").nivoSlider({
     //  effect: 'fade',
