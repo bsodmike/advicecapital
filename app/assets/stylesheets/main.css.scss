@@ -104,10 +104,14 @@ header {
       }
 
       li:hover {
-        background: url('btn_background.png') repeat-x;
+        background: url('rounded_middle.png') center top repeat-x;
         height: 18px;
         margin: 0;
         padding: 16px 10px 3px 10px;
+
+        span {
+          background: url('rounded_right.png') right top no-repeat;
+        }
 
         ul {
           padding: 0;

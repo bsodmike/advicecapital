@@ -1,8 +1,10 @@
 %nav
 
   %ul#main
-    %li 
-      = link_to 'Advice Capital', '/about_ac'
+    %li
+      %a{:href => "/about_ac"}
+        %span Advice Capital
+      /= link_to 'Advice Capital', ''
       %ul
         %li
           = link_to 'Historie', '/about_ac/history'
