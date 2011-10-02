@@ -8,7 +8,9 @@
       });
     });
 
-    $.getJSON('/employees.json', function() )
+    $.getJSON('employees.json', function(data) {
+      alert("data : " + data)
+    });
 
 
     $("#map").gMap({

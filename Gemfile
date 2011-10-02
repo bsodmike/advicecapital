@@ -20,6 +20,9 @@ gem 'ransack'
 gem 'thin'  # added for heroku
 gem 'kaminari'
 
+gem 'carrierwave'
+gem 'panda'
+
 group :development do
   gem 'taps'
   gem 'heroku'
