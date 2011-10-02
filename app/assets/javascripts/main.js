@@ -8,6 +8,8 @@
       });
     });
 
+    $.getJSON('/employees.json', function() )
+
 
     $("#map").gMap({
       markers: [{
@@ -17,7 +19,6 @@
       }],
       address: "Strandvejen 100, Hellerup, Denmark",
       zoom: 15
-
     });
 
     tinyMCE.init({
