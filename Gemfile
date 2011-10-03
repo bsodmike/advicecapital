@@ -15,18 +15,18 @@ gem 'ystock'
 gem 'jquery-rails'
 gem 'carrierwave'
 
+gem 'eventmachine', "~> 1.0.0.beta.4.1"
+
 gem 'haml'
 gem 'ransack'
 gem 'thin'  # added for heroku
 gem 'kaminari'
 
-gem 'carrierwave'
 gem 'panda'
 
 group :development do
   gem 'taps'
   gem 'heroku'
-  #gem 'eventmachine', '~> 1.0.0.beta.3'
   gem 'foreman'
 end
 
