@@ -1,26 +1,4 @@
-- content_for :pre_body_close do
-  :javascript
-    var peon_data = []
-    $.ajax({
-      url: 'employees.json',
-      async: false,
-      dataType: 'json',
-      success: function (json) {
-        peon_data = json;
-      }
-    });
 
-    console.log(peon_data);
-    var peon = peon_data
-
-    function slideFlip() {
-        peon = peon_data.pop();
-        $("#employee_image").html('<img src=/assets/employees/'+peon.image+' height="120px" width="100px" />');
-        $("#employee_info").html(peon.name+'<br/><br/>'+peon.title+'<br/><br/>'+peon.email+'<br/><br/>'+peon.phone);
-        peon_data.unshift(peon);
-    }
-
-    setInterval(slideFlip, 8000 );
 
 #main_content
   #slider.nivoSlider
@@ -33,7 +11,7 @@
 
 
   #content
-    .span-7
+    .span-8
       %h3 Udvalgte portefølje-selskaber
       %ul
         %li ALK Abelle
@@ -41,17 +19,16 @@
         %li 10% Agrokor
         %li 10,4 Lauritzen
 
-    .span-8
+    .span-7
       %h3 Derfor valgte vi Advice Invest
       %p
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-    .span-7.last
+    .span-8.last
       %h3 Videoplayer
-      %p
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      = render :partial => "pages/index/video"
 
-    .span-7
+    .span-8
       %h3 Seneste nyt om porteføljeselskaber
       %ul
         - @news.each do |news|
@@ -60,7 +37,7 @@
             %br/
             = raw(truncate(news.content, :length => 50))
 
-    .span-8
+    .span-7
       %h3 Seneste nyt
       %ul
         - @news.each do |news|
@@ -69,9 +46,9 @@
             %br/
             = raw(truncate(news.content, :length => 50))
 
-    .span-7.last
+    .span-8.last
       %h3 Hvem er vi
-      = render :partial => "employees"
+      = render :partial => "pages/index/employees"
 
 .stay-clear
 #bottom
@@ -79,5 +56,5 @@
     %ul
       =# render :partial => "default_ystock"
       - Resque.enqueue(FetchStocks)
-      = render :partial => "resque_ystock"
+      = render :partial =>  "pages/index/resque_ystock"
 

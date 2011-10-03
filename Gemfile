@@ -15,7 +15,7 @@ gem 'ystock'
 gem 'jquery-rails'
 gem 'carrierwave'
 
-gem 'eventmachine', "~> 1.0.0.beta.4.1"
+gem 'eventmachine', "1.0.0.beta.4.1"
 
 gem 'haml'
 gem 'ransack'
