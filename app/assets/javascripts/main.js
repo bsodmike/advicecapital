@@ -27,22 +27,6 @@
 //    });
 
 
-    function slideFlip() {
-
-      $.getJSON('employees.json', function(data) {
-
-          var peon = data.pop();
-          $("#employees_list").html('Name: '+peon.name+'<br/><br/>Title: '+peon.title+'Email: '+peon.email);
-          // put it back at data[0]
-          data.unshift(peon);
-
-        });
-    }
-    setInterval(slideFlip, 5000 );
-
-
-
-
     $("#map").gMap({
       markers: [{
         address: "Strandvejen 100, Hellerup, Denmark",

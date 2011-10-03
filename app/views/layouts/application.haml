@@ -21,7 +21,6 @@
     /[if lt IE 9]
       = javascript_include_tag 'http://html5shiv.googlecode.com/svn/trunk/html5.js'
     = csrf_meta_tag
-
   %body
 
     .container
@@ -38,7 +37,8 @@
           = render :partial => 'layouts/admin_menu'
 
         = yield
-
+    
+    = yield :pre_body_close  
     = render :partial => 'layouts/footer'
 
 

@@ -1,3 +1,27 @@
+- content_for :pre_body_close do
+  :javascript
+    var peon_data = []
+    $.ajax({
+      url: 'employees.json',
+      async: false,
+      dataType: 'json',
+      success: function (json) {
+        peon_data = json;
+      }
+    });
+
+    console.log(peon_data);
+    var peon = peon_data
+
+    function slideFlip() {
+        peon = peon_data.pop();
+        $("#employee_image").html('<img src=/images/employees/'+peon.image+' />');
+        $("#employee_info").html('<strong>Name</strong>: '+peon.name+'<br/><br/>Title: '+peon.title+'<br/><br/>Email: '+peon.email+'<br/><br/>Phone: '+peon.phone);
+        peon_data.unshift(peon);
+    }
+
+    setInterval(slideFlip, 5000 );
+
 #main_content
   #slider.nivoSlider
     
