@@ -8,23 +8,37 @@
       });
     });
 
-    $.getJSON('employees.json', function(data) {
-      var image = data[0].image
-      var name = data[0].name
-      var email = data[0].email
-      var title = data[0].title
+//    $.getJSON('employees.json', function(data) {
+//      var image = data[0].image
+//      var name = data[0].name
+//      var email = data[0].email
+//      var title = data[0].title
+//
+//      alert(data[0])
+//
+//      $("#employees").live("employees", function() {
+//        $.each(data, function(i) {
+//          $("#employees_list")
+//            .append('<p><img src="'+i.image+'" width="120px" height="100px" />'+i.name+'</p>')
+//            .fadeIn(30)
+//            .fadeOut(1000)
+//        });
+//      });
+//    });
 
-      alert(data[0])
 
-      $("#employees").live("employees", function() {
-        $.each(data, function(i) {
-          $("#employees_list")
-            .append('<p><img src="'+i.image+'" width="120px" height="100px" />'+i.name+'</p>')
-            .fadeIn(30)
-            .fadeOut(1000)
+    function slideFlip() {
+
+      $.getJSON('employees.json', function(data) {
+
+          var peon = data.pop();
+          $("#employees_list").html('Name: '+peon.name+'<br/><br/>Title: '+peon.title+'Email: '+peon.email);
+          // put it back at data[0]
+          data.unshift(peon);
+
         });
-      });
-    });
+    }
+    setInterval(slideFlip, 5000 );
 
 
 
