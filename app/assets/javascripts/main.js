@@ -59,19 +59,6 @@
       visible: 6
     });
 
-    // $("#employees_index").update("<%= escape_javascript(render(@employees)) %>");
-
-    //$("#employees_index").nivoSlider({
-    //  effect: 'fade',
-    //  pauseOnHover: true,
-    //  animSpeed: 1000,
-    //  pauseTime: 5000,
-    //  directionNav: false,
-    //  controlNav: false,
-    //  keyboardNav: false,
-    //  captionOpacity: 1
-    //});
-
     $("#stocks").jCarouselLite({
       auto: 1,
       speed: 2000

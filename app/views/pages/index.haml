@@ -15,12 +15,12 @@
 
     function slideFlip() {
         peon = peon_data.pop();
-        $("#employee_image").html('<img src=/images/employees/'+peon.image+' />');
-        $("#employee_info").html('<strong>Name</strong>: '+peon.name+'<br/><br/>Title: '+peon.title+'<br/><br/>Email: '+peon.email+'<br/><br/>Phone: '+peon.phone);
+        $("#employee_image").html('<img src=/assets/employees/'+peon.image+' height="120px" width="100px" />');
+        $("#employee_info").html(peon.name+'<br/><br/>'+peon.title+'<br/><br/>'+peon.email+'<br/><br/>'+peon.phone);
         peon_data.unshift(peon);
     }
 
-    setInterval(slideFlip, 5000 );
+    setInterval(slideFlip, 8000 );
 
 #main_content
   #slider.nivoSlider

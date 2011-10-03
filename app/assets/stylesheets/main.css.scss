@@ -241,22 +241,6 @@ footer {
       display:block;
     }
   }
-  /*ul {
-    width: 600px;
-    list-style: none;
-    display: inline-block;
-    float: left;
-
-    li {
-      float: left;
-      margin-right: 20px;
-
-      img {
-        width: 115px;
-        height: 77px;
-      }
-    }
-  }*/
 
   .arrows {
     clear: both;
@@ -333,28 +317,15 @@ footer {
 }
 #employees_index {
   float: left;
-  width: 120px;
   height: 150px;
   background: none;
 
-  .nivoSlider {
-    img {
-      width: 120px;
-      height: 150px;
-    }
-  }
-
-  #employees_index_info {
-    margin-left: 10px;
+  #employee_image {
     float: left;
-    ul {
-      margin: 0;
-      padding: 0;
-      list-style-type: none;
-
-      li {
-      }
-    }
+    margin-right: 10px;
+  }
+  #employee_info {
+    float: right;
   }
 }
 
