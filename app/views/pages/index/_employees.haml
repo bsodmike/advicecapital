@@ -15,7 +15,7 @@
 
     function slideFlip() {
         peon = peon_data.pop();
-        $("#employee_image").html('<img src=/assets/employees/'+peon.image+' height="120px" width="100px" />');
+        $("#employee_image").html('<img src=/assets/employees/'+peon.image+' height="150px" width="120px" />');
         $("#employee_info").html(peon.name+'<br/><br/>'+peon.title+'<br/><br/>'+peon.email+'<br/><br/>'+peon.phone);
         peon_data.unshift(peon);
     }
