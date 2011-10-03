@@ -124,16 +124,16 @@ header {
         	color-stop(0.61, #283641)
         );
 
-        border-top-left-radius: 10px 10px;
-        border-top-right-radius: 10px 10px;
-        -moz-border-radius-topleft: 10px 10px;
-        -moz-border-radius-topright: 10px 10px;
-        border-radius: 10px;
+        border-top-left-radius: 8px 8px;
+        border-top-right-radius: 8px 8px;
+        -moz-border-radius-topleft: 8px 8px;
+        -moz-border-radius-topright: 8px 8px;
+        border-radius: 8px;
         /*background: url('rounded_middle.png') center top repeat-x;*/
         margin: 0;
         padding: 15px 10px 3px 10px;
 
-        behavior: url(ie-css3.htc);
+        behavior: url(/PIE.htc) url(ie-css3.htc) url(border-radius.htc);
 
 
         /*span {
