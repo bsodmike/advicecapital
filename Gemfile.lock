@@ -184,7 +184,7 @@ DEPENDENCIES
   cancan
   carrierwave
   coffee-script
-  eventmachine (~> 1.0.0.beta.4.1)
+  eventmachine
   factory_girl_rails
   foreman
   haml
