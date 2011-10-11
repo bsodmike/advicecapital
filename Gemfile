@@ -1,5 +1,6 @@
 source 'http://rubygems.org'
-gem 'rails', '3.1.0'
+gem 'rails', '3.1.1'
+gem 'bcrypt-ruby'
 
 # Asset template engines
 group :assets do
@@ -25,6 +26,7 @@ gem 'panda'
 group :development do
   gem 'taps'
   gem 'heroku'
+  gem 'eventmachine', '~> 1.0.0.beta.4.1'
   gem 'foreman'
 end
 
@@ -32,18 +34,20 @@ group :production do
   gem 'therubyracer-heroku'
   gem 'pg'
   gem 'arel'
-  gem 'eventmachine'
 end
 
 group :test do
-  # Pretty printed test output
-  gem 'turn', :require => false
   #gem 'rspec'
   gem 'webrat'
   gem 'factory_girl_rails'
 end
 
 group :development, :test do
-  #gem 'rspec-rails'
+  gem 'turn'
+  gem 'rspec-rails'
+  gem 'capybara'
+  gem 'guard'
+  gem 'guard-rspec'
+  gem 'minitest'
   gem 'sqlite3'
 end
