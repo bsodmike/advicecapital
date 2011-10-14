@@ -36,7 +36,7 @@ class NewsController < ApplicationController
     if @news.update_attributes(params[:news])
       redirect_to(@news, :notice => 'News was successfully updated.')
     else
-      render :action => "edit"
+      render :edit
     end
   end
 

@@ -3,8 +3,7 @@ class PagesController < ApplicationController
   respond_to :html, :json, :js
 
   def index
-    respond_with(@page_title = "Advice Capital A/S - Index", @news = News.limit(5).all, @employees = Employee.all)
-
+    respond_with(@page_title = "Advice Capital A/S - Index", @news = News.limit(5).all, @employees = Employee.all, @box = Box.first)
   end
 
   def show

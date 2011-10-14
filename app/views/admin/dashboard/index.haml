@@ -2,7 +2,7 @@
 
 %p
   Du er logget ind som:
-  = current_user.name
+  = link_to current_user.name, current_user
   \-
   = current_user.email
   %br/
@@ -11,8 +11,20 @@
 
 %p
   Seneste nyhed:
-  = @latest_news_written.title unless @latest_news_written.nil?
+  = link_to @latest_news_written.title, @latest_news_written unless @latest_news_written.nil?
   %br/
   %br/
-  Antal medarbejdere:
-  = @total_employees
+%h2 Forside
+
+.span-4{:style=>'text-align:center'}
+  %h3= link_to 'Nyheder', news_index_path
+  = link_to 'Opret nyhed', new_news_path
+.span-4{:style=>'text-align:center'}
+  %h3= link_to 'Sider', admin_advice_pages_path
+.span-4{:style=>'text-align:center'}
+  %h3= link_to 'Investorer', boards_path
+  = link_to 'Opret investor', new_board_path
+.span-4{:style=>'text-align:center'}
+  %h3= link_to 'Brugere', users_path
+  = link_to 'Opret bruger', new_user_path
+

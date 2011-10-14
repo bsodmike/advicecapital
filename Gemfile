@@ -21,13 +21,15 @@ gem 'ransack'
 gem 'thin'  # added for heroku
 gem 'kaminari'
 
+
 gem 'panda'
 
 group :development do
   gem 'taps'
   gem 'heroku'
-  gem 'eventmachine', '~> 1.0.0.beta.4.1'
   gem 'foreman'
+  gem 'eventmachine'
+  gem 'therubyracer'
 end
 
 group :production do
@@ -37,14 +39,13 @@ group :production do
 end
 
 group :test do
-  #gem 'rspec'
   gem 'webrat'
   gem 'factory_girl_rails'
 end
 
 group :development, :test do
   gem 'turn'
-  gem 'rspec-rails'
+  gem 'rspec-rails', :require => 'rspec'
   gem 'capybara'
   gem 'guard'
   gem 'guard-rspec'

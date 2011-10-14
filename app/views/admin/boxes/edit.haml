@@ -1,0 +1,17 @@
+%h3 Rediger box
+
+= form_for [:admin, @box] do |f|
+  - if @box.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@box.errors.count, "error")
+        prohibited this news from being saved:
+      %ul
+        - @box.errors.full_messages.each do |msg|
+          %li= msg
+  .field
+    = f.label :content, "Indhold:"
+    %br/
+    = f.text_area :content
+  .actions
+    = f.submit "Gem"

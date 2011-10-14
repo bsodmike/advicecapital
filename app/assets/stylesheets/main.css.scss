@@ -17,11 +17,12 @@ body {
 
 /**************** LINKS ****************/
 a, a:hover, a:visited, a:active {
-  color: $white;
+  color: $black;
   text-decoration: none;
 }
 a.link_black, .link_black a {
-  color: $black;
+  color: $white;
+  font-weight: none !important;
 }
 /**************** LINKS _END_ ****************/
 
@@ -59,6 +60,7 @@ header {
       li {
         padding-right: 6px;
         a {
+          color: $white;
           text-decoration: none;
         }
         #search_button {
@@ -78,6 +80,7 @@ header {
     }
 
     ul#main {
+      color: $white;
       font-size: 14px;
       float: left;
       margin-top: 84px;
@@ -89,6 +92,7 @@ header {
         cursor: pointer;
 
         a {
+          color: $white;
           text-decoration: none;
         }
 
@@ -371,15 +375,16 @@ footer {
   position: fixed;
   top: 10;
   left: 0;
-  min-width: 120px;
+  min-width: 140px;
   height: 200px;
   margin: 10px 0 10px 20px;
 
   ul {
     margin: 8px 0 0 0;
-    list-style-type: disc;
+    list-style-type: none;
 
     li {
+      margin: 0;
       a {
         color: $black;
       }

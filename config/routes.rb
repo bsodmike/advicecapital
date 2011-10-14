@@ -2,17 +2,19 @@ Advicecapital::Application.routes.draw do
 
   match '/signin', :to => 'sessions#new'
   match '/signout', :to => 'sessions#destroy'
+
   resources :sessions
   
   resources :users
   resources :news
   resources :boards
   resources :employees
-  resource :contacts, :only => [:show, :new, :create]
+  resource :contacts, :only => [:show, :new]
 
   namespace :admin do
     root :to => 'dashboard#index'
     resources :advice_pages
+    resources :boxes, :only => [:show, :edit]
   end
   
   root :to => "pages#index"
