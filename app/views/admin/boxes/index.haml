@@ -1,0 +1,9 @@
+%h3 Boxes
+
+= @boxes.each do |box|
+  .span-7
+    %h3= box.name
+    %br/
+    = raw box.content
+    .notice
+      = link_to 'Rediger', edit_admin_box_path(box)
