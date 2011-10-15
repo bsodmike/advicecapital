@@ -3,9 +3,8 @@ class PagesController < ApplicationController
   respond_to :html, :json, :js
 
   def index
-    box_choose = 1
-    box_portfolio = 2
-
+    box_portfolio = 1
+    box_choose = 2
 
     respond_with(
       @page_title = "Advice Capital A/S - Index",
