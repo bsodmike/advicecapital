@@ -1,0 +1,7 @@
+%h3 Seneste nyt om porteføljeselskaber
+%ul
+  - @news.each do |news|
+    %li
+      %b= news.created_at.strftime('%d/%m/%y - %H:%M:%S')
+      %br/
+      = raw(truncate(news.content, :length => 50))

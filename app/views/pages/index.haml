@@ -9,7 +9,6 @@
       %li= image_tag 'header-1.jpg'
       %li= image_tag 'IMG_0940.jpg'
 
-
   #content
     .span-8
       = render "pages/index/box_portfolio"
@@ -18,29 +17,15 @@
       = render "pages/index/box_choose"
 
     .span-9.last
-      %h3 Videoplayer
       = render "pages/index/video"
 
     .span-8
-      %h3 Seneste nyt om porteføljeselskaber
-      %ul
-        - @news.each do |news|
-          %li
-            %b= news.created_at.strftime('%d/%m/%y - %H:%M:%S')
-            %br/
-            = raw(truncate(news.content, :length => 50))
+      = render "pages/index/latest_news_portfolio"
 
     .span-7
-      %h3 Seneste nyt
-      %ul
-        - @news.each do |news|
-          %li
-            %b= news.created_at.strftime('%d/%m/%y - %H:%M:%S')
-            %br/
-            = raw(truncate(news.content, :length => 50))
+      = render "pages/index/latest_news"
 
     .span-9.last
-      %h3 Hvem er vi
       = render "pages/index/employees"
 
 .stay-clear
