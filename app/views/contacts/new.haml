@@ -1,8 +1,8 @@
-%div{:style => "clear:both;float:right;margin-right:260px;"}
+%div{:style => "clear:both;float:right;margin-right:250px;"}
   %h3 Vores beliggenhed
-#map{:style => "clear:both;float:right;width:400px;height:300px;margin-right: 10px;"}
+  #map{:style => "clear:both;float:right;width:400px;height:300px;margin-right: 10px;"}
 %h3 Kontakt os
-= form_for @contact do |f|
+= form_for @contact, :url => {:action => "create"} do |f|
   - unless @contact.errors.empty?
     #error_explanation
       Please correct the following:
