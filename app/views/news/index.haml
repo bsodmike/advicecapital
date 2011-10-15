@@ -1,26 +1,21 @@
 %h3 Nyheder
 
-.span-22
-  %table
-    - @news.each do |news|
-      %tr
+%table
+  - @news.each do |news|
+    %tr
+      %td
+        %b= news.created_at.strftime('%D - %H:%m')
+        \-
+        = raw(truncate(news.content, :length => 50))
+      - if current_user && current_user.admin?
         %td
-          %b= news.created_at.strftime('%D - %H:%m')
-          \-
-          = raw(truncate(news.content, :length => 50))
-        - if current_user && current_user.admin?
-          %td
-            .link_black
-              = link_to 'Vis', news
-              = link_to 'Rediger', edit_news_path(news)
-              = link_to 'Slet', news, :confirm => 'Are you sure?', :method => :delete
-
+          = link_to 'Vis', news
+          = link_to 'Rediger', edit_news_path(news)
+          = link_to 'Slet', news, :confirm => 'Are you sure?', :method => :delete
         %td
-    .link_black
-      = paginate @news
+  = paginate @news
 
 %br/
 %br/
 - if current_user && current_user.admin?
-  .link_black
-    = link_to 'Opret nyhed', new_news_path
+  = link_to 'Opret nyhed', new_news_path

@@ -20,7 +20,7 @@ a, a:hover, a:visited, a:active {
   color: $black;
   text-decoration: none;
 }
-a.link_black, .link_black a {
+a.link_white, .link_white a {
   color: $white;
   font-weight: none !important;
 }
@@ -430,7 +430,6 @@ footer {
     color: $white;
   }
 }
-
 #error_explanation {
   width: 400px;
   border: 2px solid red;
