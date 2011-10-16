@@ -30,9 +30,6 @@ module Advicecapital
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
 
-    # Please note that JavaScript expansions are *ignored altogether* if the asset
-    # pipeline is enabled (see config.assets.enabled below). Put your defaults in
-    # app/assets/javascripts/application.js in that case.
     #
     # JavaScript files you want as :defaults (application.js is always included).
     # config.action_view.javascript_expansions[:defaults] = %w(prototype prototype_ujs)
@@ -45,6 +42,20 @@ module Advicecapital
 
     # Enable the asset pipeline
     config.assets.enabled = true
+
+    #config.action_mailer.smtp_settings = {
+    #  :address              => "smtp.gmail.com",
+    #  :port                 => 587,
+    #  :domain               => "advicecapital.dk",
+    #  :user_name            => "znowm4n@gmail.com.dk",
+    #  :password             => "Le!nad3309",
+    #  :authentication       => :plain,
+    #  :enable_starttls_auto => true
+    #}
+    #
+    #config.action_mailer.default_url_options = {
+    #  :host => "advicecapital.dk"
+    #}
 
   end
 end

@@ -1,7 +1,8 @@
-class Notifier < ActionMailer::Base
-  #default :to => "contact@advicecapital.dk"
+class NotificationsMailer < ActionMailer::Base
+  #default :to => "znowm"
+  #default :from =>
 
-  def contact(message)
+  def new_message(message)
     @message = message
     mail(
       :from => @message.email,

@@ -1,6 +1,7 @@
 Advicecapital::Application.routes.draw do
 
-  match '/contact', :to => 'contacts#new'
+  match '/contact' => 'contact#new', :as => 'contact', :via => :get
+  match '/contact' =>  'contact#create', :as => 'contact', :via => :post
 
   match '/signin', :to => 'sessions#new'
   match '/signout', :to => 'sessions#destroy'
@@ -15,7 +16,7 @@ Advicecapital::Application.routes.draw do
   resources :news
   resources :boards
   resources :employees
-  resources :contacts, :only => [:new, :create]
+  #resources :contacts, :only => [:new, :create]
 
   namespace :admin do
     root :to => 'dashboard#index'

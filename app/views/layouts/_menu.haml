@@ -1,5 +1,4 @@
 %nav
-
   %ul#main
     %li
       = link_to 'Advice Capital', '/about_ac'
@@ -80,7 +79,7 @@
     %li
       = link_to 'Forside', root_path
     %li
-      = link_to 'Kontakt', new_contacts_path
+      = link_to 'Kontakt', '/contact'
     %li
       = text_field_tag :search_field, nil, :size => 15
       = button_tag 'Søg', :disabled => true, :id => 'search_button'

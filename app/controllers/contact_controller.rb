@@ -1,14 +1,14 @@
-class ContactsController < ApplicationController
+class ContactController < ApplicationController
 
   def new
-    @contact = Contact.new(:id => 1)
+    @message = Message.new
   end
 
   def create
-    @contact = Contact.new(params[:contact])
+    @message = Message.new(params[:message])
 
-    if @contact.save
-      #Notifier.contact(@contact).deliver
+    if @message.valid?
+      NotificationsMailer.new_message(@message).deliver
       redirect_to root_path, :notice => "Din email blev sendt, vi kontakter dig."
     else
       render :new, :error => "Din email blev ikke sendt."
