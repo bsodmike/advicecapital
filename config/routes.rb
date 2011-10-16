@@ -33,8 +33,8 @@ Advicecapital::Application.routes.draw do
 
   mount Resque::Server, :at => "/resque"
     
-  AdvicePage.all.each do |r|
-    match r.slug, :to => "pages#show"
-  end
+  #AdvicePage.all.each do |r|
+  #  match r.slug, :to => "pages#show"
+  #end
 
 end
