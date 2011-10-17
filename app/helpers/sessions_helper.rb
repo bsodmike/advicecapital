@@ -40,7 +40,7 @@ module SessionsHelper
 
   def deny_access
     store_location
-    redirect_to signin_path, :notice => "Please sign in to access this page" # A shortcut to put a message in flash[:notice] with redirect_to, also works with :error but not :success
+    redirect_to signin_path, :error => "Please sign in to access this page" # A shortcut to put a message in flash[:notice] with redirect_to, also works with :error but not :success
   end
 
   def redirect_back_or(default)

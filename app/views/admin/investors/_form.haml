@@ -1,0 +1,44 @@
+= form_for [:admin, @investor] do |f|
+  - if @investor.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@investor.errors.count, "error")
+        prohibited this news from being saved:
+      %ul
+        - @investor.errors.full_messages.each do |msg|
+          %li= msg
+
+  = field_set_tag "Generelle oplysninger" do
+    .field
+      = f.label :name, "Fulde navn:"
+      %br/
+      = f.text_field :name
+    .field
+      = f.label :entry_date, "Dato for indtrædelse:"
+      %br/
+      = f.text_field :entry_date
+
+
+  = field_set_tag "Kontakt oplysninger" do
+    .field
+      = f.label :email, "Evt. email:"
+      %br/
+      = f.email_field :email
+    .field
+      = f.label :phone, "Evt. telefon:"
+      %br/
+      = f.phone_field :phone
+
+
+  = field_set_tag "Aktie oplysninger" do
+    .field
+      = f.label :stocks, "Antal aktier:"
+      %br/
+      = f.text_field :stocks
+    .field
+      = f.label :entry_stock_price, "Pris pr. aktie ved indtrædelse:"
+      %br/
+      = f.text_field :entry_stock_price
+
+  .actions
+    = f.submit "Gem"

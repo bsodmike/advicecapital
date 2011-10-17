@@ -22,6 +22,7 @@ Advicecapital::Application.routes.draw do
     root :to => 'dashboard#index'
     resources :advice_pages
     resources :boxes, :only => [:index, :show, :edit, :update]
+    resources :investors
   end
   
   root :to => "pages#index"
