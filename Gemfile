@@ -46,7 +46,7 @@ end
 
 group :development, :test do
   gem 'turn'
-  gem 'rspec-rails', :require => 'rspec'
+  gem 'rspec-rails'
   gem 'capybara'
   gem 'guard'
   gem 'guard-rspec'
