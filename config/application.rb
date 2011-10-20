@@ -43,19 +43,9 @@ module Advicecapital
     # Enable the asset pipeline
     config.assets.enabled = true
 
-    #config.action_mailer.smtp_settings = {
-    #  :address              => "smtp.gmail.com",
-    #  :port                 => 587,
-    #  :domain               => "advicecapital.dk",
-    #  :user_name            => "znowm4n@gmail.com.dk",
-    #  :password             => "Le!nad3309",
-    #  :authentication       => :plain,
-    #  :enable_starttls_auto => true
-    #}
-    #
-    #config.action_mailer.default_url_options = {
-    #  :host => "advicecapital.dk"
-    #}
+    config.generators do |g|
+      g.test_framework :rspec
+    end
 
   end
 end
