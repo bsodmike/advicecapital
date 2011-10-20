@@ -20,9 +20,10 @@ gem 'haml'
 gem 'ransack'
 gem 'thin'  # added for heroku
 gem 'kaminari'
-
-
 gem 'panda'
+gem 'googlecharts'
+
+gem 'capistrano'
 
 group :development do
   gem 'taps'

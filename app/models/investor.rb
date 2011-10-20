@@ -24,4 +24,6 @@ class Investor < ActiveRecord::Base
   validates :entry_stock_price,
             :presence => false,
             :numericality => { :only_integer => false }
+
+
 end
