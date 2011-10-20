@@ -1,5 +1,5 @@
 default_run_options[:pty] = true
-set :repository,  "git://github.com/znow/advicecapital.git"
+set :repository,  "git@github.com:Znow/advicecapital.git"
 
 set :scm, "git"
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
@@ -10,6 +10,7 @@ set :deploy_via, :remote_cache
 set :application, "advicecapital"
 set :deploy_to , "/var/www/apps/#{application}"
 set :user, "deploy"
+set :use_sudo, false
 set :admin_runner, "deploy"
 
 role :web, "danielg.dk"                          # Your HTTP server, Apache/etc
