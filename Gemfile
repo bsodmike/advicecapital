@@ -27,14 +27,12 @@ gem 'capistrano'
 
 group :development do
   gem 'taps'
-  gem 'heroku'
   gem 'foreman'
   gem 'eventmachine'
   gem 'therubyracer'
 end
 
 group :production do
-  gem 'therubyracer-heroku'
   gem 'pg'
   gem 'arel'
 end
