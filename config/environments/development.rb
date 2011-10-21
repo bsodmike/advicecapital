@@ -1,6 +1,6 @@
 Advicecapital::Application.configure do
 
-  config.action_mailer.default_url_options = {host: 'www.advicecapital.dk' }
+  config.action_mailer.default_url_options = { host: '192.168.159.128:3000' }
   config.action_mailer.perform_deliveries = true
   config.action_mailer.delivery_method = :sendmail
   config.action_mailer.sendmail_settings = {

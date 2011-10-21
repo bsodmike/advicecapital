@@ -18,7 +18,7 @@ class SessionsController < ApplicationController
       end
       redirect_to root_url, :notice => "Du er nu logget ind"
     else
-      render :new, :error => = "Forkert email eller kodeord."
+      render :new, :error => "Forkert email eller kodeord."
     end
   end
 

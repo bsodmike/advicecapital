@@ -16,6 +16,7 @@ Advicecapital::Application.routes.draw do
   resources :news
   resources :boards
   resources :employees
+  resources :password_resets
   #resources :contacts, :only => [:new, :create]
 
   namespace :admin do
@@ -34,8 +35,8 @@ Advicecapital::Application.routes.draw do
 
   mount Resque::Server, :at => "/resque"
     
-  #AdvicePage.all.each do |r|
-  #  match r.slug, :to => "pages#show"
-  #end
+  AdvicePage.all.each do |r|
+    match r.slug, :to => "pages#show"
+  end
 
 end

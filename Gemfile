@@ -45,8 +45,9 @@ group :test do
 end
 
 group :development, :test do
+  gem 'rb-fsevent'
   gem 'turn'
-  gem 'rspec-rails'
+  gem 'rspec-rails', :require => 'rspec'
   gem 'capybara'
   gem 'guard'
   gem 'guard-rspec'
