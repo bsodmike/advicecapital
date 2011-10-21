@@ -36,7 +36,7 @@ Advicecapital::Application.configure do
   #URI::DEFAULT_PARSER = :development
   #URI::Parser.new(:UNRESERVED => URI::REGEXP::PATTERN::UNRESERVED + '|')
 
-  ENV['PANDASTREAM_URL'] = "http://64b6578ec12f737d1cd0:8c087ad66dafcbce7c00@api.pandastream.com:443/b195123f26b7e27884125984293d8f70"
+  #ENV['PANDASTREAM_URL'] = "http://64b6578ec12f737d1cd0:8c087ad66dafcbce7c00@api.pandastream.com:443/b195123f26b7e27884125984293d8f70"
 
 
   
