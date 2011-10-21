@@ -45,6 +45,7 @@ group :test do
 end
 
 group :development, :test do
+  gem 'minitest'
   gem 'rb-fsevent'
   gem 'turn'
   gem 'rspec-rails', :require => 'rspec'
