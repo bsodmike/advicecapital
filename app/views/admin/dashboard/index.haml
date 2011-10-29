@@ -2,7 +2,7 @@
 
 %p
   Du er logget ind som:
-  = link_to current_user.name, current_user
+  = current_user.name
   \-
   = current_user.email
   %br/
@@ -25,10 +25,6 @@
 .span-4{:style=>'text-align:center'}
   %h3= link_to 'Investorer', admin_investors_path
   = link_to 'Opret investor', new_admin_investor_path
-
-.span-4{:style=>'text-align:center'}
-  %h3= link_to 'Brugere', users_path
-  = link_to 'Opret bruger', new_user_path
 
 .span-4{:style=>'text-align:center'}
   %h3= link_to 'Boxe', admin_boxes_path

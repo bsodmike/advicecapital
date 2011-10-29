@@ -44,9 +44,9 @@
 
   #user_nav
   - if user_signed_in?
-    Signed in as #{current_user.email}. Not you?
-    = link_to "Sign out", destroy_user_session_path, :method => :delete
+    Signed in as #{current_user.email}.
+    = link_to "Log ud", destroy_user_session_path, :method => :delete
   - else
-    = link_to "sign in", new_user_session_path
+    = link_to "Log ind", new_user_session_path
 
 
