@@ -1,4 +1,8 @@
 def password_reset(user)
-  @user = user
-  mail :to => user.email, :subject => "Password Reset"
+  default :from => "test@example.com"
+
+  def password_reset(user)
+    @user = user
+    mail :to => user.email, :subject => "Nulstil kodeord"
+  end
 end

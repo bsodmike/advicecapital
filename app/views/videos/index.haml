@@ -1,0 +1,5 @@
+%h2 Video-arkiv
+- @videos.each do |video|
+  = video.title
+  - if current_user.super_admin?
+    = link_to ""

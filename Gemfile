@@ -18,10 +18,11 @@ gem 'carrierwave'
 
 gem 'haml'
 gem 'ransack'
-gem 'thin'  # added for heroku
+gem 'thin'
 gem 'kaminari'
 gem 'panda'
 gem 'googlecharts'
+gem 'prawn'
 
 gem 'capistrano'
 

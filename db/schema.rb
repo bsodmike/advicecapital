@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111017171006) do
+ActiveRecord::Schema.define(:version => 20111106134016) do
 
   create_table "advice_pages", :force => true do |t|
     t.string   "title"
@@ -86,6 +86,13 @@ ActiveRecord::Schema.define(:version => 20111017171006) do
     t.string   "password_reset_token"
     t.datetime "password_reset_sent_at"
     t.string   "role",                   :default => "visitor"
+  end
+
+  create_table "videos", :force => true do |t|
+    t.string   "title"
+    t.string   "panda_video_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

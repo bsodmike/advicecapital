@@ -18,6 +18,7 @@ Advicecapital::Application.routes.draw do
   resources :employees
   resources :password_resets
   #resources :contacts, :only => [:new, :create]
+  resources :videos
 
   namespace :admin do
     root :to => 'dashboard#index'
