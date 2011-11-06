@@ -3,8 +3,7 @@
     %li= link_to 'Admin Index', '/admin'
     %li= link_to 'Sider', admin_advice_pages_path
     %li= link_to 'Nyheder', news_index_path
-    %li= link_to 'Brugere', users_path
 
-    %li= link_to 'Profil', current_user
-    %li= link_to 'Brugerindstillinger', edit_user_path(current_user)
-    %li= link_to 'Log ud', signout_path, :method => :delete
+    %li=# link_to 'Profil', current_user
+    %li= link_to 'Brugerindstillinger', '#'#edit_user_registration
+    %li= link_to 'Log ud', destroy_user_session_path, :method => :delete

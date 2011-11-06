@@ -1,5 +1,5 @@
 source 'http://rubygems.org'
-gem 'rails', '3.1.0'
+gem 'rails', '3.1.1'
 gem 'bcrypt-ruby'
 
 # Asset template engines
@@ -15,6 +15,8 @@ gem 'ystock'
 
 gem 'jquery-rails'
 gem 'carrierwave'
+
+gem 'devise'
 
 gem 'haml'
 gem 'ransack'
