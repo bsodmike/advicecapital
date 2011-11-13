@@ -46,13 +46,10 @@ group :test do
 end
 
 group :development, :test do
-  gem 'minitest'
   gem 'rb-fsevent'
-  gem 'turn'
   gem 'rspec-rails', :require => 'rspec'
   gem 'capybara'
   gem 'guard'
   gem 'guard-rspec'
-  gem 'minitest'
   gem 'sqlite3'
 end
