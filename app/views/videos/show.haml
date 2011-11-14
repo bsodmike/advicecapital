@@ -1,2 +1,6 @@
 %h2= @video.title
 %p=h @video.panda_video.inspect
+
+- if @video.panda_video.status == "success"
+  %video#movie{:controls => "", :height => @h264_encoding.height, :poster => @h264_encoding.screenshots.first, :autoplay => "autoplay", :preload => "none", :width => @h264_encoding.width}
+    %source{:src => @h264_encoding.url, :type => "video/mp4"}
