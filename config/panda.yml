@@ -1,18 +1,18 @@
 development:
-  access_key: AKIAJD4H3NUBLUCC7QJQ
-  secret_key: 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
-  cloud_id: b195123f26b7e27884125984293d8f70
+  access_key: 37046a41354fb511e6b3
+  secret_key: 0264798fcef742ccf608
+  cloud_id: 3cf7a094467ed995fc841b163f006ec2
   # Uncomment the line below if your account is in the EU
-  # api_host: api-eu.pandastream.com
+  api_host: api-eu.pandastream.com
 test:
-  access_key: AKIAJD4H3NUBLUCC7QJQ
-  secret_key: WiitrI60zT3RkSdiNb8jFoeTl2OrDzUnJp+rfQbM
-  cloud_id: b195123f26b7e27884125984293d8f70
+  access_key: 37046a41354fb511e6b3
+  secret_key: 0264798fcef742ccf608
+  cloud_id: 3cf7a094467ed995fc841b163f006ec2
   # Uncomment the line below if your account is in the EU
-  # api_host: api-eu.pandastream.com
+  api_host: api-eu.pandastream.com
 production:
-  access_key: AKIAJD4H3NUBLUCC7QJQ
-  secret_key: WiitrI60zT3RkSdiNb8jFoeTl2OrDzUnJp+rfQbM
-  cloud_id: b195123f26b7e27884125984293d8f70
+  access_key: 37046a41354fb511e6b3
+  secret_key: 0264798fcef742ccf608
+  cloud_id: 3cf7a094467ed995fc841b163f006ec2
   # Uncomment the line below if your account is in the EU
-  # api_host: api-eu.pandastream.com
+  api_host: api-eu.pandastream.com
