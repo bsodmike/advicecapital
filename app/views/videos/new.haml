@@ -11,15 +11,4 @@
 
   = f.submit "Upload video"
 
-:javascript
-  var panda_access_details = {
-    'access_key': 'AKIAJD4H3NUBLUCC7QJQ',
-    'cloud_id': 'WiitrI60zT3RkSdiNb8jFoeTl2OrDzUnJp+rfQbM',
-    'timestamp': '2010-02-02T17:04:46+00:00',
-    'signature': 'dC/M34sNc7v+oyhFRfVLEKpkVMNyhhyuyCECAQiR6nrUw='
-  };
-  auth_params = Panda.signed_params('post', "/videos.json")
-  jQuery("#returned_video_id").pandaUploader(<%=raw auth_params.to_json %>, {
-    api_host: 'api_eu.pandastream.com',
-    upload_progress_id: 'upload_progress'
-  });
+= render "script"
