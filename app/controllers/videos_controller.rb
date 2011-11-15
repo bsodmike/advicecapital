@@ -2,13 +2,13 @@ class VideosController < ApplicationController
   before_filter :authenticate_user!, :except => :index
 
   def index
-    @videos = Video.order("created_at DESC").all
+    @videos = Panda.get('/videos.json')
   end
 
   def show
     @video = Video.find(params[:id])
     @original_video = @video.panda_video
-    @h264_encoding = @original_video.encodings["h264"]
+    @h264_encoding = @original_video.encodings['h264']
   end
 
   def new

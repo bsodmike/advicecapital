@@ -23,6 +23,7 @@ gem 'ransack'
 gem 'thin'
 gem 'kaminari'
 gem 'panda'
+gem 'fog'
 gem 'googlecharts'
 gem 'prawn'
 

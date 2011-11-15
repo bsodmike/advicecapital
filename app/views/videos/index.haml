@@ -1,5 +1,7 @@
 %h2 Video-arkiv
 - @videos.each do |video|
-  = video.title
-  - if current_user.super_admin?
-    = link_to ""
+	= debug video.source_url
+	- #@original_video = video.panda_video
+	- #@h264_encoding = @original_video.encodings["h264"]
+	%video#movie{:controls => "controls", :height => "240", :autoplay => "autoplay", :width => "320"}
+		%source{:src => video, :type => "video/mp4"}
