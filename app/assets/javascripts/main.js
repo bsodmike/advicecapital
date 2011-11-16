@@ -64,15 +64,21 @@
       speed: 2000
     });
 
-    $("#slider").nivoSlider({
-      effect: 'sliceUp',
-      pauseOnHover: true,
-      animSpeed: 500,
-      pauseTime: 3000,
-      captionOpacity: 0.8,
-      manualAdvance: false
 
+    $("#slider").CloudCarousel({
+      xPos: 128,
+      yPos: 32,
+      autoRotate: 'yes'
     });
+    //$("#slider").nivoSlider({
+      //effect: 'sliceUp',
+      //pauseOnHover: true,
+      //animSpeed: 500,
+      //pauseTime: 3000,
+      //captionOpacity: 0.8,
+      //manualAdvance: false
+
+    //});
 
     // Organisation, employees slider
     $(".slider_custom ul.employees li img").hover(function() {

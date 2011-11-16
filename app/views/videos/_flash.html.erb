@@ -1,5 +1,5 @@
 <script type='text/javascript'>
-  var so = new SWFObject('/player.swf','mpl',"<%= @h264_encoding.width %>","<%= @h264_encoding.height %>",'9');
+  var so = new SWFObject('/player.swf','mpl',"<%=# @h264_encoding.width %>","<%=# @h264_encoding.height %>",'9');
   so.addParam('allowfullscreen','true');
   so.addParam('allowscriptaccess','always');
   so.addParam('wmode','opaque');
