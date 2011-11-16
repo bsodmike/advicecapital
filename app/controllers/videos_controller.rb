@@ -1,8 +1,8 @@
 class VideosController < ApplicationController
-  before_filter :authenticate_user!, :except => :index
+  before_filter :authenticate_user!, :except => [:index, :show]
 
   def index
-    @videos = Panda.get('/videos.json')
+    @videos = Panda::Encoding.all#Panda.get('/videos.json')
   end
 
   def show
