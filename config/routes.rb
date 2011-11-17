@@ -4,6 +4,7 @@ Advicecapital::Application.routes.draw do
   match '/contact' =>  'contact#create', :as => 'contact', :via => :post
 
   devise_for :users
+  
 
   resources :news
   resources :boards
@@ -16,6 +17,7 @@ Advicecapital::Application.routes.draw do
     resources :advice_pages
     resources :boxes, :only => [:index, :show, :edit, :update]
     resources :investors
+    resources :users
   end
   
   root :to => "pages#index"

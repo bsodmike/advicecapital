@@ -1,6 +1,8 @@
 # encode UTF-8
 class PagesController < ApplicationController
+
   respond_to :html, :json, :js
+
 
   def index
     box_portfolio = 1

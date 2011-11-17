@@ -2,6 +2,7 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
+    user ||= User.new
     # Abilities
     # :manage
     # :create
@@ -13,12 +14,17 @@ class Ability
     # :manage, Model
     if user.super_admin?
       can :manage, :all
+
     elsif user.admin?
       can :manage, :news
+      can :manage, :videos
+      can :manage, :employees
       can [:read, :update], User, :id => user.id
+
     elsif user.investor?
       can :read, News
       can [:read, :update], User, :id => user.id
+
     else # default role for newly created account, "visitor"
       can :read, News
       can [:read, :update], User, :id => user.id

@@ -1,4 +1,6 @@
 class BoardsController < ApplicationController
+  load_and_authorize_resource
+  
   # GET /boards
   # GET /boards.xml
   def index

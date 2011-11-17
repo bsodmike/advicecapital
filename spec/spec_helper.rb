@@ -11,9 +11,9 @@ Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 RSpec.configure do |config|
 
   config.mock_with :rspec
-  config.expect_with :stdlib
-  config.include ActiveSupport::Testing::Assertions
 
+  config.include Devise::TestHelpers, :type => :controller
+  config.extend ControllerMacros, :type => :controller
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
   # examples within a transaction, remove the following line or assign false
   # instead of true.
