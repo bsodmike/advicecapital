@@ -28,9 +28,13 @@ Advicecapital::Application.routes.draw do
   match '/organisation', :to => 'employees#index'
 
   mount Resque::Server, :at => "/resque"
+  
+  match '/*slugs', :to => 'pages#show'
     
-  AdvicePage.all.each do |r|
-    match r.slug, :to => "pages#show"
-  end
+  # AdvicePage.all.each do |r|
+  #   match r.slug, :to => "pages#show"
+  # end
+
+
 
 end
