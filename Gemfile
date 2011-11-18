@@ -27,6 +27,8 @@ gem 'fog'
 gem 'googlecharts'
 gem 'prawn'
 
+gem 'thinking-sphinx'
+
 gem 'capistrano'
 
 group :development do
