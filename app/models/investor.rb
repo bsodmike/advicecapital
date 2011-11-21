@@ -25,5 +25,7 @@ class Investor < ActiveRecord::Base
             :presence => false,
             :numericality => { :only_integer => false }
 
+            
+
 
 end
