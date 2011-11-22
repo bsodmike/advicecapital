@@ -38,11 +38,6 @@ group :development do
   gem 'therubyracer'
 end
 
-group :production do
-  gem 'pg'
-  gem 'arel'
-end
-
 group :test do
   gem 'webrat'
   gem 'factory_girl_rails'
