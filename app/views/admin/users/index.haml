@@ -13,8 +13,8 @@
 			%td= user.role
 			%td
 			%td
-			%td
-				= link_to 'Vis', news
-        = link_to 'Rediger', edit_news_path(news)
-        = link_to 'Slet', news, :confirm => 'Are you sure?', :method => :delete
+			%td.notice
+				= link_to 'Vis', user
+				= link_to 'Rediger', '#'#edit_news_path(news)
+				= link_to 'Slet', user, :confirm => 'Er du sikker?', :method => :delete
 				
