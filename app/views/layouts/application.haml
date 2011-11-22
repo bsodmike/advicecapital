@@ -55,7 +55,5 @@
     - if user_signed_in?
       Logget ind som #{current_user.email}.
       = link_to "Log ud", destroy_user_session_path, :method => :delete
-    - else
-      = link_to "Log ind", new_user_session_path
 
 

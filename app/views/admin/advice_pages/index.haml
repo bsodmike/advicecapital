@@ -2,12 +2,18 @@
 
 #table-wrapper
   %table
+    %tr
+      %th Titel
+      %th Sti
+      %th Slugv
+      %th Sidst opdateret
+      %th Handling
     - @pages.each do |r|
       %tr
         %td= r.title.empty? ? "No Title Set" : r.title
         %td= r.slug
         %td= r.template
-        %td= r.updated_at
+        %td= r.updated_at.strftime('%d/%m/%y - %H:%M:%S')
         %td
           = link_to "Rediger", edit_admin_advice_page_path(r)
           | 

@@ -17,6 +17,21 @@ class Admin::UsersController < AdminController
 	def create
 	end
 
+	def edit
+		@user = User.find(params[:id])
+	end
+
+	def update
+		@user = User.find(params[:id])
+
+		if @user.update_attributes(params[:user])
+			redirect_to admin_users_path, :notice => "Brugeren blev opdateret."
+		else
+			render :edit
+		end
+
+	end
+
 	def destroy
 		@user = User.find(params[:id])
 		if @user.destroy
