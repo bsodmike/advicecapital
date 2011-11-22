@@ -1,12 +1,12 @@
 Advicecapital::Application.configure do
 
-  config.action_mailer.default_url_options = { host: '192.168.159.128:3000' }
-  config.action_mailer.perform_deliveries = true
-  config.action_mailer.delivery_method = :sendmail
-  config.action_mailer.sendmail_settings = {
-    location: '/usr/sbin/sendmail',
-    arguments: "-i -t -f contato@dominio.com"
-  }
+  #config.action_mailer.default_url_options = { host: '192.168.159.128:3000' }
+  #config.action_mailer.perform_deliveries = true
+  #config.action_mailer.delivery_method = :sendmail
+  #config.action_mailer.sendmail_settings = {
+    #location: '/usr/sbin/sendmail',
+    #arguments: "-i -t -f contato@dominio.com"
+  #}
   # Settings specified here will take precedence over those in config/application.rb
 
   # In the development environment your application's code is reloaded on
