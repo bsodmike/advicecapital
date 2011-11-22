@@ -1,2 +1,3 @@
-Before you run: rake db:migrate
-Comment out line 27-29 in routes.rb!
+Advice Capital A/S
+
+/resque - list workers
