@@ -1,5 +1,5 @@
 .span-20
-  %h3= @page.title
+  %h3= @page.title if @page.title
 
   %p
     = raw(@page.content)

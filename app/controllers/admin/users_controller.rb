@@ -1,6 +1,7 @@
 class Admin::UsersController < AdminController
 	load_and_authorize_resource
 
+
 	def index
 		@users = User.all # Shows all users except current_users
 	end
@@ -11,10 +12,17 @@ class Admin::UsersController < AdminController
 	end
 
 	def new
-		User.new
+		@user = User.new
 	end
 
 	def create
+		@user = User.new
+
+		if @user.save
+			redirect_to admin_users, :notice => "Brugeren blev oprettet."
+		else
+			render :new
+		end
 	end
 
 	def edit
@@ -25,7 +33,7 @@ class Admin::UsersController < AdminController
 		@user = User.find(params[:id])
 
 		if @user.update_attributes(params[:user])
-			redirect_to admin_users_path, :notice => "Brugeren blev opdateret."
+			redirect_to admin_user_path(@user), :notice => "Brugeren blev opdateret."
 		else
 			render :edit
 		end

@@ -1,4 +1,4 @@
-= form_for(@user) do |f|
+= form_for "admin_user_path#{@user}" do |f|
   - if @user.errors.any?
     #error_explanation
       %h2
@@ -10,10 +10,10 @@
   .field
     = f.label :emaul, "Email:"
     %br/
-    = f.email_field :email
+    = f.email_field :email, :value => @user.email
   .field
     = f.label :role, "Rolle:"
     %br/
-    = f.select(:role, @user.role)
+    = f.select(:role, User::ROLES)
   .actions
     = f.submit "Gem"
