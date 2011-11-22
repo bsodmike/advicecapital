@@ -37,10 +37,10 @@
     //   zoom: 15
     // });
 
-    $('#map').googleMaps({
-      latitude: 42.351505,
-      longitude: -71.094455
-    }); 
+    //$('#map').googleMaps({
+      //latitude: 42.351505,
+      //longitude: -71.094455
+    //}); 
 
     tinyMCE.init({
         mode : "textareas",
