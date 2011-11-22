@@ -1,3 +1,16 @@
 Advice Capital A/S
 
-/resque - list workers
+/resque - see current workers
+
+First:
+
+	rake db:migrate
+	rake db:seed
+	rake resque:workers ( remember to start up redis-server )
+	rake pages:seed_table_data - to feed the pages model with pages data
+
+	(User)
+
+		User.create!(:email => "email@email.dk", :password => "somecode")
+		.update_attribute(:role, "role")
+
