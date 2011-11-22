@@ -1,5 +1,20 @@
 %h3 Brugere
 
-- @users.each do |user|
-	= user.email
-	%br/
+%table
+	%tr
+		%th Email
+		%th Rolle
+		%th
+		%th
+		%th Handling
+	- @users.each do |user|
+		%tr
+			%td= user.email
+			%td= user.role
+			%td
+			%td
+			%td
+				= link_to 'Vis', news
+        = link_to 'Rediger', edit_news_path(news)
+        = link_to 'Slet', news, :confirm => 'Are you sure?', :method => :delete
+				
