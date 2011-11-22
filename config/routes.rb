@@ -26,7 +26,7 @@ Advicecapital::Application.routes.draw do
   match '/receive_news', :to => 'pages#receive_news'
   
   match '/disclaimer', :to => 'pages#disclaimer'
-  match '/organisation', :to => 'employees#index'
+  match '/organisation', :to => 'admin/employees#index'
 
   mount Resque::Server, :at => "/resque"
   
