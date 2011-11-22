@@ -8,7 +8,7 @@ Advicecapital::Application.routes.draw do
 
   resources :news
   resources :boards
-  resources :employees
+  
   #resources :contacts, :only => [:new, :create]
   resources :videos
 
@@ -18,6 +18,7 @@ Advicecapital::Application.routes.draw do
     resources :boxes, :only => [:index, :show, :edit, :update]
     resources :investors
     resources :users
+    resources :employees
   end
   
   root :to => "pages#index"

@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  ROLES = %w(visitor investor admin super_admin)
+  ROLES = %w(visitor employee investor admin super_admin)
   # Include default devise modules. Others available are:
   # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, #:registerable,
@@ -7,6 +7,8 @@ class User < ActiveRecord::Base
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, :roles
+
+  #before_filter 
 
   def admin?
     ['admin', 'super_admin'].include? self.role

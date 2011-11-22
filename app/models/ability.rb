@@ -12,16 +12,16 @@ class Ability
 
     # :manage, :all
     # :manage, Model
-    if user.super_admin?
+    if user.role == "super_admin"
       can :manage, :all
 
-    elsif user.admin?
+    elsif user.role == "admin"
       can :manage, :news
       can :manage, :videos
       can :manage, :employees
       can [:read, :update], User, :id => user.id
 
-    elsif user.investor?
+    elsif user.role == "investor"
       can :read, News
       can [:read, :update], User, :id => user.id
 
