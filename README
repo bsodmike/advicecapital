@@ -1,12 +1,16 @@
 Advice Capital A/S
 
+resque_web
 /resque - see current workers
+u: admin
+p: Znowdkk3141
 
 First:
 
+
 	rake db:migrate
 	rake db:seed
-	rake resque:workers ( remember to start up redis-server )
+	rake resque:workers QUEUE='*' ( remember to start up redis-server )
 	rake pages:seed_table_data - to feed the pages model with pages data
 
 	(User)
