@@ -10,7 +10,11 @@ First:
 
 	rake db:migrate
 	rake db:seed
+
+	rake stock_table:setup
 	rake resque:workers QUEUE='*' ( remember to start up redis-server )
+	rake stock_info_update
+	
 	rake pages:seed_table_data - to feed the pages model with pages data
 
 	(User)
