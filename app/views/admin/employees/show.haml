@@ -14,6 +14,6 @@
   %b Phone:
   = @employee.phone
 
-- if current_user
+- if can? :manage, @employee
   = link_to 'Edit', edit_employee_path(@employee), :style => 'color: black;'
   = link_to 'Destroy', @employee, :confirm => 'Are you sure?', :method => :delete, :style => 'color: black;'
