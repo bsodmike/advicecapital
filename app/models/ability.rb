@@ -12,6 +12,14 @@ class Ability
 
     # :manage, :all
     # :manage, Model
+    #alias_action :index, :show, :to => :read
+    #alias_action :new, :to => :create
+    #alias_action :edit, :to => :update
+    #alias_action :update, :destroy, :to => :modify
+
+
+
+
     if user.super_admin?
       can :manage, :all
 
