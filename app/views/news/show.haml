@@ -5,8 +5,8 @@
   %b Indhold:
   = raw(@news.content)
 
-- if current_user && current_user.admin?
-  .link_black
+- if can? :update, @news
+  .notice
     = link_to 'Rediger', edit_news_path(@news)
-    |
-    = link_to 'Tilbage', news_index_path
+    
+= link_to 'Tilbage', news_index_path

@@ -7,7 +7,7 @@
         %b= news.created_at.strftime('%D - %H:%m')
         \-
         = raw(truncate(news.content, :length => 50))
-      - if can? :manage, @news
+      - if can? :manage, news
         %td
           .notice
             = link_to 'Vis', news
@@ -18,5 +18,6 @@
 
 %br/
 %br/
-- if can? :create, @news
-  = link_to 'Opret nyhed', new_news_path
+- if can? :create, News
+  .notice
+    = link_to 'Opret nyhed', new_news_path
