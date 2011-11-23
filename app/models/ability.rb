@@ -27,7 +27,8 @@ class Ability
       can :manage, News
       can :manage, Video
       can :manage, Employee
-      can :manage, Admin
+      can :manage, Dashboard
+      can :view,   AdvicePage
       can [:read, :update], User, :id => user.id
 
     elsif user.investor?
