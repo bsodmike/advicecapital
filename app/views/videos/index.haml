@@ -3,5 +3,4 @@
 	%video#movie{:controls => "controls", :height => "240", :width => "320"}
 		%source{:src => video.url, :type => "video/mp4"}
 	.notice
-		= link_to 'Vis', video
-    = link_to 'Slet', video, :confirm => 'Er du sikker?', :method => :delete
+		= link_to 'Slet', video.video_id, :confirm => 'Er du sikker?', :method => :delete

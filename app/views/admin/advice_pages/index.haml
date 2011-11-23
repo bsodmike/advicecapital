@@ -5,7 +5,7 @@
     %tr
       %th Titel
       %th Sti
-      %th Slugv
+      %th Slug
       %th Sidst opdateret
       %th Handling
     - @pages.each do |r|
@@ -15,6 +15,7 @@
         %td= r.template
         %td= r.updated_at.strftime('%d/%m/%y - %H:%M:%S')
         %td
-          = link_to "Rediger", edit_admin_advice_page_path(r)
-          | 
-          = link_to "Vis", r.slug, :target => "_blank"
+          - if can? :manage, @pages
+            = link_to "Rediger", edit_admin_advice_page_path(r)
+            | 
+            = link_to "Vis", r.slug, :target => "_blank"

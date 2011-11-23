@@ -53,7 +53,8 @@
 
   #user_nav
     - if user_signed_in?
-      Logget ind som #{current_user.email}.
+      Logget ind som 
+      = link_to current_user.email, admin_user_path(current_user)
       = link_to "Log ud", destroy_user_session_path, :method => :delete
 
 

@@ -27,5 +27,5 @@ class VideosController < ApplicationController
     @video.destroy
 
     redirect_to videos_path, :notice => "Video blev slettet."
-
+  end
 end
