@@ -22,3 +22,9 @@ First:
 		User.create!(:email => "email@email.dk", :password => "somecode")
 		.update_attribute(:role, "role")
 
+
+
+Userguide:
+
+	To directly edit a editable page, insert /editor/ in the URL
+

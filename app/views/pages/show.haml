@@ -1,8 +1,14 @@
 .span-20
-  %h3= @page.title if @page.title
+	%h3
+		%span#page_title.mercury-region{"data-type" => "editable"}
+			= raw @page.title
 
-  %p
-    = raw(@page.content)
+	%p
+		#page_content.mercury-region{"data-type" => "editable"}
+			= raw @page.content			
 
-    - if Rails.env.development?
-      = @path
+	- if can? :manage, @page
+		= link_to "Rediger side", "/editor" + request.path, id: "edit_link", data: {save_url: mercury_update_admin_advice_page_path(@page)}
+
+		- if Rails.env.development?
+			= @path

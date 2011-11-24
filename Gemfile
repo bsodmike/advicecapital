@@ -12,12 +12,10 @@ end
 gem 'resque', :require => "resque/server"
 gem 'cancan'
 gem 'ystock'
-
 gem 'jquery-rails'
 gem 'carrierwave'
-
 gem 'devise'
-
+gem 'mercury-rails'
 gem 'haml'
 gem 'ransack'
 gem 'thin'
@@ -26,9 +24,7 @@ gem 'panda'
 gem 'fog'
 gem 'googlecharts'
 gem 'prawn'
-
 gem 'thinking-sphinx'
-
 gem 'capistrano'
 
 group :development do

@@ -1,5 +1,7 @@
 Advicecapital::Application.routes.draw do
 
+  Mercury::Engine.routes
+
   match '/contact' => 'contact#new', :as => 'contact', :via => :get
   match '/contact' =>  'contact#create', :as => 'contact', :via => :post
 
@@ -14,7 +16,10 @@ Advicecapital::Application.routes.draw do
 
   namespace :admin do
     root :to => 'dashboard#index'
-    resources :advice_pages
+    resources :advice_pages do
+      member { post :mercury_update }
+    end
+    
     resources :boxes, :only => [:index, :show, :edit, :update]
     resources :investors
     resources :users
@@ -35,7 +40,5 @@ Advicecapital::Application.routes.draw do
   # AdvicePage.all.each do |r|
   #   match r.slug, :to => "pages#show"
   # end
-
-
 
 end
