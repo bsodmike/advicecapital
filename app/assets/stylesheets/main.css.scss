@@ -391,6 +391,17 @@ footer {
     }
   }
 }
+#sub_pages {
+  -moz-box-shadow: $box-dark-shadow;
+  -webkit-box-shadow: $box-dark-shadow;
+  box-shadow: $box-dark-shadow;
+  position: fixed;
+  top: 10;
+  left: 0;  
+  min-width: 140px;
+  height: 200px;
+  margin: 10px 0 10px 20px;
+}
 #bottom {
   -moz-box-shadow: $box-shadow;
   -webkit-box-shadow: $box-shadow;

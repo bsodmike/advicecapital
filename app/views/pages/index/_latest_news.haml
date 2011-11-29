@@ -1,7 +1,8 @@
 %h3 Seneste nyt
 %ul
-  - @news.each do |news|
+  - @rss.entries[0,5].each do |rss|
     %li
-      %b= news.created_at.strftime('%d/%m/%y - %H:%M:%S')
+      %b= rss.pubDate.strftime('%d/%m/%y - %H:%M:%S')
       %br/
-      = raw(truncate(news.content, :length => 50))
+      = link_to(truncate(rss.title, :length => 50), rss.link)
+      

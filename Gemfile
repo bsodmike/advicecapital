@@ -26,6 +26,10 @@ gem 'googlecharts'
 gem 'prawn'
 gem 'thinking-sphinx'
 gem 'capistrano'
+gem 'feedzirra'
+gem 'simple-rss'
+gem 'rest-open-uri'
+
 
 group :development do
   gem 'taps'
