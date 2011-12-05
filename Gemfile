@@ -34,7 +34,6 @@ gem 'rest-open-uri'
 group :development do
   gem 'taps'
   gem 'foreman'
-  gem 'eventmachine'
   gem 'therubyracer'
 end
 

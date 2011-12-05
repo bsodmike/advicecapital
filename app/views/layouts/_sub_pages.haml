@@ -1,4 +1,4 @@
-- if current_page?('/about_ac') || current_page?('/about_ac/history') || current_page?('/about_ac/concept') || current_page?('/about_ac/results') || current_page?('/about_ac/strategy')
+- if current_page?('/about_ac')
   #sub_pages
     %ul
       %li= link_to 'Historie', '/about_ac/history'  
@@ -31,7 +31,7 @@
       %li= link_to 'Obligationer', '/invest_universe/bonds'
       %li= link_to 'Virksomhedsobligationer', '/invest_universe/company_bonds'
       %li= link_to 'Valuta', '/invest_universe/valuta'
-- elsif current_page?('/news')
+- elsif current_page?(request.path == '/news')
   #sub_pages
     %ul
       %li= link_to 'Modtag nyheder', '/receive_news'
