@@ -31,7 +31,7 @@
       %li= link_to 'Obligationer', '/invest_universe/bonds'
       %li= link_to 'Virksomhedsobligationer', '/invest_universe/company_bonds'
       %li= link_to 'Valuta', '/invest_universe/valuta'
-- elsif current_page?(request.path == '/news')
+- elsif current_page?('/news')
   #sub_pages
     %ul
       %li= link_to 'Modtag nyheder', '/receive_news'

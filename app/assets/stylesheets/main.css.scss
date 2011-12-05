@@ -372,21 +372,21 @@ footer {
   -moz-box-shadow: $box-dark-shadow;
   -webkit-box-shadow: $box-dark-shadow;
   box-shadow: $box-dark-shadow;
-  position: fixed;
-  top: 10;
+  position: absolute;
+  top: 0;
   left: 0;
   min-width: 140px;
-  height: 200px;
+  min-height: 100px;
   margin: 10px 0 10px 20px;
 
   ul {
-    margin: 8px 0 0 0;
+    margin: 4px 8px 0 0;
     list-style-type: none;
 
     li {
       margin: 0;
       a {
-        color: $black;
+        color: $white;
       }
     }
   }
