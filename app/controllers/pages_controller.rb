@@ -3,7 +3,6 @@ class PagesController < ApplicationController
 
   respond_to :html, :json, :js
 
-
   def index
     box_portfolio = 1
     box_choose = 2

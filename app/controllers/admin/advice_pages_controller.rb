@@ -8,14 +8,6 @@ class Admin::AdvicePagesController < AdminController
     @page = AdvicePage.find(params[:id])
   end
 
-  def mercury_update
-    page = AdvicePage.find(params[:id])
-    page.name = params[:content][:page_title][:value]
-    page.content = params[:content][:page_content][:value]
-    page.save!
-    render text: ""
-  end
-
   def edit
     @page = AdvicePage.find(params[:id])
   end
