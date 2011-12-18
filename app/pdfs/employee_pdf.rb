@@ -1,5 +1,5 @@
 class EmployeePdf < Prawn::Document
-	def initialize(employee)
+	def initialize(employee, view)
 		super(top_margin: 70)
 		@employee = employee
 		name
