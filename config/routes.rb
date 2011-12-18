@@ -19,8 +19,10 @@ Advicecapital::Application.routes.draw do
     resources :boxes, :only => [:index, :show, :edit, :update]
     resources :investors
     resources :users
-    resources :employees
+    
   end
+
+  resources :employees
   
   root :to => "pages#index"
 

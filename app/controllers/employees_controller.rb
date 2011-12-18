@@ -1,4 +1,4 @@
-class Admin::EmployeesController < AdminController
+class EmployeesController < ApplicationController
 
   def index
     @employees = Employee.all
@@ -13,6 +13,12 @@ class Admin::EmployeesController < AdminController
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @employee }
+      format.pdf do
+        pdf = EmployeePdf.new(@employee, view_context)
+        send_data pdf.render, filename: "employee_#{@employee}.pdf",
+                              type: "application/pdf",
+                              disposition: "inline"
+      end
     end
   end
 
