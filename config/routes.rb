@@ -1,30 +1,24 @@
 Advicecapital::Application.routes.draw do
 
-  resources :stocks
-
   match '/contact' => 'contact#new', :as => 'contact', :via => :get
   match '/contact' =>  'contact#create', :as => 'contact', :via => :post
 
   devise_for :users
   
-
   resources :news
   resources :boards
-  
   #resources :contacts, :only => [:new, :create]
   resources :videos
+  resources :employees
 
   namespace :admin do
     root :to => 'dashboard#index'
-    resources :advice_pages
-    
+    resources :advice_pages    
     resources :boxes, :only => [:index, :show, :edit, :update]
     resources :investors
+    resources :stocks
     resources :users
-    
   end
-
-  resources :employees
   
   root :to => "pages#index"
 
