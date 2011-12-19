@@ -8,6 +8,10 @@
       });
     });
 
+    $('#flash').delay(500).fadeIn('normal', function() {
+      $(this).delay(2500).fadeOut();
+    });
+
 //    $.getJSON('employees.json', function(data) {
 //      var image = data[0].image
 //      var name = data[0].name

@@ -38,8 +38,9 @@
       .stay-clear
       
       #wrapper
+        
         - flash.each do |key, value|
-          = content_tag(:div, value, :class => "flash #{key}")
+          = content_tag(:div, value, :class => "flash #{key}", :id => "flash")
 
         - if current_user && current_user.admin?
           = render 'layouts/admin_menu'
