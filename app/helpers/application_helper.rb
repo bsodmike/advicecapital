@@ -18,13 +18,4 @@ module ApplicationHelper
 	  end
 	end
 
-	def flash_message 
-    messages = ""
-    [:notice, :info, :warning, :error].each {|type|
-      if flash[type]
-         messages += content_tag :div, flash[type], :class => "#{type}", :id => "alert"
-      end
-    }
-    messages << javascript_tag("$j('#alert').fadeOut(12000);")
-  end
 end

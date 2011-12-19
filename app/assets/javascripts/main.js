@@ -12,25 +12,6 @@
       $(this).delay(2500).fadeOut();
     });
 
-//    $.getJSON('employees.json', function(data) {
-//      var image = data[0].image
-//      var name = data[0].name
-//      var email = data[0].email
-//      var title = data[0].title
-//
-//      alert(data[0])
-//
-//      $("#employees").live("employees", function() {
-//        $.each(data, function(i) {
-//          $("#employees_list")
-//            .append('<p><img src="'+i.image+'" width="120px" height="100px" />'+i.name+'</p>')
-//            .fadeIn(30)
-//            .fadeOut(1000)
-//        });
-//      });
-//    });
-
-
     // $("#map").gMap({
     //   markers: [{
     //     address: "Strandvejen 100, Hellerup, Denmark",
