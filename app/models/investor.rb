@@ -25,7 +25,7 @@ class Investor < ActiveRecord::Base
             :presence => false,
             :numericality => { :only_integer => false }
 
-            
+  has_many :stock, through: :investor_stock           
 
 
 end

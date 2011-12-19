@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Value:</b>
+  <%= @stock.value %>
+</p>
+
+<p>
+  <b>Month:</b>
+  <%= @stock.month %>
+</p>
+
+<p>
+  <b>Year:</b>
+  <%= @stock.year %>
+</p>
+
+
+<%= link_to 'Edit', edit_stock_path(@stock) %> |
+<%= link_to 'Back', stocks_path %>
