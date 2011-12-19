@@ -77,9 +77,11 @@
 
   %ul#generic
     %li
-      = link_to 'Forside', root_path
+      %div{:style=>"padding-top:5px;"}
+        = link_to 'Forside', root_path
     %li
-      = link_to 'Kontakt', '/contact'
+      %div{:style=>"padding-top:5px;"}
+        = link_to 'Kontakt', '/contact'
     %li
       #cse-search-form{:style => "width: 100%;"} Loading
       %script{:src => "http://www.google.com/jsapi", :type => "text/javascript"}
@@ -94,4 +96,3 @@
           options.enableSearchboxOnly("http://www.google.com/cse?cx=010629835534026407651:wbgznkl70us");
           customSearchControl.draw('cse-search-form', options);
         }, true);
-      %link{:href => "http://www.google.com/cse/style/look/default.css", :rel => "stylesheet", :type => "text/css"}/

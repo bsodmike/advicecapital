@@ -58,24 +58,9 @@ header {
 
       li {
         padding-right: 6px;
-        padding-top: 2px;
         a {
           color: $white;
           text-decoration: none;
-        }
-        #search_button {
-          border: 1px solid #1c2831;
-          background: #283641;
-          color: $white;
-          margin: 0;
-          padding-top: 2px;
-        }
-        #search_field {
-          padding: 2px;
-          margin: 0;
-          border: 1px solid #283641;
-          background: $white;
-          color: $black;
         }
       }
     }
