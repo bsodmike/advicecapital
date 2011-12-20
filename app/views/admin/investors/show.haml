@@ -1,0 +1,25 @@
+%h3= @investor.name
+
+
+%h3 Aktie udvikling
+%table
+	%tr
+		%th Værdi
+		%th Måned
+		%th År
+	- @stocks.each do |stock|	
+		%tr
+			%td= stock.value
+			%td= stock.month
+			%td= stock.year
+
+- stock_value = @stocks.map(&:value)
+- stock_month = @stocks.map(&:month)
+
+
+	
+- chart = Gchart.line(:size => '600x300', :title => "Aktiekurs", :bg => 'fff', :legend => 'Aktie Værdi', :data => stock_value, :axis_with_labels => 'y,x,r', :axis_labels => [ stock_value ,stock_month, ['2011'] ])
+
+%img{:src => chart}
+	
+		

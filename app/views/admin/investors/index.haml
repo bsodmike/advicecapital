@@ -6,7 +6,7 @@
 		%th Email
 		%th Aktier
 		%th Tiltrædelse
-		= @investors.each do |investor|
+		- @investors.each do |investor|
 			%tr
 				%td= investor.name
 				%td= investor.email

@@ -5,6 +5,7 @@ class Admin::InvestorsController < AdminController
 
   def show
     @investor = Investor.find(params[:id])
+    @stocks = Stock.all 
   end
 
   def new

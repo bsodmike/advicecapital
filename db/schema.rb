@@ -70,8 +70,8 @@ ActiveRecord::Schema.define(:version => 20111219205713) do
   end
 
   create_table "investors_stocks", :force => true do |t|
-    t.integer  "investor"
-    t.integer  "stock"
+    t.integer  "investor_id"
+    t.integer  "stock_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
