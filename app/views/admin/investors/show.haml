@@ -1,5 +1,4 @@
-%h3= @investor.name
-
+%h3=# @investor.name
 
 %h3 Aktie udvikling
 %table
@@ -7,19 +6,22 @@
 		%th Værdi
 		%th Måned
 		%th År
-	- @stocks.each do |stock|	
+	- @stocks.each do |s|	
 		%tr
-			%td= stock.value
-			%td= stock.month
-			%td= stock.year
+			%td= s.value
+			%td= s.month
+			%td= s.year
 
-- stock_value = @stocks.map(&:value)
-- stock_month = @stocks.map(&:month)
+-# @investor.investors_stocks.collect { |s| s.stock }
+-# @investor.stocks
+
+-# stock_value = @stocks.map(&:value)
+-# stock_month = @stocks.map(&:month)
 
 
 	
-- chart = Gchart.line(:size => '600x300', :title => "Aktiekurs", :bg => 'fff', :legend => 'Aktie Værdi', :data => stock_value, :axis_with_labels => 'y,x,r', :axis_labels => [ stock_value ,stock_month, ['2011'] ])
+-# chart = Gchart.line(:size => '600x300', :title => "Aktiekurs", :bg => 'fff', :legend => 'Aktie Værdi', :data => stock_value, :axis_with_labels => 'y,x,r', :axis_labels => [ stock_value, stock_month, ['2011'] ])
 
-%img{:src => chart}
+//%img{:src => chart}
 	
 		

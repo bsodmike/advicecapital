@@ -5,7 +5,17 @@ class Admin::InvestorsController < AdminController
 
   def show
     @investor = Investor.find(params[:id])
-    @stocks = Stock.all 
+    #@stocks = @investor.stocks
+    #@stocks = @investor.investors_stocks.stocks
+
+    respond_to do |format|
+      format.pdf do
+        pdf = InvestorPdf.new(@investor, view_context)
+        send_data pdf.render, filename: "investor_#{@investor}.pdf",
+                              type: "application/pdf",
+                              disposition: "inline"
+        end
+    end
   end
 
   def new
