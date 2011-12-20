@@ -1,4 +1,22 @@
 %h3 Investorer
 
-= @investors.each do |investor|
-  = investor.name
+%table
+	%tr
+		%th Navn
+		%th Email
+		%th Aktier
+		%th Tiltrædelse
+		= @investors.each do |investor|
+			%tr
+				%td= investor.name
+				%td= investor.email
+				%td= investor.stocks
+				%td= investor.entry_date
+				- if can? :manage, investor
+					%td
+						.notice
+							= link_to 'Vis', admin_investor_path(investor)
+							= link_to 'Rediger', edit_admin_investor_path(investor)
+							= link_to 'Slet', admin_investor_path(investor), :confirm => 'Er du sikker?', :method => :delete
+
+		=# paginate @investors

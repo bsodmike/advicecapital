@@ -12,6 +12,8 @@
       $(this).delay(2500).fadeOut();
     });
 
+    $('#investor_entry_date').datepicker();
+
     // $("#map").gMap({
     //   markers: [{
     //     address: "Strandvejen 100, Hellerup, Denmark",
