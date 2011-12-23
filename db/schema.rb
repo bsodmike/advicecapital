@@ -58,6 +58,13 @@ ActiveRecord::Schema.define(:version => 20111220130031) do
     t.datetime "updated_at"
   end
 
+  create_table "investor_stocks", :force => true do |t|
+    t.integer  "investor_id"
+    t.integer  "stock_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "investors", :force => true do |t|
     t.string   "name"
     t.string   "email"
@@ -66,13 +73,6 @@ ActiveRecord::Schema.define(:version => 20111220130031) do
     t.datetime "entry_date"
     t.integer  "entry_stock_price"
     t.integer  "phone"
-  end
-
-  create_table "investors_stocks", :force => true do |t|
-    t.integer  "investor_id"
-    t.integer  "stock_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
   end
 
   create_table "news", :force => true do |t|

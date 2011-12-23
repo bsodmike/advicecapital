@@ -1,0 +1,12 @@
+%p
+  %b Værdi:
+  = @stock.value
+%p
+  %b Måned:
+  = @stock.month
+%p
+  %b År:
+  = @stock.year
+= link_to 'Rediger', edit_admin_stock_path(@stock)
+|
+= link_to 'Tilbage', admin_stocks_path

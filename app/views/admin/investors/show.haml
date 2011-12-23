@@ -1,4 +1,4 @@
-%h3=# @investor.name
+%h3= @investor.name
 
 %h3 Aktie udvikling
 %table
@@ -11,17 +11,23 @@
 			%td= s.value
 			%td= s.month
 			%td= s.year
+			- if can? :manage, s
+				%td
+					.notice.actions
+						= link_to 'Vis', admin_stock_path(s)
+						= link_to 'Rediger', edit_admin_stock_path(s)
+						= link_to 'Slet', admin_stock_path(s), :confirm => 'Er du sikker?', :method => :delete
 
--# @investor.investors_stocks.collect { |s| s.stock }
--# @investor.stocks
+	= #paginate @stocks
 
--# stock_value = @stocks.map(&:value)
--# stock_month = @stocks.map(&:month)
+
+- stock_value = @stocks.map(&:value)
+- stock_month = @stocks.map(&:month)
 
 
 	
--# chart = Gchart.line(:size => '600x300', :title => "Aktiekurs", :bg => 'fff', :legend => 'Aktie Værdi', :data => stock_value, :axis_with_labels => 'y,x,r', :axis_labels => [ stock_value, stock_month, ['2011'] ])
+- chart = Gchart.line(:size => '600x300', :title => "Aktiekurs", :bg => 'fff', :legend => 'Aktie Værdi', :data => stock_value, :axis_with_labels => 'y,x,r', :axis_labels => [ stock_value, stock_month, ['2011'] ])
 
-//%img{:src => chart}
+%img{:src => chart}
 	
 		

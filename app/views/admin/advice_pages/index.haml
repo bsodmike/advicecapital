@@ -16,6 +16,6 @@
         %td= r.updated_at.strftime('%d/%m/%y - %H:%M:%S')
         %td
           - if can? :manage, r
-            = link_to "Rediger", edit_admin_advice_page_path(r)
-            | 
-            = link_to "Vis", r.slug, :target => "_blank"
+            .notice.actions
+              = link_to "Rediger", edit_admin_advice_page_path(r)
+              = link_to "Vis", r.slug, :target => "_blank"

@@ -1,0 +1,22 @@
+%h3 Aktier
+%table
+  %tr
+    %th Værdi
+    %th Måned
+    %th År
+    %th
+  - @stocks.each do |stock|
+    %tr
+      %td= stock.value
+      %td= stock.month
+      %td= stock.year
+      %td
+        .notice.actions
+          - if can? :manage, stock
+            = link_to 'Vis', admin_stock_path(stock)
+            = link_to 'Rediger', edit_admin_stock_path(stock)
+            = link_to 'Slet', admin_stock_path(stock), confirm: 'Are you sure?', method: :delete
+%br/
+- if can? :manage, @stocks
+  .notice.actions
+    = link_to 'Ny aktie', new_admin_stock_path

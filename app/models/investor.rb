@@ -16,15 +16,12 @@ class Investor < ActiveRecord::Base
             :presence => false,
             :numericality => true
             #:format => { :with => phone_regex }
-  validates :stocks,
-            :presence => false,
-            :numericality => true
   validates :entry_stock_price,
             :presence => false,
             :numericality => { :only_integer => false }
 
-  has_many :investors_stocks
-  has_many :stocks, :through => :investors_stocks       
+  has_many :investor_stocks
+  has_many :stocks, :through => :investor_stocks       
 
 
 end

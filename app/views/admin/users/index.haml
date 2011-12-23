@@ -14,7 +14,8 @@
 			%td= user.last_sign_in_at.strftime('%d/%m/%y - %H:%M:%S') if user.last_sign_in_at
 			%td= user.updated_at.strftime('%d/%m/%y - %H:%M:%S')
 			%td
-				= link_to 'Vis', admin_user_path(user)
-				= link_to 'Rediger', edit_admin_user_path(user)
-				= link_to 'Slet', admin_user_path(user), :confirm => 'Er du sikker?', :method => :delete if user != current_user
+				.notice.actions
+					= link_to 'Vis', admin_user_path(user)
+					= link_to 'Rediger', edit_admin_user_path(user)
+					= link_to 'Slet', admin_user_path(user), :confirm => 'Er du sikker?', :method => :delete if user != current_user
 				

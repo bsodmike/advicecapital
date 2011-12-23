@@ -6,5 +6,5 @@
     %br/
     = raw box.content
     - if can? :update, box
-	    .notice
+	    .notice.actions
 	      = link_to 'Rediger', edit_admin_box_path(box)
