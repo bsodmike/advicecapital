@@ -12,8 +12,8 @@ task :create_boxes => :environment do
 		}
 	}
 
-	boxes.each do |box|
-		Box.create(:name => boxes[:name], :content => boxes[:content])
+	boxes.each do |box, value|
+		Box.create!(:name => value[:name], :content => value[:content])
 	end
 
 end
