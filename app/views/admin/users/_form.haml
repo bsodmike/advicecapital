@@ -11,9 +11,5 @@
     = f.label :emaul, "Email:"
     %br/
     = f.email_field :email, :value => @user.email
-  .field
-    = f.label :role, "Rolle:"
-    %br/
-    = f.select(:role, User::ROLES)
   .actions
     = f.submit "Gem"
