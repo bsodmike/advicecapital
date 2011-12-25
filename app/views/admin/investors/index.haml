@@ -12,10 +12,14 @@
 				%td= investor.entry_date
 				- if can? :manage, investor
 					%td
-						.notice
+						.notice.actions
 							= link_to 'Vis', admin_investor_path(investor)
 							= link_to 'Rediger', edit_admin_investor_path(investor)
 							= link_to 'Slet', admin_investor_path(investor), :confirm => 'Er du sikker?', :method => :delete
 							= link_to 'PDF', admin_investor_path(investor, format: "pdf")
+		
+- if can? :manage, @investors
+	.notice.actions
+		= link_to 'Ny investor', new_admin_investor_path
 
 		=# paginate @investors
