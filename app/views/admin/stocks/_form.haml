@@ -19,5 +19,11 @@
     = f.label :year, "År"
     %br/
     = f.number_field :year
+  
+  .field
+    
+    = select(:investor, :id, options_from_collection_for_select(Investor.all, :id, :name))
+
+    %br/
   .actions
     = f.submit "Gem"
