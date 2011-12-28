@@ -26,7 +26,7 @@ namespace :stock_table do
      {:symbol=>"WDH.CO", :price=>"424.60", :change=>"-3.80", :volume=>"262782"}]
       
     stock.each do |hash|
-      StockData.create(:symbol => hash[:symbol],:price => hash[:price], :change => hash[:change],:volume => hash[:volume],)
+      StockData.create(:symbol => hash[:symbol],:price => hash[:price], :change => hash[:change],:volume => hash[:volume])
     end
 
     # set price, change, and volume fields to 'NaN'
