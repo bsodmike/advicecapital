@@ -1,14 +1,11 @@
 .span-20
 	%h3
 		%span#page_title
-			= raw @page.title if @page.title
+			= raw @page.title if @page
 
 	%p
 		#page_content
-			= raw @page.content if @page.content
-
-	- if can? :manage, @page
-		= link_to "Rediger side", edit_admin_advice_page_path(@page)
+			= raw @page.content if @page
 
 		- if Rails.env.development?
 			= @path

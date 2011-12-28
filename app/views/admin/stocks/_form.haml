@@ -1,4 +1,4 @@
-= form_for(admin_stocks_path(@stock)) do |f|
+= form_for([:admin, @stock]) do |f|
   - if @stock.errors.any?
     #error_explanation
       %h2

@@ -41,10 +41,13 @@ class Admin::StocksController < AdminController
   # POST /stocks.json
   def create
     @stock = Stock.new(params[:stock])
+    @is = InvestorStock.new(params[:stock][:investor_id])
 
     respond_to do |format|
       if @stock.save
-        format.html { redirect_to @stock, notice: 'Stock was successfully created.' }
+        @is.stock_id = @stock.id
+        @is.save
+        format.html { redirect_to admin_stock_url(@stock), notice: 'Stock was successfully created.' }
         format.json { render json: @stock, status: :created, location: @stock }
       else
         format.html { render action: "new" }
@@ -60,7 +63,7 @@ class Admin::StocksController < AdminController
 
     respond_to do |format|
       if @stock.update_attributes(params[:stock])
-        format.html { redirect_to @stock, notice: 'Stock was successfully updated.' }
+        format.html { redirect_to admin_stock_url(@stock), notice: 'Stock was successfully updated.' }
         format.json { head :ok }
       else
         format.html { render action: "edit" }
@@ -76,7 +79,7 @@ class Admin::StocksController < AdminController
     @stock.destroy
 
     respond_to do |format|
-      format.html { redirect_to stocks_url }
+      format.html { redirect_to admin_stocks_url }
       format.json { head :ok }
     end
   end

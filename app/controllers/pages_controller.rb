@@ -12,7 +12,6 @@ class PagesController < ApplicationController
     @employees = Employee.all
     @box_portfolio = Box.find_by_id(box_portfolio)
     @box_choose = Box.find_by_id(box_choose)
-    #@feed = Feedzirra::Feed.fetch_and_parse("http://borsen.dk/rss/investor/")
     @rss = SimpleRSS.parse open('http://borsen.dk/rss/investor/')
   end
 

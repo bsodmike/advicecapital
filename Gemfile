@@ -24,7 +24,6 @@ gem 'fog'
 gem 'googlecharts'
 gem 'prawn'
 gem 'capistrano'
-gem 'feedzirra'
 gem 'simple-rss'
 gem 'rest-open-uri'
 
