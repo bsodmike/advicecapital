@@ -41,7 +41,7 @@ class Admin::StocksController < AdminController
   # POST /stocks.json
   def create
     @stock = Stock.new(params[:stock])
-    @is = InvestorStock.new(params[:stock][:investor_id])
+    @is = InvestorStock.new(params[:stock][:investor])
 
     respond_to do |format|
       if @stock.save
