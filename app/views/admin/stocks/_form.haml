@@ -21,7 +21,11 @@
     = f.number_field :year
   
   .field
-    = f.collection_select(:investors, :id, Investor.all, :id, :name, {:prompt => 'Vælg investor'})
+    =# f.collection_select(:stock, :investor_ids, Investor.all, :id, :name, {:prompt => 'VÃ¦lg investor'})
+
+    = f.collection_select(:investor, :investor_id, Investor.all, :id, :name)
+
+    = #f.collection_select(:investors, :id, Investor.all, :id, :name, {:prompt => 'Vælg investor'})
     = #collection_select(:investor_ids, :id, Investor.all, :id, :name, {:prompt => 'Vælg investor'})
 
     %br/
