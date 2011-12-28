@@ -41,12 +41,8 @@ class Admin::StocksController < AdminController
   # POST /stocks.json
   def create
     @stock = Stock.new(params[:stock])
-    @is = InvestorStock.new(params[:stock][:investor])
-
     respond_to do |format|
       if @stock.save
-        @is.stock_id = @stock.id
-        @is.save
         format.html { redirect_to admin_stock_url(@stock), notice: 'Stock was successfully created.' }
         format.json { render json: @stock, status: :created, location: @stock }
       else
