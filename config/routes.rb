@@ -1,7 +1,7 @@
 Advicecapital::Application.routes.draw do
 
-  match '/contact' => 'contact#new', :as => 'contact', :via => :get
-  match '/contact' =>  'contact#create', :as => 'contact', :via => :post
+  #match '/contact' => 'contact#new', :as => 'contact', :via => :get
+  #match '/contact' =>  'contact#create', :as => 'contact', :via => :post
 
   devise_for :users
   
@@ -25,7 +25,7 @@ Advicecapital::Application.routes.draw do
   match '/receive_news', :to => 'pages#receive_news'
   
   match '/disclaimer', :to => 'pages#disclaimer'
-  match '/organisation', :to => 'admin/employees#index'
+  match '/organisation', :to => 'employees#index'
 
   mount Resque::Server, :at => "/resque"
   
