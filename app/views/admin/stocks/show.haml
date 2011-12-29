@@ -1,4 +1,4 @@
-%table{:style => "width: 200px;"}
+%table{:style => "width: 300px;"}
 	%tr
 		%td
 			%b Værdi:
@@ -14,7 +14,8 @@
 	%tr
 		%td
 			%b Investor:
-		%td= @stock.investors.map(&:name)#{|i| i.name }
+		- @stock.investors.each do |s|
+			%td= s.name
 	%tr
 		%td
 			%b
