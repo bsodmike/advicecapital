@@ -1,12 +1,30 @@
-%p
-  %b Værdi:
-  = @stock.value
-%p
-  %b Måned:
-  = @stock.month
-%p
-  %b År:
-  = @stock.year
-= link_to 'Rediger', edit_admin_stock_path(@stock)
-|
-= link_to 'Tilbage', admin_stocks_path
+%table{:style => "width: 200px;"}
+	%tr
+		%td
+			%b Værdi:
+		%td= @stock.value
+	%tr
+		%td
+			%b Måned:
+		%td= @stock.month
+	%tr
+		%td
+			%b År:
+		%td= @stock.year
+	%tr
+		%td
+			%b Investor:
+		%td= @stock.investors.map(&:name)#{|i| i.name }
+	%tr
+		%td
+			%b
+				%small Oprettet:
+		%td
+			%small= @stock.updated_at.to_date
+	%tr
+		%td
+			- if can? :manage, @stock
+				.notice.actions
+					= link_to 'Rediger', edit_admin_stock_path(@stock)
+					|
+					= link_to 'Tilbage', admin_stocks_path
