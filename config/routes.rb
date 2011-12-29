@@ -7,7 +7,7 @@ Advicecapital::Application.routes.draw do
   
   resources :news
   resources :boards
-  #resources :contacts, :only => [:new, :create]
+  resources :contacts
   resources :videos
   resources :employees
 

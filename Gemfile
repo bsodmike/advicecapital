@@ -41,7 +41,7 @@ end
 
 group :development, :test do
   gem 'rb-fsevent'
-  gem 'rspec-rails', :require => 'rspec'
+  gem 'rspec-rails'
   gem 'capybara'
   gem 'guard'
   gem 'guard-rspec'
