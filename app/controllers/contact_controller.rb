@@ -7,8 +7,13 @@ class ContactController < ApplicationController
   def create
     @message = Message.new(params[:message])
 
-    if @message.valid?
-      NotificationsMailer.new_message(@message).deliver
+    @message = Message.new(params[:message])
+      @message.request = request
+      if @message.deliver
+
+
+    # if @message.valid?
+    #   NotificationsMailer.new_message(@message).deliver
       redirect_to root_path, :notice => "Din email blev sendt, vi kontakter dig."
     else
       render :new, :error => "Din email blev ikke sendt."
