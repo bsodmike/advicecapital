@@ -9,7 +9,7 @@
         = raw(truncate(news.content, :length => 50))
       - if can? :manage, news
         %td
-          .notice
+          .notice.actions
             = link_to 'Vis', news
             = link_to 'Rediger', edit_news_path(news)
             = link_to 'Slet', news, :confirm => 'Er du sikker?', :method => :delete
@@ -19,5 +19,5 @@
 %br/
 %br/
 - if can? :create, News
-  .notice
+  .notice.actions
     = link_to 'Opret nyhed', new_news_path

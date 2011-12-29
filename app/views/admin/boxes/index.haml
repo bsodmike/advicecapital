@@ -1,10 +1,10 @@
 %h3 Boxes
 
-= @boxes.each do |box|
+- @boxes.each do |box|
   .span-7
     %h3= box.name
     %br/
     = raw box.content
     - if can? :update, box
-	    .notice.actions
-	      = link_to 'Rediger', edit_admin_box_path(box)
+      .notice.actions
+        = link_to 'Rediger', edit_admin_box_path(box)

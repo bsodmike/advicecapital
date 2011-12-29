@@ -1,4 +1,17 @@
 %h3= @investor.name
+= @investor.email
+%br/
+= @investor.entry_date.to_date
+%br/
+%br/
+- if can? :manage, @investor
+	.notice.actions
+		= link_to 'Rediger', edit_admin_investor_path(@investor)
+		|
+		= link_to 'Slet', admin_investor_path(@investor), :confirm => 'Er du sikker?', :method => :delete
+
+%br/
+%br/
 
 %h3 Aktie udvikling
 %table
@@ -29,5 +42,10 @@
 - chart = Gchart.line(:size => '600x300', :title => "Aktiekurs", :bg => 'fff', :legend => 'Aktie Værdi', :data => stock_value, :axis_with_labels => 'y,x,r', :axis_labels => [ stock_value, stock_month, ['2011'] ])
 
 %img{:src => chart}
+
+%br/
+%br/
+.notice.actions
+	= link_to 'Tilbage', admin_investors_path
 	
 		

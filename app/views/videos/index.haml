@@ -3,6 +3,6 @@
 - @videos.each do |video|
 	%video#movie{:controls => "controls", :height => "240", :width => "320"}
 		%source{:src => video.url, :type => "video/mp4"}
-	.notice
+	.notice.actions
 		IMPLEMENT DELETE
 		= #link_to 'Slet', v, :confirm => 'Er du sikker?', :method => :delete
