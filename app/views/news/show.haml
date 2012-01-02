@@ -6,7 +6,7 @@
   = raw(@news.content)
 
 - if can? :update, @news
-  .notice
+  .notice.actions
     = link_to 'Rediger', edit_news_path(@news)
     
 = link_to 'Tilbage', news_index_path

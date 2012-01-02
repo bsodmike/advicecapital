@@ -1,7 +1,9 @@
 %h3 Seneste nyt om porteføljeselskaber
 %ul{:style => "list-style-type: none;padding: 0;"}
-  - @news.each do |news|
+  - @rss.entries[0,5].each do |rss|
     %li
-      %b= news.created_at.strftime('%d/%m/%y - %H:%M:%S')
+      %small= rss.pubDate.strftime('%d/%m/%y - %H:%M:%S')
       %br/
-      = link_to raw(truncate(news.content, :length => 50)), news
+      = link_to(truncate(rss.description, :length => 150), rss.link)
+      %br/
+      %br/
