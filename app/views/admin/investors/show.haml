@@ -1,9 +1,32 @@
-%h3= @investor.name
+%h3 Velkommen til #{@investor.name} 
 = @investor.email
 %br/
-= @investor.entry_date.to_date
+%br/
+
+%b Dato for indtrædelse:
+%br/
+= @investor.entry_date.strftime('%d-%m-%y')
 %br/
 %br/
+
+%b Antal aktier:
+%br/
+= #@investor.stock_count
+%br/
+%br/
+
+%b Investeret beløb:
+%br/
+=# @investor.investment_
+%br/
+%br/
+
+%b Aktuelt afkast:
+%br/
+=# @investor.
+%br/
+%br/
+
 - if can? :manage, @investor
 	.notice.actions
 		= link_to 'Rediger', edit_admin_investor_path(@investor)
