@@ -1,8 +1,10 @@
 %h3 Seneste nyt
 %ul{:style => "list-style-type: none;padding: 0;"}
-  - @rss.entries[0,5].each do |rss|
+  - @news.each do |news|
     %li
-      %b= rss.pubDate.strftime('%d/%m/%y - %H:%M:%S')
+      %b= news.created_at.strftime('%d/%m/%y - %H:%M:%S')
       %br/
-      = link_to(truncate(rss.title, :length => 50), rss.link)
+      = link_to raw(truncate(news.content, :length => 50)), news
+
+= link_to 'Flere nyheder fra Advice Capital A/S', news_index_path
       

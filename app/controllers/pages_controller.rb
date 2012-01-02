@@ -8,7 +8,7 @@ class PagesController < ApplicationController
     box_choose = 2
 
     @page_title = "Advice Capital A/S - Index"
-    @news = News.limit(5).all
+    @news = News.limit(5).order("updated_at DESC").all
     @employees = Employee.all
     @box_portfolio = Box.find_by_id(box_portfolio)
     @box_choose = Box.find_by_id(box_choose)
