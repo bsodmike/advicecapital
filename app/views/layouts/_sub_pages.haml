@@ -1,6 +1,6 @@
 - if current_page?('/about_ac')
   #sub_pages
-    %h3 Advice Capital
+    %h3{:style => "color: #2b3743;"} Advice Capital
     %br/
     = link_to 'Historie', '/about_ac/history'  
     %br/
@@ -12,7 +12,7 @@
 
 - elsif current_page?('/about_ai')
   #sub_pages
-    %h3 Produkter
+    %h3{:style => "color: #2b3743;"} Produkter
     %br/
     = link_to 'Formål', '/about_ai/purpose'
     %br/
@@ -20,7 +20,7 @@
 
 - elsif current_page?(organisation_path)
   #sub_pages
-    %h3 Organisation
+    %h3{:style => "color: #2b3743;"} Organisation
     %br/
     = link_to 'Hvem er vi?', '#'
     %br/
@@ -32,12 +32,12 @@
 
 - elsif current_page?('/become_customer')
   #sub_pages
-    %h3 Bliv Kunde
+    %h3{:style => "color: #2b3743;"} Bliv Kunde
     %br/
     = link_to '', ''
 - elsif current_page?('/invest_universe')
   #sub_pages
-    %h3 Investeringsunivers
+    %h3{:style => "color: #2b3743;"} Investeringsunivers
     %br/
     = link_to 'Aktier', '/invest_universe/stocks'
     %br/
@@ -48,7 +48,7 @@
     = link_to 'Valuta', '/invest_universe/valuta'
 - elsif current_page?('/news')
   #sub_pages
-    %h3 Nyheder
+    %h3{:style => "color: #2b3743;"} Nyheder
     %br/
     = link_to 'Modtag nyheder', '/receive_news'
 
