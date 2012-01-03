@@ -1,4 +1,4 @@
-- if current_page?('/about_ac')
+- if current_page?('/about_ac') || current_page?('/about_ac/history') || current_page?('/about_ac/concept') || current_page?('/about_ac/results') || current_page?('/about_ac/strategy')
   #sub_pages
     %h3{:style => "color: #2b3743;"} Advice Capital
     %br/
@@ -10,7 +10,7 @@
     %br/
     = link_to 'Strategi', '/about_ac/strategy'
 
-- elsif current_page?('/about_ai')
+- elsif current_page?('/about_ai') || current_page?('/about_ai/purpose') || current_page?('/about_ai/we_choosed_ai')
   #sub_pages
     %h3{:style => "color: #2b3743;"} Produkter
     %br/
@@ -18,7 +18,7 @@
     %br/
     = link_to 'Derfor valgte vi Advice Invest', '/about_ai/we_choosed_ai'
 
-- elsif current_page?(organisation_path)
+- elsif current_page?(organisation_path) || current_page?('/organisation/employees') || current_page?('/organisation/staff')
   #sub_pages
     %h3{:style => "color: #2b3743;"} Organisation
     %br/
@@ -35,7 +35,8 @@
     %h3{:style => "color: #2b3743;"} Bliv Kunde
     %br/
     = link_to '', ''
-- elsif current_page?('/invest_universe')
+
+- elsif current_page?('/invest_universe') || current_page?('/invest_universe/stocks') || current_page?('/invest_universe/bonds') || current_page?('/invest_universe/company_bonds') || current_page?('/invest_universe/valuta')
   #sub_pages
     %h3{:style => "color: #2b3743;"} Investeringsunivers
     %br/
@@ -46,6 +47,7 @@
     = link_to 'Virksomhedsobligationer', '/invest_universe/company_bonds'
     %br/
     = link_to 'Valuta', '/invest_universe/valuta'
+
 - elsif current_page?('/news')
   #sub_pages
     %h3{:style => "color: #2b3743;"} Nyheder
