@@ -21,10 +21,6 @@ namespace :pages do
         :title => 'Historie',
         :content => "Selskabet er etableret i 2009 af Lars Fetterlein, som har mere end 20 års investeringserfaring fra såvel Danmark som internationalt. Lars Fetterleins brede baggrund spænder fra en stilling som Group Treasurer hos medicinalselskabet H. Lundbeck A/S til corporate og private banking poster hos SEB Bank i London og Carnegie Bank i København, hertil kommer en position som CFO i formueforvaltningsselskabet Hvista ApS. Grundlaget for etableringen af Advice Capital er et udtalt behov hos kunder for: \r\nUafhængig rådgivning, som ikke influeres af kurtage betalinger, men som honoreres i.f.t. afkast på investeringen. \r\nInteressesammefald mellem kunden og rådgiver \r\nTæt og kontinuerlig relation mellem kunde og en let tilgængelig rådgiver \r\nEnkel og transparant prisstruktur, hvor aflønning er relateret til afkastet på den investerede formue"
       },
-      '/about_ac/results' => {
-        :title => 'Resultater',
-        :content => "test"
-      },
       '/about_ac/strategy' => {
         :title => 'Strategi',
         :content => ""
@@ -32,10 +28,6 @@ namespace :pages do
       '/about_ai' => {
         :title => 'Investeringsfilosofi',
         :content => "see /about_ai/index.haml TBD"
-      },
-      '/about_ai/purpose' => {
-        :title => "Formål",
-        :content => "Selskabets formål er at skabe et godt og langsigtet risikojusteret afkast ved brug af allokeringsstrategien fra Advice Capital  ved investering i:\r\n Danske aktier\r\n Globale aktier\r\n Danske statsobligationer\r\n Danske realkreditobligationer\r\n Globale erhvervsobligationer\r\n Finansielle instrumenter, herunder valutaterminskontrakter\r\n Finansieringen til disse investeringer tilvejebringes via:\r\n Egenkapital\r\n Lån i euro, danske kroner og schweizerfranc på maksimalt  1 gang egenkapitalen.\r\n Selskabet har indgået investeringsaftale med Investeringsrådgivningsselskabet Advice Capital, der ledes af Lars Fetterlein. Advice Capital er underlagt Finanstilsynet og selskabet er godkendt som investeringsrådgivere. www.finanstilsynet.dk.\r\n Investeringsrådgivningsselskabet Advice Capital’s honorar er sammensat som delvis fast fee, delvis provision af overskuddet. Fee er 0,10 % af egenkapitalen ultimo hver måned. Provisionen beregnes som 15 % af selskabets overskud før skat. Såfremt selskabet et år giver underskud, medregnes dette i det/de kommende års overskud, førend der på ny udbetales provision.\r\n Lars Fetterlein eller et selskab ejet af Lars Fetterlein, placerer selv midler i selskabet. Formålet er at sikre sammenfaldende interesser med de øvrige aktionærer i selskabet. Incitamentet for et godt langsigtet afkast er således dobbelt, dels igennem ejerskab, dels igennem aflønningsformen."
       },
       '/about_ai/we_choosed_ai' => {
         :title => 'Derfor valgte vi Advice Invest',

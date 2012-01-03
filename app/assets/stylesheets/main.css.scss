@@ -72,12 +72,12 @@ header {
       color: $white;
       font-size: 14px;
       float: left;
-      margin-top: 84px;
-      height: 18px;
+      margin-top: 90px;
+      height: 13px;
 
       li {
         margin: 0;
-        padding: 15px 10px 3px 8px;
+        padding: 10px 10px 3px 8px;
         cursor: pointer;
 
         a {
@@ -127,14 +127,9 @@ header {
         border-radius: 8px;
         /*background: url('rounded_middle.png') center top repeat-x;*/
         margin: 0;
-        padding: 15px 10px 3px 8px;
+        padding: 10px 10px 3px 8px;
 
         behavior: url(/PIE.htc) url(ie-css3.htc) url(border-radius.htc);
-
-
-        /*span {
-          background: url('rounded_right.png') right top no-repeat;
-        }*/
 
         ul {
           padding: 0;
@@ -142,6 +137,7 @@ header {
           position: fixed;
 
           li {
+            font-size: 12px;
             margin-top: 10px;
             margin-right: 5px;
             padding: 0;
