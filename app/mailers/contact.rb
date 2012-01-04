@@ -1,13 +1,15 @@
+# Contact Mailer
 class Contact < ActionMailer::Base
   #default :to => "contact@advicecapital.dk"
 
-  def contact(message)
+  def contact(message, sender)
     @message = message
-    @sender = @message.email
+    @sender = sender
     mail(
-      :from => @sender,
+      :from => sender,
       :to => "znowm4n@gmail.com",
-      :subject => "[Contact AC]"
+      :subject => "[Contact AC]",
+      :message => message
     )
   end
 end

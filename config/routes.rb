@@ -1,13 +1,12 @@
 Advicecapital::Application.routes.draw do
 
-  #match '/contact' => 'contact#new', :as => 'contact', :via => :get
-  #match '/contact' =>  'contact#create', :as => 'contact', :via => :post
+  
 
   devise_for :users
   
   resources :news
   resources :boards
-  resources :contacts
+  #resources :contacts
   resources :videos
   resources :employees
 
@@ -19,6 +18,9 @@ Advicecapital::Application.routes.draw do
     resources :stocks
     resources :users
   end
+
+  match '/contact' => 'contact#new', :as => 'contact', :via => :get
+  match '/contact' =>  'contact#create', :as => 'contact', :via => :post
   
   root :to => "pages#index"
 
