@@ -3,11 +3,11 @@
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
   %body
-    %h1
-      Welcome to example.com, 
     %p
-      You have successfully signed up to example.com,      your username is: 
+      Hej!
       %br/
-    %p
-      To login to the site, just follow this link:.
-    %p Thanks for joining and have a great day!
+      %br/
+      Du har modtaget en besked fra:
+      = @name + " - " + @sender
+      %br/
+      = raw @message
