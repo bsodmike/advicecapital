@@ -14,22 +14,6 @@
 
     $('#investor_entry_date').datepicker();
 
-
-    $("#map").gMap({
-      markers: [{
-        address: "Strandvejen 100, Hellerup, Denmark",
-        html: "Advice Capital A/S<br/>Strandvejen 100<br/>2900 Hellerup<br/>+45 3930 6080<br/><a class='link_black' href='mailto:info@advicecapital.dk'>info@advicecapital.dk</a>",
-        popup: true
-      }],
-      address: "Strandvejen 100, Hellerup, Denmark",
-      zoom: 15
-    });
-
-    //$('#map').googleMaps({
-      //latitude: 42.351505,
-      //longitude: -71.094455
-    //}); 
-
     tinyMCE.init({
         mode : "textareas",
         theme: "advanced",
@@ -45,6 +29,32 @@
         skin : "o2k7",
         skin_variant : "silver"
     });
+
+    var myLatlng = new google.maps.LatLng(55.732734,12.575625);
+    var myOptions = {
+      zoom: 18,
+      center: myLatlng,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    }
+    map = new google.maps.Map(document.getElementById("map"), myOptions);
+    
+    google.maps.event.addListener(map, 'zoom_changed', function() {
+      setTimeout(moveToDarwin, 3000);
+    });
+    
+    var marker = new google.maps.Marker({
+        position: myLatlng, 
+        map: map,
+        title:"Advice Capital A/S - Strandvejen 100 - 2900 Hellerup - +45 3930 6080 - info@advicecapital.dk"
+    });
+    google.maps.event.addListener(marker, 'click', function() {
+      map.setZoom(2);
+    });
+
+    function moveToDarwin() {
+      var darwin = new google.maps.LatLng(-12.461334, 130.841904);
+      map.setCenter(darwin);
+    }    
     
     $(".slider_custom").jCarouselLite({
       auto: 1,

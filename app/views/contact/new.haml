@@ -1,33 +1,34 @@
-%div{:style => "clear:both;float:right;margin-right:250px;"}
+%div{:style => "clear:both;float:right;margin-right:20px;"}
   %h3 Vores beliggenhed
   #map{:style => "clear:both;float:right;width:400px;height:300px;margin-right: 10px;"}
-%h3 Kontakt os
-= form_for @message, :url => contact_path do |f|
-  - unless @message.errors.empty?
-    #error_explanation
-      Please correct the following:
-    
-      %ul
-        - @message.errors.full_messages.each do |err|
-          %li
-            %strong= err 
+%div  
+  %h3 Kontakt os
+  = form_for @message, :url => contact_path do |f|
+    - unless @message.errors.empty?
+      #error_explanation
+        Please correct the following:
+      
+        %ul
+          - @message.errors.full_messages.each do |err|
+            %li
+              %strong= err 
 
-  .field
-    = f.label :name, "Navn"
-    %br/
-    = f.text_field :name
+    .field
+      = f.label :name, "Navn"
+      %br/
+      = f.text_field :name
 
-  .field
-    = f.label :email, "Email"
-    %br/
-    = f.text_field :email
+    .field
+      = f.label :email, "Email"
+      %br/
+      = f.text_field :email
 
-  .field
-    = f.label :message, "Besked"
-    %br/
-    = f.text_area :message
+    .field
+      = f.label :message, "Besked"
+      %br/
+      = f.text_area :message
 
-  .action
-    = f.submit "Send"
+    .action
+      = f.submit "Send"
 
 
