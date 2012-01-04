@@ -10,7 +10,7 @@ namespace :pages do
 
     pages = {
       '/about_ac' => {
-        :title => "",
+        :title => "Advice Capital",
         :content => "But I must explain to you how all this mistaken idea of denouncing pleasure\r\n      and praising pain was born and I will give you a complete account of the\r\n      system, and expound the actual teachings of the great explorer of the truth,\r\n      the master-builder of human happiness."
       },
       '/about_ac/concept' => {
@@ -26,24 +26,24 @@ namespace :pages do
         :content => ""
       },
       '/about_ai' => {
-        :title => 'Investeringsfilosofi',
+        :title => 'Advice Invest A/S',
         :content => "see /about_ai/index.haml TBD"
       },
-      '/about_ai/we_choosed_ai' => {
-        :title => 'Derfor valgte vi Advice Invest',
+      '/about_ai/company_bonds' => {
+        :title => 'Advice Capital - Virksomhedsobligationer A/S',
         :content => "TBD"
-      },
-      '/become_customer' => {
-        :title => 'Bliv kunde',
-        :content => "see become_customer.haml TBD"
       },
       '/organisation/employees' => {
         :title => 'Medarbejdere',
         :content => "TBD"
       },
-      '/organisation/staff' => {
-        :title => 'TBD',
+      '/organisation/structure' => {
+        :title => 'Organisationsstruktur',
         :content => "TBD"
+      }
+      '/become_customer' => {
+        :title => 'Bliv kunde',
+        :content => "see become_customer.haml TBD"
       },
       '/investor_login' => {
         :title => 'Investor login',
