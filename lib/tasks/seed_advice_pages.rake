@@ -45,13 +45,29 @@ namespace :pages do
         :title => 'Bliv kunde',
         :content => "see become_customer.haml TBD"
       },
+      '/invest_universe' => {
+        :title => 'Investeringsunivers',
+        :content => "TBD"
+      },
+      '/invest_universe/stocks' => {
+        :title => 'Aktier',
+        :content => "TBD"
+      },
+      '/invest_universe/bonds' => {
+        :title => 'Obligationer',
+        :content => "TBD"
+      },
+      '/invest_universe/company_bonds' => {
+        :title => 'Virksomhedsobligationer',
+        :content => "TBD"
+      },
+      '/invest_universe/valuta' => {
+        :title => 'Valuta',
+        :content => "TBD"
+      },
       '/investor_login' => {
         :title => 'Investor login',
         :content => "see investor_login.haml TBD"
-      },
-      '/invest_universe' => {
-        :title => 'Invest univers',
-        :content => "TBD"
       },
       '/disclaimer' => {
         :title => 'Disclaimer',
