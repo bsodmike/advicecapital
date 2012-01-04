@@ -15,15 +15,15 @@
     $('#investor_entry_date').datepicker();
 
 
-    // $("#map").gMap({
-    //   markers: [{
-    //     address: "Strandvejen 100, Hellerup, Denmark",
-    //     html: "Advice Capital A/S<br/>Strandvejen 100<br/>2900 Hellerup<br/>+45 3930 6080<br/><a class='link_black' href='mailto:info@advicecapital.dk'>info@advicecapital.dk</a>",
-    //     popup: true
-    //   }],
-    //   address: "Strandvejen 100, Hellerup, Denmark",
-    //   zoom: 15
-    // });
+    $("#map").gMap({
+      markers: [{
+        address: "Strandvejen 100, Hellerup, Denmark",
+        html: "Advice Capital A/S<br/>Strandvejen 100<br/>2900 Hellerup<br/>+45 3930 6080<br/><a class='link_black' href='mailto:info@advicecapital.dk'>info@advicecapital.dk</a>",
+        popup: true
+      }],
+      address: "Strandvejen 100, Hellerup, Denmark",
+      zoom: 15
+    });
 
     //$('#map').googleMaps({
       //latitude: 42.351505,
