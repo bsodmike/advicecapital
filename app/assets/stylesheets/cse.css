@@ -38,8 +38,8 @@
 .gsc-resultsHeader {
   border: block;
 }
-.gsc-input { padding: 2px !important; margin: 0 !important;}
-.gsc-search-button {padding: 2px !important; margin-left: 10px !important; }
+.gsc-input { padding: 2px !important; margin: 0 !important; width: 100px !important; height: 20px;}
+.gsc-search-button {padding: 2px !important; margin-left: 10px !important; width: 40px; }
 /* Search button */
 .cse input.gsc-search-button,
 input.gsc-search-button {

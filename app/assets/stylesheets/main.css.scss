@@ -58,9 +58,11 @@ header {
       position: absolute;
       right: 0;
       top: 4px;
-
+      width: 300px;
       li {
+        display: inline !important;
         padding-right: 6px;
+        float: left;
         a {
           color: $white;
           text-decoration: none;
