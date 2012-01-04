@@ -179,6 +179,7 @@ header {
   */
   width: 930px;
   min-height: 500px;
+  margin-bottom: -5px;
 
   #main_content {
     margin-top: 20px;
@@ -402,8 +403,7 @@ footer {
   box-shadow: $box-shadow;
   background: #eaebed;
   width: 930px;
-  height: 50px;
-  margin-bottom:4px;
+  height: 45px;
   margin-right: 10px;
   padding: 0 !important;
   text-align: center;
