@@ -27,6 +27,10 @@ gem 'capistrano'
 gem 'simple-rss'
 gem 'rest-open-uri'
 
+group :production do
+  gem 'mysql2' 
+end
+
 
 group :development do
   gem 'taps'
