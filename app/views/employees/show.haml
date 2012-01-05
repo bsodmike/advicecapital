@@ -1,20 +1,20 @@
-%p#notice= notice
 %p
-  = image_tag "/images/employees/#{@employee.image}"
+  = image_tag "employees/#{@employee.image}"
 %p
-  %b Name:
+  %b Navn:
   = @employee.name
 %p
-  %b Title:
+  %b Titel:
   = @employee.title
 %p
   %b Email:
-  = @employee.email
+  = link_to @employee.email, "mailto:#{@employee.email}"
 %p
-  %b Phone:
+  %b Telefon:
   = @employee.phone
 
 - if can? :manage, @employee
-  = link_to 'Edit', edit_employee_path(@employee), :style => 'color: black;'
-  = link_to 'Destroy', @employee, :confirm => 'Are you sure?', :method => :delete, :style => 'color: black;'
-  = link_to 'PDF', employee_path(@employee, format: "pdf")
+  .notice.actions
+    = link_to 'Rediger', edit_employee_path(@employee), :style => 'color: black;'
+    = link_to 'Slet', @employee, :confirm => 'Are you sure?', :method => :delete, :style => 'color: black;'
+    = link_to 'PDF', employee_path(@employee, format: "pdf")
