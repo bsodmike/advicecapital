@@ -40,7 +40,7 @@ namespace :pages do
       '/organisation/structure' => {
         :title => 'Organisationsstruktur',
         :content => "TBD"
-      }
+      },
       '/become_customer' => {
         :title => 'Bliv kunde',
         :content => "see become_customer.haml TBD"
