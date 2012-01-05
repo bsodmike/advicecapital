@@ -41,6 +41,20 @@
       speed: 2000
     });
 
+    $("#news_feed").jCarouselLite({
+      vertical: true,
+      auto: 1,
+      visible: 2,
+      start: 0,
+      speed: 5000,
+      beforeStart: function(a) {
+        $(a).parent().fadeTo(800, 0);
+      },
+      afterEnd: function(a) {
+        $(a).parent().fadeTo(800, 1);
+      }
+
+    });
 
     $("#slider").CloudCarousel({
       xPos: 128,
