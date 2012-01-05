@@ -218,47 +218,8 @@ footer {
   -moz-box-shadow: $box-shadow;
   -webkit-box-shadow: $box-shadow;
   box-shadow: $box-shadow;
-
-  .nivoSlider {
-    position:relative;
-    width:854px; /* Change this to your images width */
-    height:100px; /* Change this to your images height */
-    background:url(images/loading.gif) no-repeat 50% 50%;
-
-    img {
-      position:absolute;
-      top:0px;
-      left:0px;
-      display:none;
-    }
-    a {
-      border:0;
-      display:block;
-    }
-  }
-
-  .arrows {
-    clear: both;
-    width: 23px;
-    height: 90px;
-  }
-  .arrow_left {
-    background: url('imgSlider/arrow_left.png');
-    width: 23px;
-    height: 21px;
-    float: left; 
-  }
-
-  .arrow_right {
-    background: url('imgSlider/arrow_right.png');
-    width: 23px;
-    height: 21px;
-    float: right; 
-  }
-  .arrows:hover {
-    cursor: pointer;
-  }
 }
+
 .slider_custom {
   width: 854px !important;
   min-height: 128px;
