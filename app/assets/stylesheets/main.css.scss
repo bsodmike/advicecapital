@@ -143,11 +143,11 @@ header {
             margin-top: 10px;
             margin-right: 5px;
             padding: 0;
-            background: none;
+            background: none !important;
             display: inline;
           }
           li:hover {
-            background: none;
+            background: none !important;
           }
         }
       }

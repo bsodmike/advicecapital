@@ -1,6 +1,32 @@
 %div{:style => "clear:both;float:right;margin-right:20px;"}
   %h3 Vores beliggenhed
   #map{:style => "clear:both;float:right;width:400px;height:300px;margin-right: 10px;"}
+  :javascript
+    var myLatlng = new google.maps.LatLng(55.732734,12.575625);
+      var myOptions = {
+        zoom: 18,
+        center: myLatlng,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      }
+      map = new google.maps.Map(document.getElementById("map"), myOptions);
+      
+      google.maps.event.addListener(map, 'zoom_changed', function() {
+        setTimeout(moveToAC, 3000);
+      });
+      
+      var marker = new google.maps.Marker({
+          position: myLatlng, 
+          map: map,
+          title:"Advice Capital A/S - Strandvejen 100 - 2900 Hellerup - +45 3930 6080 - info@advicecapital.dk"
+      });
+      google.maps.event.addListener(marker, 'click', function() {
+        map.setZoom(2);
+      });
+
+      function moveToAC() {
+        var ac = new google.maps.LatLng(55.732734, 12.575625);
+        map.setCenter(ac);
+      }
 %div  
   %h3 Kontakt os
   = form_for @message, :url => contact_path do |f|

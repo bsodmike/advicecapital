@@ -17,6 +17,8 @@ First:
 	
 	rake pages:seed_table_data - to feed the pages model with pages data
 
+	rake boxes:create_boxes
+
 	(User)
 
 		User.create!(:email => "email@email.dk", :password => "somecode")

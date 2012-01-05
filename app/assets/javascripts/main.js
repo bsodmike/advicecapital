@@ -29,32 +29,6 @@
         skin : "o2k7",
         skin_variant : "silver"
     });
-
-    var myLatlng = new google.maps.LatLng(55.732734,12.575625);
-    var myOptions = {
-      zoom: 18,
-      center: myLatlng,
-      mapTypeId: google.maps.MapTypeId.ROADMAP
-    }
-    map = new google.maps.Map(document.getElementById("map"), myOptions);
-    
-    google.maps.event.addListener(map, 'zoom_changed', function() {
-      setTimeout(moveToDarwin, 3000);
-    });
-    
-    var marker = new google.maps.Marker({
-        position: myLatlng, 
-        map: map,
-        title:"Advice Capital A/S - Strandvejen 100 - 2900 Hellerup - +45 3930 6080 - info@advicecapital.dk"
-    });
-    google.maps.event.addListener(marker, 'click', function() {
-      map.setZoom(2);
-    });
-
-    function moveToDarwin() {
-      var darwin = new google.maps.LatLng(-12.461334, 130.841904);
-      map.setCenter(darwin);
-    }    
     
     $(".slider_custom").jCarouselLite({
       auto: 1,
@@ -73,15 +47,6 @@
       yPos: 32,
       autoRotate: 'yes'
     });
-    //$("#slider").nivoSlider({
-      //effect: 'sliceUp',
-      //pauseOnHover: true,
-      //animSpeed: 500,
-      //pauseTime: 3000,
-      //captionOpacity: 0.8,
-      //manualAdvance: false
-
-    //});
 
     // Organisation, employees slider
     $(".slider_custom ul.employees li img").hover(function() {
@@ -98,7 +63,7 @@
     });
     
 	  var getId = function (self) {
-		return self.attr('id').replace(/(image|employee)_/, '');
+		  return self.attr('id').replace(/(image|employee)_/, '');
 	  };
 
     // Organisation Info
@@ -106,13 +71,14 @@
       var self = $(this);    
       var id = getId(self);
       
-        $('#info_' + id).css({display: 'block'});
+      $('#info_' + id).css({display: 'block'});
+
     }, function () {
       var self = $(this);
       var id = getId(self);
 
-        $('#info_' + id).css({display: 'none'});
-	});
+      $('#info_' + id).css({display: 'none'});
+	  });
   });
 })(jQuery);
 
