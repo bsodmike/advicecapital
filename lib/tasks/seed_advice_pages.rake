@@ -25,11 +25,15 @@ namespace :pages do
         :title => 'Strategi',
         :content => ""
       },
-      '/about_ai' => {
+      '/products' => {
+        :title => 'Produkter',
+        :content => 'TBD'
+      },
+      '/products/ai' => {
         :title => 'Advice Invest A/S',
         :content => "see /about_ai/index.haml TBD"
       },
-      '/about_ai/company_bonds' => {
+      '/products/ac_company_bonds' => {
         :title => 'Advice Capital - Virksomhedsobligationer A/S',
         :content => "TBD"
       },
