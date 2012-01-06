@@ -16,6 +16,6 @@
       - roles = ['super_admin', 'admin', 'visitor']
       = f.label :role, "Rolle:"
       %br/
-      = f.select("role", options_for_select(roles)  )
+      = f.select :role, options_for_select(roles)
   .actions
     = f.submit "Gem"
