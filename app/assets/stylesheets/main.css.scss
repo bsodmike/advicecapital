@@ -2,7 +2,7 @@
   $white: #fff;
   $black: #000;
   $dark-gray: #888;
-  $ac-blue: #C3D9FF;
+  $ac-blue: #2b3743;
   $box-shadow: 0 0 4px 1px #eee;
   $box-dark-shadow: 0 0 6px 4px #888;
   $wrapper-shadow: 5px 5px 5px #606060;
@@ -289,16 +289,20 @@ footer {
 .ui-datepicker-calendar, ui-datepicker-title, ui-datepicker-header, ui-datepicker-div {
   background: #C3D9FF; 
 }
-
-.submenu_box {
+.sub_pages {
+  -moz-box-shadow: $box-dark-shadow;
+  -webkit-box-shadow: $box-dark-shadow;
+  box-shadow: $box-dark-shadow;
   position: fixed;
   top: 10;
-  left: 0;
-  width: 120px;
+  left: 0;  
+  min-width: 140px;
   height: 200px;
-  border: 1px solid gray;
-  margin-left: 50px;
-  padding: 5px;
+  margin: 10px 0 10px 20px;
+
+  h3 {
+    color: $ac-blue;
+  }
 }
 .organisation_box {
   -moz-box-shadow: $box-dark-shadow;
@@ -348,17 +352,7 @@ footer {
     }
   }
 }
-#sub_pages {
-  -moz-box-shadow: $box-dark-shadow;
-  -webkit-box-shadow: $box-dark-shadow;
-  box-shadow: $box-dark-shadow;
-  position: fixed;
-  top: 10;
-  left: 0;  
-  min-width: 140px;
-  height: 200px;
-  margin: 10px 0 10px 20px;
-}
+
 #bottom {
   -moz-box-shadow: $box-shadow;
   -webkit-box-shadow: $box-shadow;

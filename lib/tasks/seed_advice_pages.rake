@@ -23,7 +23,7 @@ namespace :pages do
       },
       '/about_ac/strategy' => {
         :title => 'Strategi',
-        :content => ""
+        :content => "TBD"
       },
       '/products' => {
         :title => 'Produkter',
@@ -68,10 +68,6 @@ namespace :pages do
       '/invest_universe/valuta' => {
         :title => 'Valuta',
         :content => "TBD"
-      },
-      '/investor_login' => {
-        :title => 'Investor login',
-        :content => "see investor_login.haml TBD"
       },
       '/disclaimer' => {
         :title => 'Disclaimer',
