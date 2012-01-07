@@ -60,7 +60,8 @@
       xPos: 400,
       yPos: 32,
       autoRotate: 'yes',
-      reflOpacity: 0,
+      reflOpacity: 0.7,
+      reflGap: 0.7,
       speed: 0.1,
       autoRotateDelay: 3000
     });
