@@ -302,11 +302,11 @@ footer {
   -webkit-box-shadow: $box-dark-shadow;
   box-shadow: $box-dark-shadow;
   position: fixed;
-  top: 150px;
+  top: 140px;
   left: 0px;  
-  width: 200px;
+  min-width: 160px;
   min-height: 200px;
-  margin: 10px 0 10px 30px;
+  margin: 10px 0 10px 10px;
   padding: 10px;
 
   h3 {

@@ -57,13 +57,20 @@
     });
 
     $("#slider").CloudCarousel({
-      xPos: 400,
-      yPos: 32,
+      xPos: 450,
+      yPos: 30,
       autoRotate: 'yes',
       reflOpacity: 0.7,
       reflGap: 0.7,
       speed: 0.1,
-      autoRotateDelay: 3000
+      autoRotateDelay: 3000,
+      bringToFront: true
+    });
+
+    $("#slider img").hover(function() {
+      $(".employees_info").show();
+    }, function () {
+      $(".employees_info").hide();
     });
 
     // Organisation, employees slider
