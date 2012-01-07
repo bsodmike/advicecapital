@@ -56,9 +56,9 @@
 
     });
 
-    $("#slider").CloudCarousel({
+    $("#employees_slider").CloudCarousel({
       xPos: 450,
-      yPos: 30,
+      yPos: 25,
       autoRotate: 'yes',
       reflOpacity: 0.7,
       reflGap: 0.7,
@@ -67,18 +67,18 @@
       bringToFront: true
     });
 
-    $("#slider img").hover(function() {
+    $("#employees_slider img").hover(function() {
       $(".employees_info").show();
     }, function () {
       $(".employees_info").hide();
     });
 
-    // Organisation, employees slider
-    $(".slider_custom ul.employees li img").hover(function() {
-      $(".employees_info").show();
-    }, function() {
-      $(".employees_info").hide();
-    });
+    // // Organisation, employees slider
+    // $(".slider_custom ul.employees li img").hover(function() {
+    //   $(".employees_info").show();
+    // }, function() {
+    //   $(".employees_info").hide();
+    // });
     
     // Organisation_box
     $(".organisation_box ul li").hover(function() {

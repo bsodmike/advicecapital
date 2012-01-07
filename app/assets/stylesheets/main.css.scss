@@ -273,7 +273,17 @@ footer {
     list-style: none;
   }
 }
-#employees_index {
+.ui-datepicker-calendar, ui-datepicker-title, ui-datepicker-header, ui-datepicker-div {
+  background: #C3D9FF; 
+}
+#employees_slider {
+  border: 1px solid #888;
+  width:800px;
+  height:250px;
+  background:#eee;
+  overflow:scroll;
+
+  #employees_index {
   float: left;
   height: 150px;
   background: none;
@@ -287,15 +297,10 @@ footer {
     width: 150px;
   }
 }
-.ui-datepicker-calendar, ui-datepicker-title, ui-datepicker-header, ui-datepicker-div {
-  background: #C3D9FF; 
-}
-#slider {
-  border: 1px solid #888;
-  width:800px;
-  height:250px;
-  background:#eee;
-  overflow:scroll;
+
+  img:hover {
+    cursor: pointer;
+  }
 }
 .sub_pages {
   -moz-box-shadow: $box-dark-shadow;
@@ -325,10 +330,10 @@ footer {
   position: fixed;
   top: 400px;
   left: 0px;
-  width: 200px;
+  min-width: 160px;
   min-height: 200px;
   padding: 10px;
-  margin: 20px 0 0 30px;
+  margin: 20px 0 0 10px;
 
   ul.employee_names {
     list-style-type: none;
