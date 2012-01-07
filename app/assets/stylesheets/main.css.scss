@@ -290,6 +290,13 @@ footer {
 .ui-datepicker-calendar, ui-datepicker-title, ui-datepicker-header, ui-datepicker-div {
   background: #C3D9FF; 
 }
+#slider {
+  border: 1px solid #888;
+  width:800px;
+  height:250px;
+  background:#eee;
+  overflow:scroll;
+}
 .sub_pages {
   -moz-box-shadow: $box-dark-shadow;
   -webkit-box-shadow: $box-dark-shadow;

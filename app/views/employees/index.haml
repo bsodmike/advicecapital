@@ -1,29 +1,38 @@
-.organisation_box
-  %ul.employee_names
-    - @employees.each do |employee|
-      %li[employee]= link_to employee.name.split(' ', 2)[0], "/employees/#{employee.id}"
+/ .organisation_box
+/   %ul.employee_names
+/     - @employees.each do |employee|
+/       %li[employee]= link_to employee.name.split(' ', 2)[0], "/employees/#{employee.id}"
 
 
-.slider_custom
+/ .slider_custom
 
-  .slider_top
+/   .slider_top
 
-  .slider_center
-    %ul.employee_images
-      - @employees.each do |employee|
-        %li{:id => "image_#{employee.id}"}= link_to ( image_tag "employees/#{employee.image}" ), "/employees/#{employee.id}"
+/   .slider_center
+/     %ul.employee_images
+/       - @employees.each do |employee|
+/         %li{:id => "image_#{employee.id}"}= link_to ( image_tag "employees/#{employee.image}" ), "/employees/#{employee.id}"
 
-  .slider_bottom
+/   .slider_bottom
 
-  - @employees.each do |employee|
-    .employee_info{ :id => "info_#{employee.id}" }
-      %h2= employee.name
-      %h3= employee.title
-      %p
-        %b Email:
-        = employee.email
+/ - @employees.each do |employee|
+/   .employee_info{ :id => "info_#{employee.id}" }
+/     %h2= employee.name
+/     %h3= employee.title
+/     %p
+/       %b Email:
+/       = employee.email
 
-      %p
-        %b Phone:
-        = employee.phone
+/     %p
+/       %b Phone:
+/       = employee.phone
+
+
+#slider
+  = image_tag 'employees/anette.jpg', :class => "cloudcarousel"
+  = image_tag 'employees/frederik.jpg', :class => "cloudcarousel"
+  = image_tag 'employees/jesper_thaning.jpg', :class => "cloudcarousel"
+  = image_tag 'employees/lars_fetterlein.jpg', :class => "cloudcarousel"
+  = image_tag 'employees/lind_kops.jpg', :class => "cloudcarousel"
+  = image_tag 'employees/tobias_hvilsted.jpg', :class => "cloudcarousel"
 
