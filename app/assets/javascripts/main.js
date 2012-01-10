@@ -15,19 +15,19 @@
     $('#investor_entry_date').datepicker();
 
     tinyMCE.init({
-        mode : "textareas",
-        theme: "advanced",
+      mode : "textareas",
+      theme: "advanced",
 
-        theme_advanced_buttons1 : "bold,italic,underline,|,justifyleft,justifycenter,justifyright,fontselect,fontsizeselect,formatselect",
-        theme_advanced_buttons2 : "cut,copy,paste,|,bullist,numlist,|,outdent,indent,|,undo,redo,|,link,unlink,anchor,image,|,code,preview,|,forecolor,backcolor",
-        theme_advanced_buttons3 : "insertdate,inserttime,|,removeformat,|,sub,sup",
-        theme_advanced_toolbar_location : "top",
-        theme_advanced_toolbar_align : "left",
-        theme_advanced_statusbar_location : "bottom",
-        theme_advanced_resizing : true,
+      theme_advanced_buttons1 : "bold,italic,underline,|,justifyleft,justifycenter,justifyright,fontselect,fontsizeselect,formatselect",
+      theme_advanced_buttons2 : "cut,copy,paste,|,bullist,numlist,|,outdent,indent,|,undo,redo,|,link,unlink,anchor,image,|,code,preview,|,forecolor,backcolor",
+      theme_advanced_buttons3 : "insertdate,inserttime,|,removeformat,|,sub,sup",
+      theme_advanced_toolbar_location : "top",
+      theme_advanced_toolbar_align : "left",
+      theme_advanced_statusbar_location : "bottom",
+      theme_advanced_resizing : true,
 
-        skin : "o2k7",
-        skin_variant : "silver"
+      skin : "o2k7",
+      skin_variant : "silver"
     });
     
     $(".slider_custom").jCarouselLite({
@@ -67,18 +67,11 @@
       bringToFront: true
     });
 
-    $("#employees_slider img").hover(function() {
+    $("#employees_slider ul#employee_images li img").hover(function() {
       $(".employees_info").show();
     }, function () {
       $(".employees_info").hide();
     });
-
-    // // Organisation, employees slider
-    // $(".slider_custom ul.employees li img").hover(function() {
-    //   $(".employees_info").show();
-    // }, function() {
-    //   $(".employees_info").hide();
-    // });
     
     // Organisation_box
     $(".organisation_box ul li").hover(function() {

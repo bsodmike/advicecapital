@@ -221,58 +221,6 @@ footer {
   -webkit-box-shadow: $box-shadow;
   box-shadow: $box-shadow;
 }
-
-.slider_custom {
-  width: 854px !important;
-  min-height: 128px;
-  margin-left: 5px;
-  margin-bottom: 20px;
-
-  .slider_top {
-    background: url('slider_bg_top.png');
-    height: 1px;
-    width: 854px;
-  }
-  .slider_center {
-    background: url('slider_bg_center.png') repeat-y;
-    min-height: 200px;
-    width: 854px;
-  }
-  .slider_bottom {
-    background: url('slider_bg_bottom.png');
-    height: 1px;
-    width: 854px;
-  }
-  ul.employee_images {
-    li {
-      margin-top: 6px;
-      margin-left: 8px;
-      margin-right: 9px;
-      
-      img {
-        cursor: pointer;
-      }
-    }
-  }
-
-  ul.employees {
-
-    li {
-      margin: 4px !important;
-      margin-right: 10px !important;
-
-      img {
-        width: 115px;
-        height: 128px;
-      }
-    }
-  }
-
-  ul.employees_info {
-    display: none;
-    list-style: none;
-  }
-}
 .ui-datepicker-calendar, ui-datepicker-title, ui-datepicker-header, ui-datepicker-div {
   background: #C3D9FF; 
 }
@@ -288,20 +236,24 @@ footer {
   height: 150px;
   background: none;
 
-  #employee_image {
-    float: left;
-    margin-right: 20px;
+    #employee_image {
+      float: left;
+      margin-right: 20px;
+    }
+    #employee_info {
+      float: right;
+      width: 150px;
+    }
   }
-  #employee_info {
-    float: right;
-    width: 150px;
-  }
-}
 
   img:hover {
     cursor: pointer;
   }
 }
+.employee_info {
+  display: none;
+}
+
 .sub_pages {
   -moz-box-shadow: $box-dark-shadow;
   -webkit-box-shadow: $box-dark-shadow;

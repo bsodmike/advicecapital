@@ -1,6 +1,12 @@
+.organisation_box
+  %ul.employee_names
+    - @employees.each do |employee|
+      %li[employee]= link_to employee.name.split(' ', 2)[0], "/employees/#{employee.id}"
+
 #employees_slider
-  - @employees.each do |employee|
-    = image_tag "employees/#{employee.image}", :id => "image_#{employee.id}", :class => "cloudcarousel"
+  %ul.employee_images
+    - @employees.each do |employee|
+      %li= image_tag "employees/#{employee.image}", :id => "image_#{employee.id}", :class => "cloudcarousel"
 
 - @employees.each do |employee|
   .employee_info{:id => "info_#{employee.id}"}
@@ -9,13 +15,8 @@
     %p
       %b Email:
       = employee.email
-
     %p
       %b Phone:
       = employee.phone
 
-.organisation_box
-  %ul.employee_names
-    - @employees.each do |employee|
-      %li[employee]= link_to employee.name.split(' ', 2)[0], "/employees/#{employee.id}"
 
