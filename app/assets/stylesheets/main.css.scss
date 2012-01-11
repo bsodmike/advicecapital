@@ -231,23 +231,23 @@ footer {
   background:#eee;
   overflow:scroll;
 
-  #employees_index {
+  img:hover {
+    cursor: pointer;
+  }
+}
+#employees_index {
   float: left;
   height: 150px;
   background: none;
 
-    #employee_image {
-      float: left;
-      margin-right: 20px;
-    }
-    #employee_info {
-      float: right;
-      width: 150px;
-    }
+  #employee_image {
+    float: left;
+    margin-right: 20px;
   }
-
-  img:hover {
-    cursor: pointer;
+  #employee_info {
+    font-weight: none;
+    float: right;
+    width: 150px;
   }
 }
 .employee_info {
