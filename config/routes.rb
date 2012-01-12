@@ -2,6 +2,8 @@ Advicecapital::Application.routes.draw do
 
   
 
+  resources :recipients
+
   devise_for :users
   
   resources :news
