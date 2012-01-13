@@ -1,16 +1,20 @@
 <script>
-  // <% auth_params = Panda.signed_params('post', "/videos.json") %>
-  // jQuery("#returned_video_id").pandaUploader(<%=raw auth_params.to_json %>, {  
-
-  var panda_access_details = {
-    'access_key': '37046a41354fb511e6b3',
-    'cloud_id': '3cf7a094467ed995fc841b163f006ec2',
-    'timestamp': '2011-11-14T15:42:30.192972Z',
-    'signature': 'SvBRzD8SkxhCQKwPuhgNwjsud602srj+KDZVY8k2Kjw='
-  };
-  jQuery("#returned_video_id").pandaUploader(panda_access_details, {
-    // Uncomment the line below if your account is in the EU
+   <% auth_params = Panda.signed_params('post', "/videos.json") %>
+   jQuery("#returned_video_id").pandaUploader(<%=raw auth_params.to_json %>, {
     api_host: 'api-eu.pandastream.com',
     upload_progress_id: 'upload_progress'
-  });
+   });  
+
+  // var panda_access_details = {
+  //   'access_key': '37046a41354fb511e6b3',
+  //   'cloud_id': '3cf7a094467ed995fc841b163f006ec2',
+  //   'timestamp': '2012-01-13T14:13:01.853176Z',
+  //   'signature': 'm7z3rCEjdnwG7dFptEulGobtaOP+iBQaBJjnv9r1CLg='
+    
+  // };
+  // jQuery("#returned_video_id").pandaUploader(panda_access_details, {
+  //   // Uncomment the line below if your account is in the EU
+  //   api_host: 'api-eu.pandastream.com',
+  //   upload_progress_id: 'upload_progress'
+  // });
 </script>
