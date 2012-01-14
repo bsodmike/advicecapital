@@ -266,10 +266,22 @@ footer {
   margin: 10px 0 10px 10px;
   padding: 10px;
 
-  h3 {
-    color: $ac-blue;
-    border-bottom: 1px solid $ac-blue;
+  .head {
+    width: 150px;
+    height: 20px;
+
+    img {
+      float:left;
+    }
+    h3 {
+      margin-left: 5px;
+      float: left;
+      width: 120px;
+      color: $ac-blue;
+    }
   }
+
+  
 
   a {
     font-size: 16px;

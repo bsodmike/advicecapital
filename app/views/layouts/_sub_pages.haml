@@ -1,6 +1,8 @@
 - if current_page?('/about_ac') || current_page?('/about_ac/history') || current_page?('/about_ac/concept') || current_page?('/about_ac/strategy')
   .sub_pages
-    %h3 Advice Capital
+    .head
+      = image_tag 'arrow.png'
+      %h3 Advice Capital
     %br/
     = link_to 'Historie', '/about_ac/history'  
     %br/
@@ -10,7 +12,9 @@
 
 - elsif current_page?('/products') || current_page?('/products/ai') || current_page?('/products/ac_company_bonds')
   .sub_pages
-    %h3 Produkter
+    .head
+      = image_tag 'arrow.png'
+      %h3 Produkter
     %br/
     = link_to 'Advice Invest A/S', '/products/ai'
     %br/
@@ -18,7 +22,9 @@
 
 - elsif current_page?(organisation_path) || current_page?('/organisation/employees')
   .sub_pages
-    %h3 Organisation
+    .head
+      = image_tag 'arrow.png'
+      %h3 Organisation
     %br/
     = link_to 'Hvem er vi?', organisation_path
     %br/
@@ -30,7 +36,9 @@
 
 - elsif current_page?('/invest_universe') || current_page?('/invest_universe/stocks') || current_page?('/invest_universe/bonds') || current_page?('/invest_universe/company_bonds') || current_page?('/invest_universe/valuta')
   .sub_pages
-    %h3 Investeringsunivers
+    .head
+      = image_tag 'arrow.png'
+      %h3 Investeringsunivers
     %br/
     = link_to 'Aktier', '/invest_universe/stocks'
     %br/
@@ -42,7 +50,9 @@
 
 - elsif current_page?('/news')
   .sub_pages
-    %h3 Nyheder
+    .head
+      = image_tag 'arrow.png'
+      %h3 Nyheder
     %br/
     = link_to 'Modtag nyheder', '/receive_news'
 
