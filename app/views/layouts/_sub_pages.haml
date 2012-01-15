@@ -3,57 +3,62 @@
     .head
       = image_tag 'arrow.png'
       %h3 Advice Capital
-    %br/
-    = link_to 'Historie', '/about_ac/history'  
-    %br/
-    = link_to 'Koncept', '/about_ac/concept'
-    %br/
-    = link_to 'Strategi', '/about_ac/strategy'
+    .content
+      %div
+        = link_to 'Historie', '/about_ac/history'  
+      %div
+        = link_to 'Koncept', '/about_ac/concept'
+      %div
+        = link_to 'Strategi', '/about_ac/strategy'
 
 - elsif current_page?('/products') || current_page?('/products/ai') || current_page?('/products/ac_company_bonds')
   .sub_pages
     .head
       = image_tag 'arrow.png'
       %h3 Produkter
-    %br/
-    = link_to 'Advice Invest A/S', '/products/ai'
-    %br/
-    = link_to 'Advice Capital A/S - Virksomhedsobligationer', '/products/ac_company_bonds'
+    .content
+      %br/
+      = link_to 'Advice Invest A/S', '/products/ai'
+      %br/
+      = link_to 'Advice Capital A/S - Virksomhedsobligationer', '/products/ac_company_bonds'
 
 - elsif current_page?(organisation_path) || current_page?('/organisation/employees')
   .sub_pages
     .head
       = image_tag 'arrow.png'
       %h3 Organisation
-    %br/
-    = link_to 'Hvem er vi?', organisation_path
-    %br/
-    = link_to 'Organisationssturktur', '/organisation/structure'
-    //%br/
-    //= link_to 'Medarbejdere', '/organisation/employees'
-    //%br/
-    //= link_to 'Ledelse', '/organisation/staff'
+    .content
+      %br/
+      = link_to 'Hvem er vi?', organisation_path
+      %br/
+      = link_to 'Organisationssturktur', '/organisation/structure'
+      //%br/
+      //= link_to 'Medarbejdere', '/organisation/employees'
+      //%br/
+      //= link_to 'Ledelse', '/organisation/staff'
 
 - elsif current_page?('/invest_universe') || current_page?('/invest_universe/stocks') || current_page?('/invest_universe/bonds') || current_page?('/invest_universe/company_bonds') || current_page?('/invest_universe/valuta')
   .sub_pages
     .head
       = image_tag 'arrow.png'
       %h3 Investeringsunivers
-    %br/
-    = link_to 'Aktier', '/invest_universe/stocks'
-    %br/
-    = link_to 'Obligationer', '/invest_universe/bonds'
-    %br/
-    = link_to 'Virksomhedsobligationer', '/invest_universe/company_bonds'
-    %br/
-    = link_to 'Valuta', '/invest_universe/valuta'
+    .content
+      %br/
+      = link_to 'Aktier', '/invest_universe/stocks'
+      %br/
+      = link_to 'Obligationer', '/invest_universe/bonds'
+      %br/
+      = link_to 'Virksomhedsobligationer', '/invest_universe/company_bonds'
+      %br/
+      = link_to 'Valuta', '/invest_universe/valuta'
 
 - elsif current_page?('/news')
   .sub_pages
     .head
       = image_tag 'arrow.png'
       %h3 Nyheder
-    %br/
-    = link_to 'Modtag nyheder', '/receive_news'
+    .content
+      %br/
+      = link_to 'Modtag nyheder', '/receive_news'
 
   

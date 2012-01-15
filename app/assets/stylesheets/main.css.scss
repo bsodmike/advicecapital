@@ -255,6 +255,7 @@ footer {
 }
 
 .sub_pages {
+  /*background: #f0f2f3;*/
   -moz-box-shadow: $box-dark-shadow;
   -webkit-box-shadow: $box-dark-shadow;
   box-shadow: $box-dark-shadow;
@@ -281,7 +282,19 @@ footer {
     }
   }
 
-  
+  .content {
+    padding-left: 10px;
+
+    div {
+      margin: 4px 0 4px 0;
+      border-bottom: 1px dotted #000;
+
+      a {
+        
+      }
+    }
+    
+  }
 
   a {
     font-size: 16px;
