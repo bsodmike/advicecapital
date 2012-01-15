@@ -1,4 +1,4 @@
-class RecipientsController < ApplicationController
+class Admin::RecipientsController < AdminController
   # GET /recipients
   # GET /recipients.json
   def index

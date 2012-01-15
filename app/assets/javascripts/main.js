@@ -29,6 +29,11 @@
       skin : "o2k7",
       skin_variant : "silver"
     });
+
+    Shadowbox.init({
+      handleOversize: "drag",
+      modal: true
+    });
     
     $(".slider_custom").jCarouselLite({
       auto: 1,

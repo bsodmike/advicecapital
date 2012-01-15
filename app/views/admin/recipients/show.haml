@@ -1,0 +1,14 @@
+%p
+  %b Fornavn:
+  = @recipient.firstname
+%p
+  %b Efternavn:
+  = @recipient.lastname
+%p
+  %b Email:
+  = @recipient.email
+- if can? :manage, @recipient
+	.notice.actions
+		= link_to 'Rediger', edit_admin_recipient_path(@recipient)
+		
+= link_to 'Tilbage', admin_recipients_path

@@ -1,0 +1,33 @@
+%h3 Modtag nyheder fra Advice Capital
+
+
+%p
+  Indtast dit fornavn, efternavn og email, og du vil løbende modtage nyheder fra Advice Capital
+
+
+= form_for([:admin, @recipient]) do |f|
+  - if @recipient.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@recipient.errors.count, "error")
+        prohibited this recipient from being saved:
+      %ul
+        - @recipient.errors.full_messages.each do |msg|
+          %li= msg
+  .field
+    = f.label :firstname, "Fornavn"
+    %br/
+    = f.text_field :firstname
+  .field
+    = f.label :lastname, "Efternavn"
+    %br/
+    = f.text_field :lastname
+  .field
+    = f.label :email
+    %br/
+    = f.text_field :email
+  .actions
+    = f.submit, "Gem"
+
+%p
+  = button_to 'Privatlivspolitik', '/privacy'

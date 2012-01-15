@@ -1,0 +1,24 @@
+%h3 Nyhedsmodtagere
+%table
+  %tr
+    %th Fornavn
+    %th Efternavn
+    %th Email
+    %th
+    %th
+    %th
+  - @recipients.each do |recipient|
+    %tr
+      %td= recipient.firstname
+      %td= recipient.lastname
+      %td= recipient.email
+      %td
+        - if can? :manage, recipient
+          .notice.actions
+            = link_to 'Vis', recipient
+            = link_to 'Rediger', edit_admin_recipient_path(recipient)
+            = link_to 'Slet', recipient, confirm: 'Er du sikker?', method: :delete
+%br/
+- if can? :manage, @recipients
+  .notice.actions
+    = link_to 'Ny nyhedsmodtager', new_admin_recipient_path

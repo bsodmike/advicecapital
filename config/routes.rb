@@ -1,9 +1,4 @@
 Advicecapital::Application.routes.draw do
-
-  
-
-  resources :recipients
-
   devise_for :users
   
   resources :news
@@ -19,6 +14,7 @@ Advicecapital::Application.routes.draw do
     resources :investors
     resources :stocks
     resources :users
+    resources :recipients
   end
 
   match '/contact' => 'contact#new', :as => 'contact', :via => :get
@@ -26,7 +22,7 @@ Advicecapital::Application.routes.draw do
   
   root :to => "pages#index"
 
-  match '/receive_news', :to => 'pages#receive_news'
+  match '/receive_news', :to => 'recipients#new'
   
   match '/disclaimer', :to => 'pages#disclaimer'
   match '/privacy', :to => 'pages#privacy'

@@ -262,13 +262,13 @@ footer {
   position: fixed;
   top: 140px;
   left: 0px;  
-  min-width: 160px;
+  width: 170px;
   min-height: 200px;
   margin: 10px 0 10px 10px;
   padding: 10px;
 
   .head {
-    width: 150px;
+    width: 170px;
     height: 20px;
 
     img {
@@ -283,17 +283,17 @@ footer {
   }
 
   .content {
-    padding-left: 10px;
 
     div {
       margin: 4px 0 4px 0;
       border-bottom: 1px dotted #000;
-
+      width: 170px;
+      min-height: 20px;
+      float: left;
       a {
         
       }
     }
-    
   }
 
   a {
@@ -307,7 +307,7 @@ footer {
   position: fixed;
   top: 400px;
   left: 0px;
-  min-width: 160px;
+  width: 180px;
   min-height: 200px;
   padding: 10px;
   margin: 20px 0 0 10px;
