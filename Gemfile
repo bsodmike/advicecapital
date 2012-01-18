@@ -26,6 +26,7 @@ gem 'prawn'
 gem 'capistrano'
 gem 'simple-rss'
 gem 'rest-open-uri'
+gem 'whenever', :require => false
 
 group :production do
   gem 'mysql2' 
