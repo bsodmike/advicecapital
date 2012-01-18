@@ -1,3 +1,6 @@
+set :whenever_command, "bundle exec whenever"
+require "whenever/capistrano"
+
 default_run_options[:pty] = true
 set :repository,  "git@github.com:Znow/advicecapital.git"
 
