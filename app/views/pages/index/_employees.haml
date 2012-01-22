@@ -15,13 +15,17 @@
 
     function slideFlip() {
         peon = peon_data.pop();
-        $("#employee_image").html('<a class="employee_image_popup" href="/assets/employees/'+peon.image+'" rel="fancybox"><img src="/assets/employees/'+peon.image+'" height="150px" width="120px" /></a>');
+        $("#employee_image > img").wrap('<a href="/assets/employees/'+peon.image+'" rel="fancybox">');
+        $("#employee_image").html('<img src="/assets/employees/'+peon.image+'" height="150px" width="120px" />');
         $("#employee_info").html(peon.name+'<br/>'+peon.title+'<br/>'+'<a href="mailto:'+peon.email+'">'+peon.email+'</a>'+'<br/>'+peon.phone);
         peon_data.unshift(peon);
     }
 
     setInterval(slideFlip, 8000);
 // /assets/employees/'+peon.image+'
+
+// <a href="/assets/employees/'+peon.image+'" rel="fancybox">
+
 %h3{:style=>"color:#2b3743;"}= link_to 'Hvem er vi', organisation_path
 #employees_index
   #employee_image

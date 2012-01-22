@@ -38,7 +38,7 @@
 
     $("a[rel=lightbox]").lightBox();
 
-    $("a.employee_image_popup").lightBox();
+    $("a.employee_image_popup").fancybox();
     
     $(".slider_custom").jCarouselLite({
       auto: 1,
