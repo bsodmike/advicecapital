@@ -30,10 +30,15 @@
       skin_variant : "silver"
     });
 
-    Shadowbox.init({
-      handleOversize: "drag",
-      modal: true
+    $("a[rel=fancybox]").fancybox({
+      overlayShow: true,
+      frameWidth:640,
+      frameHeight:360
     });
+
+    $("a[rel=lightbox]").lightBox();
+
+    $("a.employee_image_popup").lightBox();
     
     $(".slider_custom").jCarouselLite({
       auto: 1,
