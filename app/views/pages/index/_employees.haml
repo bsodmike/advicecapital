@@ -17,10 +17,21 @@
         peon = peon_data.pop();
         
         $("#employee_image").html('<img src="/assets/employees/'+peon.image+'" height="150px" width="120px" />');
-        $("#employee_image").wrap('<a href="/assets/employees/'+peon.image+'" rel="fancybox"></a>');
+        //$("#employee_image").wrap('<a href="/assets/employees/'+peon.image+'" target="_self" rel="fancybox" onclick="'+$.fancybox()+'"></a>');
         $("#employee_info").html(peon.name+'<br/>'+peon.title+'<br/>'+'<a href="mailto:'+peon.email+'">'+peon.email+'</a>'+'<br/>'+peon.phone);
         peon_data.unshift(peon);
+
+        $("#employee_image").click(function() {
+          $.fancybox({
+            'href' : '/assets/employees/'+peon.image,
+            'title'   : 'Single image with a map',
+            'titlePosition': 'inside'
+          });
+        });
     }
+
+    
+
 
     setInterval(slideFlip, 8000);
 // /assets/employees/'+peon.image+'
