@@ -8,7 +8,7 @@ set :branch, "master"
 set :deploy_via, :remote_cache
 
 #set :whenever_command, "/usr/local/rvm/gems/ruby-1.9.3-p0/bin/whenever"
-require "whenever/capistrano"
+#require "whenever/capistrano"
 
 set :application, "advicecapital"
 set :deploy_to , "/var/www/apps/#{application}"
