@@ -7,14 +7,14 @@ set :branch, "master"
 
 set :deploy_via, :remote_cache
 
-set :whenever_command, "bundle exec whenever"
+set :whenever_command, "/usr/local/rvm/gems/ruby-1.9.3-p0/bin/whenever"
 require "whenever/capistrano"
 
 set :application, "advicecapital"
 set :deploy_to , "/var/www/apps/#{application}"
 set :user, "deploy"
 set :use_sudo, true
-set :admin_runner, "deploy"
+set :admin_runner, "root"
 
 role :web, "danielg.dk"                          # Your HTTP server, Apache/etc
 role :app, "danielg.dk"                          # This may be the same as your `Web` server
