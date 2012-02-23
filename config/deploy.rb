@@ -9,20 +9,21 @@ set :branch, "master"
 
 set :deploy_via, :remote_cache
 
-#set :whenever_command, "/usr/local/rvm/gems/ruby-1.9.3-p0/bin/whenever"
+set :whenever_command, "/usr/local/rvm/gems/ruby-1.9.3-p0/bin/whenever"
 
 set :application, "advicecapital"
 set :deploy_to , "/var/www/apps/#{application}"
 set :user, "deploy"
 set :use_sudo, true
 set :admin_runner, "root"
+set :runner, "deploy" 
 
 role :web, "danielg.dk"                          # Your HTTP server, Apache/etc
 role :app, "danielg.dk"                          # This may be the same as your `Web` server
 role :db,  "danielg.dk", :primary => true        # This is where Rails migrations will run
 
-# if you're still using the script/reaper helper you will need
-# these http://github.com/rails/irs_process_scripts
+
+
 
 #If you are using Passenger mod_rails uncomment this:
 namespace :deploy do
