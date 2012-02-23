@@ -29,6 +29,7 @@ gem 'rest-open-uri'
 gem 'whenever', :require => false
 
 group :production do
+  gem 'therubyracer-heroku'
   gem 'mysql2' 
 end
 
