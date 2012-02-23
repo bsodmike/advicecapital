@@ -13,8 +13,8 @@ set :user, "deploy"
 set :use_sudo, true
 set :admin_runner, "root"
 
-set :whenever_command, "bundle exec whenever"
-require "whenever/capistrano"
+#set :whenever_command, "bundle exec whenever"
+#require "whenever/capistrano"
 
 role :web, "danielg.dk"                          # Your HTTP server, Apache/etc
 role :app, "danielg.dk"                          # This may be the same as your `Web` server

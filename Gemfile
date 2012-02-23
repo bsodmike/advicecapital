@@ -27,6 +27,7 @@ gem 'capistrano'
 gem 'simple-rss'
 gem 'rest-open-uri'
 gem 'whenever', :require => false
+gem 'clockwork'
 
 group :production do
   gem 'mysql2' 
