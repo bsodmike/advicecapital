@@ -1,5 +1,3 @@
-require "whenever/capistrano"
-
 default_run_options[:pty] = true
 set :repository,  "git@github.com:Znow/advicecapital.git"
 
@@ -9,7 +7,8 @@ set :branch, "master"
 
 set :deploy_via, :remote_cache
 
-set :whenever_command, "/usr/local/rvm/gems/ruby-1.9.3-p0/bin/whenever"
+require "whenever/capistrano"
+#set :whenever_command, "/usr/local/rvm/gems/ruby-1.9.3-p0/bin/whenever"
 
 set :application, "advicecapital"
 set :deploy_to , "/var/www/apps/#{application}"
