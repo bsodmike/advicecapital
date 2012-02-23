@@ -2,20 +2,20 @@
 desc "rake task to update stock info from Yahoo"
 task :stock_info_update  => :environment do
   stock_data = Ystock.find([
-    'MAERSK-B.CO', # A.P. Møller Mærsk
+    'MAERSK-A.CO', # A.P. Møller Mærsk A
+    'MAERSK-B.CO', # A.P. Møller Mærsk B
     'CARL-B.CO',   # Carlsberg
-    'CRTSF.PK',    # Chr. Hansen Holding
+    'CHR.CO',      # Chr. Hansen Holding
     'COLO-B.CO',   # Coloplast
-    'DNORD.CO',    # D/S Norden
     'DANSKE.CO',   # Danske Bank
     'DSV.CO',      # DSV
     'FLS.CO',      # FLSmidth & Co
     'GN.CO',       # GN Store Nord
     'LUN.CO',      # H. Lundbeck
     'NKT.CO',      # NKT Holding
+    'NDA-DKK.CO',  # Nordea Bank
     'NOVO-B.CO',   # Novo Nordisk
     'NZYM-B.CO',   # Novozymes
-    'PNDORA.Co',   # Pandora
     'SYDB.Co',     # Sydbank
     'TDC.CO',      # TDC
     'TOP.CO',      # Topdanmark
