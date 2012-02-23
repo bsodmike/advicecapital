@@ -3,8 +3,6 @@ require File.expand_path('../config/boot', File.dirname(__FILE__))
 require File.expand_path('../config/environment', File.dirname(__FILE__))
 
 
-
-
 module Clockwork
   stock_data = Ystock.find([
     'MAERSK-B.CO', # A.P. Møller Mærsk
