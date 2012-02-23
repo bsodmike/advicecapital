@@ -5,7 +5,7 @@ PID_DIR     = "#{RAILS_ROOT}/log"
 God.pid_file_directory = "#{PID_DIR}"
 
 God.watch do |w|
-  w.name     = "clockwork"
+  w.name     = "ac"
   w.interval = 30.seconds
   w.env      = { "RAILS_ENV" => RAILS_ENV }
   w.dir      = "#{RAILS_ROOT}"
