@@ -15,7 +15,6 @@ set :deploy_to , "/var/www/apps/#{application}"
 set :user, "deploy"
 set :use_sudo, true
 set :admin_runner, "root"
-set :runner, "deploy" 
 
 role :web, "danielg.dk"                          # Your HTTP server, Apache/etc
 role :app, "danielg.dk"                          # This may be the same as your `Web` server
