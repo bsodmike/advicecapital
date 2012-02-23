@@ -1,5 +1,5 @@
 RAILS_ENV   = ENV['RAILS_ENV']  || "production"
-RAILS_ROOT  = ENV['RAILS_ROOT'] || "/home/appuser/sites/mytld.com"
+RAILS_ROOT  = ENV['RAILS_ROOT'] || "/var/www/apps/advicecapital/current"
 PID_DIR     = "#{RAILS_ROOT}/log"
 
 God.pid_file_directory = "#{PID_DIR}"
@@ -10,7 +10,7 @@ God.watch do |w|
   w.env      = { "RAILS_ENV" => RAILS_ENV }
   w.dir      = "#{RAILS_ROOT}"
 
-  w.start    = "bundle exec clockwork #{RAILS_ROOT}/app/clock.rb"
+  w.start    = "bundle exec clockwork #{RAILS_ROOT}/config/clock.rb"
   w.stop     = "kill -QUIT `cat #{PID_DIR}/clockwork.pid`"
   w.restart  = "kill -QUIT `cat #{PID_DIR}/clockwork.pid` && bundle exec clockwork #{RAILS_ROOT}/app/clock.rb"
   w.log      = "#{RAILS_ROOT}/log/clockwork.log"
