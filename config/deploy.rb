@@ -7,8 +7,8 @@ set :branch, "master"
 
 set :deploy_via, :remote_cache
 
-set :whenever_command, "bundle exec whenever"
-require "whenever/capistrano"
+#set :whenever_command, "bundle exec whenever"
+#require "whenever/capistrano"
 
 set :application, "advicecapital"
 set :deploy_to , "/var/www/apps/#{application}"
