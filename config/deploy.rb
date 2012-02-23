@@ -7,7 +7,7 @@ set :branch, "master"
 
 set :deploy_via, :remote_cache
 
-set :whenever_command, "bundle exec whenever"#"/usr/local/rvm/gems/ruby-1.9.3-p0/bin/whenever"
+set :whenever_command, "/usr/local/rvm/gems/ruby-1.9.3-p0/bin/bundle exec whenever"
 require "whenever/capistrano"
 
 set :application, "advicecapital"
