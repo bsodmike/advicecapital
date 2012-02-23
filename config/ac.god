@@ -19,8 +19,8 @@ God.watch do |w|
   w.restart_grace = 10.seconds
   w.pid_file = "#{PID_DIR}/clockwork.pid"
 
-  w.uid = 'appuser'
-  w.gid = 'appuser'
+  w.uid = 'deploy'
+  w.gid = 'deploy'
 
   # clean pid files before start if necessary
   w.behavior(:clean_pid_file)
