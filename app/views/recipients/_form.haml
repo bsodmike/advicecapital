@@ -1,11 +1,9 @@
-%h3 Modtag nyheder fra Advice Capital
-
-
 %p
   Indtast dit fornavn, efternavn og email, og du vil løbende modtage nyheder fra Advice Capital
+  
+// form_for([:admin, @recipient]) do |f|
 
-
-= form_for([:admin, @recipient]) do |f|
+= form_for (@recipient) do |f|
   - if @recipient.errors.any?
     #error_explanation
       %h2
@@ -27,7 +25,7 @@
     %br/
     = f.text_field :email
   .actions
-    = f.submit, "Gem"
+    = f.submit "Gem"
 
 %p
   = button_to 'Privatlivspolitik', '/privacy'

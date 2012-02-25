@@ -1,4 +1,6 @@
-class Admin::RecipientsController < AdminController
+class RecipientsController < ApplicationController
+  load_and_authorize_resource
+
   # GET /recipients
   # GET /recipients.json
   def index
@@ -44,7 +46,7 @@ class Admin::RecipientsController < AdminController
 
     respond_to do |format|
       if @recipient.save
-        format.html { redirect_to @recipient, notice: 'Recipient was successfully created.' }
+        format.html { redirect_to root_url, notice: 'Du er nu blevet oprettet til at modtage nyheder.' }
         format.json { render json: @recipient, status: :created, location: @recipient }
       else
         format.html { render action: "new" }

@@ -16,9 +16,9 @@
         - if can? :manage, recipient
           .notice.actions
             = link_to 'Vis', recipient
-            = link_to 'Rediger', edit_admin_recipient_path(recipient)
+            = link_to 'Rediger', edit_recipient_path(recipient)
             = link_to 'Slet', recipient, confirm: 'Er du sikker?', method: :delete
 %br/
 - if can? :manage, @recipients
   .notice.actions
-    = link_to 'Ny nyhedsmodtager', new_admin_recipient_path
+    = link_to 'Ny nyhedsmodtager', new_recipient_path

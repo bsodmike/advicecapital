@@ -5,6 +5,7 @@ Advicecapital::Application.routes.draw do
   resources :boards
   resources :videos
   resources :employees
+  resources :recipients
 
   namespace :admin do
     root :to => 'dashboard#index'
@@ -13,15 +14,16 @@ Advicecapital::Application.routes.draw do
     resources :investors
     resources :stocks
     resources :users
-    resources :recipients
+    #resources :recipients
   end
 
   match '/contact' => 'contact#new', :as => 'contact', :via => :get
   match '/contact' =>  'contact#create', :as => 'contact', :via => :post
   
   root :to => "pages#index"
-
-  match '/receive_news', :to => 'admin/recipients#new'
+  
+  match '/receive_news', :to => 'recipients#new'
+  #match '/receive_news', :to => 'admin/recipients#new'
   
   match '/disclaimer', :to => 'pages#disclaimer'
   match '/privacy', :to => 'pages#privacy'

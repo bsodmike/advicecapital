@@ -19,6 +19,7 @@ class Ability
 
     if user.super_admin?
       can :manage, :all
+      
     elsif user.admin?
       can :manage, News
       can :manage, Video
@@ -27,10 +28,12 @@ class Ability
       can :manage, Recipient
       can :view,   AdvicePage
       can [:read, :update], User, :id => user.id
+      
     elsif user.investor?
       can :read, News
       can [:read, :update], User, :id => user.id
-    else # default role for newly created account, "visitor"
+      
+    else # not logged in
       can :create, Recipient
       can :read, News
       can :read, Video
