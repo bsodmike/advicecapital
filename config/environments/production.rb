@@ -31,6 +31,10 @@ Advicecapital::Application.configure do
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
   config.force_ssl = false
+  
+  # Require SSL for authentication
+  #config.to_prepare { Devise::SessionsController.force_ssl }
+  #config.to_prepare { Devise::RegistrationsController.force_ssl }
 
   # See everything in the log (default is :info)
   # config.log_level = :debug

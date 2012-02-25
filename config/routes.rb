@@ -3,7 +3,6 @@ Advicecapital::Application.routes.draw do
   
   resources :news
   resources :boards
-  #resources :contacts
   resources :videos
   resources :employees
 
@@ -22,7 +21,7 @@ Advicecapital::Application.routes.draw do
   
   root :to => "pages#index"
 
-  match '/receive_news', :to => 'recipients#new'
+  match '/receive_news', :to => 'admin/recipients#new'
   
   match '/disclaimer', :to => 'pages#disclaimer'
   match '/privacy', :to => 'pages#privacy'
