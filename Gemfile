@@ -26,12 +26,13 @@ gem 'prawn'
 gem 'capistrano'
 gem 'simple-rss'
 gem 'rest-open-uri'
-#gem 'whenever', :require => false
 gem 'clockwork'
 gem 'god'
 
+gem 'mysql2' 
+  
 group :production do
-  gem 'mysql2' 
+
 end
 
 

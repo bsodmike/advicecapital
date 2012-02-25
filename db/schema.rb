@@ -17,8 +17,8 @@ ActiveRecord::Schema.define(:version => 20120112163823) do
     t.string   "title"
     t.string   "template"
     t.text     "content"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
     t.string   "slug"
   end
 
@@ -28,14 +28,14 @@ ActiveRecord::Schema.define(:version => 20120112163823) do
     t.string   "email"
     t.string   "phone"
     t.string   "image"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "boxes", :force => true do |t|
     t.text     "content"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
     t.string   "name"
   end
 
@@ -45,8 +45,8 @@ ActiveRecord::Schema.define(:version => 20120112163823) do
     t.string   "email"
     t.string   "phone"
     t.string   "image"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "images", :force => true do |t|
@@ -54,22 +54,22 @@ ActiveRecord::Schema.define(:version => 20120112163823) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
   end
 
   create_table "investor_stocks", :force => true do |t|
     t.integer  "investor_id"
     t.integer  "stock_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "investors", :force => true do |t|
     t.string   "name"
     t.string   "email"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
     t.datetime "entry_date"
     t.integer  "entry_stock_price"
     t.integer  "phone"
@@ -77,8 +77,8 @@ ActiveRecord::Schema.define(:version => 20120112163823) do
 
   create_table "news", :force => true do |t|
     t.string   "content"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
     t.string   "title"
   end
 
@@ -86,8 +86,8 @@ ActiveRecord::Schema.define(:version => 20120112163823) do
     t.string   "firstname"
     t.string   "lastname"
     t.string   "email"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "stock_data", :force => true do |t|
@@ -95,16 +95,16 @@ ActiveRecord::Schema.define(:version => 20120112163823) do
     t.string   "price"
     t.string   "change"
     t.string   "volume"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "stocks", :force => true do |t|
     t.integer  "value"
     t.integer  "month"
     t.integer  "year"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "users", :force => true do |t|
@@ -118,8 +118,8 @@ ActiveRecord::Schema.define(:version => 20120112163823) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                                                   :null => false
+    t.datetime "updated_at",                                                   :null => false
     t.string   "role",                                  :default => "visitor"
     t.string   "name"
   end
@@ -130,8 +130,8 @@ ActiveRecord::Schema.define(:version => 20120112163823) do
   create_table "videos", :force => true do |t|
     t.string   "title"
     t.string   "panda_video_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
   end
 
 end

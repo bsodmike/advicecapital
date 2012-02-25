@@ -9,11 +9,11 @@
         - @employee.errors.full_messages.each do |msg|
           %li= msg
   .field
-    = f.label :name
+    = f.label :name, "Fulde navn"
     %br/
     = f.text_field :name
   .field
-    = f.label :title
+    = f.label :title, "Titel"
     %br/
     = f.text_field :title
   .field
@@ -21,12 +21,12 @@
     %br/
     = f.text_field :email
   .field
-    = f.label :phone
+    = f.label :phone, "Telefon"
     %br/
     = f.text_field :phone
   .field
-    = f.label :image
+    = f.label :image, "Billede"
     %br/
-    = f.text_field :image
+    = f.file_field :image
   .actions
-    = f.submit
+    = f.submit "Gem"
