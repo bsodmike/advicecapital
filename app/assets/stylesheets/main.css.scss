@@ -231,6 +231,10 @@ footer {
   background:#eee;
   overflow:scroll;
 
+  ul {
+    list-style: none;
+  }
+
   img:hover {
     cursor: pointer;
   }
