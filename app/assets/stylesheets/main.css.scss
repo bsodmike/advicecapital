@@ -200,7 +200,7 @@ header {
 
     #content {
       margin: 20px 0 0 0;
-      
+
       .span-7.colborder, .span-8.colborder  {
         height: 320px;
       }
@@ -237,18 +237,9 @@ footer {
 }
 #employees_slider {
   border: 1px solid #888;
-  width:800px;
-  height:250px;
+  width:1000px;
+  height:400px;
   background:#eee;
-  overflow:scroll;
-
-  ul {
-    list-style: none;
-  }
-
-  img:hover {
-    cursor: pointer;
-  }
 }
 #employees_index {
   float: left;
@@ -444,4 +435,20 @@ footer {
       list-style: square;
     }
   }
+}
+
+.roundabout-holder {
+  list-style: none;
+  padding: 0;
+  margin: 60px 0 0 200px;
+  width:800px;
+  height:250px;
+}
+.roundabout-moveable-item {
+  width:400px;
+  height:250px;
+  cursor: pointer;
+}
+.roundabout-in-focus {
+  cursor: auto;
 }

@@ -6,7 +6,7 @@
 #employees_slider
   %ul.employee_images
     - @employees.each do |employee|
-      %li= image_tag "employees/#{employee.image}", :id => "image_#{employee.id}", :class => "cloudcarousel", :rel => "shadowbox"
+      %li= image_tag "employees/#{employee.image}", :id => "image_#{employee.id}", :rel => "shadowbox"
 
 - @employees.each do |employee|
   .employee_info{:id => "info_#{employee.id}"}
