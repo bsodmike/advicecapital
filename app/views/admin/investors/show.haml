@@ -11,19 +11,26 @@
 
 %b Antal aktier:
 %br/
-= #@investor.stock_count
+= @investor.entry_stock_count
+%br/
+%br/
+
+%b Aktie kurs:
+%br/
+= @investor.entry_rate
 %br/
 %br/
 
 %b Investeret beløb:
 %br/
-=# @investor.investment_
+= @investor.entry_price.to_s + " kr."
 %br/
 %br/
 
 %b Aktuelt afkast:
 %br/
-=# @investor.
+- throwoff = @investor.entry_price / @investor.entry_stock_count * @investor.entry_rate
+= throwoff
 %br/
 %br/
 
@@ -37,7 +44,7 @@
 %br/
 
 %h3 Aktie udvikling
-%table
+%table{:style => "width:300px;"}
 	%tr
 		%th Værdi
 		%th Måned

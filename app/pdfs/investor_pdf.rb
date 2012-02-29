@@ -1,3 +1,4 @@
+# encoding: UTF-8
 class InvestorPdf < Prawn::Document
 	def initialize(investor, view)
 		super(top_margin: 70)
@@ -18,6 +19,10 @@ class InvestorPdf < Prawn::Document
 		text "#{stock_value}"
 		stock_value
 		stock_month
+		text "Aktie kurs #{@investor.entry_rate}"
+		text "Værdi ved indtrædelse #{@investor.entry_price}"
+		text "Dato for indtrædelse #{@investor.entry_date.strftime('%d/%m/%y')}"
+		text "Antal aktier #{@investor.entry_stock_count}"
 
 		#Gchart.line(
 		#	:size => '600x300', 

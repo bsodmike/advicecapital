@@ -452,3 +452,18 @@ footer {
 .roundabout-in-focus {
   cursor: auto;
 }
+
+#investment {
+  float:left;
+  margin-top:40px;
+
+  .span-3 {
+    text-align: center;
+  }
+}
+#generic {
+  float: left;
+  .span-3 {
+    text-align: center;
+  }
+}

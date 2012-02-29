@@ -9,7 +9,7 @@
 			%tr
 				%td= investor.name
 				%td= investor.email
-				%td= investor.entry_date
+				%td= investor.entry_date.strftime("%d/%m/%y")
 				- if can? :manage, investor
 					%td
 						.notice.actions

@@ -66,28 +66,17 @@
 
     });
 
-    /*$("#employees_slider").CloudCarousel({
-      xPos: 500,
-      yPos: 25,
-      autoRotate: 'yes',
-      reflOpacity: 1,
-      reflGap: 0.7,
-      speed: 0.1,
-      autoRotateDelay: 3000,
-      bringToFront: true
-    });*/
-
     $("#employees_slider ul").roundabout({
       autoplay: true,
       autoplayDuration: 3000,
       autoplayPauseOnHover: true
     });
 
-    /*$("#employees_slider ul#employee_images li img").hover(function() {
+    $("#employees_slider ul#employee_images li img").hover(function() {
       $(".employees_info").show();
     }, function () {
       $(".employees_info").hide();
-    });*/
+    });
     
     // Organisation_box
     $(".organisation_box ul li").hover(function() {

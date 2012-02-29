@@ -1,4 +1,5 @@
 Advicecapital::Application.routes.draw do
+
   devise_for :users
   
   resources :news
@@ -14,6 +15,7 @@ Advicecapital::Application.routes.draw do
     resources :investors
     resources :stocks
     resources :users
+    resources :company_stocks, :only => [:edit, :update, :show]
     #resources :recipients
   end
 

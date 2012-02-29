@@ -32,6 +32,7 @@ class Ability
     elsif user.investor?
       can :read, News
       can [:read, :update], User, :id => user.id
+      #can [:read, :update], Investor, :id => user.id
       
     else # not logged in
       can :create, Recipient

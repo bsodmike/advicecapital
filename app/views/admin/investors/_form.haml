@@ -32,13 +32,21 @@
 
   = field_set_tag "Aktie oplysninger" do
     .field
-      = #f.label :stocks, "Antal aktier:"
+      = f.label :entry_price, "Værdi ved indtrædelse"
       %br/
-      = #f.text_field :stocks
+      = f.text_field :entry_price
     .field
-      = f.label :entry_stock_price, "Pris pr. aktie ved indtrædelse:"
+      = f.label :entry_rate, "Kurs ved indtrædelse"
+      %br/
+      = f.text_field :entry_rate
+    .field
+      = f.label :entry_stock_price, "Pris pr. aktie ved indtrædelse"
       %br/
       = f.text_field :entry_stock_price
+    .field
+      = f.label :entry_stock_count, "Antal aktier ved indtrædelse"
+      %br/
+      = f.text_field :entry_stock_count
 
   .actions
     = f.submit "Gem"
