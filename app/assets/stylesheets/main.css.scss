@@ -5,7 +5,7 @@
   $ac-blue: #2b3743;
   $box-shadow: 0 0 4px 1px #eee;
   $box-dark-shadow: 0 0 6px 4px #888;
-  $wrapper-shadow: 5px 5px 5px #606060;
+  $wrapper-shadow: -8px 0px 10px -2px #eee, 8px 0px 10px -2px #eee;
 
 /**************** VARS _END_ ****************/
 
@@ -170,28 +170,32 @@ header {
     height: 94px;
     float: right; 
   }
+  #logo_text {
+    background: url('advicecapital.png');
+    width: 330px;
+    height: 33px;
+    position: absolute;
+    margin: 10px 0 0 30px;
+  }
 
 }
 /**************** HEADER _END_ *****************/
 
 /**************** SECTION ****************/
 .stay-clear{clear:both;}
-.container {padding: 0 !important;min-height: 500p;}
+.container {padding: 0 !important;min-height: 500px;width:1024px;}
 
 #wrapper {
-  padding: 20px 40px 0 20px !important;
-  background: url('center_bg2.png') repeat-y;
-  /*
+  padding: 20px 10px 10px 20px !important;
+  /*background: url('center_bg3.png') repeat-y;*/
   box-shadow: $wrapper-shadow;
   -webkit-box-shadow: $wrapper-shadow;
   -moz-box-shadow: $wrapper-shadow;
-  */
-  width: 930px;
+  width: 1024px;//930px;
   min-height: 600px;
   margin-bottom: -5px;
 
   #main_content {
-    margin-top: 20px;
     min-height: 500px;
   }
 }
@@ -217,17 +221,6 @@ footer {
 }
 /**************** FOOTER _END_ ****************/
 
-#slider {
-  background: #dfe0e2;
-  border: 1px solid #888;
-  min-width: 930px;
-  height: 100px;
-  margin-bottom: 20px;
-  float: left;
-  -moz-box-shadow: $box-shadow;
-  -webkit-box-shadow: $box-shadow;
-  box-shadow: $box-shadow;
-}
 .ui-datepicker-calendar, ui-datepicker-title, ui-datepicker-header, ui-datepicker-div {
   background: #C3D9FF; 
 }
