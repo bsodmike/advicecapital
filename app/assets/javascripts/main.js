@@ -54,7 +54,7 @@
     $("#news_feed").jCarouselLite({
       vertical: true,
       auto: 1,
-      visible: 2,
+      visible: 3,
       start: 0,
       speed: 5000,
       beforeStart: function(a) {
