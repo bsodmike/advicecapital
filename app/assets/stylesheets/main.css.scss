@@ -333,7 +333,7 @@ footer {
     }
   }
 }
-.admin_box {
+.admin_box, .investor_box {
   -moz-box-shadow: $box-dark-shadow;
   -webkit-box-shadow: $box-dark-shadow;
   box-shadow: $box-dark-shadow;
@@ -436,6 +436,8 @@ footer {
     }
   }
 }
+/* ERROR MESSAGES _END_ */
+
 
 .roundabout-holder {
   list-style: none;

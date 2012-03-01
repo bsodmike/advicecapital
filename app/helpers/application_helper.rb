@@ -18,4 +18,8 @@ module ApplicationHelper
 	  end
 	end
 
+	def current_investor(user_id)
+  	Investor.where(:user_id => user_id)
+  end
+
 end

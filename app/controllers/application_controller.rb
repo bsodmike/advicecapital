@@ -6,4 +6,7 @@ class ApplicationController < ActionController::Base
     redirect_to root_url
   end
 
+  
+  #@current_investor = Investor.where(:user_id => current_user) if current_user
+
 end

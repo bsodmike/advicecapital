@@ -6,6 +6,7 @@ class Admin::InvestorsController < AdminController
   def show
     @investor = Investor.find(params[:id])
     @stocks = @investor.stocks
+    @profile = @investor.users
     #@stocks = @investor.investors_stocks.stocks
 
     respond_to do |format|

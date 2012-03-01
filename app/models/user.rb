@@ -21,4 +21,7 @@ class User < ActiveRecord::Base
   def investor?
     self.role == 'investor'
   end
+
+  has_many :investor_profiles
+  has_many :investors, :through => :investor_profiles      
 end

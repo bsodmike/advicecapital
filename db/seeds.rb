@@ -67,6 +67,6 @@ News.create([
     { :title => t, :content => n },
 ])
 
-CompanyStocks.create(
-  :primo => 1000, :ultimo => 2000
-)
+# CompanyStocks.create!(
+#   :primo => 1000, :ultimo => 2000
+# )

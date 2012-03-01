@@ -48,6 +48,11 @@
 
         - if current_user && current_user.admin?
           = render 'layouts/admin_menu'
+        /- elsif current_user && current_user.investor?
+        /= render 'layouts/investor_menu'
+        - if current_user.investor_profiles.empty?
+        = #debug current_investor(current_user)
+        
 
         = render 'layouts/sub_pages'
         

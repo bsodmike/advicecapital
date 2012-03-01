@@ -31,4 +31,8 @@ class Investor < ActiveRecord::Base
 
   has_many :investor_stocks
   has_many :stocks, :through => :investor_stocks       
+
+  has_many :investor_profiles
+  has_many :users, :through => :investor_profiles
+  
 end

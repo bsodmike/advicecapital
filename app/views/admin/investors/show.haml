@@ -1,7 +1,12 @@
-%h3 Velkommen til #{@investor.name} 
+%h3 Velkommen #{@investor.name} 
 = @investor.email
 %br/
 %br/
+
+%b Bruger
+%br/ 
+- @investor.users.each do |p|
+	= p.role
 
 %b Dato for indtrædelse:
 %br/
@@ -33,6 +38,15 @@
 = throwoff
 %br/
 %br/
+
+%b Primo / Ultimo Kurs
+%br/
+= CompanyStock.first.primo if CompanyStock.first.primo
+\/
+= CompanyStock.first.ultimo if CompanyStock.first.ultimo
+%br/
+%br/
+
 
 - if can? :manage, @investor
 	.notice.actions
