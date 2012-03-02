@@ -1,18 +1,25 @@
 %h3 Brugere
 
-%table
+%table.users
 	%tr
 		%th Email
 		%th Rolle
 		%th Sidste login
 		%th Oprettet
+		%th Tilknyttet investor
 		%th Handling
+
 	- @users.each do |user|
 		%tr
 			%td= user.email
-			%td= user.role
+			%td= user_role(user.role)# user.role
 			%td= user.last_sign_in_at.strftime('%d/%m/%y - %H:%M:%S') if user.last_sign_in_at
 			%td= user.updated_at.strftime('%d/%m/%y - %H:%M:%S')
+			- if !user.investor_profiles.empty?
+				%td= link_to user.investor_profiles.map(&:investor_id), admin_investor_path(user.investor_profiles.map(&:investor_id))
+			- else
+				%td
+					%i Ingen
 			%td
 				.notice.actions
 					= link_to 'Vis', admin_user_path(user)
