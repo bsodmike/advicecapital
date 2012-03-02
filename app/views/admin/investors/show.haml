@@ -15,22 +15,28 @@
 	%br/
 	%br/
 
-	%b Aktie kurs:
+	%b Aktiekurs ved indtrædelse:
 	%br/
 	= @investor.entry_rate
 	%br/
 	%br/
 
+	%b Nuværende aktiekurs
+	%br/
+	= @investor.current_rate
+	%br/
+	%br/
+
 	%b Investeret beløb:
 	%br/
-	= @investor.entry_price.to_s + " kr."
+	= number_with_delimiter(@investor.entry_price) + " kr."
 	%br/
 	%br/
 
 	%b Aktuelt afkast:
 	%br/
 	- throwoff = @investor.entry_price / @investor.entry_stock_count * @investor.entry_rate
-	= throwoff
+	= throwoff.to_s + " kr."
 	%br/
 	%br/
 
@@ -61,9 +67,11 @@
 							= link_to 'Slet', admin_stock_path(s), :confirm => 'Er du sikker?', :method => :delete
 
 %div{:style=>"float:right;margin-top:80px;"}
-	- stock_value = @stocks.map(&:value)
-	- stock_month = @stocks.map(&:month)
-	- chart = Gchart.line(:size => '600x300', :title => "Aktiekurs", :bg => 'fff', :legend => 'Aktie Værdi', :data => stock_value, :axis_with_labels => 'y,x,r', :axis_labels => [ stock_value, stock_month, ['2011'] ])
+	-# stock_value = @stocks.map(&:value)
+	-# stock_month = @stocks.map(&:month)
+	- stock_entry_rate = @investor.entry_rate
+	- stock_current_rate = @investor.current_rate
+	- chart = Gchart.line(:size => '600x300', :title => "Aktiekurs", :bg => 'fff', :legend => 'Aktie Værdi', :data => [stock_entry_rate, stock_current_rate], :axis_with_labels => 'y,x,r', :axis_labels => [ stock_entry_rate, stock_current_rate, ['2012'] ])
 
 	%img{:src => chart}
 

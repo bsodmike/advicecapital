@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120301200934) do
+ActiveRecord::Schema.define(:version => 20120302114824) do
 
   create_table "advice_pages", :force => true do |t|
     t.string   "title"
@@ -93,6 +93,7 @@ ActiveRecord::Schema.define(:version => 20120301200934) do
     t.integer  "entry_stock_count"
     t.integer  "entry_price"
     t.float    "entry_rate"
+    t.float    "current_rate"
   end
 
   create_table "news", :force => true do |t|

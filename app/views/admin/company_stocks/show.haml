@@ -1,3 +1,12 @@
-= @company_stocks.primo
-%br/
-= @company_stocks.ultimo
+%h3 Firmaværdier
+%p
+  %b Primo værdi:
+  = @company_stocks.primo
+  %br/
+  %br/
+  %b Ultimo værdi:
+  = @company_stocks.ultimo
+
+  - if can? :manage, @company_stocks
+    .notice.actions
+      = link_to 'Rediger', edit_admin_company_stock_path(@company_stocks)

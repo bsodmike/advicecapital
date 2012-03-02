@@ -1,0 +1,20 @@
+= form_for [:admin, @company_stocks] do |f|
+  - if @company_stocks.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@company_stocks.errors.count, "error")
+        prohibited this news from being saved:
+      %ul
+        - @company_stocks.errors.full_messages.each do |msg|
+          %li= msg
+  
+  .field
+    = f.label :primo, "Primo værdi:"
+    %br/
+    = f.text_field :primo
+  .field
+    = f.label :ultimo, "Ultimo værdi:"
+    %br/
+    = f.text_field :ultimo
+  .actions
+    = f.submit "Opdater"
