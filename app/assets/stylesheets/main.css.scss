@@ -191,12 +191,12 @@ header {
   box-shadow: $wrapper-shadow;
   -webkit-box-shadow: $wrapper-shadow;
   -moz-box-shadow: $wrapper-shadow;
-  width: 1024px;//930px;
+  width: 1024px;/*930px;*/
   min-height: 600px;
   margin-bottom: -5px;
 
   #main_content {
-    min-height: 500px;
+    min-height: 600px;
 
     #content {
       margin: 20px 0 0 0;

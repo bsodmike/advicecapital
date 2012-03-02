@@ -4,7 +4,11 @@ class InvestorPdf < Prawn::Document
 		super(top_margin: 70)
 		@investor = investor
 		@stocks = Stock.all
+		@company_stocks = CompanyStock.first
+		
+		# Sections
 		name
+		info
 		chart
 	end
 
@@ -12,17 +16,18 @@ class InvestorPdf < Prawn::Document
 		text "#{@investor.name}", size: 30, style: :bold
 	end
 
+	def info
+		text "Aktie kurs ved indtrædelse: #{@investor.entry_rate}"
+		text "Nuværende aktiekurs: #{@investor.current_rate}"
+		text "Værdi ved indtrædelse: #{@investor.entry_price} kr."
+		text "Dato for indtrædelse: #{@investor.entry_date.strftime('%d/%m/%y')}"
+		text "Antal aktier: #{@investor.entry_stock_count}"
+	end
+
 	def chart
 		stock_value = @stocks.map(&:value)
 		stock_month = @stocks.map(&:month)
 
-		text "#{stock_value}"
-		stock_value
-		stock_month
-		text "Aktie kurs #{@investor.entry_rate}"
-		text "Værdi ved indtrædelse #{@investor.entry_price}"
-		text "Dato for indtrædelse #{@investor.entry_date.strftime('%d/%m/%y')}"
-		text "Antal aktier #{@investor.entry_stock_count}"
 
 		#Gchart.line(
 		#	:size => '600x300', 
