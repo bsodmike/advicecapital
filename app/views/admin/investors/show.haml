@@ -1,90 +1,74 @@
-%h3 Velkommen #{@investor.name} 
-= @investor.email
-%br/
-%br/
+%div{:style=>"float:left;"}
+	%h3 Velkommen #{@investor.name + " - " + @investor.email} 
+	%br/
+	%br/
 
-%b Dato for indtrædelse:
-%br/
-= @investor.entry_date.strftime('%d-%m-%y')
-%br/
-%br/
+	%b Dato for indtrædelse:
+	%br/
+	= @investor.entry_date.strftime('%d-%m-%y')
+	%br/
+	%br/
 
-%b Antal aktier:
-%br/
-= @investor.entry_stock_count
-%br/
-%br/
+	%b Antal aktier:
+	%br/
+	= @investor.entry_stock_count
+	%br/
+	%br/
 
-%b Aktie kurs:
-%br/
-= @investor.entry_rate
-%br/
-%br/
+	%b Aktie kurs:
+	%br/
+	= @investor.entry_rate
+	%br/
+	%br/
 
-%b Investeret beløb:
-%br/
-= @investor.entry_price.to_s + " kr."
-%br/
-%br/
+	%b Investeret beløb:
+	%br/
+	= @investor.entry_price.to_s + " kr."
+	%br/
+	%br/
 
-%b Aktuelt afkast:
-%br/
-- throwoff = @investor.entry_price / @investor.entry_stock_count * @investor.entry_rate
-= throwoff
-%br/
-%br/
+	%b Aktuelt afkast:
+	%br/
+	- throwoff = @investor.entry_price / @investor.entry_stock_count * @investor.entry_rate
+	= throwoff
+	%br/
+	%br/
 
-%b Primo / Ultimo Kurs
-%br/
-= CompanyStock.first.primo if CompanyStock.first.primo
-\/
-= CompanyStock.first.ultimo if CompanyStock.first.ultimo
-%br/
-%br/
+	%b Primo / Ultimo Kurs
+	%br/
+	= CompanyStock.first.primo if CompanyStock.first.primo
+	\/
+	= CompanyStock.first.ultimo if CompanyStock.first.ultimo
+	%br/
+	%br/
 
-
-- if can? :manage, @investor
-	.notice.actions
-		= link_to 'Rediger', edit_admin_investor_path(@investor)
-		|
-		= link_to 'Slet', admin_investor_path(@investor), :confirm => 'Er du sikker?', :method => :delete
-
-%br/
-%br/
-
-%h3 Aktie udvikling
-%table{:style => "width:300px;"}
-	%tr
-		%th Værdi
-		%th Måned
-		%th År
-	- @stocks.each do |s|	
+	%h3 Aktie udvikling
+	%table{:style => "width:300px;"}
 		%tr
-			%td= s.value
-			%td= s.month
-			%td= s.year
-			- if can? :manage, s
-				%td
-					.notice.actions
-						= link_to 'Vis', admin_stock_path(s)
-						= link_to 'Rediger', edit_admin_stock_path(s)
-						= link_to 'Slet', admin_stock_path(s), :confirm => 'Er du sikker?', :method => :delete
+			%th Værdi
+			%th Måned
+			%th År
+		- @stocks.each do |s|	
+			%tr
+				%td= s.value
+				%td= s.month
+				%td= s.year
+				- if can? :manage, s
+					%td
+						.notice.actions
+							= link_to 'Vis', admin_stock_path(s)
+							= link_to 'Rediger', edit_admin_stock_path(s)
+							= link_to 'Slet', admin_stock_path(s), :confirm => 'Er du sikker?', :method => :delete
 
-	= #paginate @stocks
+%div{:style=>"float:right;margin-top:80px;"}
+	- stock_value = @stocks.map(&:value)
+	- stock_month = @stocks.map(&:month)
+	- chart = Gchart.line(:size => '600x300', :title => "Aktiekurs", :bg => 'fff', :legend => 'Aktie Værdi', :data => stock_value, :axis_with_labels => 'y,x,r', :axis_labels => [ stock_value, stock_month, ['2011'] ])
 
+	%img{:src => chart}
 
-- stock_value = @stocks.map(&:value)
-- stock_month = @stocks.map(&:month)
-
-
-	
-- chart = Gchart.line(:size => '600x300', :title => "Aktiekurs", :bg => 'fff', :legend => 'Aktie Værdi', :data => stock_value, :axis_with_labels => 'y,x,r', :axis_labels => [ stock_value, stock_month, ['2011'] ])
-
-%img{:src => chart}
-
-%br/
-%br/
-.notice.actions
-	= link_to 'Tilbage', admin_investors_path
-	
-		
+/- if can? :manage, @investor
+/	.notice.actions
+/		= link_to 'Rediger', edit_admin_investor_path(@investor)
+/		|
+/		= link_to 'Slet', admin_investor_path(@investor), :confirm => 'Er du sikker?', :method => :delete
