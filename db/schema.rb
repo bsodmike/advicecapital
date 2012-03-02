@@ -72,6 +72,9 @@ ActiveRecord::Schema.define(:version => 20120301200934) do
     t.datetime "updated_at",  :null => false
   end
 
+  add_index "investor_profiles", ["investor_id"], :name => "index_investor_profiles_on_investor_id", :unique => true
+  add_index "investor_profiles", ["user_id"], :name => "index_investor_profiles_on_user_id", :unique => true
+
   create_table "investor_stocks", :force => true do |t|
     t.integer  "investor_id"
     t.integer  "stock_id"
@@ -90,7 +93,6 @@ ActiveRecord::Schema.define(:version => 20120301200934) do
     t.integer  "entry_stock_count"
     t.integer  "entry_price"
     t.float    "entry_rate"
-    t.integer  "user_id"
   end
 
   create_table "news", :force => true do |t|
@@ -104,8 +106,8 @@ ActiveRecord::Schema.define(:version => 20120301200934) do
     t.string   "firstname"
     t.string   "lastname"
     t.string   "email"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "stock_data", :force => true do |t|
