@@ -1,0 +1,17 @@
+<%= form_for(@investor_profile) do |f| %>
+  <% if @investor_profile.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@investor_profile.errors.count, "error") %> prohibited this investor_profile from being saved:</h2>
+
+      <ul>
+      <% @investor_profile.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

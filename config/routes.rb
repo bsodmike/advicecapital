@@ -1,5 +1,21 @@
 Advicecapital::Application.routes.draw do
 
+  resources :investor_profiles
+
+  get "investor_profiles/index"
+
+  get "investor_profiles/new"
+
+  get "investor_profiles/create"
+
+  get "investor_profiles/edit"
+
+  get "investor_profiles/update"
+
+  get "investor_profiles/show"
+
+  get "investor_profiles/destroy"
+
   devise_for :users
   
   resources :news

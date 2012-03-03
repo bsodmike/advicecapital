@@ -26,8 +26,6 @@ class Ability
       can :manage, Employee
       can :manage, Dashboard
       can :manage, Recipient
-      can :manage, CompanyStock
-      can :manage, InvestorProfile
       can :view,   AdvicePage
       can [:read, :update], User, :id => user.id
       
