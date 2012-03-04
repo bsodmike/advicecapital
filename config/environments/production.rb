@@ -31,8 +31,8 @@ Advicecapital::Application.configure do
   config.force_ssl = false
   
   # Require SSL for authentication
-  config.to_prepare { Devise::SessionsController.force_ssl }
-  config.to_prepare { Devise::RegistrationsController.force_ssl }
+  #config.to_prepare { Devise::SessionsController.force_ssl }
+  #config.to_prepare { Devise::RegistrationsController.force_ssl }
 
   # See everything in the log (default is :info)
   # config.log_level = :debug

@@ -7,7 +7,6 @@
     = stylesheet_link_tag 'blueprint/screen', :media => "screen, projection"
     = stylesheet_link_tag 'blueprint/print', :media => "print"
     = stylesheet_link_tag 'jquery.fancybox-1.3.4'
-    = stylesheet_link_tag 'jquery.lightbox-0.5'
     /[if lt IE 8]
       = stylesheet_link_tag 'blueprint/ie'
 
@@ -15,24 +14,24 @@
 
     /= javascript_include_tag '//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js', '//ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js'
     = javascript_include_tag 'application'
-    = javascript_include_tag 'http://gsgd.co.uk/sandbox/jquery/easing/jquery.easing.1.3.js'
-    = javascript_include_tag 'http://maps.googleapis.com/maps/api/js?sensor=false'    
+    = javascript_include_tag '//maps.googleapis.com/maps/api/js?sensor=false'    
     = javascript_include_tag '//google.com/jsapi'
     :javascript
       google.load('visualization', '1.0', {'packages':['corechart']});
-    = javascript_include_tag 'http://cdn.pandastream.com/u/1.4/jquery.panda-uploader.min.js'
+    = javascript_include_tag '//cdn.pandastream.com/u/1.4/jquery.panda-uploader.min.js'
 
     // LOCAL SCRIPTS
     = javascript_include_tag '/assets/swfobject/swfobject.js'
     = javascript_include_tag '/javascripts/tiny_mce/jquery.tinymce.js' # PUBLIC FOLDER
     = javascript_include_tag '/javascripts/tiny_mce/tiny_mce.js' # PUBLIC FOLDER
-    = javascript_include_tag '/assets/nested_form.js' # PUBLIC FOLDER
+    = javascript_include_tag '/javascripts/nested_form.js' # PUBLIC FOLDER
     = javascript_include_tag '/assets/cloud-carousel.1.0.5.min.js'
     = javascript_include_tag '/assets/jquery.fancybox-1.3.4.js'
-    = javascript_include_tag '/assets/jquery.roundabout.min.js'
     = javascript_include_tag '/assets/jcarousellite_1.0.1.min.js'
+    = javascript_include_tag '/assets/jquery.roundabout.min.js'
+    = javascript_include_tag '/assets/jquery.easing.1.3.js'
     /[if lt IE 9]
-      = javascript_include_tag 'http://html5shiv.googlecode.com/svn/trunk/html5.js'
+      = javascript_include_tag '//html5shiv.googlecode.com/svn/trunk/html5.js'
     = csrf_meta_tag
   %body
 
