@@ -12,49 +12,52 @@
 %p
   Seneste nyhed:
   = link_to @latest_news_written.title, @latest_news_written unless @latest_news_written.nil?
-  %br/
-  %br/
+  %hr/
   #generic
     %h3 Generelt
     %br/
     .span-3
       %h3= link_to 'Nyheder', news_index_path
       = link_to 'Opret nyhed', new_news_path
-
     .span-3
-      %h3= link_to 'Sider', admin_advice_pages_path
-
-    .span-3
-      %h3= link_to 'Medarbejdere', employees_path
-      = link_to 'Opret medarbejder', new_employee_path
-
-    .span-3
-      %h3= link_to 'Brugere', admin_users_path
-      = link_to 'Opret bruger', new_admin_user_path
-
+      %h3= link_to 'Sider', admin_advice_pages_path  
     .span-3
       %h3= link_to 'Boxe', admin_boxes_path
       %i Vises på forsiden
-
     .span-3
       %h3= link_to 'Video-arkiv', videos_path
       = link_to 'Upload video', new_video_path
-    
     .span-3
       %h3= link_to 'Nyhedsmodtagere', recipients_path
-    
+  
+  %hr/
 
-  #investment
-    %h3 Investering
+  #user_administration
+    %h3 Brugeradministration
     %br/
+    .span-3
+      %h3= link_to 'Brugere', admin_users_path
+      = link_to 'Opret bruger', new_admin_user_path
+    .span-3
+      %h3= link_to 'Medarbejdere', employees_path
+      = link_to 'Opret medarbejder', new_employee_path
     .span-3
       %h3= link_to 'Investorer', admin_investors_path
       = link_to 'Opret investor', new_admin_investor_path
-    
+    .span-3
+      %h3= link_to 'Investor profil', admin_investor_profiles_path
+      = link_to 'Opret investor profil', new_admin_investor_profile_path
+      %small
+        %i Opretter en tilknytning til en bruger.
+
+  %hr/
+
+  #investment
+    %h3 Investering
+    %br/    
     .span-3
       %h3= link_to 'Aktier', admin_stocks_path
       = link_to 'Opret aktie(r)', new_admin_stock_path
-
     - if current_user.super_admin?
       .span-3
         %h3= link_to 'Firma værdier', admin_company_stock_path(1)

@@ -22,6 +22,7 @@ class Admin::InvestorsController < AdminController
 
   def new
     @investor = Investor.new
+    3.times { @investor.stocks.build }
   end
 
   def create
@@ -42,7 +43,7 @@ class Admin::InvestorsController < AdminController
     @investor = Investor.find(params[:id])
 
     if @investor.update_attributes(params[:investor])
-      redirect_to @investor, :notice => "Investor was successfully updated."
+      redirect_to admin_investor_path(@investor), :notice => "Investor was successfully updated."
     else
       render :edit
     end

@@ -28,6 +28,7 @@ gem 'simple-rss'
 gem 'rest-open-uri'
 gem 'clockwork'
 gem 'god'
+gem 'nested_form', :git => 'https://github.com/ryanb/nested_form.git'
 
 gem 'mysql2' 
   

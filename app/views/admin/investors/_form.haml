@@ -1,4 +1,4 @@
-= form_for [:admin, @investor] do |f|
+= nested_form_for [:admin, @investor] do |f|
   - if @investor.errors.any?
     #error_explanation
       %h2
@@ -31,22 +31,47 @@
 
 
   = field_set_tag "Aktie oplysninger" do
-    .field
-      = f.label :entry_price, "Værdi ved indtrædelse"
-      %br/
-      = f.text_field :entry_price
-    .field
-      = f.label :entry_rate, "Kurs ved indtrædelse"
-      %br/
-      = f.text_field :entry_rate
-    .field
-      = f.label :entry_stock_price, "Pris pr. aktie ved indtrædelse"
-      %br/
-      = f.text_field :entry_stock_price
-    .field
-      = f.label :entry_stock_count, "Antal aktier ved indtrædelse"
-      %br/
-      = f.text_field :entry_stock_count
+    %div{:style=>"float:left;margin-right:40px;"}
+      .field
+        = f.label :entry_price, "Værdi ved indtrædelse"
+        %br/
+        = f.text_field :entry_price
+      .field
+        = f.label :entry_rate, "Kurs ved indtrædelse"
+        %br/
+        = f.text_field :entry_rate
+      .field
+        = f.label :entry_stock_price, "Pris pr. aktie ved indtrædelse"
+        %br/
+        = f.text_field :entry_stock_price
+      .field
+        = f.label :entry_stock_count, "Antal aktier ved indtrædelse"
+        %br/
+        = f.text_field :entry_stock_count
+        %br/
+        %br/
+    %div{:style=>"float:left;"}  
+      = field_set_tag "Aktieværdier" do
+        /= f.fields_for :stocks
+        = f.fields_for :stocks do |stock_form|
+          .field
+            = stock_form.label :value, "Værdi"
+            %br/
+            = stock_form.text_field :value
+          .field
+            = stock_form.label :month, "Måned"
+            %br/
+            = stock_form.text_field :month
+          .field
+            = stock_form.label :year, "År"
+            %br/
+            = stock_form.text_field :year
+            %br/
+            %br/
+            = stock_form.link_to_remove "Fjern"
+        %br/
+        
+        = f.link_to_add "Tilføj aktie", :stocks
 
   .actions
     = f.submit "Gem"

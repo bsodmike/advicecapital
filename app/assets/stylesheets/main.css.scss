@@ -467,10 +467,15 @@ footer {
 .roundabout-in-focus {
   cursor: auto;
 }
-
+#user_administration {
+  float: left;
+  margin: 0 0 20px 0;
+  .span-3 {
+    text-align: center;
+  }
+}
 #investment {
   float:left;
-  margin-top:40px;
 
   .span-3 {
     text-align: center;
@@ -478,6 +483,7 @@ footer {
 }
 #generic {
   float: left;
+  margin: 0 0 20px 0;
   .span-3 {
     text-align: center;
   }

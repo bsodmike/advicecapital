@@ -1,0 +1,5 @@
+= @investor_profile.user_id
+
+- if can? :manage, @investor_profile
+	.notice.actions
+		= link_to 'Rediger', edit_admin_investor_profile_path(@investor_profile)

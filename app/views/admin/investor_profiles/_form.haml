@@ -1,0 +1,20 @@
+= form_for([:admin,@investor_profile]) do |f|
+  - if @investor_profile.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@investor_profile.errors.count, "error")
+        prohibited this investor_profile from being saved:
+      %ul
+        - @investor_profile.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :investor_id, "Investor"
+    %br/
+    = f.collection
+  .field
+    = f.label :user_id, "Bruger"
+    %br/
+    = f.collection
+  .actions
+    = f.submit

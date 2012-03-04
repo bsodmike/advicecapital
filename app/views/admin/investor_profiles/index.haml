@@ -1,0 +1,19 @@
+%h3 Investor Profiler
+%table
+  %tr
+    %th Investor
+    %th Bruger
+    %th
+  - @investor_profiles.each do |investor_profile|
+    %tr
+      %td= investor_profile.investor_id
+      %td= investor_profile.user_id
+      - if can? :manage, investor_profile
+        .notice.actions
+          %td
+            = link_to 'Vis', admin_investor_profile
+            = link_to 'Rediger', edit_admin_investor_profile_path(investor_profile)
+            = link_to 'Slet', admin_investor_profile, confirm: 'Are you sure?', method: :delete
+%br/
+- if can? :manage, @investor_profiles
+  = link_to 'Ny Investor profil', new_admin_investor_profile_path

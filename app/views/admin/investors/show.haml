@@ -59,21 +59,15 @@
 				%td= s.value
 				%td= s.month
 				%td= s.year
-				- if can? :manage, s
-					%td
-						.notice.actions
-							= link_to 'Vis', admin_stock_path(s)
-							= link_to 'Rediger', edit_admin_stock_path(s)
-							= link_to 'Slet', admin_stock_path(s), :confirm => 'Er du sikker?', :method => :delete
 
 %div{:style=>"float:right;margin-top:80px;"}
-	-# stock_value = @stocks.map(&:value)
-	-# stock_month = @stocks.map(&:month)
-	- stock_entry_rate = @investor.entry_rate
-	- stock_current_rate = @investor.current_rate
-	- chart = Gchart.line(:size => '600x300', :title => "Aktiekurs", :bg => 'fff', :legend => 'Aktie Værdi', :data => [stock_entry_rate, stock_current_rate], :axis_with_labels => 'y,x,r', :axis_labels => [ stock_entry_rate, stock_current_rate, ['2012'] ])
+	- stock_value = @stocks.map(&:value)
+	- stock_month = @stocks.map(&:month)
+	- stock_year = @stocks.map(&:year)
 
-	%img{:src => chart}
+	- chart = Gchart.line(:size => '600x300', :title => "Aktiekurs", :bg => 'fff', :legend => 'Aktie Værdi', :data => [stock_value, stock_month, stock_year], :axis_with_labels => 'y,x,r', :axis_labels => [ stock_value, stock_month, stock_year ]) unless stock_value || stock_month || stock_year.blank?
+
+	%img{:src => chart }
 
 /- if can? :manage, @investor
 /	.notice.actions
