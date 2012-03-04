@@ -36,8 +36,6 @@
       frameHeight:360
     });
 
-    $("a[rel=lightbox]").lightBox();
-
     $("a.employee_image_popup").fancybox();
     
     $(".slider_custom").jCarouselLite({
