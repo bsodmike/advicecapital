@@ -1,4 +1,4 @@
-= nested_form_for ([:admin, @investor]), :multipart => true do |f|
+= nested_form_for [:admin, @investor] do |f|
   - if @investor.errors.any?
     #error_explanation
       %h2
@@ -59,10 +59,20 @@
               %td= stock_form.text_field :value
             %tr
               %td= stock_form.label :month, "Måned"
-              %td= stock_form.date_select :month, :discard_day => true, :discard_year => true, :use_month_numbers => true
+              %td
+                = stock_form.text_field :month
+                %br/
+                %i
+                  %small Indtastes som 2-cifret tal: 01
+              /%td= stock_form.date_select 'month', 'stock_month', :discard_day => true, :discard_year => true, :use_month_numbers => true
             %tr
               %td= stock_form.label :year, "År"
-              %td= stock_form.date_select :year, :discard_day => true, :discard_month => true, :start_year => 1990
+              %td
+                = stock_form.text_field :year
+                %br/
+                %i
+                  %small Indtastes som 4-cifret årstal: 2012
+              /%td= stock_form.date_select 'year', 'stock_year',:discard_day => true, :discard_month => true, :start_year => 1990
             %tr
               %td
               %td= stock_form.link_to_remove "Fjern"

@@ -66,7 +66,7 @@
 	- stock_year = @stocks.map(&:year)
 	 
 
-	- chart = Gchart.line(:size => '600x300', :title => "Aktiekurs", :bg => 'fff', :legend => 'Aktie Værdi', :data => [stock_value], :axis_with_labels => 'y,x', :axis_labels => [ stock_value, stock_year ]) unless stock_value.empty?
+	- chart = Gchart.line(:size => '600x300', :title => "Aktiekurs", :bg => 'fff', :legend => 'Aktie Værdi', :data => [stock_value], :axis_with_labels => 'y,x', :axis_labels => [ stock_value, stock_month ]) unless stock_value.empty?
 
 	%img{:src => chart }
 

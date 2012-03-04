@@ -11,10 +11,12 @@
   .field
     = f.label :investor_id, "Investor"
     %br/
-    = f.collection
+    - investors = Investor.all.map { |i| [i.email, i] }
+    = f.select :investor_id, options_for_select(investors)
   .field
     = f.label :user_id, "Bruger"
     %br/
-    = f.collection
+    - users = User.all.map { |u| [u.email, u] }
+    = f.select :user_id, options_for_select(users)
   .actions
     = f.submit

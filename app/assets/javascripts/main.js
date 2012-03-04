@@ -8,19 +8,6 @@
       });
     });
 
-    // // INVESTOR
-    // function remove_fields(link) {
-    //   $(link).prev("input[type=hidden]").val("1");
-    //   $(link).closest(".fields").hide();
-    // }
-
-    // function add_fields(link, association, content) {
-    //   var new_id = new Date().getTime();
-    //   var regexp = new RegExp("new_" + association, "g");
-    //   $(link).parent().before(content.replace(regexp, new_id));
-    // }
-
-
     $('#flash').delay(500).fadeIn('normal', function() {
       $(this).delay(2500).fadeOut();
     });
@@ -76,7 +63,6 @@
       afterEnd: function(a) {
         $(a).parent().fadeTo(800, 1);
       }
-
     });
 
     $("#employees_slider ul").roundabout({
