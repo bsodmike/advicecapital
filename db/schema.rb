@@ -121,7 +121,7 @@ ActiveRecord::Schema.define(:version => 20120302114824) do
   end
 
   create_table "stocks", :force => true do |t|
-    t.integer  "value"
+    t.float    "value"
     t.integer  "month"
     t.integer  "year"
     t.datetime "created_at", :null => false

@@ -22,7 +22,7 @@ class Admin::InvestorsController < AdminController
 
   def new
     @investor = Investor.new
-    3.times { @investor.stocks.build }
+    @investor.stocks.build
   end
 
   def create

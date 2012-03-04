@@ -25,7 +25,7 @@
       $(this).delay(2500).fadeOut();
     });
 
-    $('#investor_entry_date').datepicker();
+    $('.date_select').datepicker();
 
     tinyMCE.init({
       mode : "textareas",

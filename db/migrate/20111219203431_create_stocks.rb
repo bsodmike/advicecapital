@@ -1,7 +1,7 @@
 class CreateStocks < ActiveRecord::Migration
   def change
     create_table :stocks do |t|
-      t.integer :value
+      t.float :value
       t.integer :month
       t.integer :year
 

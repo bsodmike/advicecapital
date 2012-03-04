@@ -1,4 +1,4 @@
-= nested_form_for [:admin, @investor] do |f|
+= nested_form_for ([:admin, @investor]), :multipart => true do |f|
   - if @investor.errors.any?
     #error_explanation
       %h2
@@ -16,7 +16,7 @@
     .field
       = f.label :entry_date, "Dato for indtrædelse:"
       %br/
-      = f.text_field :entry_date
+      = f.text_field :entry_date, :class => "date_select"
 
 
   = field_set_tag "Kontakt oplysninger" do
@@ -52,25 +52,20 @@
         %br/
     %div{:style=>"float:left;"}  
       = field_set_tag "Aktieværdier" do
-        /= f.fields_for :stocks
         = f.fields_for :stocks do |stock_form|
-          .field
-            = stock_form.label :value, "Værdi"
-            %br/
-            = stock_form.text_field :value
-          .field
-            = stock_form.label :month, "Måned"
-            %br/
-            = stock_form.text_field :month
-          .field
-            = stock_form.label :year, "År"
-            %br/
-            = stock_form.text_field :year
-            %br/
-            %br/
-            = stock_form.link_to_remove "Fjern"
-        %br/
-        
+          %table
+            %tr
+              %td= stock_form.label :value, "Værdi"
+              %td= stock_form.text_field :value
+            %tr
+              %td= stock_form.label :month, "Måned"
+              %td= stock_form.date_select :month, :discard_day => true, :discard_year => true, :use_month_numbers => true
+            %tr
+              %td= stock_form.label :year, "År"
+              %td= stock_form.date_select :year, :discard_day => true, :discard_month => true, :start_year => 1990
+            %tr
+              %td
+              %td= stock_form.link_to_remove "Fjern"
         = f.link_to_add "Tilføj aktie", :stocks
 
   .actions

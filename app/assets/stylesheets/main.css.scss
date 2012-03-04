@@ -193,8 +193,7 @@ header {
   -webkit-box-shadow: $wrapper-shadow;
   -moz-box-shadow: $wrapper-shadow;
   width: 1024px;/*930px;*/
-  min-height: 600px;
-  margin-bottom: -5px;
+  min-height: 800px;
 
   #main_content {
     min-height: 600px;
@@ -398,6 +397,7 @@ footer {
   display: none;
 }
 .actions {
+  height: 20px;
   width: 120px;
   text-align:center;
 }
