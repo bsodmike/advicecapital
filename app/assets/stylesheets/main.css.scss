@@ -3,6 +3,7 @@
   $black: #000;
   $dark-gray: #888;
   $ac-blue: #2b3743;
+  $ac-blue2: #1c2732;
   $box-shadow: 0 0 4px 1px #eee;
   $box-dark-shadow: 0 0 6px 4px #888;
   $wrapper-shadow: -8px 0px 10px -2px #eee, 8px 0px 10px -2px #eee;
@@ -316,7 +317,7 @@ footer {
     }
 
     .sub_page_selected {
-      background: #1c2732;
+      background: $ac-blue2;
       color: #fff;
 
       a {
@@ -325,12 +326,12 @@ footer {
     }
 
     div:hover {
-      background: #1c2732;
+      background: $ac-blue2;
       color: #fff;
 
       a {
         color: #fff;
-        background: #1c2732;
+        background: $ac-blue2;
       }
     }
   }
@@ -491,6 +492,7 @@ footer {
 #user_administration {
   float: left;
   margin: 0 0 20px 0;
+  
   .span-3 {
     text-align: center;
   }
