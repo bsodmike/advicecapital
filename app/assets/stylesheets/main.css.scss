@@ -13,6 +13,15 @@ body {
   background: $white url('top_bannerEXT.png') repeat-x;
   font-family: Arial, Helvetica, sans-serif;
 }
+#body_background {
+  background: url(baggrundsgrafik.png);
+  width: 829px;
+  height: 1086px;
+  float: right;
+  position: absolute;
+  right: 0;
+  z-index: 100;
+}
 
 /*input[type=submit] {
   border: 2px solid #1a252d;
@@ -302,6 +311,15 @@ footer {
         margin: 0 0 0 6px;
       }
       a:active {
+        color: #fff;
+      }
+    }
+
+    .sub_page_selected {
+      background: #1c2732;
+      color: #fff;
+
+      a {
         color: #fff;
       }
     }
