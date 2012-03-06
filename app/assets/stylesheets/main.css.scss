@@ -248,8 +248,8 @@ footer {
      -moz-box-shadow: $footer-shadow;
           box-shadow: $footer-shadow;
   /*background: url('footer_bg.png') repeat;*/
-  position: absolute;
-  min-height: 200px;
+  position: fixed;
+  height: 75px;
   width: 100%;
 
   .content {
