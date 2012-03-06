@@ -7,6 +7,7 @@
   $box-shadow: 0 0 4px 1px #eee;
   $box-dark-shadow: 0 0 4px 2px #888;
   $wrapper-shadow: -8px 0px 10px -2px #eee, 8px 0px 10px -2px #eee;
+  $footer-shadow: 0 -4px 4px 1px #eee;
 
 /**************** VARS _END_ ****************/
 
@@ -228,8 +229,27 @@ header {
 /**************** FOOTER ****************/
 footer {
   text-align: center;
-  background: url('footer_bg.png') repeat-x;
-  height: 100px;
+  background: linear-gradient(bottom, rgb(40,54,65) 0%, rgb(34,47,56) 50%, rgb(26,37,46) 75%) repeat;
+  background: -o-linear-gradient(bottom, rgb(40,54,65) 0%, rgb(34,47,56) 50%, rgb(26,37,46) 75%) repeat;
+  background: -moz-linear-gradient(bottom, rgb(40,54,65) 0%, rgb(34,47,56) 50%, rgb(26,37,46) 75%) repeat;
+  background: -webkit-linear-gradient(bottom, rgb(40,54,65) 0%, rgb(34,47,56) 50%, rgb(26,37,46) 75%) repeat;
+  background: -ms-linear-gradient(bottom, rgb(40,54,65) 0%, rgb(34,47,56) 50%, rgb(26,37,46) 75%) repeat;
+
+  background: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0, rgb(40,54,65)),
+    color-stop(0.5, rgb(34,47,56)),
+    color-stop(0.75, rgb(26,37,46)) repeat
+  );
+
+  -webkit-box-shadow: $footer-shadow;
+     -moz-box-shadow: $footer-shadow;
+          box-shadow: $footer-shadow;
+  /*background: url('footer_bg.png') repeat;*/
+  position: absolute;
+  min-height: 200px;
   width: 100%;
 
   .content {
