@@ -4,7 +4,7 @@
   $dark-gray: #888;
   $ac-blue: #2b3743;
   $ac-blue2: #1c2732;
-  $box-shadow: 0 0 4px 1px #eee;
+  $box-shadow: 0 0 10px 2px #eee;
   $box-dark-shadow: 0 0 4px 2px #888;
   $wrapper-shadow: -8px 0px 10px -2px #eee, 8px 0px 10px -2px #eee;
   $footer-shadow: 0 -4px 4px 1px #eee;
@@ -291,9 +291,9 @@ footer {
 }
 
 .sub_pages {
-  -moz-box-shadow: $box-dark-shadow;
-  -webkit-box-shadow: $box-dark-shadow;
-  box-shadow: $box-dark-shadow;
+  -moz-box-shadow: $box-shadow;
+  -webkit-box-shadow: $box-shadow;
+  box-shadow: $box-shadow;
   position: fixed;
   top: 140px;
   left: 0px;  
@@ -321,7 +321,7 @@ footer {
     margin: 20px 0 0 0;
 
     div {
-      border-bottom: 1px dotted #000;
+      border-bottom: 1px solid #999;
       width: 174px;
       min-height: 20px;
       float: left;
@@ -358,14 +358,14 @@ footer {
   }
 }
 .organisation_box {
-  -moz-box-shadow: $box-dark-shadow;
-  -webkit-box-shadow: $box-dark-shadow;
-  box-shadow: $box-dark-shadow;
+  -moz-box-shadow: $box-shadow;
+  -webkit-box-shadow: $box-shadow;
+  box-shadow: $box-shadow;
   position: fixed;
   top: 400px;
   left: 0px;
   width: 180px;
-  min-height: 200px;
+  height: auto;
   padding: 10px;
   margin: 20px 0 0 10px;
 
