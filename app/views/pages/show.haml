@@ -1,11 +1,12 @@
-.span-20
-	%h3
-		%span#page_title
-			= raw @page.title if @page
+#main_content
+	.span-20
+		%h3
+			%span#page_title
+				= raw @page.title if @page
 
-	%p
-		#page_content
-			= raw @page.content if @page
+		%p
+			#page_content
+				= raw @page.content if @page
 
-		- if Rails.env.development?
-			= @path
+			- if Rails.env.development?
+				= @path

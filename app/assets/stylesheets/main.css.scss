@@ -18,10 +18,11 @@ body {
 #body_background {
   background: url(baggrundsgrafik.png);
   width: 829px;
-  min-height: 1086px;
+  height: 1086px;
   float: right;
   position: absolute;
   right: 0;
+  bottom: 0;
   z-index: -100;
   opacity: .5;
 }
