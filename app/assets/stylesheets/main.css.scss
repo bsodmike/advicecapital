@@ -278,12 +278,12 @@ footer {
   position: fixed;
   top: 140px;
   left: 0px;  
-  width: 200px;
+  width: 180px;
   min-height: 200px;
   margin: 10px 0 10px 10px;
 
   .head {
-    width: 200px;
+    width: 180px;
     height: 20px;
 
     img {
@@ -303,13 +303,15 @@ footer {
 
     div {
       border-bottom: 1px dotted #000;
-      width: 200px;
+      width: 174px;
       min-height: 20px;
       float: left;
-      padding: 6px 0 6px 0;
+      padding: 6px 0 6px 6px;
+      text-align: left;
 
       a {
-        margin: 0 0 0 6px;
+        font-size: 14px;
+        text-align: left;
       }
       a:active {
         color: #fff;
@@ -334,10 +336,6 @@ footer {
         background: $ac-blue2;
       }
     }
-  }
-
-  a {
-    font-size: 16px;
   }
 }
 .organisation_box {
