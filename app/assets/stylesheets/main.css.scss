@@ -18,11 +18,12 @@ body {
 #body_background {
   background: url(baggrundsgrafik.png);
   width: 829px;
-  height: 1086px;
+  min-height: 1000px;
   float: right;
   position: absolute;
   right: 0;
-  z-index: 100;
+  z-index: -100;
+  opacity: .5;
 }
 
 /*input[type=submit] {
@@ -198,15 +199,14 @@ header {
 
 #wrapper {
   padding: 20px 10px 10px 20px !important;
-  /*background: url('center_bg3.png') repeat-y;*/
   box-shadow: $wrapper-shadow;
   -webkit-box-shadow: $wrapper-shadow;
   -moz-box-shadow: $wrapper-shadow;
   width: 1024px;/*930px;*/
-  min-height: 600px;
+  min-height: 800px;
 
   #main_content {
-    min-height: 600px;
+    min-height: 800px;
 
     #content {
       margin: 20px 0 0 0;
