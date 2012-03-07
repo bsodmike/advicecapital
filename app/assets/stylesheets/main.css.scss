@@ -1,4 +1,20 @@
-/**************** VARS ****************/
+/*
+Theme Name: Advice Capital
+Theme URI: http://advicecapital.dk/
+Description: Advice Capital A/S
+Author: Daniel Gottschalck
+Author URI: http://znow.dk/
+Version: 1.0
+Tags: advicecapital, advicecapital.dk, Advice Capital
+
+License: Advice Capital
+License URI: advicecapital.dk
+
+General comments (optional).
+*/
+
+/* =Variables
+-------------------------------------------------------------- */
   $white: #fff;
   $black: #000;
   $dark-gray: #888;
@@ -9,8 +25,11 @@
   $wrapper-shadow: -8px 0px 10px -2px #eee, 8px 0px 10px -2px #eee;
   $footer-shadow: 0 -4px 4px 1px #eee;
 
-/**************** VARS _END_ ****************/
+/* =Variables END
+-------------------------------------------------------------- */
 
+/* =Body
+-------------------------------------------------------------- */
 body {
   background: $white url('top_bannerEXT.png') repeat-x;
   font-family: Arial, Helvetica, sans-serif;
@@ -26,6 +45,8 @@ body {
   z-index: -100;
   opacity: .5;
 }
+/* =Body END
+-------------------------------------------------------------- */
 
 /*input[type=submit] {
   border: 2px solid #1a252d;
@@ -34,7 +55,8 @@ body {
   padding: 4px;
 }*/
 
-/**************** LINKS ****************/
+/* =Links
+-------------------------------------------------------------- */
 a:link, a:visited, a:active {
   color: $black;
   text-decoration: none;
@@ -48,9 +70,11 @@ a.link_white, .link_white a {
   color: $white;
   font-weight: none !important;
 }
-/**************** LINKS _END_ ****************/
+/* =Links end
+-------------------------------------------------------------- */
 
-/**************** Default Navigation ****************/
+/* =Default Navigation
+-------------------------------------------------------------- */
 nav {
   ul {
     list-style-type: none; 
@@ -60,17 +84,19 @@ nav {
     }
   }
 }
+/* =Default Navigation END
+-------------------------------------------------------------- */
 
-/**************** HEADER ****************/
+/* =Header
+-------------------------------------------------------------- */
 header {
   height: 131px;
   width: 100%;
   padding: 0 !important;
   margin: 0;
 
-/**************** HEADER NAVIGATION ****************/
-/**************** Top Navigation ****************/
-
+/* =Navigation
+-------------------------------------------------------------- */
   nav {
     font-weight: bold;
 
@@ -174,6 +200,9 @@ header {
       }
     }
   }
+  /* =Navigation END
+  -------------------------------------------------------------- */
+
   #logo {
     background: url(whitegiraf_small.png);
     //background: url('ac_logo.png');
@@ -192,10 +221,12 @@ header {
   }
 
 }
-/**************** HEADER _END_ *****************/
+/* =Header END
+-------------------------------------------------------------- */
 
-/**************** SECTION ****************/
-.stay-clear{clear:both;}
+/* =Container, Wrapper
+-------------------------------------------------------------- */
+
 .container {padding: 0 !important;min-height: 500px;width:1054px;}
 
 #wrapper {
@@ -221,13 +252,11 @@ header {
     }
   }
 }
+/* =Container, Wrapper END
+-------------------------------------------------------------- */
 
-#table-wrapper a, #table-wrapper a:hover, #table-wrapper a:visited, #table-wrapper a:active {
-  color: $black;
-}
-/**************** SECTION _END_ ****************/
-
-/**************** FOOTER ****************/
+/* =Footer
+-------------------------------------------------------------- */
 footer {
   text-align: center;
   background: linear-gradient(bottom, rgb(40,54,65) 0%, rgb(34,47,56) 50%, rgb(26,37,46) 75%) repeat;
@@ -235,7 +264,6 @@ footer {
   background: -moz-linear-gradient(bottom, rgb(40,54,65) 0%, rgb(34,47,56) 50%, rgb(26,37,46) 75%) repeat;
   background: -webkit-linear-gradient(bottom, rgb(40,54,65) 0%, rgb(34,47,56) 50%, rgb(26,37,46) 75%) repeat;
   background: -ms-linear-gradient(bottom, rgb(40,54,65) 0%, rgb(34,47,56) 50%, rgb(26,37,46) 75%) repeat;
-
   background: -webkit-gradient(
     linear,
     left bottom,
@@ -244,11 +272,9 @@ footer {
     color-stop(0.5, rgb(34,47,56)),
     color-stop(0.75, rgb(26,37,46)) repeat
   );
-
   -webkit-box-shadow: $footer-shadow;
      -moz-box-shadow: $footer-shadow;
           box-shadow: $footer-shadow;
-  /*background: url('footer_bg.png') repeat;*/
   height: 75px;
   width: 100%;
 
@@ -259,36 +285,11 @@ footer {
     color: $white;
   }
 }
-/**************** FOOTER _END_ ****************/
+/* =Footer END
+-------------------------------------------------------------- */
 
-.ui-datepicker-calendar, ui-datepicker-title, ui-datepicker-header, ui-datepicker-div {
-  background: #C3D9FF; 
-}
-#employees_slider {
-  border: 1px solid #888;
-  width:1000px;
-  height:400px;
-  background:#eee;
-}
-#employees_index {
-  float: left;
-  height: 150px;
-  background: none;
-
-  #employee_image {
-    float: left;
-    margin-right: 20px;
-  }
-  #employee_info {
-    font-weight: none !important;
-    float: right;
-    width: 150px;
-  }
-}
-.employee_info {
-  display: none;
-}
-
+/* =Page specific
+-------------------------------------------------------------- */
 .sub_pages {
   -moz-box-shadow: $box-shadow;
   -webkit-box-shadow: $box-shadow;
@@ -332,81 +333,37 @@ footer {
         text-align: left;
       }
       a:active {
-        color: #fff;
+        color: $white;
       }
     }
-
-    .sub_page_selected {
-      background: $ac-blue2;
-      color: #fff;
-
-      a {
-        color: #fff;
-      }
-    }
-
     div:hover {
       background: $ac-blue2;
-      color: #fff;
+      color: $white;
 
       a {
-        color: #fff;
+        color: $white;
         background: $ac-blue2;
       }
     }
-  }
-}
-.organisation_box {
-  -moz-box-shadow: $box-shadow;
-  -webkit-box-shadow: $box-shadow;
-  box-shadow: $box-shadow;
-  position: fixed;
-  top: 400px;
-  left: 0px;
-  width: 180px;
-  height: auto;
-  padding: 10px;
-  margin: 20px 0 0 10px;
-
-  ul.employee_names {
-    list-style-type: none;
-
-    li {
-      float: none;
-      a {
-        font-size: 16px;
-        color: $black;
-      }
+    div:last-child {
+      border-bottom: 0;
     }
-    li:hover {
-      cursor: pointer;
-    }
-  }
-}
-.admin_box, .investor_box {
-  -moz-box-shadow: $box-dark-shadow;
-  -webkit-box-shadow: $box-dark-shadow;
-  box-shadow: $box-dark-shadow;
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-width: 100px;
-  min-height: 40px;
-  margin: 10px 0 10px 20px;
+    .sub_page_selected {
+      background: $ac-blue2;
+      color: $white;
 
-  ul {
-    margin: 4px 8px 0 0;
-    list-style-type: none;
-
-    li {
-      margin: 0;
       a {
         color: $white;
       }
     }
   }
 }
-/* INDEX PAGE */
+/* =Page specific END
+-------------------------------------------------------------- */
+
+
+/* =Index Page specific
+-------------------------------------------------------------- */
 #bottom {
   -moz-box-shadow: $box-shadow;
   -webkit-box-shadow: $box-shadow;
@@ -431,14 +388,6 @@ footer {
     }
   }
 }
-.employeeInfo {
-  display: none;
-}
-.actions {
-  height: 20px;
-  width: 120px;
-  text-align:center;
-}
 #news_feed {
   height: 220px;
 
@@ -447,7 +396,145 @@ footer {
     padding: 0;
   }
 }
-/* Error Messages */
+/* =Index Page specific END
+-------------------------------------------------------------- */
+
+
+/* =Employee Page specific
+-------------------------------------------------------------- */
+#employees_slider {
+  border: 1px solid #888;
+  width:1000px;
+  height:400px;
+  background:#eee;
+}
+#employees_index {
+  float: left;
+  height: 150px;
+  background: none;
+
+  #employee_image {
+    float: left;
+    margin-right: 20px;
+  }
+  #employee_info {
+    font-weight: none !important;
+    float: right;
+    width: 150px;
+  }
+}
+.employee_info {
+  display: none;
+}
+.employeeInfo {
+  display: none;
+}
+.organisation_box {
+  -moz-box-shadow: $box-shadow;
+  -webkit-box-shadow: $box-shadow;
+  box-shadow: $box-shadow;
+  position: fixed;
+  top: 400px;
+  left: 0px;
+  width: 180px;
+  height: auto;
+  margin: 20px 0 0 10px;
+  padding: 0;
+
+  ul.employee_names {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      float: none;
+      padding: 6px 0 6px 6px;
+      border-bottom: 1px solid #999;
+      a {
+        font-size: 16px;
+        color: $black;
+      }
+    }
+    li:hover {
+      background: $ac-blue2;
+      cursor: pointer;
+      a {
+        color: $white;
+      }
+    }
+    li:last-child {
+      border-bottom: 0;
+    }
+  }
+}
+/* =Employee Page specific END
+-------------------------------------------------------------- */
+
+/* =Layout Global
+-------------------------------------------------------------- */
+.admin_box, .investor_box {
+  -moz-box-shadow: $box-dark-shadow;
+  -webkit-box-shadow: $box-dark-shadow;
+  box-shadow: $box-dark-shadow;
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100px;
+  min-height: 40px;
+  margin: 10px 0 10px 20px;
+
+  ul {
+    margin: 4px 8px 0 0;
+    list-style-type: none;
+
+    li {
+      margin: 0;
+      a {
+        color: $white;
+      }
+    }
+  }
+}
+/* =Layout Global END
+-------------------------------------------------------------- */
+
+/* =Other
+-------------------------------------------------------------- */
+.roundabout-holder {
+  list-style: none;
+  padding: 0;
+  margin: 60px 0 0 200px;
+  width:800px;
+  height:250px;
+}
+.roundabout-moveable-item {
+  width:400px;
+  height:250px;
+  cursor: pointer;
+}
+.roundabout-in-focus {
+  cursor: auto;
+}
+table.investors th, table.investors td {
+  text-align:center;
+}
+.stay-clear{clear:both;}
+.ui-datepicker-calendar, ui-datepicker-title, ui-datepicker-header, ui-datepicker-div {
+  background: #C3D9FF; 
+}
+#table-wrapper a, #table-wrapper a:hover, #table-wrapper a:visited, #table-wrapper a:active {
+  color: $black;
+}
+/* =Other END
+-------------------------------------------------------------- */
+
+/* =Messages
+-------------------------------------------------------------- */
+.actions {
+  height: 20px;
+  width: 120px;
+  text-align:center;
+}
 .field_with_errors {
   margin-top: 10px;
   padding: 2px;
@@ -487,24 +574,11 @@ footer {
     }
   }
 }
-/* ERROR MESSAGES _END_ */
+/* =Messages END
+-------------------------------------------------------------- */
 
-
-.roundabout-holder {
-  list-style: none;
-  padding: 0;
-  margin: 60px 0 0 200px;
-  width:800px;
-  height:250px;
-}
-.roundabout-moveable-item {
-  width:400px;
-  height:250px;
-  cursor: pointer;
-}
-.roundabout-in-focus {
-  cursor: auto;
-}
+/* =Admin Dashboard
+-------------------------------------------------------------- */
 #user_administration {
   float: left;
   margin: 0 0 20px 0;
@@ -527,6 +601,5 @@ footer {
     text-align: center;
   }
 }
-table.investors th, table.investors td {
-  text-align:center;
-}
+/* =Admin Dashboard END
+-------------------------------------------------------------- */
