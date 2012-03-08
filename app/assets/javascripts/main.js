@@ -1,7 +1,6 @@
 (function ($) {
   $(function () {
 
-
     function fixHeight() {
       var height = $(window).height();
       var setHeight;
@@ -29,8 +28,42 @@
         //alert(height);
       }
     }
+    function fixHeaderElementPosition() {
+      var logo = $('#logo');
+      var logoText = $('#logo_text');
+      var genericMenu = $('ul#generic');
+      var adminMenu = $('.admin_box');
+
+      var width = $(window).width();
+
+      if (width <= 1280) {
+        genericMenu.css('right', '300px');
+
+        adminMenu.css({
+          "width" : "120px",
+          "height" : "300px",
+          "margin" : "10px 0 10px 5px"
+        })
+        .find("ul, ol")
+          .css({
+            "margin" : "0",
+            "padding" : "0"
+          })
+        .find("div:nth-child(2)")
+          .css({
+            "float" : "left",
+            "margin" : "0",
+            "padding" : "0"
+          })
+        .find("a")
+          .css("color", "#000");
+
+        console.log('width: ' + width + 'px' + adminMenu);
+      }      
+    }
 
     fixHeight();
+    fixHeaderElementPosition();
 
     $('nav ul li a').mouseover(function () {
       $(this).siblings('li ul').addClass('hover');
