@@ -10,7 +10,7 @@
 		%th Aktiekurs ved indtrædelse
 		%th Nuværende aktiekurs
 		%th Antal aktier
-		%th Tilknyttet bruger ID
+		%th Tilknyttet bruger
 		- @investors.each do |investor|
 			%tr
 				%td= investor.name
@@ -21,7 +21,7 @@
 				%td= investor.entry_rate
 				%td= investor.current_rate
 				%td= investor.entry_stock_count
-				%td= investor.investor_profiles.map(&:user_id)
+				%td= link_to investor.users.map(&:email), admin_user_path(investor.users.map(&:id))
 				- if can? :manage, investor
 					%td
 						.notice.actions

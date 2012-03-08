@@ -44,7 +44,7 @@ class Admin::InvestorProfilesController < AdminController
 
     respond_to do |format|
       if @investor_profile.save
-        format.html { redirect_to admin_investor_profile_path(@investor_profile), notice: 'Investor profile was successfully created.' }
+        format.html { redirect_to admin_investor_profiles_path, notice: 'Investor profile was successfully created.' }
         format.json { render json: @investor_profile, status: :created, location: @investor_profile }
       else
         format.html { render action: "new" }
@@ -60,7 +60,7 @@ class Admin::InvestorProfilesController < AdminController
 
     respond_to do |format|
       if @investor_profile.update_attributes(params[:investor_profile])
-        format.html { redirect_to admin_investor_profile_path(@investor_profile), notice: 'Investor profile was successfully updated.' }
+        format.html { redirect_to admin_investor_profiles_path, notice: 'Investor profile was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
