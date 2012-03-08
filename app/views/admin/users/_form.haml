@@ -1,4 +1,4 @@
-= form_for ([:admin, @user]) do |f|
+= form_for [:admin, @user] do |f|
   - if @user.errors.any?
     #error_explanation
       %h2
@@ -14,11 +14,15 @@
   .field
     = f.label :email, "Email:"
     %br/
-    = f.email_field :email, :value => @user.email
+    = f.text_field :email
   .field
     = f.label :password, "Kodeord:"
     %br/
     = f.password_field :password
+  .field
+    = f.label :password_confirmation, "Kodeord igen:"
+    %br/
+    = f.password_field :password_confirmation
 
   - if can? :manage, @user
     .field

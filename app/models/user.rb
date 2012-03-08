@@ -8,8 +8,6 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, :roles
 
-  #before_filter 
-
   def admin?
     ['admin', 'super_admin'].include? self.role
   end

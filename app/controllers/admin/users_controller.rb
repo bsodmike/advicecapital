@@ -5,7 +5,6 @@ class Admin::UsersController < AdminController
 	end
 
 	def show
-		# @user = current_user
 		@user = User.find(params[:id])
 	end
 
@@ -14,8 +13,8 @@ class Admin::UsersController < AdminController
 	end
 
 	def create
-		@user = User.new
-
+		@user = User.new(params[:user])
+		#raise @user.to_yaml
 		if @user.save
 			redirect_to admin_users_path(@user), :notice => "Brugeren blev oprettet."
 		else
@@ -35,7 +34,6 @@ class Admin::UsersController < AdminController
 		else
 			render :edit
 		end
-
 	end
 
 	def destroy
@@ -44,5 +42,4 @@ class Admin::UsersController < AdminController
 			redirect_to admin_users_path, :notice => "Brugeren blev slettet."
 		end
 	end
-
 end
