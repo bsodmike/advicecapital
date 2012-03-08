@@ -1,5 +1,37 @@
 (function ($) {
   $(function () {
+
+
+    function fixHeight() {
+      var height = $(window).height();
+      var setHeight;
+      var wrapper = $('#wrapper');
+      var minHeight = 'min-height';
+
+      if (height < 900 || height == 900) {
+        wrapper.css(minHeight, 800);
+        //alert(height);
+      }
+      else if (height > 900 && height < 1000) {
+        wrapper.css(minHeight, 800);
+        //alert(height);
+      }
+      else if (height > 1000 && height < 1200) {
+        wrapper.css(minHeight, 1000);
+        //alert(height);
+      }
+      else if (height > 1200 && height < 1400) {
+        wrapper.css(minHeight, 1200);
+        //alert(height);
+      }
+      else if (height > 1400 && height < 1600) {
+        wrapper.css(minHeight, 1400);
+        //alert(height);
+      }
+    }
+
+    fixHeight();
+
     $('nav ul li a').mouseover(function () {
       $(this).siblings('li ul').addClass('hover');
 
