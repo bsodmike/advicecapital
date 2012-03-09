@@ -9,23 +9,23 @@
 
       if (height < 900 || height == 900) {
         wrapper.css(minHeight, 800);
-        //alert(height);
+        console.log('height: ' + height + 'px');
       }
       else if (height > 900 && height < 1000) {
         wrapper.css(minHeight, 800);
-        //alert(height);
+        console.log('height: ' + height + 'px');
       }
-      else if (height > 1000 && height < 1200) {
-        wrapper.css(minHeight, 1000);
-        //alert(height);
+      else if (height > 1000 && height < 1200) { // OPTIMIZED FOR 1600x1200 SCREEN
+        wrapper.css(minHeight, 920);
+        console.log('height: ' + height + 'px');
       }
       else if (height > 1200 && height < 1400) {
         wrapper.css(minHeight, 1200);
-        //alert(height);
+        console.log('height: ' + height + 'px');
       }
       else if (height > 1400 && height < 1600) {
         wrapper.css(minHeight, 1400);
-        //alert(height);
+        console.log('height: ' + height + 'px');
       }
     }
     function fixHeaderElementPosition() {
@@ -44,18 +44,18 @@
           "height" : "300px",
           "margin" : "10px 0 10px 5px"
         })
-        .find("ul, ol")
+        adminMenu.find("ul, ol")
           .css({
             "margin" : "0",
             "padding" : "0"
           })
-        .find("div:nth-child(2)")
+        adminMenu.find("div:nth-child(2)")
           .css({
             "float" : "left",
             "margin" : "0",
             "padding" : "0"
           })
-        .find("a")
+        adminMenu.find("a")
           .css("color", "#000");
 
         console.log('width: ' + width + 'px' + adminMenu);
