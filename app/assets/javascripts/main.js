@@ -17,8 +17,8 @@
         console.log('height: ' + height + 'px');
       }
       else if (height > 1000 && height < 1200) { // OPTIMIZED FOR 1600x1200 SCREEN
-        wrapper.css(minHeight, 920);
-        mainContent.css(minHeight, 800);
+        wrapper.css(minHeight, 940);
+        mainContent.css(minHeight, 840);
         console.log('height: ' + height + 'px - ' + 'wrapper: ' + wrapper + "px - " + "mainContent: " + mainContent + "px");
       }
       else if (height > 1200 && height < 1400) {
