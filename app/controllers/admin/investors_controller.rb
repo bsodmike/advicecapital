@@ -5,9 +5,9 @@ class Admin::InvestorsController < AdminController
 
   def show
     @investor = Investor.find(params[:id])
-    @stocks = @investor.stocks
+    @investorStocks = @investor.stocks
+    @stocks = Stock.all
     @profile = @investor.users
-    #@stocks = @investor.investors_stocks.stocks
 
     respond_to do |format|
       format.html
@@ -41,6 +41,8 @@ class Admin::InvestorsController < AdminController
 
   def update
     @investor = Investor.find(params[:id])
+
+    #raise @investor.to_yaml
 
     if @investor.update_attributes(params[:investor])
       redirect_to admin_investor_path(@investor), :notice => "Investor was successfully updated."

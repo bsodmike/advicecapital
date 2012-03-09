@@ -21,9 +21,8 @@
     = f.label :year, "År"
     %br/
     = f.number_field :year
-  
-  .field
-    = f.collection_select(:investor_ids, Investor.all, :id, :name, {}, { :prompt => 'Vælg investor' })
+
+    /=# f.collection_select(:investor_ids, Investor.all, :id, :name, {}, { :include_blank => true })
 
     %br/
   .actions

@@ -2,7 +2,7 @@ class Admin::StocksController < AdminController
   # GET /stocks
   # GET /stocks.json
   def index
-    @stocks = Stock.order("value").page(params[:page]).per(10)
+    @stocks = Stock.order("value").page(params[:page]).per(12)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -25,6 +25,7 @@ class Admin::StocksController < AdminController
   # GET /stocks/new.json
   def new
     @stock = Stock.new
+    3.times { @stock }
 
     respond_to do |format|
       format.html # new.html.erb

@@ -17,6 +17,11 @@
       = f.label :entry_date, "Dato for indtrædelse:"
       %br/
       = f.text_field :entry_date, :class => "date_select"
+    .field
+      = f.label :type, "Kundetype:"
+      %br/
+      - types = ['Frie midler', 'Pension', 'Selskab', 'Andet']
+      = f.select :type, options_for_select(types)
 
 
   = field_set_tag "Kontakt oplysninger" do
@@ -40,6 +45,10 @@
         = f.label :entry_rate, "Kurs ved indtrædelse"
         %br/
         = f.text_field :entry_rate
+      .field
+        = f.label :current_rate, "Nuværende kurs"
+        %br/
+        = f.text_field :current_rate
       .field
         = f.label :entry_stock_price, "Pris pr. aktie ved indtrædelse"
         %br/

@@ -1,7 +1,11 @@
 %div{:style=>"float:left;"}
 	%h3 Velkommen #{@investor.name + " - " + @investor.email} 
 	%br/
-	%br/
+	%br
+	- if current_user.super_admin?
+		%b Kundetype:
+		%br/
+		= @investor.type
 
 	%b Dato for indtrædelse:
 	%br/
@@ -35,8 +39,15 @@
 
 	%b Aktuelt afkast:
 	%br/
-	- throwoff = @investor.entry_price / @investor.entry_stock_count * @investor.entry_rate
-	= throwoff.to_s + " kr."
+	- throwoff = @investor.current_rate.to_i - @investor.entry_rate.to_i# * @investor.entry_stock_count
+	- throwoffValue = throwoff * @investor.entry_stock_count
+	- throwoffPercent = throwoff / @investor.entry_rate.to_i
+	= number_with_delimiter(throwoffValue) + " kr."
+	%br/
+	= throwoffPercent.to_s + " %"
+
+	-# throwoff = @investor.entry_price / @investor.entry_stock_count * @investor.entry_rate
+	=# throwoff.to_s + " kr."
 	%br/
 	%br/
 
@@ -54,7 +65,7 @@
 			%th Værdi
 			%th Måned
 			%th År
-		- @stocks.each do |s|	
+		- @investorStocks.each do |s|
 			%tr
 				%td= s.value
 				%td= s.month
@@ -65,10 +76,14 @@
 	- stock_month = @stocks.map(&:month)
 	- stock_year = @stocks.map(&:year)
 	 
+	-# data = [[stock_value], [stock_month]]
+	- chart = Gchart.line(:size => '600x300', :title => "Aktiekurs", :bg => 'fff', :legend => ['Aktie Værdi', 'Månedsobservation'], :data => stock_value, :axis_with_labels => 'y,x', :line_colors => "FF0000,00FF00", :axis_labels => [ 'Kurs', ['Jan','Feb','Mar','Apr','Maj','Juni','Juli','Aug','Sep','Okt','Nov','Dec'] ]) unless stock_value.empty?
 
-	- chart = Gchart.line(:size => '600x300', :title => "Aktiekurs", :bg => 'fff', :legend => 'Aktie Værdi', :data => [stock_value], :axis_with_labels => 'y,x', :axis_labels => [ stock_value, stock_month ]) unless stock_value.empty?
+	%img{:src => chart}
 
-	%img{:src => chart }
+	%br/
+	%br/
+	= button_to 'Skateregnskab', ''
 
 - if can? :manage, @investor
 	.notice.actions{:style=>"float:left;clear:both;"}
