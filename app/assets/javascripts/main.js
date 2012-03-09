@@ -5,6 +5,7 @@
       var height = $(window).height();
       var setHeight;
       var wrapper = $('#wrapper');
+      var mainContent = $('#main_content');
       var minHeight = 'min-height';
 
       if (height < 900 || height == 900) {
@@ -17,7 +18,8 @@
       }
       else if (height > 1000 && height < 1200) { // OPTIMIZED FOR 1600x1200 SCREEN
         wrapper.css(minHeight, 920);
-        console.log('height: ' + height + 'px');
+        mainContent.css(minHeight, 800);
+        console.log('height: ' + height + 'px - ' + 'wrapper: ' + wrapper + "px - " + "mainContent: " + mainContent + "px");
       }
       else if (height > 1200 && height < 1400) {
         wrapper.css(minHeight, 1200);
