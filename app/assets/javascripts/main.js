@@ -45,8 +45,7 @@
           "width" : "60px",
           "height" : "auto",
           "margin" : "10px 0 10px 5px",
-          "padding" : "4px 0 4px 4px",
-          "top" : "140px",
+          "padding" : "4px 0 0 4px",
           "font-size" : "10px"
         });
         adminMenu.find("ul")
@@ -60,9 +59,6 @@
             "margin" : "0",
             "padding" : "0"
           });
-        adminMenu.find("a")
-          .css("color", "#000");
-
         console.log('width: ' + width + 'px' + adminMenu);
       }  
     }

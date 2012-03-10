@@ -77,13 +77,13 @@
 	- stock_year = @stocks.map(&:year)
 	 
 	-# data = [[stock_value], [stock_month]]
-	- chart = Gchart.line(:size => '600x300', :title => "Aktiekurs", :bg => 'fff', :legend => ['Aktie Værdi', 'Månedsobservation'], :data => stock_value, :axis_with_labels => 'y,x', :line_colors => "FF0000,00FF00", :axis_labels => [ 'Kurs', ['Jan','Feb','Mar','Apr','Maj','Juni','Juli','Aug','Sep','Okt','Nov','Dec'] ]) unless stock_value.empty?
+	- chart = Gchart.line(:size => '600x300', :title => "Aktiekurs", :bg => 'fff', :legend => ['Aktie Værdi', 'Månedsobservation'], :data => [stock_value], :axis_with_labels => 'y,x', :line_colors => "FF0000,00FF00", :axis_labels => [ 'Kurs', ['Jan','Feb','Mar','Apr','Maj','Juni','Juli','Aug','Sep','Okt','Nov','Dec'] ]) unless stock_value.empty?
 
 	%img{:src => chart}
 
 	%br/
 	%br/
-	= button_to 'Skateregnskab', ''
+	= button_to 'Skatteregnskab', ''
 
 - if can? :manage, @investor
 	.notice.actions{:style=>"float:left;clear:both;"}
