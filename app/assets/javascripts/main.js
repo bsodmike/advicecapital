@@ -22,11 +22,11 @@
         console.log('height: ' + height + 'px - ' + 'wrapper: ' + wrapper + "px - " + "mainContent: " + mainContent + "px");
       }
       else if (height > 1200 && height < 1400) {
-        wrapper.css(minHeight, 1200);
+        wrapper.css(minHeight, 1000);
         console.log('height: ' + height + 'px');
       }
       else if (height > 1400 && height < 1600) {
-        wrapper.css(minHeight, 1400);
+        wrapper.css(minHeight, 1000);
         console.log('height: ' + height + 'px');
       }
     }
@@ -42,27 +42,29 @@
         genericMenu.css('right', '300px');
 
         adminMenu.css({
-          "width" : "100px",
-          "height" : "200px",
+          "width" : "60px",
+          "height" : "auto",
           "margin" : "10px 0 10px 5px",
-          "top" : "140px"
-        })
+          "padding" : "4px 0 4px 4px",
+          "top" : "140px",
+          "font-size" : "10px"
+        });
         adminMenu.find("ul")
           .css({
             "margin" : "0",
             "padding" : "0"
-          })
+          });
         adminMenu.find("div:nth-child(2)")
           .css({
             "float" : "left",
             "margin" : "0",
             "padding" : "0"
-          })
+          });
         adminMenu.find("a")
           .css("color", "#000");
 
         console.log('width: ' + width + 'px' + adminMenu);
-      }      
+      }  
     }
 
     fixHeight();
