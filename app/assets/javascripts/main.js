@@ -42,11 +42,12 @@
         genericMenu.css('right', '300px');
 
         adminMenu.css({
-          "width" : "120px",
-          "height" : "300px",
-          "margin" : "10px 0 10px 5px"
+          "width" : "100px",
+          "height" : "200px",
+          "margin" : "10px 0 10px 5px",
+          "top" : "140px"
         })
-        adminMenu.find("ul, ol")
+        adminMenu.find("ul")
           .css({
             "margin" : "0",
             "padding" : "0"
