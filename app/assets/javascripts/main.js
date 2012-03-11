@@ -30,11 +30,12 @@
         console.log('height: ' + height + 'px');
       }
     }
-    function fixHeaderElementPosition() {
+    function fixElementPosition() {
       var logo = $('#logo');
       var logoText = $('#logo_text');
       var genericMenu = $('ul#generic');
       var adminMenu = $('.admin_box');
+      var subPages = $('.sub_pages');
 
       var width = $(window).width();
 
@@ -59,12 +60,34 @@
             "margin" : "0",
             "padding" : "0"
           });
+
+        subPages.css({
+          "width" : "100px",
+          "margin" : "10px 0 10px 0"
+        });
+        subPages.find(".head")
+          .css({
+            "width" : "96px"
+          });
+        subPages.find(".head h3")
+          .css({
+            "font-size" : "10px",
+            "margin" : "none"
+          });
+        subPages.find(".content div")
+          .css({
+            "width" : "96px"
+          });
+        subPages.find(".content a")
+          .css({
+            "font-size" : "8px"
+          });
         console.log('width: ' + width + 'px' + adminMenu);
       }  
     }
 
     fixHeight();
-    fixHeaderElementPosition();
+    fixElementPosition();
 
     $('nav ul li a').mouseover(function () {
       $(this).siblings('li ul').addClass('hover');

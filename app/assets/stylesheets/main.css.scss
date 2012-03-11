@@ -527,6 +527,13 @@ textarea#advice_page_content {
   height: 600px;
   width: 500px;
 }
+.video {
+  float: left;
+  margin: 0 20px 0 0;
+}
+.video:last-child {
+  margin: 0;
+}
 /* =Other END
 -------------------------------------------------------------- */
 

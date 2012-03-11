@@ -9,6 +9,17 @@ class Admin::InvestorsController < AdminController
     @stocks = Stock.all
     @profile = @investor.users
 
+    @throwoff = @investor.current_rate.to_i - @investor.entry_rate.to_i# * @investor.entry_stock_count
+    @throwoffValue = @throwoff * @investor.entry_stock_count
+    @throwoffPercent = @throwoff / @investor.entry_rate.to_i
+
+    @stock_value = @stocks.map(&:value)
+    @investor_stock_value = @investorStocks.map(&:value)
+    @stock_month = @stocks.map(&:month)
+    @stock_year = @stocks.map(&:year)
+
+    @array = 0..300
+
     respond_to do |format|
       format.html
       format.pdf do

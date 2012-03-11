@@ -16,6 +16,7 @@
             = link_to 'Vis', admin_stock_path(stock)
             = link_to 'Rediger', edit_admin_stock_path(stock)
             = link_to 'Slet', admin_stock_path(stock), confirm: 'Are you sure?', method: :delete
+  
   = paginate @stocks
   
 %br/
