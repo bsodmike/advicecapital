@@ -523,6 +523,10 @@ table.investors th, table.investors td {
 #table-wrapper a, #table-wrapper a:hover, #table-wrapper a:visited, #table-wrapper a:active {
   color: $black;
 }
+textarea#advice_page_content {
+  height: 600px;
+  width: 500px;
+}
 /* =Other END
 -------------------------------------------------------------- */
 
