@@ -52,6 +52,8 @@
     %li
       - if current_user && current_user.investor?
         = link_to 'Investor', admin_investor_path(current_user)
+      - elsif current_user && current_user.super_admin?
+        = link_to 'Investor', admin_root_path
       - else
         = link_to 'Investor', new_user_session_path
 
