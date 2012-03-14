@@ -1,6 +1,7 @@
 = form_for @video do |f|
   %p
-    = f.label :title
+    = f.label :title, "Titel:"
+    %br/
     = f.text_field :title
 
   / The control will appear next to this, and the video ID will be stored here after the upload
@@ -8,7 +9,8 @@
 
   / upload progress bar (optional)
   #upload_progress.panda_upload_progress
-
+  %br/
+  %br/
   = f.submit "Upload video"
 
 = render "script"

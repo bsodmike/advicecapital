@@ -18,10 +18,10 @@
       %br/
       = f.text_field :entry_date, :class => "date_select"
     .field
-      = f.label :type, "Kundetype:"
+      = f.label :investor_type, "Kundetype:"
       %br/
       - types = ['Frie midler', 'Pension', 'Selskab', 'Andet']
-      = f.select :type, options_for_select(types)
+      = f.select :investor_type, options_for_select(types)
 
 
   = field_set_tag "Kontakt oplysninger" do
