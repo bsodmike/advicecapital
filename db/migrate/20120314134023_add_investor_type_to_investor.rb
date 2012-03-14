@@ -1,5 +1,6 @@
-class AddInvestorTypeToInvestors < ActiveRecord::Migration
+class AddInvestorTypeToInvestor < ActiveRecord::Migration
   def change
     add_column :investors, :investor_type, :string
+
   end
 end
