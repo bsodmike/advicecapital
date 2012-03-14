@@ -1,9 +1,9 @@
 class AddInvestorTypeToInvestor < ActiveRecord::Migration
-  def up
+  def self.up
     add_column :investors, :investor_type, :string
   end
 
-  def down
+  def self.down
   	remove_column :investors, :investor_type
   end
 end
