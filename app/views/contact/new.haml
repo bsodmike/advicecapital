@@ -28,31 +28,30 @@
         map.setCenter(ac);
       }
 %div  
-  %h3 Kontakt os
+  %h3=t :contact_us
   = form_for @message, :url => contact_path do |f|
     - unless @message.errors.empty?
       #error_explanation
         Please correct the following:
-      
         %ul
           - @message.errors.full_messages.each do |err|
             %li
               %strong= err 
 
     .field
-      = f.label :name, "Navn"
+      =t f.label :name, "Navn"
       %br/
       = f.text_field :name
 
     .field
-      = f.label :email, "Email"
+      =t f.label :email, "Email"
       %br/
-      = f.text_field :email
+      =t f.text_field :email
 
     .field
-      = f.label :message, "Besked"
+      =t f.label :message, "Besked"
       %br/
-      = f.text_area :message
+      =t f.text_area :message
 
     .action
       = f.submit "Send"
