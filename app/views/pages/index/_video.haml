@@ -1,4 +1,8 @@
 %h3{:style=>"color:#2b3743;"}= link_to 'AdviceTV', videos_path
+/= debug @h264_encoding
+/= debug @ogg_encoding
 %video#movie{:controls => "", :width => "320", :height => "240", :autoplay => "autoplay", :preload => "auto", :loop => "loop" }
-  %source{:src => "https://s3.amazonaws.com/advicecapital/6e1070bc1a3e2909a22c864bae34932b.mp4", :type => "video/mp4"}
-  %source{:src => "https://s3.amazonaws.com/advicecapital/1f52d8900fcadd354c518516be91421a.ogv", :type => "video/ogg"}
+  %source{:src => @h264_encoding.url, :type => "video/mp4"}
+  %source{:src => @ogg_encoding.url, :type => "video/ogg"}
+  //%source{:src => "https://s3.amazonaws.com/advicecapital/6e1070bc1a3e2909a22c864bae34932b.mp4", :type => "video/mp4"}
+//  %source{:src => "https://s3.amazonaws.com/advicecapital/1f52d8900fcadd354c518516be91421a.ogv", :type => "video/ogg"}
