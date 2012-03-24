@@ -203,5 +203,3 @@ en:
   activerecord:
     errors:
       <<: *errors
-  # Test
-  contact_us: Contact us

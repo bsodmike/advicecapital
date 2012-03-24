@@ -1,5 +1,5 @@
 %div{:style => "clear:both;float:right;margin-right:20px;"}
-  %h3 Vores beliggenhed
+  %h3=t :location
   #map{:style => "clear:both;float:right;width:400px;height:300px;margin-right: 10px;"}
   :javascript
     var myLatlng = new google.maps.LatLng(55.732734,12.575625);
@@ -39,19 +39,19 @@
               %strong= err 
 
     .field
-      =t f.label :name, "Navn"
+      = f.label t :name
       %br/
       = f.text_field :name
 
     .field
-      =t f.label :email, "Email"
+      = f.label t :email
       %br/
-      =t f.text_field :email
+      = f.text_field :email
 
     .field
-      =t f.label :message, "Besked"
+      = f.label t :message
       %br/
-      =t f.text_area :message
+      = f.text_area :message
 
     .action
       = f.submit "Send"
