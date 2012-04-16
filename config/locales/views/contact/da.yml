@@ -1,6 +1,18 @@
 da:
   contact_us: Kontakt os
   location: Vores beliggenhed
-  name: Navn
-  email: Email
-  message: Besked
+  
+  activerecord:
+    models: Contact
+    attributes:
+      contact:
+        name: Navn
+        email: Email
+        message: Besked
+  
+  helpers:
+    label:
+      contact:
+        name: Navn
+        email: Email
+        message: Besked

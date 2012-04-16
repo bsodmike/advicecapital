@@ -1,6 +1,18 @@
 en:
   contact_us: Contact us
   location: Our Location
-  name: Name
-  email: Email
-  message: Message
+  
+  activerecord:
+    models: Contact
+    attributes:
+      contact:
+        name: Name
+        email: Email
+        message: Message
+  
+  helpers:
+    label:
+      contact:
+        name: Name
+        email: Email
+        message: Message

@@ -11,7 +11,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120302114824) do
+ActiveRecord::Schema.define(:version => 20120416173831) do
+
+  create_table "advice_page_translations", :force => true do |t|
+    t.integer  "advice_page_id"
+    t.string   "locale"
+    t.string   "title"
+    t.text     "content"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
+
+  add_index "advice_page_translations", ["advice_page_id"], :name => "index_advice_page_translations_on_advice_page_id"
+  add_index "advice_page_translations", ["locale"], :name => "index_advice_page_translations_on_locale"
 
   create_table "advice_pages", :force => true do |t|
     t.string   "title"
@@ -31,6 +43,18 @@ ActiveRecord::Schema.define(:version => 20120302114824) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  create_table "box_translations", :force => true do |t|
+    t.integer  "box_id"
+    t.string   "locale"
+    t.string   "name"
+    t.text     "content"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "box_translations", ["box_id"], :name => "index_box_translations_on_box_id"
+  add_index "box_translations", ["locale"], :name => "index_box_translations_on_locale"
 
   create_table "boxes", :force => true do |t|
     t.text     "content"
@@ -103,6 +127,18 @@ ActiveRecord::Schema.define(:version => 20120302114824) do
     t.datetime "updated_at", :null => false
     t.string   "title"
   end
+
+  create_table "news_translations", :force => true do |t|
+    t.integer  "news_id"
+    t.string   "locale"
+    t.string   "title"
+    t.text     "content"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "news_translations", ["locale"], :name => "index_news_translations_on_locale"
+  add_index "news_translations", ["news_id"], :name => "index_news_translations_on_news_id"
 
   create_table "recipients", :force => true do |t|
     t.string   "firstname"

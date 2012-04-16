@@ -14,9 +14,13 @@ class PagesController < ApplicationController
     @box_choose = Box.find_by_id(box_choose)
     @rss = SimpleRSS.parse open('http://borsen.dk/rss/investor/')
     @video = Video.first
-    @original_video = @video.panda_video
-    @h264_encoding = @original_video.encodings["h264"]
-    @ogg_encoding = @original_video.encodings["ogg"]
+    
+    unless @video.nil? 
+      @original_video = @video.panda_video
+      @h264_encoding = @original_video.encodings["h264"] 
+      @ogg_encoding = @original_video.encodings["ogg"]
+    end
+      
   end
 
   def show

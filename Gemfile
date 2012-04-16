@@ -29,6 +29,7 @@ gem 'rest-open-uri'
 gem 'clockwork'
 gem 'god'
 gem 'nested_form', :git => 'https://github.com/ryanb/nested_form.git'
+gem 'globalize3'
 
 gem 'mysql2' 
   
