@@ -1,4 +1,3 @@
-
 = form_for(@employee) do |f|
   - if @employee.errors.any?
     #error_explanation
@@ -9,11 +8,11 @@
         - @employee.errors.full_messages.each do |msg|
           %li= msg
   .field
-    = f.label :name, "Fulde navn"
+    = f.label :name
     %br/
     = f.text_field :name
   .field
-    = f.label :title, "Titel"
+    = f.label :title
     %br/
     = f.text_field :title
   .field
@@ -21,12 +20,12 @@
     %br/
     = f.text_field :email
   .field
-    = f.label :phone, "Telefon"
+    = f.label :phone
     %br/
     = f.text_field :phone
   .field
-    = f.label :image, "Billede"
+    = f.label :image
     %br/
     = f.file_field :image
   .actions
-    = f.submit "Gem"
+    = f.submit

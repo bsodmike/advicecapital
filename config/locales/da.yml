@@ -7,6 +7,22 @@ da:
   index:
     latest_news_portfolio: Seneste nyt om porteføljeselskaber
     
+  employees:
+    index:
+      email: Email:
+      phone: Tlf.:
+    new:
+      title: Ny medarbejder
+    edit:
+      title: Rediger medarbejder
+    show:
+      name: Navn:
+      title: Titel:
+      email: Email:
+      phone: Tlf.:
+    form:
+      
+    
   recipients:
     index:
       title: Nyhedsmodtagere
@@ -15,6 +31,12 @@ da:
       email: Email
     new:
       title: Modtag nyheder fra Advice Capital
+    edit:
+      title: Rediger nyhedsmodtager
+    show:
+      firstname: Fornavn
+      lastname: Efternavn
+      email: Email
     form:
       title: "Indtast dit fornavn, efternavn og email, og du vil løbende modtage nyheder fra Advice Capital"
       
@@ -22,6 +44,9 @@ da:
   pages:
     privacy:
       title: Privatlivspolitik
+      
+    disclaimer:
+      title: Disclaimer
   
 
   activerecord:

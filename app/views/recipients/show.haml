@@ -1,11 +1,11 @@
 %p
-  %b Fornavn:
+  %b=t ".firstname"
   = @recipient.firstname
 %p
-  %b Efternavn:
+  %b=t ".lastname"
   = @recipient.lastname
 %p
-  %b Email:
+  %b=t ".email"
   = @recipient.email
 - if can? :manage, @recipient
   .notice.actions

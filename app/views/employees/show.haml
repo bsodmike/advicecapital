@@ -1,16 +1,16 @@
 %p
   = image_tag "employees/#{@employee.image}"
 %p
-  %b Navn:
+  %b=t ".name"
   = @employee.name
 %p
-  %b Titel:
+  %b=t ".title"
   = @employee.title
 %p
-  %b Email:
+  %b=t ".email"
   = link_to @employee.email, "mailto:#{@employee.email}"
 %p
-  %b Telefon:
+  %b=t ".phone"
   = @employee.phone
 
 - if can? :manage, @employee
