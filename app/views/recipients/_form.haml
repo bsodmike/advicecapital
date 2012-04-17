@@ -1,7 +1,4 @@
-%p
-  Indtast dit fornavn, efternavn og email, og du vil løbende modtage nyheder fra Advice Capital
-  
-// form_for([:admin, @recipient]) do |f|
+%p=t ".title"
 
 = form_for (@recipient) do |f|
   - if @recipient.errors.any?
@@ -13,11 +10,11 @@
         - @recipient.errors.full_messages.each do |msg|
           %li= msg
   .field
-    = f.label :firstname, "Fornavn"
+    = f.label :firstname
     %br/
     = f.text_field :firstname
   .field
-    = f.label :lastname, "Efternavn"
+    = f.label :lastname
     %br/
     = f.text_field :lastname
   .field
@@ -25,7 +22,7 @@
     %br/
     = f.text_field :email
   .actions
-    = f.submit "Gem"
+    = f.submit
 
 %p
   = button_to 'Privatlivspolitik', '/privacy'

@@ -1,6 +1,6 @@
 Advicecapital::Application.routes.draw do
 
-  scope "(:locale)", :locale => /da|en/ do
+  scope "(:locale)", :locale => /da|en/ do #{I18n.available_locales.join("|")}
     devise_for :users#, :path_prefix => 'd'
   
     resources :news

@@ -2,10 +2,18 @@ en:
   contact:
     new:
       title: Contact us
-      location: Vores beliggenhed
+      location: Our location
   
+  index:
+    latest_news_portfolio: Latest on the portfolio companies
+  
+  recipients:
+    new:
+      title: Receive news from Advice Capital
+    form:
+      title: "Enter your first name, last name and email and you will regularly receive news from Advice Capital"
+    
   activerecord:
-    models: Contact
     attributes:
       contact:
         name: Name
