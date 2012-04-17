@@ -1,6 +1,8 @@
 en:
-  contact_us: Contact us
-  location: Our Location
+  contact:
+    new:
+      title: Contact us
+      location: Vores beliggenhed
   
   activerecord:
     models: Contact

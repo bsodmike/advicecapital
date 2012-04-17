@@ -1,5 +1,5 @@
 %div{:style => "clear:both;float:right;margin-right:20px;"}
-  %h3=t :location
+  %h3=t ".location"
   #map{:style => "clear:both;float:right;width:400px;height:300px;margin-right: 10px;"}
   :javascript
     var myLatlng = new google.maps.LatLng(55.732734,12.575625);
@@ -28,7 +28,7 @@
         map.setCenter(ac);
       }
 %div  
-  %h3=t :contact_us
+  %h3=t ".title"
   = form_for @message, :url => contact_path do |f|
     - unless @message.errors.empty?
       #error_explanation
