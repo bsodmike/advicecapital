@@ -3,15 +3,47 @@ en:
     new:
       title: Contact us
       location: Our location
-  
-  index:
-    latest_news_portfolio: Latest on the portfolio companies
+    
+  employees:
+    index:
+      email: "Email:"
+      phone: "Phone:"
+    new:
+      title: New employee
+    edit:
+      title: Edit employee
+    show:
+      name: "Name:"
+      title: "Title:"
+      email: "Email:"
+      phone: "Phone:"
+    form:
   
   recipients:
+    index:
+      title: News recipients
+      firstname: Firstname
+      lastname: Lastname
+      email: Email
     new:
       title: Receive news from Advice Capital
+    edit:
+      title: Edit news recipient
+    show:
+      firstname: Firstname
+      lastname: Lastname
+      email: Email
+      
+      link_to: New recipient
+      
     form:
       title: "Enter your first name, last name and email and you will regularly receive news from Advice Capital"
+      privacy_policy: Privacy policy
+      submit: Register
+      
+  pages:
+    index:
+      latest_news_portfolio: Latest on the portfolio companies
     
   activerecord:
     attributes:
@@ -19,6 +51,10 @@ en:
         name: Name
         email: Email
         message: Message
+        
+      recipient:
+        firstname: Firstname
+        lastname: Lastname
   
   helpers:
     label:

@@ -22,7 +22,7 @@
     %br/
     = f.text_field :email
   .actions
-    = f.submit
+    = f.submit t(".submit")
 
 %p
-  = button_to 'Privatlivspolitik', '/privacy'
+  = button_to t(".privacy_policy"), '/privacy'

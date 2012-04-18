@@ -3,32 +3,25 @@ da:
     new:
       title: Kontakt os
       location: Vores beliggenhed
-  
-  index:
-    latest_news_portfolio: Seneste nyt om porteføljeselskaber
     
   employees:
     index:
-      email: Email:
-      phone: Tlf.:
+      email: "Email:"
+      phone: "Tlf.:"
     new:
       title: Ny medarbejder
     edit:
       title: Rediger medarbejder
     show:
-      name: Navn:
-      title: Titel:
-      email: Email:
-      phone: Tlf.:
-    form:
-      
+      name: "Navn:"
+      title: "Titel:"
+      email: "Email:"
+      phone: "Tlf.:"
+    form: 
     
   recipients:
     index:
       title: Nyhedsmodtagere
-      firstname: Fornavn
-      lastname: Efternavn
-      email: Email
     new:
       title: Modtag nyheder fra Advice Capital
     edit:
@@ -39,9 +32,17 @@ da:
       email: Email
     form:
       title: "Indtast dit fornavn, efternavn og email, og du vil løbende modtage nyheder fra Advice Capital"
+      privacy_policy: Privatlivspolitik
+      submit: Tilmeld
+      
+  news:
+  videos:
       
       
   pages:
+    index:
+      latest_news_portfolio: Seneste nyt om porteføljeselskaber
+    
     privacy:
       title: Privatlivspolitik
       
@@ -56,9 +57,10 @@ da:
         email: Email
         message: Besked
 
-      recipients:
+      recipient:
         firstname: Fornavn
         lastname: Efternavn
+      
         
   
   helpers:
