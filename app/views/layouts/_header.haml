@@ -4,8 +4,7 @@
     #logo_text
     #logo
     
-  = link_to_unless_current "Dansk", locale: "da"
-  |
-  = link_to_unless_current "English", locale: "en"
+  = link_to_unless_current image_tag("dk.png"), locale: "da"
+  = link_to_unless_current image_tag("uk.png"), locale: "en"
 
   
