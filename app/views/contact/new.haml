@@ -39,21 +39,21 @@
               %strong= err 
 
     .field
-      = f.label :name
+      = f.label :name, t('.name')
       %br/
       = f.text_field :name
 
     .field
-      = f.label :email
+      = f.label :email, t('.email')
       %br/
       = f.text_field :email
 
     .field
-      = f.label :message
+      = f.label :message, t('.message')
       %br/
       = f.text_area :message
 
     .action
-      = f.submit "Send"
+      = f.submit t('.submit')
 
 

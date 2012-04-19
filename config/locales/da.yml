@@ -3,6 +3,10 @@ da:
     new:
       title: Kontakt os
       location: Vores beliggenhed
+      name: Fulde navn
+      email: Email
+      message: Besked
+      submit: Send Besked
     
   employees:
     index:
@@ -38,8 +42,43 @@ da:
   news:
   videos:
       
+  layouts:
+    menu:
+      # Advice Capital
+      history: Historie
+      concept: Koncept
+      strategy: Strategi
+    
+      # Products
+      products: Produkter
+      ac_company_bonds: Advice Capital - Virksomhedsobligationer A/S
+    
+      # Organization
+      organization: Organisation
+      who: Hvem er vi?
+      organization_structure: Organisationsstruktur
       
-  pages:
+      become_customer: Bliv kunde
+      
+      # Invest universe
+      invest_universe: Investeringsunivers
+      stocks: Aktier
+      bonds: Obligationer
+      company_bonds: Virksomhedsobligationer
+      valuta: Valuta
+      
+      # News
+      news: Nyheder
+      receive_news: Modtag nyheder
+      
+      frontpage: Forside
+      contact: Kontakt
+      
+      search: Søg
+      
+      
+    
+  pages:      
     index:
       latest_news_portfolio: Seneste nyt om porteføljeselskaber
     
@@ -53,11 +92,6 @@ da:
 
   activerecord:
     attributes:
-      contact:
-        name: Navn
-        email: Email
-        message: Besked
-
       recipient:
         firstname: Fornavn
         lastname: Efternavn
@@ -66,11 +100,6 @@ da:
   
   helpers:
     label:
-      contact:
-        new:
-          name: "Navn"
-          email: "Email"
-          message: "Besked"
           
       recipients:
         new:

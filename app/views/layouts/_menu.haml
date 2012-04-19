@@ -4,48 +4,48 @@
       = link_to 'Advice Capital', '/about_ac'
       %ul
         %li
-          = link_to 'Historie', '/about_ac/history'
+          = link_to t('.history'), '/about_ac/history'
         %li
-          = link_to 'Koncept', '/about_ac/concept'
+          = link_to t('.concept'), '/about_ac/concept'
         %li
-          = link_to 'Strategi', '/about_ac/strategy'
+          = link_to t('.strategy'), '/about_ac/strategy'
 
     %li
-      = link_to 'Produkter', '/products'
+      = link_to t('.products'), '/products'
       %ul
         %li
           = link_to 'Advice Invest A/S', '/products/ai'
         %li
-          = link_to 'Advice Capital - Virksomhedsobligationer A/S', '/products/ac_company_bonds'
+          = link_to t('.ac_company_bonds'), '/products/ac_company_bonds'
 
     %li
-      = link_to 'Organisation', organisation_path#employees_path#
+      = link_to t('.organization'), organisation_path
       %ul
         %li
-          = link_to 'Hvem er vi?', '#'
+          = link_to t('.who'), '#'
         %li
-          = link_to 'Organisationsstruktur', '#'
+          = link_to t('.organization_structure'), '#'
 
     %li
-      = link_to 'Bliv kunde', '/become_customer'
+      = link_to t('.become_customer'), '/become_customer'
 
     %li
-      = link_to 'Investeringsunivers', '/invest_universe'
+      = link_to t('.invest_universe'), '/invest_universe'
       %ul
         %li
-          = link_to 'Aktier', '/invest_universe/stocks'
+          = link_to t('.stocks'), '/invest_universe/stocks'
         %li
-          = link_to 'Obligationer', '/invest_universe/bonds'
+          = link_to t('.bonds'), '/invest_universe/bonds'
         %li
-          = link_to 'Virksomhedsobligationer', '/invest_universe/company_bonds'
+          = link_to t('.company_bonds'), '/invest_universe/company_bonds'
         %li
-          = link_to 'Valuta', '/invest_universe/valuta'
+          = link_to t('.valuta'), '/invest_universe/valuta'
 
     %li
-      = link_to 'Nyheder', news_index_path
+      = link_to t('.news'), news_index_path
       %ul
         %li
-          = link_to 'Modtag nyheder', '/receive_news'
+          = link_to t('.receive_news'), '/receive_news'
     %li
       = link_to 'AdviceTV', videos_path
 
@@ -60,15 +60,16 @@
   %ul#generic
     %li
       %div{:style=>"padding-top:5px;"}
-        = link_to 'Forside', root_path
+        = link_to t('.frontpage'), root_path
     %li
       %div{:style=>"padding-top:5px;"}
-        = link_to 'Kontakt', contact_path
+        = link_to t('.contact'), contact_path
     %li
       #cse-search-form{:style => "width: 100px;"} Loading
       %script{:src => "http://www.google.com/jsapi", :type => "text/javascript"}
       :javascript
         google.load('search', '1', {language : 'da'});
+        //google.load('', '1');
         google.setOnLoadCallback(function() {
           var customSearchControl = new google.search.CustomSearchControl(
             '010629835534026407651:wbgznkl70us');

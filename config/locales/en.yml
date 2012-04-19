@@ -3,6 +3,10 @@ en:
     new:
       title: Contact us
       location: Our location
+      name: Full name
+      email: Email
+      message: Message
+      submit: Send Message
     
   employees:
     index:
@@ -41,6 +45,41 @@ en:
       privacy_policy: Privacy policy
       submit: Register
       
+  layouts:
+    menu:
+      # Advice Capital
+      history: History
+      concept: Concept
+      strategy: Strategy
+
+      # Products
+      products: Products
+      ac_company_bonds: Advice Capital - Company Bonds A/S
+
+      # Organization
+      organization: Organization
+      who: Who are we?
+      organization_structure: Organizationstructure
+
+      become_customer: Become customer
+
+      # Invest universe
+      invest_universe: Investment universe
+      stocks: Stocks
+      bonds: Bonds
+      company_bonds: Company bonds
+      valuta: Valuta
+
+      # News
+      news: News
+      receive_news: Receive news
+
+      frontpage: Home
+      contact: Contact
+
+      search: Search
+
+      
   pages:
     index:
       latest_news_portfolio: Latest on the portfolio companies
@@ -50,10 +89,6 @@ en:
       
   activerecord:
     attributes:
-      contact:
-        name: Name
-        email: Email
-        message: Message
         
       recipient:
         firstname: Firstname
@@ -61,7 +96,3 @@ en:
   
   helpers:
     label:
-      contact:
-        name: Name
-        email: Email
-        message: Message
