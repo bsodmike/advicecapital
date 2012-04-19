@@ -101,7 +101,7 @@
       $(this).delay(2500).fadeOut();
     });
 
-    $('.date_select').datepicker();
+    $('.date_select').datepicker({dateFormat: "yy-mm-dd"});
 
     tinyMCE.init({
       mode : "textareas",

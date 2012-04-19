@@ -43,9 +43,11 @@
 /* Search button */
 .cse input.gsc-search-button,
 input.gsc-search-button {
+  border: 1px solid #7575;
   color: #fff;
-  border: 1px solid #1c2831;
   background: #283641;
+  padding: 4px;
+  border-radius: 5px;
 }
 /* Inactive tab */
 .cse .gsc-tabHeader.gsc-tabhInactive,

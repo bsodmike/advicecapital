@@ -6,8 +6,6 @@ class Investor < ActiveRecord::Base
   validates :name,
             :presence => true,
             :uniqueness => true
-  validates :entry_date,
-            :presence => false
   validates :email,
             :presence => true,
             :format => { :with => email_regex },

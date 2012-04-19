@@ -38,9 +38,13 @@ da:
       title: "Indtast dit fornavn, efternavn og email, og du vil løbende modtage nyheder fra Advice Capital"
       privacy_policy: Privatlivspolitik
       submit: Tilmeld
+  
       
   news:
   videos:
+  company_stocks:
+    edit:
+      submit: Opdater
       
   layouts:
     menu:
@@ -95,6 +99,9 @@ da:
       recipient:
         firstname: Fornavn
         lastname: Efternavn
+      company_stocks:
+        primo: "Primo værdi:"
+        ultimo: "Ultimo værdi:"
       
         
   

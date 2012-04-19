@@ -50,9 +50,10 @@
 
 	%b Primo / Ultimo Kurs
 	%br/
-	= CompanyStock.first.primo
-	\/
-	= CompanyStock.first.ultimo
+	- unless CompanyStock.first.nil?
+		= CompanyStock.first.primo unless CompanyStock.first.nil?
+		\/
+		= CompanyStock.first.ultimo
 	%br/
 	%br/
 

@@ -48,12 +48,14 @@ body {
 /* =Body END
 -------------------------------------------------------------- */
 
-/*input[type=submit] {
-  border: 2px solid #1a252d;
+input[type=submit] {
+  border: 1px solid #7575;
   color: #fff;
-  background: #293742;
+  background: #283641;
   padding: 4px;
-}*/
+  border-radius: 5px;
+  min-width: 60px
+}
 
 /* =Links
 -------------------------------------------------------------- */

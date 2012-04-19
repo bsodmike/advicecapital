@@ -1,11 +1,11 @@
 %h3 Firmaværdier
 %p
   %b Primo værdi:
-  = @company_stocks.primo
+  = @company_stocks.primo unless @company_stocks.nil?
   %br/
   %br/
   %b Ultimo værdi:
-  = @company_stocks.ultimo
+  = @company_stocks.ultimo unless @company_stocks.nil?
 
   - if can? :manage, @company_stocks
     .notice.actions
