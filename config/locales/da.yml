@@ -84,7 +84,14 @@ da:
     
   pages:      
     index:
-      latest_news_portfolio: Seneste nyt om porteføljeselskaber
+      latest_news_portfolio:
+        latest_news_portfolio: Seneste nyt om porteføljeselskaber
+      latest_news:
+        title: Seneste nyt
+        more_news: Flere nyheder fra Advice Capital A/S
+      employees:
+        title: Hvem er vi
+      
     
     privacy:
       title: Privatlivspolitik

@@ -82,7 +82,14 @@ en:
       
   pages:
     index:
-      latest_news_portfolio: Latest on the portfolio companies
+      latest_news_portfolio:
+        latest_news_portfolio: Latest on the portfolio companies
+      latest_news:
+        title: Latest news
+        more_news: More news from Advice Capital A/S
+      employees:
+        title: Who we are
+      
     privacy:
       title: Privacy policy
       content: "<p>Advice Capital A/S records no data that can be used to identify you unless you<br/> sign up for services or register on the site. Information you provide in connection with <br/> registration is treated with strict confidentiality. Advice Capital A/S do not sell any<br/> personal data to third parties.</p><p><b>Statistics</b><br/>For the development and improvement of the website, we collect current statistics about users'<br/> behavior. Advice Capital A/S uses only statistics in summarized form, for example. to see<br/> which pages and browsers our visitors use. </p>"
