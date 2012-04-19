@@ -1,6 +1,5 @@
 %h3{:style=>"color:#2b3743;"}= link_to 'AdviceTV', videos_path
 %video#movie{:controls => "", :width => "320", :height => "240", :autoplay => "autoplay", :preload => "auto", :loop => "loop" }
-  - unless @h264_encoding.nil?
+  - unless @h264_encoding.nil? || @ogg_encoding.nil?
     %source{:src => @h264_encoding.url, :type => "video/mp4"}
-  - unless @ogg_encoding.nil?
     %source{:src => @ogg_encoding.url, :type => "video/ogg"}
