@@ -8,6 +8,15 @@
   %br/
   Rolle:
   = current_user.role
+  %br/
+  Sprog:
+  - I18n.locale = locale
+  - if locale == :da
+    = "Dansk" 
+  - elsif locale == :en
+    = "Engelsk"
+  - else
+    = "Intet sprog valgt"
 
 %p
   Seneste nyhed:

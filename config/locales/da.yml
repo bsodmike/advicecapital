@@ -48,7 +48,11 @@ da:
       
   layouts:
     menu:
+      advice_capital: Advice Capital
+      advice_invest: Advice Invest A/S
+      
       # Advice Capital
+
       history: Historie
       concept: Koncept
       strategy: Strategi
@@ -80,6 +84,33 @@ da:
       
       search: Søg
       
+    sub_pages:
+      advice_capital: Advice Capital
+      advice_invest: Advice Invest A/S
+      
+      # Advice Capital
+
+      history: Historie
+      concept: Koncept
+      strategy: Strategi
+    
+      # Products
+      products: Produkter
+      ac_company_bonds: Advice Capital - Virksomhedsobligationer A/S
+    
+      # Organization
+      organization: Organisation
+      who: Hvem er vi?
+      organization_structure: Organisationsstruktur
+      
+      become_customer: Bliv kunde
+      
+      # Invest universe
+      invest_universe: Investeringsunivers
+      stocks: Aktier
+      bonds: Obligationer
+      company_bonds: Virksomhedsobligationer
+      valuta: Valuta
       
     
   pages:      

@@ -2,80 +2,80 @@
   .sub_pages
     .head
       = image_tag 'arrow.png'
-      %h3 Advice Capital
+      %h3= t('.advice_capital')
     .content
       - if current_page?('/about_ac/history')
         .sub_page_selected
-          = link_to 'Historie', '/about_ac/history'  
+          = link_to t('.history'), '/about_ac/history'  
         %div
-          = link_to 'Koncept', '/about_ac/concept'
+          = link_to t('.concept'), '/about_ac/concept'
         %div
-          = link_to 'Strategi', '/about_ac/strategy'
+          = link_to t('.strategy'), '/about_ac/strategy'
       - elsif current_page?('/about_ac/concept')
         %div
-          = link_to 'Historie', '/about_ac/history'
+          = link_to t('.history'), '/about_ac/history'
         .sub_page_selected
-          = link_to 'Koncept', '/about_ac/concept'
+          = link_to t('.concept'), '/about_ac/concept'
         %div
-          = link_to 'Strategi', '/about_ac/strategy'
+          = link_to t('.strategy'), '/about_ac/strategy'
       - elsif current_page?('/about_ac/strategy')
         %div
-          = link_to 'Historie', '/about_ac/history'  
+          = link_to t('.history'), '/about_ac/history'  
         %div
-          = link_to 'Koncept', '/about_ac/concept'
+          = link_to t('.concept'), '/about_ac/concept'
         .sub_page_selected
-          = link_to 'Strategi', '/about_ac/strategy'
+          = link_to t('.strategy'), '/about_ac/strategy'
       - else
         %div
-          = link_to 'Historie', '/about_ac/history'  
+          = link_to t('.history'), '/about_ac/history'  
         %div
-          = link_to 'Koncept', '/about_ac/concept'
+          = link_to t('.concept'), '/about_ac/concept'
         %div
-          = link_to 'Strategi', '/about_ac/strategy'
+          = link_to t('.strategy'), '/about_ac/strategy'
 
 - elsif current_page?('/products') || current_page?('/products/ai') || current_page?('/products/ac_company_bonds')
   .sub_pages
     .head
       = image_tag 'arrow.png'
-      %h3 Produkter
+      %h3=t ('.products')
     .content
       - if current_page?('/products/ai')
         .sub_page_selected
-          = link_to 'Advice Invest A/S', '/products/ai'
+          = link_to t('.advice_invest'), '/products/ai'
         %div
-          = link_to 'Advice Capital A/S - Virksomhedsobligationer', '/products/ac_company_bonds'
+          = link_to t('.ac_company_bonds'), '/products/ac_company_bonds'
       - elsif current_page?('/products/ac_company_bonds')
         %div
-          = link_to 'Advice Invest A/S', '/products/ai'
+          = link_to t('.advice_invest'), '/products/ai'
         .sub_page_selected
-          = link_to 'Advice Capital A/S - Virksomhedsobligationer', '/products/ac_company_bonds'
+          = link_to t('.ac_company_bonds'), '/products/ac_company_bonds'
       - else
         %div
-          = link_to 'Advice Invest A/S', '/products/ai'
+          = link_to t('.advice_invest'), '/products/ai'
         %div
-          = link_to 'Advice Capital A/S - Virksomhedsobligationer', '/products/ac_company_bonds'
+          = link_to t('.ac_company_bonds'), '/products/ac_company_bonds'
 
 - elsif current_page?(organisation_path) || current_page?('/organisation/employees') || current_page?('/organisation/structure')
   .sub_pages
     .head
       = image_tag 'arrow.png'
-      %h3 Organisation
+      %h3= t('.organization')
     .content
       - if current_page?(organisation_path)
         .sub_page_selected
-          = link_to 'Hvem er vi?', organisation_path
+          = link_to t('.who'), organisation_path
         %div
-          = link_to 'Organisationsstruktur', '/organisation/structure'
+          = link_to t('.organization_structure'), '/organisation/structure'
       - elsif current_page?('/organisation/structure')
         %div
-          = link_to 'Hvem er vi?', organisation_path
+          = link_to t('.who'), organisation_path
         .sub_page_selected
-          = link_to 'Organisationsstruktur', '/organisation/structure'
+          = link_to t('.organization_structure'), '/organisation/structure'
       - else
         %div
-          = link_to 'Hvem er vi?', organisation_path
+          = link_to t('.who'), organisation_path
         %div
-          = link_to 'Organisationsstruktur', '/organisation/structure'
+          = link_to t('.organization_structure'), '/organisation/structure'
           //%br/
           //= link_to 'Medarbejdere', '/organisation/employees'
           //%br/
@@ -85,61 +85,61 @@
   .sub_pages
     .head
       = image_tag 'arrow.png'
-      %h3 Investeringsunivers
+      %h3= t('.invest_universe')
     .content
       - if current_page?('/invest_universe/stocks')
         .sub_page_selected
-          = link_to 'Aktier', '/invest_universe/stocks'
+          = link_to t('.stocks'), '/invest_universe/stocks'
         %div
-          = link_to 'Obligationer', '/invest_universe/bonds'
+          = link_to t('.bonds'), '/invest_universe/bonds'
         %div
-          = link_to 'Virksomhedsobligationer', '/invest_universe/company_bonds'
+          = link_to t('.company_bonds'), '/invest_universe/company_bonds'
         %div
-          = link_to 'Valuta', '/invest_universe/valuta'
+          = link_to t('.valuta'), '/invest_universe/valuta'
       - elsif current_page?('/invest_universe/bonds')
         %div
-          = link_to 'Aktier', '/invest_universe/stocks'
+          = link_to t('.stocks'), '/invest_universe/stocks'
         .sub_page_selected
-          = link_to 'Obligationer', '/invest_universe/bonds'
+          = link_to t('.bonds'), '/invest_universe/bonds'
         %div
-          = link_to 'Virksomhedsobligationer', '/invest_universe/company_bonds'
+          = link_to t('.company_bonds'), '/invest_universe/company_bonds'
         %div
-          = link_to 'Valuta', '/invest_universe/valuta'
+          = link_to t('.valuta'), '/invest_universe/valuta'
       - elsif current_page?('/invest_universe/company_bonds')
         %div
-          = link_to 'Aktier', '/invest_universe/stocks'
+          = link_to t('.stocks'), '/invest_universe/stocks'
         %div
-          = link_to 'Obligationer', '/invest_universe/bonds'
+          = link_to t('.bonds'), '/invest_universe/bonds'
         .sub_page_selected
-          = link_to 'Virksomhedsobligationer', '/invest_universe/company_bonds'
+          = link_to t('.company_bonds'), '/invest_universe/company_bonds'
         %div
-          = link_to 'Valuta', '/invest_universe/valuta'
+          = link_to t('.valuta'), '/invest_universe/valuta'
       - elsif current_page?('/invest_universe/valuta')
         %div
-          = link_to 'Aktier', '/invest_universe/stocks'
+          = link_to t('.stocks'), '/invest_universe/stocks'
         %div
-          = link_to 'Obligationer', '/invest_universe/bonds'
+          = link_to t('.bonds'), '/invest_universe/bonds'
         %div
-          = link_to 'Virksomhedsobligationer', '/invest_universe/company_bonds'
+          = link_to t('.company_bonds'), '/invest_universe/company_bonds'
         .sub_page_selected
-          = link_to 'Valuta', '/invest_universe/valuta'
+          = link_to t('.valuta'), '/invest_universe/valuta'
       - else
         %div
-          = link_to 'Aktier', '/invest_universe/stocks'
+          = link_to t('.stocks'), '/invest_universe/stocks'
         %div
-          = link_to 'Obligationer', '/invest_universe/bonds'
+          = link_to t('.bonds'), '/invest_universe/bonds'
         %div
-          = link_to 'Virksomhedsobligationer', '/invest_universe/company_bonds'
+          = link_to t('.company_bonds'), '/invest_universe/company_bonds'
         %div
-          = link_to 'Valuta', '/invest_universe/valuta'
+          = link_to t('.valuta'), '/invest_universe/valuta'
 
 - elsif current_page?('/news')
   .sub_pages
     .head
       = image_tag 'arrow.png'
-      %h3 Nyheder
+      %h3= t('.news')
     .content
       %div
-        = link_to 'Modtag nyheder', '/receive_news'
+        = link_to t('.receive_news'), '/receive_news'
 
   
