@@ -2,7 +2,7 @@
 %ul{:style => "list-style-type: none;padding: 0;"}
   - @news.each do |news|
     %li
-      %b= news.created_at.strftime('%d/%m/%y - %H:%M:%S')
+      %b= news.updated_at.strftime('%d/%m/%y - %H:%M:%S')
       %br/
       = link_to raw(truncate(news.content, :length => 50)), news
 
