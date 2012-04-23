@@ -4,7 +4,7 @@
     %li
       %b= news.updated_at.strftime('%d/%m/%y - %H:%M:%S')
       %br/
-      %i= news.title
+      %b= news.title
       = link_to raw(truncate(news.content, :length => 50)), news
 
 = link_to t('.more_news'), news_index_path

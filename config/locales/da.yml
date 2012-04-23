@@ -41,6 +41,10 @@ da:
   
       
   news:
+    new:
+      title: Opret nyhed
+    form:
+      submit: Opret!
   videos:
   company_stocks:
     edit:
@@ -140,6 +144,9 @@ da:
       company_stocks:
         primo: "Primo værdi:"
         ultimo: "Ultimo værdi:"
+      news:
+        title: "Titel:"
+        content: "Indhold:"
       
         
   
