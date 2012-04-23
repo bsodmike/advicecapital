@@ -2,10 +2,11 @@
 %ul{:style => "list-style-type: none;padding: 0;"}
   - @news.each do |news|
     %li
-      %b= news.updated_at.strftime('%d/%m/%y - %H:%M:%S')
+      %small= news.updated_at.strftime('%d/%m/%y - %H:%M:%S')
       %br/
       %b= news.title
-      = link_to raw(truncate(news.content, :length => 50)), news
+      %br/
+      = link_to raw(truncate(news.content, :length => 100)), news
 
 = link_to t('.more_news'), news_index_path
       
