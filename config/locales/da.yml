@@ -22,6 +22,8 @@ da:
       email: "Email:"
       phone: "Tlf.:"
     form: 
+      submit: Gem medarbejder
+
     
   recipients:
     index:
@@ -41,10 +43,12 @@ da:
   
       
   news:
+    index:
+      create_news: Opret nyhed
     new:
       title: Opret nyhed
     form:
-      submit: Opret!
+      submit: Gem
   videos:
   company_stocks:
     edit:
@@ -147,6 +151,12 @@ da:
       news:
         title: "Titel:"
         content: "Indhold:"
+      employee:
+        name: "Navn:"
+        title: "Titel:"
+        email: "Email:"
+        phone: "Tlf.:"
+        image: "Billede:"
       
         
   
