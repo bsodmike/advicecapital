@@ -19,4 +19,15 @@
       %b=t ".phone"
       = employee.phone
 
+- if can? :manage, @employees      
+  %table{:style=>"width:40%;"}
+    - @employees.each do |employee|
+      %tr
+        %td= employee.name
+        %td
+          .notice.actions
+            = link_to 'Vis', employee_path(employee)
+            = link_to 'Rediger', edit_employee_path(employee)      
+            = link_to 'Slet', employee, :confirm => 'Er du sikker?', :method => :delete
+
 
