@@ -54,12 +54,15 @@ class Admin::InvestorsController < AdminController
     @investor = Investor.find(params[:id])
 
     #raise @investor.to_yaml
-
-    if @investor.update_attributes(params[:investor])
-      redirect_to admin_investor_path(@investor), :notice => "Investor was successfully updated."
-    else
-      render :edit
-    end
+    
+    respond_to do |format|
+      if @investor.update_attributes(params[:investor])
+        format.html { redirect_to admin_investor_path(@investor), :notice => "Investor was successfully updated." }
+        format.json { render :json => @investor }
+      else
+        format.html { render :edit }
+      end
+    end    
   end
 
   def destroy

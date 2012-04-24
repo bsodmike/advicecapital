@@ -1,4 +1,8 @@
 da:
+  admin:
+    investors:
+      form:
+        submit: Gem investor
   contact:
     new:
       title: Kontakt os
@@ -23,8 +27,7 @@ da:
       phone: "Tlf.:"
     form: 
       submit: Gem medarbejder
-
-    
+  
   recipients:
     index:
       title: Nyhedsmodtagere
@@ -41,14 +44,14 @@ da:
       privacy_policy: Privatlivspolitik
       submit: Tilmeld
   
-      
   news:
     index:
       create_news: Opret nyhed
     new:
       title: Opret nyhed
     form:
-      submit: Gem
+      submit: Gem nyhed
+  
   videos:
   company_stocks:
     edit:
