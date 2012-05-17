@@ -1,4 +1,11 @@
-%div{:style => "clear:both;float:right;margin-right:20px;"}
+%div{:style => "clear:both;float:right;margin-right:40px;border: 1px solid #eee;padding:5px;"}
+  %h4=t ".title"
+  = image_tag "stock_photo_contact.jpg"
+  %br/
+  %br/
+  %h3
+    Ring +45 3930 6080
+%div{:style => "clear:both;float:right;margin-right:20px;margin-top:20px;"}
   %h3=t ".location"
   #map{:style => "clear:both;float:right;width:400px;height:300px;margin-right: 10px;"}
   :javascript
@@ -51,9 +58,22 @@
     .field
       = f.label :message, t('.message')
       %br/
-      = f.text_area :message
-
+      = f.text_area :message, :class => "no_editor", :style => "width:160px;height:80px;"
+      %br/
     .action
       = f.submit t('.submit')
+      
+%p
+  = button_to t(".privacy_policy"), '/privacy'
+  
+%p
+  %h4
+    //= t(".contact_info")
+    Du er altid velkommen til at kontakte os, vores kontor har åbent
+    %br/ 
+    mandag til fredag fra kl. 9 til 17. 
+    %br/
+    %br/
+    Kontakt os på telefon +45 3930 6080
 
 

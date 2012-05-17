@@ -14,6 +14,7 @@ class EmployeesController < ApplicationController
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @employee }
+      format.json { render :json => @employee }
       format.pdf do
         pdf = EmployeePdf.new(@employee, view_context)
         send_data pdf.render, filename: "employee_#{@employee}.pdf",
@@ -38,6 +39,8 @@ class EmployeesController < ApplicationController
 
   def create
     @employee = Employee.new(params[:employee])
+    
+    #raise StandardError, params.inspect
 
     respond_to do |format|
       if @employee.save

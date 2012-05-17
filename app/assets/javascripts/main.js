@@ -101,23 +101,7 @@
       $(this).delay(2500).fadeOut();
     });
 
-    $('.date_select').datepicker({dateFormat: "yy-mm-dd"});
-
-    tinyMCE.init({
-      mode : "textareas",
-      theme: "advanced",
-
-      theme_advanced_buttons1 : "bold,italic,underline,|,justifyleft,justifycenter,justifyright,fontselect,fontsizeselect,formatselect",
-      theme_advanced_buttons2 : "cut,copy,paste,|,bullist,numlist,|,outdent,indent,|,undo,redo,|,link,unlink,anchor,image,|,code,preview,|,forecolor,backcolor",
-      theme_advanced_buttons3 : "insertdate,inserttime,|,removeformat,|,sub,sup",
-      theme_advanced_toolbar_location : "top",
-      theme_advanced_toolbar_align : "left",
-      theme_advanced_statusbar_location : "bottom",
-      theme_advanced_resizing : true,
-
-      skin : "o2k7",
-      skin_variant : "silver"
-    });
+    $('.date_select').datepicker({dateFormat: "dd-mm-yy"});
 
     $("a[rel=fancybox]").fancybox({
       overlayShow: true,
@@ -151,19 +135,42 @@
         $(a).parent().fadeTo(800, 1);
       }
     });
-
-    $("#employees_slider ul").roundabout({
-      autoplay: true,
-      autoplayDuration: 3000,
-      autoplayPauseOnHover: true
-    });
-
-    $("#employees_slider ul#employee_images li img").hover(function() {
-      $(".employees_info").show();
-    }, function () {
-      $(".employees_info").hide();
-    });
     
+    $('#employees_slider .employee_images').roundabout({
+      autoplay: true,
+      autoplayPauseOnHover: true,
+      autoplayDuration: 2000,
+      duration: 3000,
+      minOpacity: 0.2,
+      maxOpacity: 1.2,
+      minScale: 0.6,
+      maxScale: 1.0,
+      focusBearing: 0.0,
+      triggerFocusEvents: true,
+      clickToFocusCallback: function() {
+        var id = $(this).find(".roundabout-in-focus").attr("id");
+        var url = '/employees/' + id + '.json';
+        
+        $.ajax({
+          dataType: 'json',
+          url: url,
+          async: false,
+          global: false,
+          
+          success: function (data) {        	  
+            $('.employees_info').html(data.name);
+            
+            $('#info_' + data.id).css({
+              display: 'block'
+            });
+            setTimeout(function() { 
+              $('#info_' + data.id).css({display: 'none'});
+            }, 5000);
+          }
+        });
+      }
+    });
+
     // Organisation_box
     $(".organisation_box ul li").hover(function() {
       $(".employees_info").show();
@@ -176,7 +183,7 @@
 	  };
 
     // Organisation Info
-    $(".employee_names li, .employee_images li").hover(function () {
+    $(".employee_names li").hover(function () {
       var self = $(this);    
       var id = getId(self);
       
@@ -188,6 +195,23 @@
 
       $('#info_' + id).css({display: 'none'});
 	  });
+  
+   tinyMCE.init({
+      mode : "textareas",
+      editor_deselector : "no_editor",
+      theme: "advanced",
+
+      theme_advanced_buttons1 : "bold,italic,underline,|,justifyleft,justifycenter,justifyright,fontselect,fontsizeselect,formatselect",
+      theme_advanced_buttons2 : "cut,copy,paste,|,bullist,numlist,|,outdent,indent,|,undo,redo,|,link,unlink,anchor,image,|,code,preview,|,forecolor,backcolor",
+      theme_advanced_buttons3 : "insertdate,inserttime,|,removeformat,|,sub,sup",
+      theme_advanced_toolbar_location : "top",
+      theme_advanced_toolbar_align : "left",
+      theme_advanced_statusbar_location : "bottom",
+      theme_advanced_resizing : true,
+
+      skin : "o2k7",
+      skin_variant : "silver"
+    });
   });
 })(jQuery);
 

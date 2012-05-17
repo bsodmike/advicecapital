@@ -403,10 +403,13 @@ footer {
 /* =Employee Page specific
 -------------------------------------------------------------- */
 #employees_slider {
-  border: 1px solid #888;
-  width:1000px;
-  height:400px;
-  background:#eee;
+  width: 600px;
+  height: 400px;
+  
+  .employee_image {
+    width: 200px;
+    height: 300px;
+  }
 }
 #employees_index {
   float: left;

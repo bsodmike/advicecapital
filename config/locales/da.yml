@@ -11,6 +11,7 @@ da:
       email: Email
       message: Besked
       submit: Send Besked
+      privacy_policy: Privatlivspolitik
     
   employees:
     index:
@@ -27,7 +28,7 @@ da:
       phone: "Tlf.:"
     form: 
       submit: Gem medarbejder
-  
+
   recipients:
     index:
       title: Nyhedsmodtagere
@@ -43,7 +44,7 @@ da:
       title: "Indtast dit fornavn, efternavn og email, og du vil løbende modtage nyheder fra Advice Capital"
       privacy_policy: Privatlivspolitik
       submit: Tilmeld
-  
+
   news:
     index:
       create_news: Opret nyhed
@@ -51,7 +52,7 @@ da:
       title: Opret nyhed
     form:
       submit: Gem nyhed
-  
+
   videos:
   company_stocks:
     edit:
@@ -160,6 +161,7 @@ da:
         email: "Email:"
         phone: "Tlf.:"
         image: "Billede:"
+        date: "Dato:"
       
         
   
