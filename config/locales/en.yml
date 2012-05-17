@@ -7,6 +7,7 @@ en:
       email: Email
       message: Message
       submit: Send Message
+      privacy_policy: Privacypolicy
     
   employees:
     index:

@@ -7,6 +7,7 @@ da:
       email: Email
       message: Besked
       submit: Send Besked
+      privacy_policy: Privatlivspolitik
     
   employees:
     index:
