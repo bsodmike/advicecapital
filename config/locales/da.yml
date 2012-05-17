@@ -23,6 +23,7 @@ da:
       email: "Email:"
       phone: "Tlf.:"
     form: 
+      submit: Opret medarbejder
     
   recipients:
     index:
@@ -39,7 +40,6 @@ da:
       title: "Indtast dit fornavn, efternavn og email, og du vil løbende modtage nyheder fra Advice Capital"
       privacy_policy: Privatlivspolitik
       submit: Tilmeld
-  
       
   news:
     new:
