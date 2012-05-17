@@ -101,7 +101,7 @@
       $(this).delay(2500).fadeOut();
     });
 
-    $('.date_select').datepicker({dateFormat: "yy-mm-dd"});
+    $('.date_select').datepicker({dateFormat: "dd-mm-yy"});
 
     tinyMCE.init({
       mode : "textareas",
@@ -151,11 +151,14 @@
         $(a).parent().fadeTo(800, 1);
       }
     });
-
-    $("#employees_slider ul").roundabout({
-      autoplay: true,
-      autoplayDuration: 3000,
-      autoplayPauseOnHover: true
+    
+    $('#employees_slider').CloudCarousel({	
+      			xPos: 128,
+      			yPos: 32,
+      			buttonLeft: $("#left-but"),
+      			buttonRight: $("#right-but"),
+      			altBox: $("#alt-text"),
+      			titleBox: $("#title-text")
     });
 
     $("#employees_slider ul#employee_images li img").hover(function() {
@@ -171,22 +174,22 @@
       $(".employees_info").hide();
     });
     
-	  var getId = function (self) {
-		  return self.attr('id').replace(/(image|employee)_/, '');
-	  };
+	  //var getId = function (self) {
+		//  return self.attr('id').replace(/(image|employee)_/, '');
+	  //};
 
     // Organisation Info
     $(".employee_names li, .employee_images li").hover(function () {
       var self = $(this);    
-      var id = getId(self);
+      //var id = getId(self);
       
       $('#info_' + id).css({display: 'block'});
 
     }, function () {
       var self = $(this);
-      var id = getId(self);
+      //var id = getId(self);
 
-      $('#info_' + id).css({display: 'none'});
+      //$('#info_' + id).css({display: 'none'});
 	  });
   });
 })(jQuery);

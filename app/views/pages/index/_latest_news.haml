@@ -2,7 +2,7 @@
 %ul{:style => "list-style-type: none;padding: 0;"}
   - @news.each do |news|
     %li
-      %small= news.updated_at.strftime('%d/%m/%y - %H:%M:%S')
+      %small= news.date.strftime('%d-%m-%y') unless news.date.blank?
       %br/
       %b= news.title
       %br/

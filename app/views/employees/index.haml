@@ -4,9 +4,9 @@
       %li[employee]= link_to employee.name.split(' ', 2)[0], "/employees/#{employee.id}"
 
 #employees_slider
-  %ul.employee_images
+  .employee_images
     - @employees.each do |employee|
-      %li= image_tag "employees/#{employee.image}", :id => "image_#{employee.id}", :rel => "shadowbox"
+      = image_tag "employees/#{employee.image}", :id => "image_#{employee.id}", :class => "cloudcarousel employee_image", :rel => "shadowbox"
 
 - @employees.each do |employee|
   .employee_info{:id => "info_#{employee.id}"}

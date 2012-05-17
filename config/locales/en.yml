@@ -100,6 +100,10 @@ en:
       recipient:
         firstname: Firstname
         lastname: Lastname
+      news:
+        title: "Title:"
+        content: "Content:"
+        date: "Date:"
   
   helpers:
     label:

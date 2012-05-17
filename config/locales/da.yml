@@ -44,7 +44,8 @@ da:
     new:
       title: Opret nyhed
     form:
-      submit: Opret!
+      submit: Opret
+      
   videos:
   company_stocks:
     edit:
@@ -147,6 +148,7 @@ da:
       news:
         title: "Titel:"
         content: "Indhold:"
+        date: "Dato:"
       
         
   
