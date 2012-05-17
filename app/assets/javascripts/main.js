@@ -105,7 +105,7 @@
 
     tinyMCE.init({
       mode : "textareas",
-      editor_deselector : "no_editor"
+      editor_deselector : "no_editor",
       theme: "advanced",
 
       theme_advanced_buttons1 : "bold,italic,underline,|,justifyleft,justifycenter,justifyright,fontselect,fontsizeselect,formatselect",

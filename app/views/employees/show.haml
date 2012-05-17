@@ -1,8 +1,8 @@
 %p
-  = image_tag "employees/#{@employee.image}"
+  = image_tag "employees/#{@employee.image}", :style => "width:300px;height:450px;"
 %p
   %b=t ".name"
-  = @employee.name
+  = @employee.name unless @employee.name.nil?
 %p
   %b=t ".title"
   = @employee.title
