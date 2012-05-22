@@ -5,7 +5,7 @@ class Admin::UsersController < AdminController
 	end
 
 	def show
-		@user = User.find(params[:id])
+		@user = get_user(params[:id])
 	end
 
 	def new
@@ -14,7 +14,7 @@ class Admin::UsersController < AdminController
 
 	def create
 		@user = User.new(params[:user])
-		#raise @user.to_yaml
+		
 		if @user.save
 			redirect_to admin_users_path(@user), :notice => "Brugeren blev oprettet."
 		else
@@ -23,11 +23,11 @@ class Admin::UsersController < AdminController
 	end
 
 	def edit
-		@user = User.find(params[:id])
+		@user = get_user(params[:id])
 	end
 
 	def update
-		@user = User.find(params[:id])
+		@user = get_user(params[:id])
 
 		if @user.update_attributes(params[:user])
 			redirect_to admin_users_path, :notice => "Brugeren blev opdateret."
@@ -37,9 +37,14 @@ class Admin::UsersController < AdminController
 	end
 
 	def destroy
-		@user = User.find(params[:id])
+		@user = get_user(params[:id])
 		if @user.destroy
 			redirect_to admin_users_path, :notice => "Brugeren blev slettet."
 		end
 	end
+	
+	private
+	def get_user(user_id)
+	  User.find(user_id)
+  end
 end

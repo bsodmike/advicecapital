@@ -5,21 +5,26 @@ class Admin::BoxesController < AdminController
   end
 
   def show
-    @box = Box.find(params[:id])
+    @box = get_box(params[:id])
   end
 
   def edit
-    @box = Box.find(params[:id])
+    @box = get_box(params[:id])
   end
 
   def update
-    @box = Box.find(params[:id])
+    @box = get_box(params[:id])
 
     if @box.update_attributes(params[:box])
       redirect_to(root_url, :notice => "Boxen blev opdateret")
     else
       render :edit
     end
+  end
+  
+  private
+  def get_box(box_id)
+    Box.find(box_id)
   end
 
 end

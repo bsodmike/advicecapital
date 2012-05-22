@@ -8,7 +8,7 @@ class VideosController < ApplicationController
   end
 
   def show
-    @video = Video.find(params[:id])
+    @video = get_video(params[:id])
     @original_video = @video.panda_video
     @h264_encoding = @original_video.encodings['h264']
     @ogg_encoding = @original_video.encodings['ogg']
@@ -24,9 +24,14 @@ class VideosController < ApplicationController
   end
 
   def destroy
-    @video = Video.find(params[:id])
+    @video = get_video(params[:id])
     @video.destroy
 
     redirect_to videos_path, :notice => "Video blev slettet."
+  end
+  
+  private
+  def get_video(video_id)
+    Video.find(video_id)
   end
 end

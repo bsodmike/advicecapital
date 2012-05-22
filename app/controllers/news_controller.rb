@@ -7,7 +7,7 @@ class NewsController < ApplicationController
   end
 
   def show
-    respond_with(@news = News.find(params[:id]))
+    respond_with(@news = get_news)
   end
 
   def new
@@ -15,38 +15,36 @@ class NewsController < ApplicationController
   end
 
   def edit
-    respond_with(@news = News.find(params[:id]))
+    respond_with(@news = get_news)
   end
 
   def create
     @news = News.new(params[:news])
 
     if @news.save
-      respond_with(@news) do |format|
-        format.html { redirect_to(@news, :notice => 'News was successfully created.') }
-      end
+      redirect_to @news, :notice => 'News was successfully created.'
     else
       render :new
     end
   end
 
   def update
-    @news = News.find(params[:id])
+    @news = get_news
 
     if @news.update_attributes(params[:news])
-      redirect_to(@news, :notice => 'News was successfully updated.')
+      redirect_to @news, :notice => 'News was successfully updated.'
     else
       render :edit
     end
   end
 
   def destroy
-    @news = News.find(params[:id])
+    @news = get_news
     @news.destroy
-
-    respond_to do |format|
-      format.html { redirect_to(news_index_url) }
-      format.xml  { head :ok }
-    end
+  end
+  
+  private
+  def get_news
+    News.find(params[:id])
   end
 end

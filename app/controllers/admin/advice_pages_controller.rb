@@ -5,21 +5,26 @@ class Admin::AdvicePagesController < AdminController
   end
   
   def show
-    @page = AdvicePage.find(params[:id])
+    @page = get_page(params[:id])
   end
 
   def edit
-    @page = AdvicePage.find(params[:id])
+    @page = get_page(params[:id])
   end
 
   def update
-    @page = AdvicePage.find(params[:id])
+    @page = get_page(params[:id])
 
     if @page.update_attributes(params[:advice_page])
       redirect_to admin_advice_pages_path, :notice => 'Page was successfully updated.'
     else
       redirect_to edit_admin_advice_page(@page.id)
     end
+  end
+  
+  private
+  def get_page(page_id)
+    AdvicePage.find(page_id)
   end
 
 end

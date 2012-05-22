@@ -4,7 +4,7 @@ class Admin::InvestorsController < AdminController
   end
 
   def show
-    @investor = Investor.find(params[:id])
+    @investor = get_investor(params[:id])
     @investorStocks = @investor.stocks
     @stocks = Stock.all
     @profile = @investor.users
@@ -47,13 +47,11 @@ class Admin::InvestorsController < AdminController
   end
 
   def edit
-    @investor = Investor.find(params[:id])
+    @investor = get_investor(params[:id])
   end
 
   def update
-    @investor = Investor.find(params[:id])
-
-    #raise @investor.to_yaml
+    @investor = get_investor(params[:id])
     
     respond_to do |format|
       if @investor.update_attributes(params[:investor])
@@ -66,9 +64,14 @@ class Admin::InvestorsController < AdminController
   end
 
   def destroy
-    @investor = Investor.find(params[:id])
+    @investor = get_investor(params[:id])
     @investor.destroy
     redirect_to admin_investors_path, :notice => "Investor was successfully deleted."
+  end
+  
+  private 
+  def get_investor(investor_id)
+    Investor.find(investor_id)
   end
 
 end
