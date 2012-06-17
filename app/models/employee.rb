@@ -1,4 +1,6 @@
 class Employee < ActiveRecord::Base
+  attr_accessible :name, :title, :email, :phone, :image
+  
   email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i # full regex
 
   validates :name, :presence => true

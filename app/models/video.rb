@@ -1,4 +1,6 @@
 class Video < ActiveRecord::Base
+  attr_accessible :title, :panda_video_id
+  
   validates :panda_video_id, :presence => true
 
   def panda_video

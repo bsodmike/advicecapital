@@ -18,7 +18,7 @@ class Admin::AdvicePagesController < AdminController
     if @page.update_attributes(params[:advice_page])
       redirect_to admin_advice_pages_path, :notice => 'Page was successfully updated.'
     else
-      redirect_to edit_admin_advice_page(@page.id)
+      redirect_to edit_admin_advice_page(@page.id), :only_path => true
     end
   end
   

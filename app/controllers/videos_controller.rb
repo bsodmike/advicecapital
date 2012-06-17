@@ -20,7 +20,7 @@ class VideosController < ApplicationController
 
   def create
     @video = Video.create!(params[:video])
-    redirect_to :action => :show, :id => @video.id
+    redirect_to :action => :show, :id => @video.id, :only_path => true
   end
 
   def destroy
