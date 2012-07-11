@@ -31,7 +31,6 @@ gem 'god'
 gem 'nested_form', :git => 'https://github.com/ryanb/nested_form.git'
 gem 'globalize3'
 gem 'httparty'
-
 gem 'mysql2' 
   
 group :production do

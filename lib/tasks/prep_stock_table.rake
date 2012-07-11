@@ -19,7 +19,7 @@ namespace :stock_table do
       {:symbol=>"NDA-DKK.CO", :price=>"100.00", :change=>"-1.00", :volume=>"200100"},
       {:symbol=>"NOVO-B.CO", :price=>"560.50", :change=>"+7.00", :volume=>"901981"},
       {:symbol=>"NZYM-B.CO",:price=>"744.00", :change=>"-15.50", :volume=>"100456"},
-      {:symbol=>"SYDB.Co", :price=>"104.50", :change=>"-0.50", :volume=>"220223"},
+      {:symbol=>"PNDORA.CO", :price=>"104.50", :change=>"-0.50", :volume=>"220223"},
       {:symbol=>"TDC.CO", :price=>"45.99", :change=>"+0.84", :volume=>"1744640"},
       {:symbol=>"TOP.CO", :price=>"839.50", :change=>"+7.50", :volume=>"53123"},
       {:symbol=>"TRYG.CO", :price=>"290.80", :change=>"+0.70", :volume=>"94504"},
