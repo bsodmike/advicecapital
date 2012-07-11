@@ -27,7 +27,7 @@ module Clockwork
     'WDH.CO'       # William Demant Holding
   ])
 
-  every(5.minutes, 'stock_data.update') do
+  every(5.minutes, 'stock_data_update') do
     
     stock_data.each do |hash|
       StockData.where(:symbol => hash[:symbol]).last.update_attributes(:price => hash[:price], :change => hash[:change],:volume => hash[:volume])
