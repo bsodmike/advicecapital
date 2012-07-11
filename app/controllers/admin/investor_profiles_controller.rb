@@ -40,7 +40,6 @@ class Admin::InvestorProfilesController < AdminController
     @investor_profile.destroy
 
     redirect_to investor_profiles_url
-    end
   end
   
   private
