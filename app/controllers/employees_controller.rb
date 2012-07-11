@@ -42,7 +42,7 @@ class EmployeesController < ApplicationController
     @employee = get_employee
 
     if @employee.update_attributes(params[:employee])
-      redirect_to(@employee, :notice => 'Employee was successfully updated.'
+      redirect_to(@employee, :notice => 'Employee was successfully updated.')
     else
       render :edit
     end
