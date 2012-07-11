@@ -1,35 +1,6 @@
 (function ($) {
   $(function () {
 
-    /*function fixHeight() {
-      var height = $(window).height();
-      var setHeight;
-      var wrapper = $('#wrapper');
-      var mainContent = $('#main_content');
-      var minHeight = 'min-height';
-
-      if (height < 900 || height == 900) {
-        wrapper.css(minHeight, 800);
-        console.log('height: ' + height + 'px');
-      }
-      else if (height > 900 && height < 1000) {
-        wrapper.css(minHeight, 800);
-        console.log('height: ' + height + 'px');
-      }
-      else if (height > 1000 && height < 1200) { // OPTIMIZED FOR 1600x1200 SCREEN
-        wrapper.css(minHeight, 940);
-        mainContent.css(minHeight, 840);
-        console.log('height: ' + height + 'px - ' + 'wrapper: ' + wrapper + "px - " + "mainContent: " + mainContent + "px");
-      }
-      else if (height > 1200 && height < 1400) {
-        wrapper.css(minHeight, 1000);
-        console.log('height: ' + height + 'px');
-      }
-      else if (height > 1400 && height < 1600) {
-        wrapper.css(minHeight, 1000);
-        console.log('height: ' + height + 'px');
-      }
-    }*/
     function fixElementPosition() {
       var logo = $('#logo');
       var logoText = $('#logo_text');
@@ -82,11 +53,8 @@
           .css({
             "font-size" : "8px"
           });
-        console.log('width: ' + width + 'px' + adminMenu);
       }  
     }
-
-    fixHeight();
     fixElementPosition();
 
     $('nav ul li a').mouseover(function () {
