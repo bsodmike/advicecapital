@@ -42,7 +42,7 @@
       
       .stay-clear
       
-      #wrapper
+      #wrapper.clearfix
         - flash.each do |key, value|
           = content_tag(:div, value, :class => "flash #{key}", :id => "flash")
 

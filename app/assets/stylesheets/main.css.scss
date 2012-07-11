@@ -229,16 +229,20 @@ header {
 
 .container {padding: 0 !important;min-height: 500px;width:1054px;}
 
+.clearfix:before, .clearfix:after {  content: "\0020"; display: block; height: 0; visibility: hidden;    } 
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
 #wrapper {
   padding: 20px 10px 10px 20px !important;
   box-shadow: $wrapper-shadow;
   -webkit-box-shadow: $wrapper-shadow;
   -moz-box-shadow: $wrapper-shadow;
   width: 1024px;/*930px;*/
-  min-height: 800px;
+  height: auto;
+
 
   #main_content {
-    min-height: 800px;
 
     #content {
       margin: 20px 0 0 0;

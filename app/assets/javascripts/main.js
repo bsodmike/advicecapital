@@ -1,7 +1,7 @@
 (function ($) {
   $(function () {
 
-    function fixHeight() {
+    /*function fixHeight() {
       var height = $(window).height();
       var setHeight;
       var wrapper = $('#wrapper');
@@ -29,7 +29,7 @@
         wrapper.css(minHeight, 1000);
         console.log('height: ' + height + 'px');
       }
-    }
+    }*/
     function fixElementPosition() {
       var logo = $('#logo');
       var logoText = $('#logo_text');
