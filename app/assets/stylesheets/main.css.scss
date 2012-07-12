@@ -239,10 +239,12 @@ header {
   -webkit-box-shadow: $wrapper-shadow;
   -moz-box-shadow: $wrapper-shadow;
   width: 1024px;/*930px;*/
-  height: auto;
+  min-height: 500px !important;
+  height: 100% !important;
 
 
   #main_content {
+    min-height: 100%;
 
     #content {
       margin: 20px 0 0 0;
