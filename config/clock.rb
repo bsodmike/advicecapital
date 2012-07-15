@@ -19,7 +19,7 @@ module Clockwork
     'NDA-DKK.CO',  # Nordea Bank
     'NOVO-B.CO',   # Novo Nordisk
     'NZYM-B.CO',   # Novozymes
-    'SYDB.Co',     # Sydbank
+    'PNDORA.CO',   # Pandora
     'TDC.CO',      # TDC
     'TOP.CO',      # Topdanmark
     'TRYG.CO',     # Tryg
@@ -27,9 +27,9 @@ module Clockwork
     'WDH.CO'       # William Demant Holding
   ])
 
-  every(5.minutes, 'stock_data_update') do
+  every(5.minutes, 'stock_data.update') do
     
-    stock_data.each do |hash|
+    stock_data.each do |key, hash|
       StockData.where(:symbol => hash[:symbol]).last.update_attributes(:price => hash[:price], :change => hash[:change],:volume => hash[:volume])
     end  
 
