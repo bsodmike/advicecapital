@@ -107,8 +107,8 @@
     $('#employees_slider .employee_images').roundabout({
       autoplay: true,
       autoplayPauseOnHover: true,
-      autoplayDuration: 2000,
-      duration: 3000,
+      autoplayDuration: 1000,
+      duration: 1000,
       minOpacity: 0.2,
       maxOpacity: 1.2,
       minScale: 0.6,

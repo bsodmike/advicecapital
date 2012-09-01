@@ -13,4 +13,6 @@ class Employee < ActiveRecord::Base
     { :id => self.id, :name => self.name, :title => self.title, :email => self.email, :phone => self.phone, :image => self.image }
   end
 
+  mount_uploader :image, ImageUploader
+
 end

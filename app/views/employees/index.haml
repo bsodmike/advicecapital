@@ -6,7 +6,7 @@
 #employees_slider
   %ul.employee_images
     - @employees.each do |employee|
-      %li{:id => "#{employee.id}"}= image_tag "employees/#{employee.image}", :id => "employee_#{employee.id}", :class => "employee_image", :rel => "fancybox"
+      %li{:id => "#{employee.id}"}= image_tag employee.image, :id => "employee_#{employee.id}", :class => "employee_image", :rel => "fancybox"
 
 - @employees.each do |employee|
   .employee_info{:id => "info_#{employee.id}"}
