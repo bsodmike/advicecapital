@@ -32,8 +32,8 @@ module Clockwork
     stock_data.each do |key, hash|
       StockData.where(:symbol => hash[:symbol]).last.update_attributes(:price => hash[:price], :change => hash[:change],:volume => hash[:volume])
     end  
-
-    puts "StockData updated at #{Time.now.strftime("%D @ %H%M %z")}"
+  
+    puts "Rake[:stock_info_update] => StockData updated at #{Time.now.strftime("%D @ %H%M %z")}"
   end
 end
 

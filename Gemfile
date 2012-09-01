@@ -1,5 +1,5 @@
 source 'http://rubygems.org'
-gem 'rails', '3.2.6'
+gem 'rails', '3.2.8'
 gem 'bcrypt-ruby'
 
 # Asset template engines
@@ -28,7 +28,7 @@ gem 'simple-rss'
 gem 'rest-open-uri'
 gem 'clockwork'
 gem 'god'
-gem 'nested_form', :git => 'https://github.com/ryanb/nested_form.git'
+gem 'nested_form'#, :git => 'https://github.com/ryanb/nested_form.git'
 gem 'globalize3'
 gem 'httparty'
 gem 'mysql2' 
