@@ -22,7 +22,7 @@
 
         $("#employee_image").click(function() {
           $.fancybox({
-            'href' : peon.image,
+            'href' : peon.image.image.url,
             'title'   : '<p>'+peon.name+'<br/><br/>'+peon.title+'<br/><br/><a href="mailto:'+peon.email+'">'+peon.email+'</a></p>',
             'titlePosition': 'inside'
           });
