@@ -6,3 +6,4 @@ tmp/
 tmp/*
 .sass-cache/
 .idea
+.DS_Store
