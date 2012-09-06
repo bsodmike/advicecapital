@@ -15,6 +15,8 @@ God.watch do |w|
   w.restart  = "kill -QUIT `cat #{PID_DIR}/clockwork.pid` && bundle exec clockwork #{RAILS_ROOT}/config/clock.rb"
   w.log      = "#{RAILS_ROOT}/log/clockwork.log"
 
+  w.keepalive
+
   w.start_grace = 10.seconds
   w.restart_grace = 10.seconds
   w.pid_file = "#{PID_DIR}/clockwork.pid"
