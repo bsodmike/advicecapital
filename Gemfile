@@ -34,6 +34,7 @@ gem 'globalize3'
 gem 'httparty'
 gem 'mysql2' 
 gem 'dalli'
+gem 'daemons'
   
 group :production do
 
