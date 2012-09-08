@@ -14,7 +14,7 @@ gem 'cancan'
 gem 'ystock'
 gem 'jquery-rails'
 gem 'carrierwave'
-#gem "rmagick"
+#gem 'rmagick'
 gem 'devise'
 gem 'haml'
 gem 'ransack'

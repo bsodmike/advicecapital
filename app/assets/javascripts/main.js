@@ -104,16 +104,16 @@
       }
     });
     
-    $('#employees_slider .employee_images').roundabout({
+    $('.employee_images').roundabout({
       autoplay: true,
       autoplayPauseOnHover: true,
-      autoplayDuration: 1000,
-      duration: 1000,
+      autoplayDuration: 3000,
+      //duration: 3000,
       minOpacity: 0.2,
       maxOpacity: 1.2,
       minScale: 0.6,
       maxScale: 1.0,
-      focusBearing: 0.0,
+      responsive: true,
       triggerFocusEvents: true,
       clickToFocusCallback: function() {
         var id = $(this).find(".roundabout-in-focus").attr("id");
