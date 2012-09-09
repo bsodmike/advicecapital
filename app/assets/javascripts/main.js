@@ -14,6 +14,52 @@
 
       if (width <= 1366) {
         genericMenu.css('right', '300px');
+        adminMenu.css({
+          "width" : "60px",
+          "height" : "auto",
+          "margin" : "10px 0 10px 5px",
+          "padding" : "4px 0 0 4px",
+          "font-size" : "10px"
+        });
+        adminMenu.find("ul")
+          .css({
+            "margin" : "0",
+            "padding" : "0"
+          });
+        adminMenu.find("div:nth-child(2)")
+          .css({
+            "float" : "left",
+            "margin" : "0",
+            "padding" : "0"
+          });
+
+        subPages.css({
+          "width" : "100px",
+          "margin" : "10px 0 10px 0"
+        });
+        subPages.find(".head")
+          .css({
+            "width" : "96px"
+          });
+        subPages.find(".head h3")
+          .css({
+            "font-size" : "12px",
+            "margin" : "none",
+            "word-wrap" : "break-word",
+            "word-break" : "normal",
+            "white-space" : "normal"
+          });
+        subPages.find(".content div")
+          .css({
+            "width" : "80px"
+          });
+        subPages.find(".content a")
+          .css({
+            "font-size" : "10px",
+            "word-wrap" : "break-word",
+            "word-break" : "normal",
+            "white-space" : "normal"
+          });
       }
 
       if (width <= 1280) {
