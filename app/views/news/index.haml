@@ -7,7 +7,7 @@
         %td
           %b= news.date.strftime('%d/%m/%y') unless news.date.nil?
           \-
-          = link_to raw(truncate(news.content, :length => 50)), news
+          = link_to raw(truncate(news.content, :length => 200)), news
         - if can? :manage, news
           %td
             .notice.actions
