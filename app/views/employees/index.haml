@@ -1,35 +1,36 @@
-.organisation_box
-  %ul.employee_names
-    - @employees.each do |employee|
-      %li[employee]= link_to employee.name.split(' ', 2)[0], "/employees/#{employee.id}"
+#main_content
+  .organisation_box
+    %ul.employee_names
+      - @employees.each do |employee|
+        %li[employee]= link_to employee.name.split(' ', 2)[0], "/employees/#{employee.id}"
 
-#employees_slider
-  %ul.employee_images
-    - @employees.each do |employee|
-      %li{:id => "#{employee.id}"}= image_tag employee.image, :id => "employee_#{employee.id}", :class => "employee_image", :rel => "fancybox"
+  #employees_slider
+    %ul.employee_images
+      - @employees.each do |employee|
+        %li{:id => "#{employee.id}"}= image_tag employee.image, :id => "employee_#{employee.id}", :class => "employee_image", :rel => "fancybox"
 
-- @employees.each do |employee|
-  .employee_info{:id => "info_#{employee.id}"}
-    %h2= employee.name
-    %h3= employee.title
-    %p
-      %b=t ".email"
-      = employee.email
-    %p
-      %b=t ".phone"
-      = employee.phone
+  - @employees.each do |employee|
+    .employee_info{:id => "info_#{employee.id}"}
+      %h2= employee.name
+      %h3= employee.title
+      %p
+        %b=t ".email"
+        = employee.email
+      %p
+        %b=t ".phone"
+        = employee.phone
 
-      
+        
 
-- if can? :manage, @employees      
-  %table{:style=>"width:40%;"}
-    - @employees.each do |employee|
-      %tr
-        %td= employee.name
-        %td
-          .notice.actions
-            = link_to 'Vis', employee_path(employee)
-            = link_to 'Rediger', edit_employee_path(employee)      
-            = link_to 'Slet', employee, :confirm => 'Er du sikker?', :method => :delete
+  - if can? :manage, @employees      
+    %table{:style=>"width:40%;"}
+      - @employees.each do |employee|
+        %tr
+          %td= employee.name
+          %td
+            .notice.actions
+              = link_to 'Vis', employee_path(employee)
+              = link_to 'Rediger', edit_employee_path(employee)      
+              = link_to 'Slet', employee, :confirm => 'Er du sikker?', :method => :delete
 
 
