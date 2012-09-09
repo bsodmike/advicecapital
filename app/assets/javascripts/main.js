@@ -7,11 +7,12 @@
       var genericMenu = $('ul#generic');
       var adminMenu = $('.admin_box');
       var subPages = $('.sub_pages');
+      var investorBox = $('.investor_box')
 
       var width = $(window).width();
 
       if (width <= 1280) {
-        genericMenu.css('right', '300px');
+        genericMenu.css('right', '400px');
 
         adminMenu.css({
           "width" : "60px",
@@ -42,17 +43,28 @@
           });
         subPages.find(".head h3")
           .css({
-            "font-size" : "10px",
-            "margin" : "none"
+            "font-size" : "12px",
+            "margin" : "none",
+            "word-wrap" : "break-word",
+            "word-break" : "normal",
+            "white-space" : "normal"
           });
         subPages.find(".content div")
           .css({
-            "width" : "96px"
+            "width" : "80px"
           });
         subPages.find(".content a")
           .css({
-            "font-size" : "8px"
+            "font-size" : "10px",
+            "word-wrap" : "break-word",
+            "word-break" : "normal",
+            "white-space" : "normal"
           });
+        //investorBox.find("ul li")
+          //.css({
+            //"font-size" : "8px"
+         // });
+
       }  
     }
     fixElementPosition();
