@@ -31,7 +31,7 @@ General comments (optional).
 /* =Body
 -------------------------------------------------------------- */
 body {
-  background: $white url('top_bannerEXT.png') repeat-x;
+  background: #EAECED url("top_bannerEXT.png") repeat-x;
   font-family: Arial, Helvetica, sans-serif;
 }
 #body_background {
@@ -122,7 +122,7 @@ header {
       color: $white;
       font-size: 14px;
       float: left;
-      margin-top: 90px;
+      margin-top: 88px;
       height: 13px;
 
       li {
@@ -206,20 +206,18 @@ header {
   -------------------------------------------------------------- */
 
   #logo {
-    background: url(whitegiraf_small.png);
-    margin: 10px 0 0 900px;
+    /*background: url(logo_new.png);*/
+    margin: 5px 0 0 -100px;
     position: absolute;
-    width: 100px;
-    height: 100px;
+    /*width: 400px;*/
   }
-  #logo_text {
+  /*#logo_text {
     background: url('advicecapital.png');
     width: 330px;
     height: 33px;
     position: absolute;
     margin: 30px 0 0 30px;
-  }
-
+  }*/
 }
 /* =Header END
 -------------------------------------------------------------- */
@@ -234,17 +232,21 @@ header {
 .clearfix { zoom: 1; }
 
 #wrapper {
-  padding: 20px 10px 10px 20px !important;
-  box-shadow: $wrapper-shadow;
-  -webkit-box-shadow: $wrapper-shadow;
-  -moz-box-shadow: $wrapper-shadow;
-  width: 1024px;/*930px;*/
-  min-height: 650px !important;
   height: 100% !important;
-
+  padding: 20px 10px 10px 20px !important;
+  box-shadow: -8px 0px 10px -2px #D5D5D5, 8px 0px 10px -2px #D5D5D5;
+  -webkit-box-shadow: -8px 0px 10px -2px #B1B1B1, 8px 0px 10px -2px #B1B1B1;
+  -moz-box-shadow: -8px 0px 10px -2px #eeeeee, 8px 0px 10px -2px #eeeeee;
+  width: 1024px;
+  background-color: rgba(255, 255, 255, 0.8);
+  margin: -7px 0 0 0;
+  position: fixed;
+  z-index: -1;
 
   #main_content {
-    min-height: 100%;
+    margin-top: 25px;
+    margin-bottom: 60px;
+    min-height: 800px;
 
     #content {
       margin: 20px 0 0 0;
@@ -270,20 +272,13 @@ footer {
   background: -moz-linear-gradient(bottom, rgb(40,54,65) 0%, rgb(34,47,56) 50%, rgb(26,37,46) 75%) repeat;
   background: -webkit-linear-gradient(bottom, rgb(40,54,65) 0%, rgb(34,47,56) 50%, rgb(26,37,46) 75%) repeat;
   background: -ms-linear-gradient(bottom, rgb(40,54,65) 0%, rgb(34,47,56) 50%, rgb(26,37,46) 75%) repeat;
-  background: -webkit-gradient(
-    linear,
-    left bottom,
-    left top,
-    color-stop(0, rgb(40,54,65)),
-    color-stop(0.5, rgb(34,47,56)),
-    color-stop(0.75, rgb(26,37,46)) repeat
-  );
-  -webkit-box-shadow: $footer-shadow;
-     -moz-box-shadow: $footer-shadow;
-          box-shadow: $footer-shadow;
+
+  -webkit-box-shadow: 0 -4px 4px 1px #D1D1D1;
+  -moz-box-shadow: 0 -4px 4px 1px #eeeeee;
+  box-shadow: 0 -4px 4px 1px #D1D1D1;
   height: 75px;
   width: 100%;
-  margin-bottom: 0 !important;
+  bottom: 0 !important;
   position: absolute;
 
   .content {
@@ -299,19 +294,42 @@ footer {
 /* =Page specific
 -------------------------------------------------------------- */
 .sub_pages {
-  -moz-box-shadow: $box-shadow;
-  -webkit-box-shadow: $box-shadow;
-  box-shadow: $box-shadow;
+  -moz-box-shadow: 0 0 10px 2px #eeeeee;
+  -webkit-box-shadow: 0 0 15px 2px #B1B1B1;
+  box-shadow: 0 0 15px 2px #B1B1B1;
   position: fixed;
   top: 140px;
-  left: 0px;  
+  left: 0px;
   width: 180px;
-  height:auto;
+  height: auto;
   margin: 10px 0 10px 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 6px;
 
   .head {
+    color: white;
     width: 180px;
-    height: 20px;
+    height: 31px;
+    text-align: center;
+    background-image: linear-gradient(bottom, #394A57 20%, #293640 45%, #394A57 61%);
+    background-image: -o-linear-gradient(bottom, #394A57 20%, #293640 45%, #394A57 61%);
+    background-image: -moz-linear-gradient(bottom, #394A57 20%, #293640 45%, #394A57 61%);
+    background-image: -webkit-linear-gradient(bottom, #394A57 20%, #293640 45%, #394A57 61%);
+    background-image: -ms-linear-gradient(bottom, #394A57 20%, #293640 45%, #394A57 61%);
+
+    background-image: -webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      color-stop(0.2, #394A57),
+      color-stop(0.45, #293640),
+      color-stop(0.61, #394A57)
+    );
+    -webkit-box-shadow: 0 -4px 4px 1px #D1D1D1;
+    -moz-box-shadow: 0 -4px 4px 1px #eeeeee;
+    box-shadow: 0 -4px 4px 1px #D1D1D1;
+    color: white;
+    border-radius: 6px;
 
     img {
       float:left;
@@ -321,12 +339,12 @@ footer {
       margin: 6px 0 0 6px;
       float: left;
       width: 120px;
-      color: $ac-blue;
+      color: #fff;
     }
   }
 
   .content {
-    margin: 20px 0 0 0;
+    margin: 0;
 
     div {
       border-bottom: 1px solid #999;
@@ -482,24 +500,26 @@ footer {
 /* =Layout Global
 -------------------------------------------------------------- */
 .admin_box, .investor_box {
-  -moz-box-shadow: $box-dark-shadow;
-  -webkit-box-shadow: $box-dark-shadow;
-  box-shadow: $box-dark-shadow;
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-width: 100px;
-  min-height: 40px;
-  margin: 10px 0 10px 20px;
+  -moz-box-shadow: 0 0 10px 2px #eeeeee;
+  -webkit-box-shadow: 0 0 15px 2px #B1B1B1;
+  box-shadow: 0 0 15px 2px #B1B1B1;
+  position: fixed;
+  top: 140px;
+  right: 0px;
+  width: 180px;
+  height: auto;
+  margin: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 6px;
 
   ul {
-    margin: 4px 8px 0 0;
+    margin: 4px 8px 4px 0;
     list-style-type: none;
 
     li {
       margin: 0;
       a {
-        color: $white;
+        color: #000;
       }
     }
   }

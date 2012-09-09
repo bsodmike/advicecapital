@@ -1,8 +1,8 @@
 %header
   = render 'layouts/menu'
   %a{:href => "#{root_url}"}
-    #logo_text
-    #logo
+    //#logo
+    #logo= image_tag "logo_new.png", :width => "460"
     
   = link_to_unless_current image_tag("dk.png"), locale: "da"
   = link_to_unless_current image_tag("uk.png"), locale: "en"
