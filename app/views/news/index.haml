@@ -8,6 +8,7 @@
           %b= news.date.strftime('%d/%m/%y') unless news.date.nil? 
           = " - " + news.title
           = link_to raw(truncate(news.content, :length => 200)), news
+          
         - if can? :manage, news
           %td
             .notice.actions

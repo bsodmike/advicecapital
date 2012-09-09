@@ -1,15 +1,15 @@
 #main_content
-	%p
-	  %b= @news.date.strftime("%d-%m-%y")
-	%p
-	  %b Titel:
-	  = @news.title
-	%p
-	  %b Indhold:
-	  = raw(@news.content)
+  %p
+    %b= @news.date.strftime("%d-%m-%y")
+  %p
+    %b Titel:
+    = @news.title
+  %p
+    %b Indhold:
+    = raw(@news.content)
 
-	- if can? :update, @news
-	  .notice.actions
-	    = link_to 'Rediger', edit_news_path(@news)
-	    
-	= link_to 'Tilbage', news_index_path
+  - if can? :update, @news
+    .notice.actions
+      = link_to 'Rediger', edit_news_path(@news)
+
+  = link_to 'Tilbage', news_index_path
