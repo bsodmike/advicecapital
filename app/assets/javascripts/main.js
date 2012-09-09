@@ -60,6 +60,18 @@
             "word-break" : "normal",
             "white-space" : "normal"
           });
+        organisationBox.css({
+          "width" : "100px",
+          "margin" : "10px 0 10px 0"
+        });
+        organisationBox.find("ul li")
+          .css({
+            "font-size" : "12px"
+          });
+        //investorBox.find("ul li")
+          //.css({
+            //"font-size" : "8px"
+         // });
       }
 
       if (width <= 1280) {
@@ -111,7 +123,14 @@
             "word-break" : "normal",
             "white-space" : "normal"
           });
-        organisationBox.find("")
+        organisationBox.css({
+          "width" : "100px",
+          "margin" : "10px 0 10px 0"
+        });
+        organisationBox.find("ul li")
+          .css({
+            "font-size" : "12px"
+          });
         //investorBox.find("ul li")
           //.css({
             //"font-size" : "8px"
