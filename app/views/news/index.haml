@@ -13,7 +13,6 @@
             .notice.actions
               = link_to 'Rediger', edit_news_path(news)
               = link_to 'Slet', news, :confirm => 'Er du sikker?', :method => :delete
-          %td
     = paginate @news
 
   %br/
