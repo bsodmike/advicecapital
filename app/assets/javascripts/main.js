@@ -13,7 +13,7 @@
       var width = $(window).width();
 
       if (width <= 1366) {
-        genericMenu.css('right', '300px');
+        genericMenu.css('right', '350px');
         adminMenu.css({
           "width" : "60px",
           "height" : "auto",
