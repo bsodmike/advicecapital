@@ -6,7 +6,7 @@
       %br/
       %b= news.title
       %br/
-      = link_to raw(truncate(news.content, :length => 100)), news
+      = link_to raw(truncate(news.content, :length => 200)), news
 
 = link_to t('.more_news'), news_index_path
       
