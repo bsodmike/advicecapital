@@ -14,8 +14,9 @@
 
       if (width <= 1366) {
         genericMenu.css('right', '380px');
+
         adminMenu.css({
-          "width" : "60px",
+          "width" : "130px",
           "height" : "auto",
           "margin" : "6px 0 10px 5px",
           "padding" : "4px",
@@ -26,32 +27,26 @@
             "margin" : "0",
             "padding" : "0"
           });
-        adminMenu.find("div:nth-child(2)")
-          .css({
-            "float" : "left",
-            "margin" : "0",
-            "padding" : "0"
-          });
 
         subPages.css({
-          "width" : "100px",
+          "width" : "140px",
           "margin" : "10px 0 10px 0"
         });
         subPages.find(".head")
           .css({
-            "width" : "96px"
+            "width" : "140px"
           });
         subPages.find(".head h3")
           .css({
-            "font-size" : "12px",
-            "margin" : "none",
+            "font-size" : "14px",
+            "margin" : "8px 0 0 0",
             "word-wrap" : "break-word",
             "word-break" : "normal",
             "white-space" : "normal"
           });
         subPages.find(".content div")
           .css({
-            "width" : "80px"
+            "width" : "130px"
           });
         subPages.find(".content a")
           .css({
@@ -187,40 +182,46 @@
       }
     });
     
-    $('.employee_images').roundabout({
-      autoplay: true,
-      autoplayPauseOnHover: true,
-      autoplayDuration: 5000,
-      //duration: 3000,
-      minOpacity: 0.2,
-      maxOpacity: 1.2,
-      minScale: 0.6,
-      maxScale: 1.0,
-      responsive: true,
-      triggerFocusEvents: true,
-      clickToFocusCallback: function() {
-        var id = $(this).find(".roundabout-in-focus").attr("id");
-        var url = '/employees/' + id + '.json';
-        
-        $.ajax({
-          dataType: 'json',
-          url: url,
-          async: false,
-          global: false,
-          
-          success: function (data) {        	  
-            $('.employees_info').html(data.name);
-            
-            $('#info_' + data.id).css({
-              display: 'block'
-            });
-            setTimeout(function() { 
-              $('#info_' + data.id).css({display: 'none'});
-            }, 5000);
-          }
-        });
-      }
+    $('#employees_slider').jCarouselLite({
+      auto: 1,
+      visible: 3,
+      start: 0,
+      speed: 5000
     });
+    // $('.employee_images').roundabout({
+    //   autoplay: true,
+    //   autoplayPauseOnHover: true,
+    //   autoplayDuration: 5000,
+    //   //duration: 3000,
+    //   minOpacity: 0.2,
+    //   maxOpacity: 1.2,
+    //   minScale: 0.6,
+    //   maxScale: 1.0,
+    //   responsive: true,
+    //   triggerFocusEvents: true,
+    //   clickToFocusCallback: function() {
+    //     var id = $(this).find(".roundabout-in-focus").attr("id");
+    //     var url = '/employees/' + id + '.json';
+        
+    //     $.ajax({
+    //       dataType: 'json',
+    //       url: url,
+    //       async: false,
+    //       global: false,
+          
+    //       success: function (data) {        	  
+    //         $('.employees_info').html(data.name);
+            
+    //         $('#info_' + data.id).css({
+    //           display: 'block'
+    //         });
+    //         setTimeout(function() { 
+    //           $('#info_' + data.id).css({display: 'none'});
+    //         }, 5000);
+    //       }
+    //     });
+    //   }
+    // });
 
     // Organisation_box
     $(".organisation_box ul li").hover(function() {

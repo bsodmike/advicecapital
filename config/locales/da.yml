@@ -131,9 +131,9 @@ da:
   pages:      
     index:
       latest_news_portfolio:
-        latest_news_portfolio: Seneste nyt om porteføljeselskaber
+        latest_news_portfolio: Finans Nyheder
       latest_news:
-        title: Seneste nyt
+        title: Advice Nyheder
         more_news: Flere nyheder fra Advice Capital A/S
       employees:
         title: Hvem er vi

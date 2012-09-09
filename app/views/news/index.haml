@@ -1,22 +1,23 @@
-%h3 Nyheder
+#main_content
+  %h3 Nyheder
 
-%table
-  - @news.each do |news|
-    %tr
-      %td
-        %b= news.date.strftime('%d/%m/%y') unless news.date.nil?
-        \-
-        = link_to raw(truncate(news.content, :length => 50)), news
-      - if can? :manage, news
+  %table
+    - @news.each do |news|
+      %tr
         %td
-          .notice.actions
-            = link_to 'Rediger', edit_news_path(news)
-            = link_to 'Slet', news, :confirm => 'Er du sikker?', :method => :delete
-        %td
-  = paginate @news
+          %b= news.date.strftime('%d/%m/%y') unless news.date.nil?
+          \-
+          = link_to raw(truncate(news.content, :length => 50)), news
+        - if can? :manage, news
+          %td
+            .notice.actions
+              = link_to 'Rediger', edit_news_path(news)
+              = link_to 'Slet', news, :confirm => 'Er du sikker?', :method => :delete
+          %td
+    = paginate @news
 
-%br/
-%br/
-- if can? :create, News
-  .notice.actions
-    = link_to t('.create_news'), new_news_path
+  %br/
+  %br/
+  - if can? :create, News
+    .notice.actions
+      = link_to t('.create_news'), new_news_path

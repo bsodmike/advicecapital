@@ -33,6 +33,7 @@ General comments (optional).
 body {
   background: #EAECED url("top_bannerEXT.png") repeat-x;
   font-family: Arial, Helvetica, sans-serif;
+  margin: 0 !important;
 }
 #body_background {
   background: url(baggrundsgrafik.png);
@@ -124,6 +125,8 @@ header {
       float: left;
       margin-top: 88px;
       height: 13px;
+      position: absolute;
+      z-index: 10;
 
       li {
         margin: 0;
@@ -225,7 +228,12 @@ header {
 /* =Container, Wrapper
 -------------------------------------------------------------- */
 
-.container {padding: 0 !important;min-height: 500px;width:1054px;}
+.container {
+  padding: 0 !important;
+  min-height: 100%;
+  height: 100%;
+  width:1054px;
+}
 
 .clearfix:before, .clearfix:after {  content: "\0020"; display: block; height: 0; visibility: hidden;    } 
 .clearfix:after { clear: both; }
@@ -240,8 +248,6 @@ header {
   width: 1024px;
   background-color: rgba(255, 255, 255, 0.8);
   margin: -7px 0 0 0;
-  position: fixed;
-  z-index: 0;
 
   #main_content {
     margin-top: 25px;
@@ -278,8 +284,6 @@ footer {
   box-shadow: 0 -4px 4px 1px #D1D1D1;
   height: 75px;
   width: 100%;
-  bottom: 0 !important;
-  position: absolute;
 
   .content {
     height: 20px;
@@ -307,7 +311,6 @@ footer {
   border-radius: 6px;
 
   .head {
-    color: white;
     width: 180px;
     height: 31px;
     text-align: center;
@@ -522,6 +525,54 @@ footer {
         color: #000;
       }
     }
+  }
+}
+
+.side_box {
+  -moz-box-shadow: 0 0 10px 2px #eeeeee;
+  -webkit-box-shadow: 0 0 15px 2px #B1B1B1;
+  box-shadow: 0 0 15px 2px #B1B1B1;
+  width: 360px;
+  min-height: 200px;
+  height: auto;
+  margin: 10px 0 10px 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 6px;
+
+  .head {
+    width: 100%;
+    height: 31px;
+    text-align: center;
+    background-image: linear-gradient(bottom, #394A57 20%, #293640 45%, #394A57 61%);
+    background-image: -o-linear-gradient(bottom, #394A57 20%, #293640 45%, #394A57 61%);
+    background-image: -moz-linear-gradient(bottom, #394A57 20%, #293640 45%, #394A57 61%);
+    background-image: -webkit-linear-gradient(bottom, #394A57 20%, #293640 45%, #394A57 61%);
+    background-image: -ms-linear-gradient(bottom, #394A57 20%, #293640 45%, #394A57 61%);
+
+    background-image: -webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      color-stop(0.2, #394A57),
+      color-stop(0.45, #293640),
+      color-stop(0.61, #394A57)
+    );
+    -webkit-box-shadow: 0 -4px 4px 1px #D1D1D1;
+    -moz-box-shadow: 0 -4px 4px 1px #eeeeee;
+    box-shadow: 0 -4px 4px 1px #D1D1D1;
+    color: white;
+    border-radius: 6px;
+
+    h3 {
+      /*margin: 10px 0 0 10px;*/
+      padding: 6px;
+      text-align: left;
+      width: 120px;
+      color: #fff;
+    }
+  }
+  .content {
+    padding: 10px;
   }
 }
 /* =Layout Global END

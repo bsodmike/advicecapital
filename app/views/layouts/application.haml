@@ -58,20 +58,23 @@
         - if current_user && current_user.admin?
           = render 'layouts/admin_menu'
         - elsif current_user && current_user.investor?
-          = render 'layouts/investor_menu'        
+          = render 'layouts/investor_menu'   
+
+        #user_nav
+          - if user_signed_in?
+            Logget ind som 
+            = link_to current_user.email, admin_user_path(current_user)
+            |
+            = link_to "Log ud", destroy_user_session_path, :method => :delete     
 
         = render 'layouts/sub_pages'
         
         = yield
-            
-    = yield :pre_body_close  
-    = render 'layouts/footer'
+      
 
-  #user_nav
-    - if user_signed_in?
-      Logget ind som 
-      = link_to current_user.email, admin_user_path(current_user)
-      |
-      = link_to "Log ud", destroy_user_session_path, :method => :delete
+    = yield :pre_body_close  
+    = render 'layouts/footer'            
+
+  
 
 

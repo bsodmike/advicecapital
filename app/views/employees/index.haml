@@ -19,6 +19,8 @@
       %b=t ".phone"
       = employee.phone
 
+      
+
 - if can? :manage, @employees      
   %table{:style=>"width:40%;"}
     - @employees.each do |employee|
