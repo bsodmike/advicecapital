@@ -12,4 +12,8 @@ class News < ActiveRecord::Base
     "#{id}-#{title.parameterize}"
   end
 
+  class News::Translation
+  	attr_accessible :locale
+  end
+
 end

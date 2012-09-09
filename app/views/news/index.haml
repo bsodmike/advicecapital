@@ -4,7 +4,7 @@
   - @news.each do |news|
     %tr
       %td
-        %b= news.created_at.strftime('%D - %H:%m')
+        %b= news.date.strftime('%d/%m/%y') unless news.date.nil?
         \-
         = link_to raw(truncate(news.content, :length => 50)), news
       - if can? :manage, news

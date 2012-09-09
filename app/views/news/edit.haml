@@ -2,7 +2,9 @@
 
 = render 'form'
 
+%br/
 - if current_user && current_user.admin?
-  = link_to 'Vis', @news
-  |
-  = link_to 'Tilbage', news_index_path
+  .notice.actions
+    = link_to 'Vis', @news
+    |
+    = link_to 'Tilbage', news_index_path
