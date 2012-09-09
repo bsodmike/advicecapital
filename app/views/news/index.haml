@@ -6,11 +6,10 @@
       %td
         %b= news.created_at.strftime('%D - %H:%m')
         \-
-        = raw(truncate(news.content, :length => 50))
+        = link_to raw(truncate(news.content, :length => 50)), news
       - if can? :manage, news
         %td
           .notice.actions
-            = link_to 'Vis', news
             = link_to 'Rediger', edit_news_path(news)
             = link_to 'Slet', news, :confirm => 'Er du sikker?', :method => :delete
         %td

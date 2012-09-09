@@ -7,9 +7,14 @@
       var genericMenu = $('ul#generic');
       var adminMenu = $('.admin_box');
       var subPages = $('.sub_pages');
-      var investorBox = $('.investor_box')
+      var investorBox = $('.investor_box');
+      var organisationBox = $('.organisation_box');
 
       var width = $(window).width();
+
+      if (width <= 1366) {
+        genericMenu.css('right', '300px');
+      }
 
       if (width <= 1280) {
         genericMenu.css('right', '400px');
@@ -60,6 +65,7 @@
             "word-break" : "normal",
             "white-space" : "normal"
           });
+        organisationBox.find("")
         //investorBox.find("ul li")
           //.css({
             //"font-size" : "8px"
