@@ -32,6 +32,9 @@ da:
   recipients:
     index:
       title: Nyhedsmodtagere
+      firstname: Fornavn
+      lastname: Efternavn
+      email: Email
     new:
       title: Modtag nyheder fra Advice Capital
     edit:
