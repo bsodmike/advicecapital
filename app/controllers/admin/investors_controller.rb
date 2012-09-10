@@ -5,7 +5,7 @@ class Admin::InvestorsController < AdminController
 
   def show
     @investor = get_investor(params[:id])
-    @investorStocks = @investor.stocks
+    #@investorStocks = @investor.stocks
     @stocks = Stock.all
     @profile = @investor.users
 
@@ -14,7 +14,7 @@ class Admin::InvestorsController < AdminController
     @throwoffPercent = @throwoff / @investor.entry_rate.to_i
 
     @stock_value = @stocks.map(&:value)
-    @investor_stock_value = @investorStocks.map(&:value)
+    #@investor_stock_value = @investorStocks.map(&:value)
     @stock_month = @stocks.map(&:month)
     @stock_year = @stocks.map(&:year)
 
