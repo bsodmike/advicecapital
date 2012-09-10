@@ -1,12 +1,11 @@
-#main_content
-	%h2= @video.title
+%h2= @video.title
 
-	- if @h264_encoding.success? && @ogg_encoding.success?
-	  %video#movie{:controls => "", :height => @h264_encoding.height, :autoplay => "autoplay", :preload => "none", :width => @h264_encoding.width}
-	    %source{:src => @h264_encoding.url, :type => "video/mp4"}
-	    %source{:src => @ogg_encoding.url, :type => "video/ogv"}
+- if @h264_encoding.success? && @ogg_encoding.success?
+  %video#movie{:controls => "", :height => @h264_encoding.height, :autoplay => "autoplay", :preload => "none", :width => @h264_encoding.width}
+    %source{:src => @h264_encoding.url, :type => "video/mp4"}
+    %source{:src => @ogg_encoding.url, :type => "video/ogv"}
 
-	  #flash_player
+  #flash_player
 
-	  = render 'flash'
+  = render 'flash'
 

@@ -1,17 +1,16 @@
-#main_content
-  = form_for @video do |f|
-    %p
-      = f.label :title, "Titel:"
-      %br/
-      = f.text_field :title
-
-    / The control will appear next to this, and the video ID will be stored here after the upload
-    %input{:type => "hidden", :name => "video[panda_video_id]", :id => "returned_video_id"}
-
-    / upload progress bar (optional)
-    #upload_progress.panda_upload_progress
+= form_for @video do |f|
+  %p
+    = f.label :title, "Titel:"
     %br/
-    %br/
-    = f.submit "Upload video"
+    = f.text_field :title
 
-  = render "script"
+  / The control will appear next to this, and the video ID will be stored here after the upload
+  %input{:type => "hidden", :name => "video[panda_video_id]", :id => "returned_video_id"}
+
+  / upload progress bar (optional)
+  #upload_progress.panda_upload_progress
+  %br/
+  %br/
+  = f.submit "Upload video"
+
+= render "script"
