@@ -204,7 +204,7 @@
 
     // Organisation Info
     $(".employee_names li").hover(function () {
-      var self = $(this);    
+      var self = $(this);
       var id = getId(self);
       
       $('#info_' + id).css({display: 'block'});
@@ -216,12 +216,15 @@
       $('#info_' + id).css({display: 'none'});
 	  });
 
-    $('.employee_image').hover(function() {
-      var self = $(this);    
+    $('.employee_image').hover(function(e) {
+      var self = $(this);
       var id = getId(self);
       
-      $('#info_' + id).show();
-      
+      if( $('.employee_info').css("display") == 'none' ) {
+        $('#info_' + id).show();
+        $('.employee_info').css('display: block');
+      }
+
     }, function () {
       var self = $(this);
       var id = getId(self);

@@ -6,7 +6,7 @@
 #employees_slider
   %ul.employee_images
     - @employees.each do |employee|
-      %li[employee]
+      %li
         = image_tag employee.image, :id => "employee_#{employee.id}", :class => "employee_image"
         %p.employee_info{:id => "info_#{employee.id}"}
           = employee.name
