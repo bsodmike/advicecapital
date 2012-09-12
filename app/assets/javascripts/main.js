@@ -220,18 +220,12 @@
       var id = getId(self);
       
       $('#info_' + id).css({
-        'display'  : 'block',
-        'position' : 'relative',
-        'margin'   : '0',
-        'padding'  : '0',
-        'top'      : '310px',
-        'left'     : '-224px'
-      });
+        'display'  : 'inline',
+        'top'      : '300px',
+        'left'     : '300px',
+        'position' : 'absolute'
 
-      $('.employee_info').css({
-        'margin-top' : '0'
       });
-
     }, function () {
       var self = $(this);
       var id = getId(self);
