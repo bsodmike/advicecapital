@@ -6,7 +6,19 @@
 #employees_slider
   %ul.employee_images
     - @employees.each do |employee|
-      %li{:id => "#{employee.id}"}= image_tag employee.image, :id => "employee_#{employee.id}", :class => "employee_image", :rel => "fancybox"
+      %li[employee]= image_tag employee.image, :id => "employee_#{employee.id}", :class => "employee_image", :rel => "fancybox"
+      .employee_info{:id => "info_#{employee.id}"}
+        %h3
+          = employee.name
+          %br/
+          = employee.title
+        %br/
+        %b=t ".email"
+        = employee.email
+        %br/
+        %b=t ".phone"
+        = employee.phone
+
 
 - @employees.each do |employee|
   .employee_info{:id => "info_#{employee.id}"}

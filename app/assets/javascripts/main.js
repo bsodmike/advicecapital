@@ -184,44 +184,10 @@
     
     $('#employees_slider').jCarouselLite({
       auto: 1,
-      visible: 3,
+      visible: 4,
       start: 0,
       speed: 5000
     });
-    // $('.employee_images').roundabout({
-    //   autoplay: true,
-    //   autoplayPauseOnHover: true,
-    //   autoplayDuration: 5000,
-    //   //duration: 3000,
-    //   minOpacity: 0.2,
-    //   maxOpacity: 1.2,
-    //   minScale: 0.6,
-    //   maxScale: 1.0,
-    //   responsive: true,
-    //   triggerFocusEvents: true,
-    //   clickToFocusCallback: function() {
-    //     var id = $(this).find(".roundabout-in-focus").attr("id");
-    //     var url = '/employees/' + id + '.json';
-        
-    //     $.ajax({
-    //       dataType: 'json',
-    //       url: url,
-    //       async: false,
-    //       global: false,
-          
-    //       success: function (data) {        	  
-    //         $('.employees_info').html(data.name);
-            
-    //         $('#info_' + data.id).css({
-    //           display: 'block'
-    //         });
-    //         setTimeout(function() { 
-    //           $('#info_' + data.id).css({display: 'none'});
-    //         }, 5000);
-    //       }
-    //     });
-    //   }
-    // });
 
     // Organisation_box
     $(".organisation_box ul li").hover(function() {
@@ -229,6 +195,7 @@
     }, function() {
       $(".employees_info").hide();
     });
+
     
 	  var getId = function (self) {
 		  return self.attr('id').replace(/(image|employee)_/, '');
@@ -247,6 +214,36 @@
 
       $('#info_' + id).css({display: 'none'});
 	  });
+
+    $('.employee_image').hover(function() {
+      var self = $(this);    
+      var id = getId(self);
+      
+      $('#info_' + id).css({
+        'display'  : 'block',
+        'position' : 'relative',
+        'margin'   : '0',
+        'padding'  : '0',
+        'top'      : '310px',
+        'left'     : '-224px'
+      });
+
+      $('.employee_info').css({
+        'margin-top' : '0'
+      });
+
+    }, function () {
+      var self = $(this);
+      var id = getId(self);
+
+      $('#info_' + id).css({display: 'none'});
+    })
+    .click(function(e) {
+      $.fancybox({
+        'href' : e.target.src
+      });
+    });
+
   
    tinyMCE.init({
       mode : "textareas",

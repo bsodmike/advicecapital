@@ -33,7 +33,7 @@ class Admin::InvestorsController < AdminController
 
   def new
     @investor = Investor.new
-    @investor.stocks.build
+    #@investor.stocks.build
   end
 
   def create

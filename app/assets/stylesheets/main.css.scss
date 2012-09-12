@@ -430,13 +430,34 @@ footer {
 
 /* =Employee Page specific
 -------------------------------------------------------------- */
+
 #employees_slider {
-  width: 600px;
+  margin-left: 5%;
+  width: 100%;
   height: 400px;
   
   .employee_image {
     width: 200px;
     height: 300px;
+    padding-bottom: 4px;
+    margin-right: 25px !important;
+    vertical-align: top !important;
+    margin-top: 0 !important;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      border-bottom: 4px solid #000;
+
+      #employees_info {
+        font-weight: normal;
+        width: 150px;
+        position: relative;
+        display: block;
+      }
+    }
   }
 }
 #employees_index {
@@ -449,14 +470,16 @@ footer {
     margin-right: 20px;
     cursor: pointer;
   }
-  #employee_info {
+  #employees_info {
     font-weight: normal;
-    float: right;
     width: 150px;
   }
 }
 .employee_info {
   display: none;
+  font-size: 10px !important;
+  white-space: normal;
+  width: auto;
 }
 .organisation_box {
   -moz-box-shadow: $box-shadow;
