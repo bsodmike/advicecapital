@@ -196,6 +196,7 @@
       $(".employees_info").hide();
     });
 
+    $('p.employee_info').hide();
     
 	  var getId = function (self) {
 		  return self.attr('id').replace(/(image|employee)_/, '');
@@ -219,16 +220,13 @@
       var self = $(this);    
       var id = getId(self);
       
-      $('#info_' + id).css({
-        'display'  : 'inline',
-        'position' : 'relative'
-
-      });
+      $('#info_' + id).show();
+      
     }, function () {
       var self = $(this);
       var id = getId(self);
 
-      $('#info_' + id).css({display: 'none'});
+      $('#info_' + id).hide();
     })
     .click(function(e) {
       $.fancybox({
