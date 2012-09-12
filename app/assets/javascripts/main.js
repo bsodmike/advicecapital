@@ -221,9 +221,7 @@
       
       $('#info_' + id).css({
         'display'  : 'inline',
-        'top'      : '300px',
-        'left'     : '300px',
-        'position' : 'absolute'
+        'position' : 'relative'
 
       });
     }, function () {
