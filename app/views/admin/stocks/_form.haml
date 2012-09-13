@@ -10,18 +10,33 @@
   .field
     = f.label :value, "Værdi"
     %br/
-    = f.number_field :value
+    = f.text_field :value
+    %br/
+    %small
+      %i Skal angives som fx. "0000.00"
+    %br/
+    %br/
   .field
     = f.label :month, "Måned"
     %br/
     = f.number_field :month
+    %br/
     %small
-      %i Skal angives i tal: 1, 2, 3
+      %i Skal angives i heltal: 1, 2, 3
+    %br/
+    %br/
   .field
     = f.label :year, "År"
     %br/
     = f.number_field :year
-
+    %br/
+    %small
+      %i Skal angives med 4 cifre, fx. "2012"
+    %br/
     %br/
   .actions
     = f.submit "Gem"
+
+  %br/
+  .actions.notice
+    = link_to 'Tilbage', admin_stocks_path
