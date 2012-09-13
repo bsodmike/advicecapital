@@ -69,11 +69,9 @@
 				%td= s.month
 				%td= s.year
 
-%div{:style=>"float:right;margin-top:80px;"}
-	 
-	- chart = Gchart.line(:size => '600x300', :title => "Kursudvikling for Advice Invest A/S", :bg => 'fff', :legend => ['Aktie Værdi'], :data => [@stock_value], :axis_with_labels => 'y,x', :line_colors => "FF0000", :axis_labels => [ ['', 'Kurs'], ['Jan','Feb','Mar','Apr','Maj','Juni','Juli','Aug','Sep','Okt','Nov','Dec'] ]) unless @stock_value.empty?
+%div{:style=>"float:right;margin-top:80px;"}	
 
-	%img{:src => chart}
+	%img{:src => Stock.generate_stock_chart(@stock_value)}
 	%br/
 	%br/
 	= button_to 'Skatteregnskab', ''
