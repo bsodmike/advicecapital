@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120517081602) do
+ActiveRecord::Schema.define(:version => 20120913182051) do
 
   create_table "advice_page_translations", :force => true do |t|
     t.integer  "advice_page_id"
@@ -76,8 +76,9 @@ ActiveRecord::Schema.define(:version => 20120517081602) do
     t.string   "email"
     t.string   "phone"
     t.string   "image"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+    t.string   "remote_image_url"
   end
 
   create_table "images", :force => true do |t|
@@ -159,11 +160,11 @@ ActiveRecord::Schema.define(:version => 20120517081602) do
   end
 
   create_table "stocks", :force => true do |t|
-    t.float    "value"
+    t.decimal  "value",      :precision => 6, :scale => 2
     t.string   "month"
     t.string   "year"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                               :null => false
+    t.datetime "updated_at",                               :null => false
   end
 
   create_table "users", :force => true do |t|
