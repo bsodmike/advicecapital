@@ -195,8 +195,6 @@
     }, function() {
       $(".employees_info").hide();
     });
-
-    $('p.employee_info').hide();
     
 	  var getId = function (self) {
 		  return self.attr('id').replace(/(image|employee)_/, '');
@@ -216,26 +214,27 @@
       $('#info_' + id).css({display: 'none'});
 	  });
 
-    $('.employee_image').hover(function(e) {
-      var self = $(this);
-      var id = getId(self);
-      
-      if( $('.employee_info').css("display") == 'none' ) {
-        $('#info_' + id).show();
-        $('.employee_info').css('display: block');
-      }
-
-    }, function () {
-      var self = $(this);
-      var id = getId(self);
-
-      $('#info_' + id).hide();
-    })
-    .click(function(e) {
+    $('.employee_image').click(function(e) {
       $.fancybox({
         'href' : e.target.src
       });
     });
+    //.hover(function(e) {
+    //   var self = $(this);
+    //   var id = getId(self);
+      
+    //   if( $('.employee_info').css("display") == 'none' ) {
+    //     $('#info_' + id).show();
+    //     $('.employee_info').css('display: block');
+    //   }
+
+    // }, function () {
+    //   var self = $(this);
+    //   var id = getId(self);
+
+    //   $('#info_' + id).hide();
+    // })
+    
 
   
    tinyMCE.init({

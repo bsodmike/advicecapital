@@ -460,9 +460,18 @@ footer {
         display: block;
         position:relative;
       }
-
     }
   }
+}
+
+.employee_image + p {
+    visibility: hidden;
+}
+.employee_image:hover + p {
+    visibility: visible;
+}
+p.employee_info {
+  font-size: 12px !important;
 }
 #employees_index {
   float: left;
@@ -479,9 +488,7 @@ footer {
     width: 150px;
   }
 }
-p.employee_info {
-  font-size: 10px !important;
-}
+
 .organisation_box {
   -moz-box-shadow: $box-shadow;
   -webkit-box-shadow: $box-shadow;
