@@ -8,7 +8,7 @@ class Stock < ActiveRecord::Base
 
 	validates :value, :format => { :with => /^\d+??(?:\.\d{0,2})?$/ }, :numericality => {:greater_than => 0, :less_than => 9999}
 
-	def self.generate_stock_chart(value)
+	def self.generate_stock_chart(value, month, year)
     unless value.empty?
       chart = Gchart.line do |g|
         g.size = '600x300'
