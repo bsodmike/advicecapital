@@ -1,7 +1,7 @@
 class Admin::StocksController < AdminController
 
   def index
-    @stocks = Stock.order(:month).page(params[:page]).per(12)
+    @stocks = Stock.order(:year, :month).page(params[:page]).per(12)
 
     respond_to do |format|
       format.html # index.html.erb
