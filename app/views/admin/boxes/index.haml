@@ -1,8 +1,8 @@
-%h3 Boxes
+%h3 Boxe
 
 - @boxes.each do |box|
-  .span-7
-    %h3= box.name
+  .span-8
+    %h3= box.title
     %br/
     = raw box.content
     - if can? :update, box

@@ -16,7 +16,7 @@ class Admin::BoxesController < AdminController
     @box = get_box(params[:id])
 
     if @box.update_attributes(params[:box])
-      redirect_to(root_url, :notice => "Boxen blev opdateret")
+      redirect_to admin_boxes_url, :notice => "Boxen blev opdateret"
     else
       render :edit
     end
