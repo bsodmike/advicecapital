@@ -1,3 +1,4 @@
+# encode UTF-8
 class Admin::StocksController < AdminController
 
   def index
