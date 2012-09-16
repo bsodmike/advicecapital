@@ -1,4 +1,4 @@
-#encoding UTF-8
+# encoding: utf-8
 
 class Stock < ActiveRecord::Base
 	has_many :investor_stocks
