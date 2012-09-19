@@ -5,8 +5,11 @@ class Admin::InvestorsController < AdminController
 
   def show
     @investor = get_investor(params[:id])
-    #@investorStocks = @investor.stocks
-    @stocks = Stock.all
+    @entry_date_month = @investor.entry_date.strftime("%_m").to_s
+    @entry_date_year = @investor.entry_date.strftime("%Y").to_s
+
+
+    @stocks = Stock.where("month > ? AND year > ?", @entry_date_month, @entry_date_year)
     @profile = @investor.users
 
     @throwoff = @investor.current_rate.to_i - @investor.entry_rate.to_i# * @investor.entry_stock_count
@@ -14,11 +17,9 @@ class Admin::InvestorsController < AdminController
     @throwoffPercent = @throwoff / @investor.entry_rate.to_i
 
     @stock_value = @stocks.map(&:value)
-    #@investor_stock_value = @investorStocks.map(&:value)
     @stock_month = @stocks.map(&:month)
     @stock_year = @stocks.map(&:year)
 
-    @array = 0..300
 
     respond_to do |format|
       format.html
@@ -55,10 +56,9 @@ class Admin::InvestorsController < AdminController
     
     respond_to do |format|
       if @investor.update_attributes(params[:investor])
-        format.html { redirect_to admin_investor_path(@investor), :notice => "Investor was successfully updated." }
-        format.json { render :json => @investor }
+        redirect_to admin_investor_path(@investor), :notice => "Investor was successfully updated."
       else
-        format.html { render :edit }
+        render :edit
       end
     end    
   end
