@@ -7,4 +7,9 @@ tmp/*
 .sass-cache/
 .idea
 .DS_Store
+<<<<<<< HEAD
 .c9revisions
+=======
+
+app/assets/.DS_Store
+>>>>>>> added to gitignore
