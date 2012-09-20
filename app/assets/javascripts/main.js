@@ -147,7 +147,9 @@
       $(this).delay(2500).fadeOut();
     });
 
-    $('.date_select').datepicker({dateFormat: "dd-mm-yy"});
+    $('.date_select').datepicker({
+      dateFormat: "dd-mm-yy"
+    });
 
     $("a[rel=fancybox]").fancybox({
       overlayShow: true,
