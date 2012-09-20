@@ -17,6 +17,8 @@ class Admin::InvestorsController < AdminController
     @throwoffPercent = @throwoff / @investor.entry_rate.to_i
 
     @stock_value = @stocks.map(&:value)
+    stock_order = Stock.order('value ASC').all
+    @stock_order_value = stock_order.map(&:value)
     @stock_month = @stocks.map(&:month)
     @stock_year = @stocks.map(&:year)
 
