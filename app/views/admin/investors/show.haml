@@ -72,11 +72,11 @@
 
 	- unless @stocks.nil?
 		- dates = @stocks.each do |s|
-			- s.date.strftime("%d/%m/%y") unless s.date.nil?
+			- s.date
 
   
 	 
-	- chart = Gchart.line(:size => '600x300', :title => "Kursudvikling for Advice Invest A/S", :bg => 'fff', :legend => ['Aktie Værdi'], :data => [@stock_value], :axis_with_labels => 'y,x', :line_colors => "FF0000", :axis_labels => [ (9..22).map { |n| n * 50 }, dates ]) unless @stock_value.empty?
+	- chart = Gchart.line(:size => '600x300', :title => "Kursudvikling for Advice Invest A/S", :bg => 'fff', :legend => ['Aktie Værdi'], :data => [@stock_value], :axis_with_labels => 'y,x', :line_colors => "FF0000", :axis_labels => [ (9..22).map { |n| n * 50 }, dates.map(&:date).strftime("%d/%m%y") ]) unless @stock_value.empty?
 
 	%img{:src => chart}
 	%br/
