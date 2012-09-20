@@ -73,7 +73,7 @@
 
 	
 	- month_year = @stocks.each do |s|
-		- s.month.concat("/#{s.year}")
+		- s.month.concat("/"+s.year) unless s.month.present? && s.year.present?
 
 	- values = [450..1100]
   
