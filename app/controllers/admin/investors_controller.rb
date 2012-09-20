@@ -13,7 +13,7 @@ class Admin::InvestorsController < AdminController
     end
 
 
-    @stocks = Stock.where("year >= ?", @entry_date_year)
+    @stocks = Stock.where("date >= ?", @investor.entry_date)
     @profile = @investor.users
 
     @throwoff = @investor.current_rate.to_i - @investor.entry_rate.to_i# * @investor.entry_stock_count
