@@ -17,6 +17,10 @@
     %br/
     %br/
   .field
+    = f.label :date, "Dato"
+    %br/
+    = f.text_field :date, :class => "date_select"
+  .field
     = f.label :month, "Måned"
     %br/
     = f.number_field :month
