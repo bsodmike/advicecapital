@@ -11,7 +11,7 @@
 
 	%b Dato for indtrædelse:
 	%br/
-	= @investor.entry_date.strftime('%d-%m-%y')
+	= @entry_date
 	%br/
 	%br/
 
@@ -71,9 +71,9 @@
 
 %div{:style=>"float:right;margin-top:80px;"}
 
-	
-	- month_year = @stocks.each do |s|
-		- s.month.to_s.concat("/#{s.year.to_s}") if s.month.present? || s.year.present?
+	- unless @stocks.nil?
+		- month_year = @stocks.each do |s|
+			- s.month.to_s + "/" + s.year.to_s if s.month.present? && s.year.present?
 
   
 	 

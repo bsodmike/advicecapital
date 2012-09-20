@@ -17,7 +17,7 @@
 				%td= investor.name
 				%td= investor.email
 				%td= investor.investor_type
-				%td= investor.entry_date.strftime("%d/%m/%y")
+				%td= investor.entry_date.strftime("%d/%m/%y") unless investor.entry_date.nil?
 				%td= number_with_delimiter(investor.entry_price) + " kr."
 				%td= investor.entry_stock_price
 				%td= investor.entry_rate

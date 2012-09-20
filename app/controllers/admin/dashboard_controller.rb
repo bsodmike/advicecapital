@@ -4,7 +4,7 @@ class Admin::DashboardController < AdminController
 		#authorize! :view, Admin::Dashboard
 
     @page_title = "Administration"
-    @latest_news_written = News.last
+    @latest_news_written = News.last unless News.nil?
     @total_employees = Employee.count
   end
 

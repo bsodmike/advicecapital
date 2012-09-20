@@ -5,8 +5,12 @@ class Admin::InvestorsController < AdminController
 
   def show
     @investor = get_investor(params[:id])
-    @entry_date_month = @investor.entry_date.strftime("%_m").to_s
-    @entry_date_year = @investor.entry_date.strftime("%Y").to_s
+
+    unless @investor.entry_date.nil?
+			@entry_date = @investor.entry_date.strftime("%d/%m/%y")
+      @entry_date_month = @investor.entry_date.strftime("%_m").to_s
+      @entry_date_year = @investor.entry_date.strftime("%Y").to_s
+    end
 
 
     @stocks = Stock.where("month >= ? AND year >= ?", @entry_date_month, @entry_date_year)
@@ -55,14 +59,12 @@ class Admin::InvestorsController < AdminController
 
   def update
     @investor = get_investor(params[:id])
-    
-    respond_to do |format|
-      if @investor.update_attributes(params[:investor])
-        redirect_to admin_investor_path(@investor), :notice => "Investor was successfully updated."
-      else
-        render :edit
-      end
-    end    
+
+		if @investor.update_attributes(params[:investor])
+			redirect_to admin_investor_path(@investor), :notice => "Investor was successfully updated."
+		else
+			render :edit
+		end
   end
 
   def destroy
