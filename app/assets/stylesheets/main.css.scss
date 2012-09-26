@@ -401,7 +401,7 @@ footer {
   height: 45px;
   padding: 0 !important;
   text-align: center;
-  margin: 10px 0 0 0;
+  margin: 40px 0 0 0;
 
   #stocks {
     padding-top: 4px;
@@ -494,6 +494,7 @@ p.employee_info {
   -webkit-box-shadow: $box-shadow;
   box-shadow: $box-shadow;
   position: fixed;
+  background: #fff;
   top: 400px;
   left: 0px;
   width: 180px;
@@ -602,6 +603,16 @@ p.employee_info {
   }
   .content {
     padding: 10px;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+.box_content_admin {
+  img {
+    width: 100px;
+    height: 100px;
   }
 }
 /* =Layout Global END

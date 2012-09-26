@@ -4,7 +4,8 @@
   .span-8
     %h3= box.title
     %br/
-    = raw box.content
+    .box_content_admin
+      = raw box.content
     - if can? :update, box
       .notice.actions
         = link_to 'Rediger', edit_admin_box_path(box)

@@ -29,7 +29,7 @@
 			.head 
 				%h3= @box_products_second.title
 			.content
-				= @box_products_second.content
+				= raw @box_products_second.content
 
 	- elsif current_page?('/invest_universe') || current_page?('/invest_universe/stocks') || current_page?('/invest_universe/bonds') || current_page?('/invest_universe/company_bonds') || current_page?('/invest_universe/valuta')
 		.side_box
