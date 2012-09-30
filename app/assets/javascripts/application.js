@@ -7,4 +7,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery-ui
+//= require raphael
+//= require morris
 //= require_tree .

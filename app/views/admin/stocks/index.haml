@@ -2,14 +2,12 @@
 %table
   %tr
     %th Værdi
-    %th Måned
-    %th År
+    %th Dato
     %th
   - @stocks.each do |stock|
     %tr
       %td= stock.value
-      %td= stock.month
-      %td= stock.year
+      %td= stock.date.strftime("%d-%m-%y") unless stock.date.nil?
       %td
         .notice.actions
           - if can? :manage, stock

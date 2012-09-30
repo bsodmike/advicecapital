@@ -13,7 +13,7 @@ class Admin::InvestorsController < AdminController
     end
 
 
-    @stocks = Stock.where("date >= ?", @investor.entry_date)
+    @stocks = Stock.where("date >= ?", @investor.entry_date.to_date)
     @profile = @investor.users
 
     @throwoff = @investor.current_rate.to_i - @investor.entry_rate.to_i# * @investor.entry_stock_count
@@ -40,7 +40,6 @@ class Admin::InvestorsController < AdminController
 
   def new
     @investor = Investor.new
-    #@investor.stocks.build
   end
 
   def create

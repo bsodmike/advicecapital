@@ -76,11 +76,14 @@
 
   
 	 
-	- chart = Gchart.line(:size => '640x300', :title => "Kursudvikling for Advice Invest A/S", :bg => {:color => 'fff', :type => 'stripes' }, :legend => ['Aktie Værdi'], :data => [@stock_value], :axis_with_labels => 'y,x', :line_colors => "FF0000", :axis_labels => [ (9..22).map { |n| n * 50 }, @stocks.map {|s| s.date.strftime("%d/%m/%y")} ]) unless @stock_value.empty?
+	//- chart = Gchart.line(:size => '640x300', :title => "Kursudvikling for Advice Invest A/S", :bg => {:color => 'fff', :type => 'stripes' }, :legend => ['Aktie Værdi'], :data => [@stock_value], :axis_with_labels => 'y,x', :line_colors => "FF0000", :axis_labels => [ (9..22).map { |n| n * 50 }, @stocks.map {|s| s.date.strftime("%d/%m/%y")} ]) unless @stock_value.empty?
 
-	%img{:src => chart}
-	%br/
-	%br/
+	//%img{:src => chart}
+
+	= content_tag :div, "", id: "stocks_chart", data: {stocks: @stocks}
+
+	#stocks_chart{:style => "width: 600px;"}
+
 	= button_to 'Skatteregnskab', ''
 
 - if can? :manage, @investor
