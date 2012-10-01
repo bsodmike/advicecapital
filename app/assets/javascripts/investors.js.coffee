@@ -4,7 +4,7 @@ jQuery ->
     data: $('#stocks_chart').data('stocks')
     xkey: 'date'
     ykeys: ['value']
-    labels: ['Værdi', 'Dato']
+    labels: ['Værdi']
     parseTime: true
     # custom label formatting with `xLabelFormat`
     #xLabelFormat: (d) ->

@@ -36,7 +36,7 @@ gem 'dalli'
 gem 'daemons'
   
 group :production do
-
+ gem 'pg'
 end
 
 

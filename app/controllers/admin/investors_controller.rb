@@ -12,20 +12,15 @@ class Admin::InvestorsController < AdminController
       @entry_date_year = @investor.entry_date.strftime("%Y").to_s
     end
 
+		@stocks = Stock.where("date >= ?", @investor.entry_date)
 
-    @stocks = Stock.where("date >= ?", @investor.entry_date.to_date)
+    @stocks_chart = Stock.where("date >= ?", @investor.entry_date)
+
     @profile = @investor.users
 
     @throwoff = @investor.current_rate.to_i - @investor.entry_rate.to_i# * @investor.entry_stock_count
     @throwoffValue = @throwoff * @investor.entry_stock_count
     @throwoffPercent = @throwoff / @investor.entry_rate.to_i
-
-    @stock_value = @stocks.map(&:value)
-    stock_order = Stock.order('value ASC').all
-    @stock_order_value = stock_order.map(&:value)
-    @stock_month = @stocks.map(&:month)
-    @stock_year = @stocks.map(&:year)
-
 
     respond_to do |format|
       format.html
