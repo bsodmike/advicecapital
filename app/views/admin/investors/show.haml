@@ -70,9 +70,7 @@
 
 %div{:style=>"float:right;margin-top:80px;"}
 
-	= content_tag :div, "", id: "stocks_chart", data: {stocks: @stocks_chart}
-
-	#stocks_chart{:style => "width: 600px;"}
+	= content_tag :div, "", id: "stocks_chart", data: {stocks: @stocks_chart}, :style => "width: 600px"
 
 	= button_to 'Skatteregnskab', ''
 
