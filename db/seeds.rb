@@ -50,23 +50,3 @@ Employee.create([
       :image => 'jesper_thaning.jpg'
     }
 ])
-
-t = 'test'
-n = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-
-for news in [1..10]
-  puts news
-end
-
-News.create([
-    { :title => t, :content => n },
-    { :title => t, :content => n },
-    { :title => t, :content => n },
-    { :title => t, :content => n },
-    { :title => t, :content => n },
-    { :title => t, :content => n },
-])
-
-# CompanyStocks.create!(
-#   :primo => 1000, :ultimo => 2000
-# )
