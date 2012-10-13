@@ -35,8 +35,8 @@ gem 'unicorn'
 gem 'feedzirra'
   
 group :production do
- gem 'pg'
- gem 'therubyracer-heroku'
+ #gem 'pg'
+ #gem 'therubyracer-heroku'
 end
 
 
