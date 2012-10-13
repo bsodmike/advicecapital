@@ -8,12 +8,14 @@ jQuery ->
       labels: ['Værdi']
       parseTime: true
       # custom label formatting with `xLabelFormat`
-      #xLabelFormat: (d) ->
-        #d.getDate() + "/" + (d.getMonth() + 1) + "/" + d.getFullYear()
+      xLabelFormat: (d) ->
+        d.getDate() + "/" + (d.getMonth() + 1) + "/" + d.getFullYear()
+
+      hideHover: true
 
 
       # setting `xLabels` is recommended when using xLabelFormat
       xLabels: "day"
 
-      #dateFormat: (x) ->
-        #new Date(x).toDateString()
+      dateFormat: (x) ->
+        new Date(x).toDateString()
