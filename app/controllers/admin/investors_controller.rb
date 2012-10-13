@@ -1,6 +1,7 @@
 class Admin::InvestorsController < AdminController
   def index
     @investors = Investor.all
+		@stocks = Stock.all
   end
 
   def show

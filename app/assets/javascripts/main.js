@@ -185,10 +185,12 @@
     });
     
     $('#employees_slider').jCarouselLite({
-      auto: 1,
+      auto: 0,
       visible: 4,
       start: 0,
-      speed: 5000
+      speed: 2000,
+      btnNext: ".right",
+      btnPrev: ".left"
     });
 
     // Organisation_box

@@ -6,10 +6,10 @@
 		%th Email
 		%th Kundetype
 		%th Tiltrædelse
-		%th Værdi ved indtrædelse
-		%th Aktieværdi ved indtrædelse
-		%th Aktiekurs ved indtrædelse
-		%th Nuværende aktiekurs
+		/%th Værdi ved indtrædelse
+		/%th Aktieværdi ved indtrædelse
+		/%th Aktiekurs ved indtrædelse
+		/%th Nuværende aktiekurs
 		%th Antal aktier
 		%th Tilknyttet bruger
 		- @investors.each do |investor|
@@ -18,10 +18,7 @@
 				%td= investor.email
 				%td= investor.investor_type
 				%td= investor.entry_date.strftime("%d/%m/%y") unless investor.entry_date.nil?
-				%td= number_with_delimiter(investor.entry_price) + " kr."
-				%td= investor.entry_stock_price
-				%td= investor.entry_rate
-				%td= investor.current_rate
+				/%td= number_with_delimiter(investor.entry_stock_count * @stocks.where("date >= ?", investor.entry_date).first.value) + " kr."
 				%td= investor.entry_stock_count
 				%td= link_to investor.users.map(&:email), admin_user_path(investor.users.map(&:id))
 				- if can? :manage, investor
