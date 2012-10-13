@@ -13,10 +13,12 @@ Advicecapital::Application.routes.draw do
       root :to => 'dashboard#index'
       resources :advice_pages    
       resources :boxes, :only => [:index, :show, :edit, :update]
-      resources :investors
+      resources :investors do
+					get 'tax_account'
+			end
       resources :stocks
       resources :users
-      resources :company_stocks, :only => [:edit, :update, :show]
+      resources :company_stocks, :only => [:new, :create, :edit, :update, :show]
       resources :investor_profiles
     end
 

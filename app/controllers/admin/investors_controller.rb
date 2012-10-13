@@ -14,6 +14,11 @@ class Admin::InvestorsController < AdminController
 
 		@stocks = Stock.where("date >= ?", @investor.entry_date)
 
+		startOfYear = DateTime.new(DateTime.now.year, 01, 01)
+	  endOfYear = DateTime.new(DateTime.now.year, 12, 31)
+
+		@stocks_current_year = Stock.where(date: startOfYear..endOfYear)
+		#@stocks_current_year = Stock.where("date <= ?", DateTime.now.year)
     @stocks_chart = Stock.where("date >= ?", @investor.entry_date)
 
     @profile = @investor.users
@@ -23,7 +28,7 @@ class Admin::InvestorsController < AdminController
     @throwoffValue = (@stocks.last.value - @stocks.first.value) * @investor.entry_stock_count
 
 		@throwoffPercent = ((@stocks.last.value - @stocks.first.value) / @stocks.first.value * 100)
-   # @throwoffPercent = @throwoff / @investor.entry_rate.to_i
+   	# @throwoffPercent = @throwoff / @investor.entry_rate.to_i
 
     respond_to do |format|
       format.html
@@ -68,7 +73,11 @@ class Admin::InvestorsController < AdminController
     @investor = get_investor(params[:id])
     @investor.destroy
     redirect_to admin_investors_path, :notice => "Investor was successfully deleted."
-  end
+	end
+
+	def tax_account
+		@investor = get_investor(params[:id])
+	end
   
   private 
   def get_investor(investor_id)
