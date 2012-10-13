@@ -65,12 +65,12 @@
 		%tr
 			%th Værdi
 			%th Dato
-		- @stocks.each do |s|
+		- @stocks_history.each do |s|
 			%tr
 				%td= s.value
 				%td= s.date.strftime("%d/%m/%y") unless s.date.nil?
 
-		= paginate @stocks
+		= paginate @stocks_history
 
 %div{:style=>"float:right;margin-top:80px;"}
 
