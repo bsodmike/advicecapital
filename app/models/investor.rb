@@ -12,20 +12,10 @@ class Investor < ActiveRecord::Base
             :presence => true,
             :format => { :with => email_regex },
             :uniqueness => true
-  validates :phone,
-            :presence => true,
-            :numericality => true
-            #:format => { :with => phone_regex }
   validates :entry_stock_price,
             :numericality => true,
             :presence => false
   validates :entry_stock_count,
-            :presence => true,
-            :numericality => true
-  validates :entry_price,
-            :presence => true,
-            :numericality => true
-  validates :entry_rate,
             :presence => true,
             :numericality => true
 	validates :entry_date,
