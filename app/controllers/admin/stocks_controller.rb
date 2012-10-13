@@ -17,16 +17,6 @@ class Admin::StocksController < AdminController
     @stock_month = @stocks.map(&:month)
     @stock_year = @stocks.map(&:year)
     #@month_year = @stock_month.concat("/" + @stock_year)
-
-    @line_chart = Gchart.line(:size => '600x300', 
-                              :title => "Kursudvikling for Advice Invest A/S", 
-                              :bg => 'fff', 
-                              :legend => ['Aktie Værdi'], 
-                              :data => [@stock_value], 
-                              :axis_with_labels => 'x', 
-                              :line_colors => "FF0000", 
-                              :axis_labels => ['Jan','Feb','Mar','Apr','Maj','Juni','Juli','Aug','Sep','Okt','Nov','Dec']) unless @stock_value.empty?
-  
   end
 
   def new

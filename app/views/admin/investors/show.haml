@@ -23,13 +23,14 @@
 
 	%b Aktiekurs ved indtrædelse:
 	%br/
-	= @investor.entry_rate
+	= @stocks.first.value
+	=# @investor.entry_rate
 	%br/
 	%br/
 
 	%b Nuværende aktiekurs
 	%br/
-	= @investor.current_rate
+	= @stocks.last.value
 	%br/
 	%br/
 
