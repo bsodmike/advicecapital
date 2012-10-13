@@ -14,7 +14,7 @@ Advicecapital::Application.routes.draw do
       resources :advice_pages    
       resources :boxes, :only => [:index, :show, :edit, :update]
       resources :investors do
-					get 'tax_account'
+					get 'tax_account', :on => :member
 			end
       resources :stocks
       resources :users
