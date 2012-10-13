@@ -32,7 +32,7 @@ gem 'httparty'
 gem 'mysql2'
 gem 'daemons'
 gem 'unicorn'
-gem 'feedzirra'
+gem 'feedzirra', '0.2.0.rc2'
   
 group :production do
  #gem 'pg'
