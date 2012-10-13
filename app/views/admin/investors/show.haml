@@ -69,6 +69,8 @@
 				%td= s.value
 				%td= s.date.strftime("%d/%m/%y") unless s.date.nil?
 
+		= paginate @stocks
+
 %div{:style=>"float:right;margin-top:80px;"}
 
 	= content_tag :div, "", id: "stocks_chart_current_year", data: {stocks: @stocks_current_year}, :style => "width: 600px"

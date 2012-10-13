@@ -12,23 +12,18 @@ class Admin::InvestorsController < AdminController
       @entry_date_year = @investor.entry_date.strftime("%Y").to_s
     end
 
-		@stocks = Stock.where("date >= ?", @investor.entry_date)
+		@stocks = Stock.where("date >= ?", @investor.entry_date).page(params[:page]).per(12)
 
 		startOfYear = DateTime.new(DateTime.now.year, 01, 01)
 	  endOfYear = DateTime.new(DateTime.now.year, 12, 31)
 
 		@stocks_current_year = Stock.where(date: startOfYear..endOfYear)
-		#@stocks_current_year = Stock.where("date <= ?", DateTime.now.year)
     @stocks_chart = Stock.where("date >= ?", @investor.entry_date)
 
     @profile = @investor.users
-
     @throwoff = @investor.current_rate.to_i - @investor.entry_rate.to_i# * @investor.entry_stock_count
-
     @throwoffValue = (@stocks.last.value - @stocks.first.value) * @investor.entry_stock_count
-
 		@throwoffPercent = ((@stocks.last.value - @stocks.first.value) / @stocks.first.value * 100)
-   	# @throwoffPercent = @throwoff / @investor.entry_rate.to_i
 
     respond_to do |format|
       format.html
