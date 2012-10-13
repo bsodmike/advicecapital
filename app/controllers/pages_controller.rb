@@ -13,7 +13,7 @@ class PagesController < ApplicationController
     @box_portfolio = get_box_id(box_portfolio)
     @box_choose = get_box_id(box_choose)
     #@rss = SimpleRSS.parse open('http://borsen.dk/rss/investor/')
-		@rss = FeedZirra::Feed.fetch_and_parse('http://borsen.dk/rss/investor/')
+		@rss = Feedzirra::Feed.fetch_and_parse('http://borsen.dk/rss/investor/')
     @video = Video.first
     
     unless @video.nil? 
