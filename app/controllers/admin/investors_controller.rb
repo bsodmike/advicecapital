@@ -13,7 +13,8 @@ class Admin::InvestorsController < AdminController
       @entry_date_year = @investor.entry_date.strftime("%Y").to_s
     end
 
-		@stocks = Stock.where("date >= ?", @investor.entry_date).page(params[:page]).per(12)
+		@stocks_history = Stock.where("date >= ?", @investor.entry_date).page(params[:page]).per(12)
+		@stocks = Stock.where("date >= ?", @investor.entry_date)
 
 		startOfYear = DateTime.new(DateTime.now.year, 01, 01)
 	  endOfYear = DateTime.new(DateTime.now.year, 12, 31)
