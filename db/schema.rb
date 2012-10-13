@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120920170155) do
+ActiveRecord::Schema.define(:version => 20121013135539) do
 
   create_table "advice_page_translations", :force => true do |t|
     t.integer  "advice_page_id"
@@ -121,6 +121,7 @@ ActiveRecord::Schema.define(:version => 20120920170155) do
     t.float    "entry_rate"
     t.float    "current_rate"
     t.string   "investor_type"
+    t.string   "tax_note_link"
   end
 
   create_table "news", :force => true do |t|

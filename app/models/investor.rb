@@ -1,6 +1,6 @@
 class Investor < ActiveRecord::Base
   
-  attr_accessible :name, :email, :phone, :entry_stock_price, :entry_stock_count, :entry_price, :entry_rate, :entry_date
+  attr_accessible :name, :email, :phone, :entry_stock_price, :entry_stock_count, :entry_price, :entry_rate, :entry_date, :tax_note_link, :investor_type
 
   email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   phone_regex = /\A[0-9]+\z/

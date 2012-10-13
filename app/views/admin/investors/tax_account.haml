@@ -3,7 +3,42 @@
 %br/
 %h2= @investor.name
 
-= @investor.investor_type
-%br/
+%p{:style => "width:300px;"}
+  Vi har registreret dem som:
+  %u= @investor.investor_type
+  %br/
 
-= @investor.entry_date
+  - types = ['Frie midler', 'Pension', 'Selskab', 'Andet']
+  - if @investor.investor_type == "Frie midler"
+    %p{:style => "width:500px;"}
+      Beskatningen gennemføres efter lagerprincippet, ensbetydende med at forskellen mellem kursværdien primo året og ultimo året.
+    %p{:style => "width:500px;"}
+      Iflg. SKAT skal rubrik 38 anvendes:
+    %p{:style => "width:500px;"}
+      ”Rubrik 38 - Gevinst/tab på aktier/beviser i investeringsselskaber og på beviser i minimumsudloddende blandede investeringsforeninger.
+      %br/
+      Rubrikken indeholder dine gevinster eller tab. Beløbet er så vidt muligt beregnet ud fra de oplysninger, SKAT har fået om køb og salg. Men beregningen er ikke altid mulig, og SKAT får ikke altid alle oplysningerne. Det er derfor vigtigt, at du selv kontrollerer beløbet.
+      %br/
+      Beløbet i rubrikken skal omfatte
+      %br/
+      ·  Realiserede og urealiserede gevinster og tab på aktier og investeringsforeningsbeviser, der er udstedt af et investeringsselskab.”
+
+    = button_to 'Selvangivelse', "https://docs.google.com/open?id=1Ex03fYEu4G9HPPzviAjiHUN1mL__T8xzEZ3eI1g8-Ke5D2e1cwn0Y8j8b57s"
+
+  - elsif @investor.investor_type == "Pension"
+    %p{:style => "width:500px;"}
+      Beskatningen gennemføres efter lagerprincippet, ensbetydende med at forskellen mellem kursværdien primo året og ultimo året.
+    %p{:style => "width:500px;"}
+      Depotbanken opkræver automatisk beskatningen.
+      %br/
+      Ved investering via pensionsordninger beskattes avancer med PAL-skat (15%).
+  - elsif @investor.investor_type == "Selskab"
+    %p
+      For selskaber er avancen (gevinster og tab) almindelig selskabsindkomst.
+      %br/
+
+%br/
+%p
+  Primo/ultimo kursen fremgår af kursgrafen.
+
+= button_to 'Købsnota', @investor.tax_note_link if @investor.tax_note_link.present?

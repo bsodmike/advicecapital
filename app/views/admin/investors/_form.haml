@@ -36,18 +36,18 @@
   
   = field_set_tag "Aktie oplysninger" do
     %div{:style=>"float:left;margin-right:40px;"}
-      .field
-        = f.label :entry_price, "Værdi ved indtrædelse"
-        %br/
-        = f.text_field :entry_price
-      .field
-        = f.label :entry_rate, "Kurs ved indtrædelse"
-        %br/
-        = f.text_field :entry_rate
-      .field
-        = f.label :current_rate, "Nuværende kurs"
-        %br/
-        = f.text_field :current_rate
+      -#.field
+      -#  = f.label :entry_price, "Værdi ved indtrædelse"
+      -#  %br/
+      -#  = f.text_field :entry_price
+      -#.field
+      -#  = f.label :entry_rate, "Kurs ved indtrædelse"
+      -#  %br/
+      -#  = f.text_field :entry_rate
+      -#.field
+      -#  = f.label :current_rate, "Nuværende kurs"
+      -#  %br/
+      -#  = f.text_field :current_rate
       .field
         = f.label :entry_stock_price, "Pris pr. aktie ved indtrædelse"
         %br/
@@ -57,6 +57,10 @@
         %br/
         = f.text_field :entry_stock_count
         %br/
+      .field
+        = f.label :tax_note_link, "Aktienota"
+        %br/
+        = f.text_field :tax_note_link
         %br/
 
   .actions

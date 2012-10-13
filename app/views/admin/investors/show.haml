@@ -36,7 +36,8 @@
 
 	%b Investeret beløb:
 	%br/
-	= number_with_delimiter(@investor.entry_price) + " kr."
+	- count = @investor.entry_stock_count * @stocks.first.value
+	= number_with_delimiter(count) + " kr."
 	%br/
 	%br/
 
