@@ -3,8 +3,8 @@
   %ul
     - @rss.entries[0,5].each do |rss|
       %li
-        %small= rss.pubDate.strftime('%d/%m/%y - %H:%M:%S')
+        %small= rss.published.strftime('%d/%m/%y - %H:%M:%S')
         %br/
-        = link_to(truncate(rss.description, :length => 150), rss.link, :target => "_blank")
+        = link_to(truncate(rss.content, :length => 150), rss.url, :target => "_blank")
         %br/
         %br/
