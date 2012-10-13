@@ -19,9 +19,10 @@ class Admin::InvestorsController < AdminController
     @profile = @investor.users
 
     @throwoff = @investor.current_rate.to_i - @investor.entry_rate.to_i# * @investor.entry_stock_count
-    @throwoffValue = @throwoff * @investor.entry_stock_count
 
-		@throwoffPercent = (@stocks.last.value - @stocks.first.value) / @stocks.first.value
+    @throwoffValue = (@stocks.last.value - @stocks.first.value) * @investor.entry_stock_count
+
+		@throwoffPercent = ((@stocks.last.value - @stocks.first.value) / @stocks.first.value * 100)
    # @throwoffPercent = @throwoff / @investor.entry_rate.to_i
 
     respond_to do |format|

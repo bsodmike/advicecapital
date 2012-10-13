@@ -44,7 +44,8 @@
 	%br/
 	= number_with_delimiter(@throwoffValue) + " kr."
 	%br/
-	= @throwoffPercent.to_s + " %"
+	= (number_with_precision @throwoffPercent, :precision => 2) + " %"
+	=# @throwoffPercent.round.to_s + " %"
 
 	%br/
 	%br/
