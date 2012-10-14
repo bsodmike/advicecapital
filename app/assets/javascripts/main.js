@@ -223,25 +223,57 @@
         'href' : e.target.src
       });
     });
-    //.hover(function(e) {
-    //   var self = $(this);
-    //   var id = getId(self);
-      
-    //   if( $('.employee_info').css("display") == 'none' ) {
-    //     $('#info_' + id).show();
-    //     $('.employee_info').css('display: block');
-    //   }
-
-    // }, function () {
-    //   var self = $(this);
-    //   var id = getId(self);
-
-    //   $('#info_' + id).hide();
-    // })
     
+    $('#event_calendar').fullCalendar({
+      events: '/admin/events.json',
+      timeFormat: 'H(:mm)',
+      firstDay: 1,
+      header: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'year,month,agendaWeek,agendaDay'
+      },
+      eventMouseover: function(event) {
 
-  
-   tinyMCE.init({
+      },
+      eventClick: function(event) {
+
+      },
+      monthNames: [
+        'Januar',
+        'Februar',
+        'Marts',
+        'April',
+        'Maj',
+        'Juni',
+        'Juli',
+        'August',
+        'September',
+        'Oktober',
+        'November',
+        'December'
+      ],
+      dayNames: [
+        'Søndag',
+        'Mandag',
+        'Tirsdag',
+        'Onsdag',
+        'Torsdag',
+        'Fredag',
+        'Lørdag'
+      ],
+      dayNamesShort: [
+        'Søn',
+        'Man',
+        'Tir',
+        'Ons',
+        'Tor',
+        'Fre',
+        'Lør'
+      ]
+    });
+
+     tinyMCE.init({
       mode : "textareas",
       editor_deselector : "no_editor",
       theme: "advanced",

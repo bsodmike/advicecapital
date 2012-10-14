@@ -20,6 +20,7 @@ Advicecapital::Application.routes.draw do
       resources :users
       resources :company_stocks, :only => [:new, :create, :edit, :update, :show]
       resources :investor_profiles
+			resources :events
     end
 
     match '/contact' => 'contact#new',    :as => 'contact', :via => :get

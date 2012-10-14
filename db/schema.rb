@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121013135539) do
+ActiveRecord::Schema.define(:version => 20121014202950) do
 
   create_table "advice_page_translations", :force => true do |t|
     t.integer  "advice_page_id"
@@ -80,6 +80,17 @@ ActiveRecord::Schema.define(:version => 20121013135539) do
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
     t.string   "remote_image_url"
+  end
+
+  create_table "events", :force => true do |t|
+    t.string   "title"
+    t.text     "content"
+    t.datetime "date"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.datetime "start"
+    t.datetime "end"
+    t.boolean  "allDay"
   end
 
   create_table "images", :force => true do |t|

@@ -13,3 +13,9 @@ tmp/*
 
 app/assets/.DS_Store
 >>>>>>> added to gitignore
+
+app/.DS_Store
+
+app/assets/javascripts/.DS_Store
+
+app/controllers/.DS_Store

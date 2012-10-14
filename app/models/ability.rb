@@ -20,7 +20,8 @@ class Ability
     if user.super_admin?
       can :manage, :all
       
-    elsif user.admin?
+		elsif user.admin?
+			can :manage, Event
       can :manage, News
       can :manage, Video
       can :manage, Employee
@@ -32,7 +33,7 @@ class Ability
     elsif user.investor?
       can :read, News
       can :read, User, :id => user.id
-
+			can :read, Event
 			can :read, Investor, :id => user.investor_profiles.map(&:investor_id)
 			#can :read, Investor, :id => Investor { |i| user.investors.where(investor_id: i.id).exists? }
 			can :view, AdvicePage
