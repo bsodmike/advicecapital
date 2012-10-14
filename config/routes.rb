@@ -1,7 +1,7 @@
 Advicecapital::Application.routes.draw do
 
   scope "(:locale)", :locale => /da|en/ do #{I18n.available_locales.join("|")}
-    devise_for :users
+    devise_for :users, :controllers => { :registrations => "registrations" }
   
     resources :news
     resources :boards

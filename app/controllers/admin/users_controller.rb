@@ -29,12 +29,24 @@ class Admin::UsersController < AdminController
 
 	def update
 		@user = get_user(params[:id])
+		email_changed = @user.email != params[:user][:email]
+		password_changed = !params[:user][:password].empty?
 
-		if @user.update_attributes(params[:user])
+		successfully_updated = if email_changed or password_changed
+														 @user.update_with_password(params[:user])
+													 else
+														 @user.update_without_password(params[:user])
+													 end
+
+		if successfully_updated
+			# Sign in the user bypassing validation in case his password changed
+			sign_in @user, :bypass => true
 			redirect_to admin_users_path, :notice => "Brugeren blev opdateret."
 		else
 			render :edit
 		end
+
+
 	end
 
 	def destroy

@@ -8,6 +8,14 @@ class ApplicationController < ActionController::Base
   
   before_filter :set_locale
 
+	def after_sign_in_path_for(resource)
+		if current_user.investor?
+			admin_investor_path(current_user)
+		elsif current_user.admin?
+			admin_root_path
+		end
+	end
+
   def default_url_options(options={})
     logger.debug "default_url_options is passed options: #{options.inspect}\n"
     { :locale => I18n.locale }
