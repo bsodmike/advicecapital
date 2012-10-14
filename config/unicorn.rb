@@ -1,3 +1,9 @@
+current_path = "/var/www/html/my project/current"
+
+before_exec do |server|
+	ENV['BUNDLE_GEMFILE'] = "#{current_path}/Gemfile"
+end
+
 # Sample verbose configuration file for Unicorn (not Rack)
 #
 # This configuration file documents many features of Unicorn
