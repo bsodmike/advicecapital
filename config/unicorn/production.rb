@@ -1,3 +1,9 @@
+current_path = "/var/www/html/my project/current"
+
+before_exec do |server|
+	ENV['BUNDLE_GEMFILE'] = "#{current_path}/Gemfile"
+end
+
 # Set your full path to application.
 APP_PATH = "/var/www/apps/advicecapital/current"
 working_directory APP_PATH # available in 0.94.0+
