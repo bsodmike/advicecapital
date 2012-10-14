@@ -32,6 +32,9 @@ listen 8080, :tcp_nopush => true
 # nuke workers after 30 seconds instead of 60 seconds (the default)
 timeout 30
 
+# Should be 'production' by default, otherwise use other env
+rails_env = ENV['RAILS_ENV'] || 'production'
+
 # feel free to point this anywhere accessible on the filesystem
 pid APP_PATH + "/tmp/pids/unicorn.pid"
 
@@ -70,6 +73,16 @@ before_fork do |server, worker|
   #   rescue Errno::ENOENT, Errno::ESRCH
   #   end
   # end
+
+	old_pid = "#{server.config[:pid]}.oldbin"
+	if File.exists?(old_pid) && server.pid != old_pid
+		begin
+			Process.kill("QUIT", File.read(old_pid).to_i)
+		rescue Errno::ENOENT, Errno::ESRCH
+			# someone else did our job for us
+		end
+	end
+
   #
   # Throttle the master from forking too quickly by sleeping.  Due
   # to the implementation of standard Unix signal handlers, this

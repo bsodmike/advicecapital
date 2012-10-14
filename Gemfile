@@ -33,6 +33,7 @@ gem 'mysql2'
 gem 'daemons'
 gem 'unicorn'
 gem 'feedzirra', '0.2.0.rc2'
+
   
 group :production do
  #gem 'pg'
@@ -44,6 +45,7 @@ group :development do
   gem 'taps'
   gem 'foreman'
   gem 'therubyracer'
+	gem 'capistrano-unicorn', :require => false
 end
 
 group :test do

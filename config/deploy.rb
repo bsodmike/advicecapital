@@ -1,3 +1,5 @@
+require 'capistrano-unicorn'
+
 default_run_options[:pty] = true
 set :repository,  "git@github.com:Znow/advicecapital.git"
 
