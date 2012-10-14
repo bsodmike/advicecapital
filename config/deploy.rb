@@ -1,5 +1,3 @@
-require 'capistrano-unicorn'
-
 default_run_options[:pty] = true
 set :repository,  "git@github.com:Znow/advicecapital.git"
 
@@ -23,7 +21,7 @@ role :app, "znow.dk"                          # This may be the same as your `We
 role :db,  "znow.dk", :primary => true        # This is where Rails migrations will run
 
 
-
+require 'capistrano-unicorn'
 
 #If you are using Passenger mod_rails uncomment this:
 #namespace :deploy do
