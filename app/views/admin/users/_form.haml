@@ -26,7 +26,7 @@
 
   - if can? :manage, @user
     .field
-      - roles = ['super_admin', 'admin', 'visitor']
+      - roles = ['super_admin', 'admin', 'investor']
       = f.label :role, "Rolle:"
       %br/
       = f.select :role, options_for_select(roles)

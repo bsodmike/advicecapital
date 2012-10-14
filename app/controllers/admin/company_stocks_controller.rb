@@ -1,5 +1,7 @@
 # encoding: UTF-8
 class Admin::CompanyStocksController < AdminController
+	load_and_authorize_resource
+
 	def index
 		@company_stocks = CompanyStock.all
 	end

@@ -1,4 +1,5 @@
 class Admin::AdvicePagesController < AdminController
+	load_and_authorize_resource
   
   def index
     @pages = AdvicePage.all

@@ -1,4 +1,6 @@
 class Admin::InvestorProfilesController < AdminController
+	load_and_authorize_resource
+
   def index
     @investor_profiles = InvestorProfile.all
   end

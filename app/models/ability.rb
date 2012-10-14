@@ -24,21 +24,22 @@ class Ability
       can :manage, News
       can :manage, Video
       can :manage, Employee
-      can :manage, Dashboard
       can :manage, Recipient
-      can :view,   AdvicePage
+      can :view, AdvicePage
+			can :view, :dashboard
       can [:read, :update], User, :id => user.id
       
     elsif user.investor?
       can :read, News
-      can [:read, :update], User, :id => user.id
-      #can [:read, :update], Investor, :id => user.id
+      can :read, User, :id => user.id
+			can :read, Investor, :id => user.id
+			can :view, AdvicePage
+			#can [:read, :update], Investor, :id => user.id
       
     else # not logged in
       can :create, Recipient
       can :read, News
       can :read, Video
-      can [:read, :update], User, :id => user.id
     end
 
     # Define abilities for the passed in user here. For example:

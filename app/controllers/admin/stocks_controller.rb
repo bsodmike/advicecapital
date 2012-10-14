@@ -1,5 +1,6 @@
 # encoding: utf-8
 class Admin::StocksController < AdminController
+	load_and_authorize_resource
 
   def index
     @stocks = Stock.order(:year, :month).page(params[:page]).per(12)

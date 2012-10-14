@@ -81,7 +81,7 @@
 
 	= content_tag :div, "", id: "stocks_chart", data: {stocks: @stocks_chart}, :style => "width: 600px"
 
-
+	%br/
 	= button_to 'Skatteregnskab', tax_account_admin_investor_path(@investor)
 
 - if can? :manage, @investor
@@ -89,3 +89,6 @@
 		= link_to 'Rediger', edit_admin_investor_path(@investor)
 		|
 		= link_to 'Slet', admin_investor_path(@investor), :confirm => 'Er du sikker?', :method => :delete
+-# elsif can? :update, @investor
+	/.notice.actions{:style=>"float:left;clear:both;"}
+		=# link_to 'Rediger', edit_admin_investor_path(@investor)

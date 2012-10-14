@@ -1,4 +1,5 @@
 class Admin::BoxesController < AdminController
+	load_and_authorize_resource
 
   def index
     @boxes = Box.all

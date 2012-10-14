@@ -1,7 +1,7 @@
 class Admin::DashboardController < AdminController
 
   def index
-		#authorize! :view, Admin::Dashboard
+		authorize! :view, :dashboard
 
     @page_title = "Administration"
     @latest_news_written = News.last unless News.nil?

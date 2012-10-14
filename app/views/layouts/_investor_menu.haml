@@ -2,6 +2,7 @@
 .investor_box
   %div{:style=>"float:left;"}
     %ul
-      %li= link_to 'Investor Profil', admin_investor_path(current_user.investor_profiles.map(&:investor_id))
+      - if current_user.investor_profiles.present?
+        %li= link_to 'Investor Profil', admin_investor_path(current_user.investor_profiles.map(&:investor_id))
       //%li= link_to 'Brugerindstillinger', edit_admin_user_path(current_user)
       %li= link_to "Log ud", destroy_user_session_path, :method => :delete
