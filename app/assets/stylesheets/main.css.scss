@@ -723,6 +723,7 @@ textarea#advice_page_content {
 }
 #investment {
   float:left;
+  margin: 0 0 20px 0;
 
   .span-3 {
     text-align: center;
@@ -731,6 +732,12 @@ textarea#advice_page_content {
 #generic {
   float: left;
   margin: 0 0 20px 0;
+  .span-3 {
+    text-align: center;
+  }
+}
+#other {
+  float: left;
   .span-3 {
     text-align: center;
   }
