@@ -32,7 +32,9 @@ class Ability
     elsif user.investor?
       can :read, News
       can :read, User, :id => user.id
-			can :read, Investor, :id => user.id
+
+			can :read, Investor, :id => user.investor_profiles.map(&:investor_id)
+			#can :read, Investor, :id => Investor { |i| user.investors.where(investor_id: i.id).exists? }
 			can :view, AdvicePage
 			#can [:read, :update], Investor, :id => user.id
       
