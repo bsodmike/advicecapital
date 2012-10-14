@@ -1,4 +1,4 @@
-current_path = "/var/www/html/my project/current"
+current_path = "/var/www/apps/advicecapital/current"
 
 before_exec do |server|
 	ENV['BUNDLE_GEMFILE'] = "#{current_path}/Gemfile"
