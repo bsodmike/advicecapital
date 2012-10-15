@@ -8,7 +8,7 @@ class Admin::EventsController < AdminController
       format.html # index.html.erb
       format.json { render json: @events }
     end
-  end
+	end
 
   # GET /events/1
   # GET /events/1.json
@@ -19,7 +19,16 @@ class Admin::EventsController < AdminController
       format.html # show.html.erb
       format.json { render json: @event }
     end
-  end
+	end
+
+	def show_day
+		@events = Event.find(params[:date]).all
+
+		respond_to do |format|
+			format.html # show.html.erb
+			format.json { render json: @events }
+		end
+	end
 
   # GET /events/new
   # GET /events/new.json

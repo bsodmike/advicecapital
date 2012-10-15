@@ -21,6 +21,8 @@ Advicecapital::Application.routes.draw do
       resources :company_stocks, :only => [:new, :create, :edit, :update, :show]
       resources :investor_profiles
 			resources :events
+
+			match '/events/show_day/date'
     end
 
     match '/contact' => 'contact#new',    :as => 'contact', :via => :get
@@ -30,7 +32,6 @@ Advicecapital::Application.routes.draw do
     root :to => "pages#index"
   
     match '/receive_news', :to => 'recipients#new'
-  
     match '/disclaimer',   :to => 'pages#disclaimer'
     match '/privacy',      :to => 'pages#privacy'
     match '/organisation', :to => 'employees#index'

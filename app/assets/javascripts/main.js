@@ -233,12 +233,37 @@
         center: 'title',
         right: 'year,month,agendaWeek,agendaDay'
       },
+      editable: true,
+      defaultView: 'year',
       eventMouseover: function(event) {
+        $(this).qtip({
+          content: '<strong>' + event.title + '</strong><br/><br/>' + event.content.substring(0,150) + '<br/><br/>' + '<a href="/admin/events/' + event.id + '">Vis mere</a>',
+          position: {
+            my: 'bottom center',
+            at: 'top center'
+          }
+        });
+        //var layer =	"<div id='events-layer' class='fc-transparent' style='position:absolute; width:100%; height:100%; top:-1px; text-align:right; z-index:100'></div>";
+        //$(this).append(layer);
+
+
+      },
+      eventMouseout: function(event) {
 
       },
       eventClick: function(event) {
-
+        window.location = "/admin/events/" + event.id;
       },
+      /*dayClick: function(date, allDay, jsEvent, view) {
+        window.location = "/admin/events/show_day?date=" + date;
+
+        if (allDay) {
+
+        }
+        else {
+
+        }
+      },*/
       monthNames: [
         'Januar',
         'Februar',
@@ -270,7 +295,14 @@
         'Tor',
         'Fre',
         'Lør'
-      ]
+      ],
+      buttonText: {
+        today: 'Idag',
+        month: 'Måned',
+        week:  'Uge',
+        day:   'Dag',
+        year:  'År'
+      }
     });
 
      tinyMCE.init({
