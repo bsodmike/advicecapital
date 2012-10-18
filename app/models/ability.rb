@@ -27,7 +27,7 @@ class Ability
       can :manage, Employee
       can :manage, Recipient
       can :read, AdvicePage
-			can :read, :dashboard
+			can :view, :dashboard
       can [:read, :update], User, :id => user.id
       
     elsif user.investor?
@@ -35,6 +35,7 @@ class Ability
       can :read, User, :id => user.id
 			can :read, Event
 			can :read, Investor, :id => user.investor_profiles.map(&:investor_id)
+			can :view, :tax_account
 			#can :read, Investor, :id => Investor { |i| user.investors.where(investor_id: i.id).exists? }
 			can :read, AdvicePage
 			#can [:read, :update], Investor, :id => user.id

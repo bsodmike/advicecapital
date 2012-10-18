@@ -1,20 +1,24 @@
-<p id="notice"><%= notice %></p>
-
 <p>
-  <b>Title:</b>
+  <b>Titel:</b>
+	<br/>
   <%= @event.title %>
 </p>
 
 <p>
-  <b>Content:</b>
-  <%= @event.content %>
+  <b>Beskrivelse:</b>
+	<br/>
+  <%= raw @event.content %>
 </p>
 
 <p>
-  <b>Date:</b>
+  <b>Dato:</b>
+	<br/>
   <%= @event.date %>
 </p>
 
-
-<%= link_to 'Edit', edit_admin_event_path(@event) %> |
-<%= link_to 'Back', admin_events_path %>
+<% if can? :manage, @event %>
+	<div class="action notice">
+		<%= link_to 'Edit', edit_admin_event_path(@event) %> |
+		<%= link_to 'Back', admin_events_path %>
+	</div>
+<% end %>

@@ -1,6 +1,6 @@
 %h1 Events
 
-- if can? :manage, Event
+- if can? :manage, @events
 	%table
 		%tr
 			%th Titel
@@ -14,11 +14,13 @@
 					%td= event.title
 					%td= event.content
 					%td= event.date
-					%td= link_to 'Vis', admin_event_path(event)
-					%td= link_to 'Rediger', edit_admin_event_path(event)
-					%td= link_to 'Slet', admin_event_path(event), method: :delete, data: { confirm: 'Er du sikker?' }
+					%td
+						.notice.actions
+							= link_to 'Vis', admin_event_path(event)
+							= link_to 'Rediger', edit_admin_event_path(event)
+							= link_to 'Slet', admin_event_path(event), method: :delete, data: { confirm: 'Er du sikker?' }
 %br/
-- if can? :manage, Event
+- if can? :manage, @events
 	.notice.actions
 		= link_to 'Nyt Event', new_admin_event_path
 

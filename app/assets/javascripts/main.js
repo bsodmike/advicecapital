@@ -235,22 +235,45 @@
       },
       editable: true,
       defaultView: 'year',
-      eventMouseover: function(event) {
-        $(this).qtip({
-          content: '<strong>' + event.title + '</strong><br/><br/>' + event.content.substring(0,150) + '<br/><br/>' + '<a href="/admin/events/' + event.id + '">Vis mere</a>',
-          position: {
-            my: 'bottom center',
-            at: 'top center'
-          }
-        });
+
+      viewDisplay: function() {
+        var calendar = $(this);
+
+        $('.fc-event').each(function(){
+          // Grab event data
+          var title = $(this).find('.fc-event-title').text(),
+              data = calendar.data('fullCalendar').clientEvents(function(event){
+                return event.title === title;
+              })[0];
+
+          $(this).qtip({
+            content: "<strong>"+data.title+"</strong><br/><br/><i>"+data.date+"</i><br/><br/>"+data.content,
+            position: {
+              my: 'bottom center',
+              at: 'top center'
+            },
+            show: 'mouseover',
+            hide: 'mouseout',
+            style: {
+              tip: true
+            }
+          })
+        })
+      },
+      //eventMouseover: function(event) {
+//        $(this).qtip({
+//          content: '<strong>' + event.title + '</strong><br/><br/>' + event.content.substring(0,150) + '<br/><br/>' + '<a href="/admin/events/' + event.id + '">Vis mere</a>',
+//          position: {
+//            my: 'bottom center',
+//            at: 'top center'
+//          }
+//        });
         //var layer =	"<div id='events-layer' class='fc-transparent' style='position:absolute; width:100%; height:100%; top:-1px; text-align:right; z-index:100'></div>";
         //$(this).append(layer);
-
-
-      },
-      eventMouseout: function(event) {
-
-      },
+      //},
+      //eventMouseout: function(event) {
+        //$(this).find('div[id*=events-layer]').hide();
+      //},
       eventClick: function(event) {
         window.location = "/admin/events/" + event.id;
       },
@@ -277,6 +300,20 @@
         'Oktober',
         'November',
         'December'
+      ],
+      monthNamesShort: [
+          'Jan',
+          'Feb',
+          'Mar',
+          'Apr',
+          'Maj',
+          'Jun',
+          'Jul',
+          'Aug',
+          'Sep',
+          'Okt',
+          'Nov',
+          'Dec'
       ],
       dayNames: [
         'Søndag',

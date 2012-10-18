@@ -82,7 +82,7 @@
 	= content_tag :div, "", id: "stocks_chart", data: {stocks: @stocks_chart}, :style => "width: 600px"
 
 	%br/
-	= button_to 'Skatteregnskab', tax_account_admin_investor_path(@investor)
+	= link_to 'Skatteregnskab', tax_account_admin_investor_path(@investor)
 
 - if can? :manage, @investor
 	.notice.actions{:style=>"float:left;clear:both;"}
