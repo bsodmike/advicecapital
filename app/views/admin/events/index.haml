@@ -20,7 +20,7 @@
 							= link_to 'Rediger', edit_admin_event_path(event)
 							= link_to 'Slet', admin_event_path(event), method: :delete, data: { confirm: 'Er du sikker?' }
 %br/
-- if can? :manage, @events
+- if can? :manage, Event
 	.notice.actions
 		= link_to 'Nyt Event', new_admin_event_path
 
