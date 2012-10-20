@@ -24,9 +24,6 @@ class Investor < ActiveRecord::Base
   #has_many :investor_stocks
   #has_many :stocks, :through => :investor_stocks
 
-  has_many :investor_profiles
-  has_many :users, :through => :investor_profiles
-
   #accepts_nested_attributes_for :stocks, :reject_if => lambda { |a| a[:value].blank? }, :allow_destroy => true
   
 end

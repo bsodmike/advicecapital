@@ -51,13 +51,13 @@ end
 group :test do
   gem 'webrat'
   gem 'factory_girl_rails'
+	gem "capybara"
+	gem "guard-rspec"
 end
 
 group :development, :test do
   gem 'rb-fsevent'
   gem 'rspec-rails'
-  gem 'capybara'
   gem 'guard'
-  gem 'guard-rspec'
   gem 'sqlite3'
 end

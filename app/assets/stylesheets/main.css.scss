@@ -478,17 +478,17 @@ p.employee_info {
 }
 #employees_index {
   float: left;
-  height: 150px;
   background: none;
 
   #employee_image {
     float: left;
-    margin-right: 20px;
+    margin-right: 10px;
     cursor: pointer;
   }
-  #employees_info {
+  #employee_info {
     font-weight: normal;
-    width: 150px;
+    float:right !important;
+    word-wrap: break-word;
   }
 }
 
