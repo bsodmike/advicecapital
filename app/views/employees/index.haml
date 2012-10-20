@@ -9,7 +9,7 @@
   %ul.employee_images
     - @employees.each do |employee|
       %li{:style => "width:200px !important;margin-right: 25px !important;"}
-        - if employee.remote_image_url.present?
+        - if !employee.remote_image_url.nil?
           = image_tag employee.remote_image_url, :id => "employee_#{employee.id}", :class => "employee_image"
         - else
           = image_tag employee.image, :id => "employee_#{employee.id}", :class => "employee_image"

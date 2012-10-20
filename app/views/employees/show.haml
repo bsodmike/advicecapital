@@ -1,5 +1,8 @@
 %p
-  = image_tag @employee.image , :style => "width:300px;height:450px;" unless @employee.image.nil?
+  - if !@employee.remote_image_url.nil?
+    = image_tag @employee.remote_image_url, :style => "width:300px;height:450px;"
+  - else
+    = image_tag @employee.image, :style => "width:300px;height:450px;"
 %p
   %b=t ".name"
   = @employee.name unless @employee.name.nil?
