@@ -1,5 +1,5 @@
 class Employee < ActiveRecord::Base
-  attr_accessible :name, :title, :email, :phone, :image
+  attr_accessible :name, :title, :email, :phone, :image, :remote_image_url
   
   email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i # full regex
 
