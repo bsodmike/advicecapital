@@ -19,7 +19,6 @@ Advicecapital::Application.routes.draw do
       resources :stocks
       resources :users
       resources :company_stocks, :only => [:new, :create, :edit, :update, :show]
-      resources :investor_profiles
 			resources :events
 
 			match '/events/show_day/date'

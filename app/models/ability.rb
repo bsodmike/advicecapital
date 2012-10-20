@@ -34,11 +34,10 @@ class Ability
       can :read, News
       can :read, User, :id => user.id
 			can :read, Event
-			can :read, Investor, :id => user.investor_profiles.map(&:investor_id)
+			can :read, Investor, :id => user.investor_id
 			can :view, :tax_account
 			#can :read, Investor, :id => Investor { |i| user.investors.where(investor_id: i.id).exists? }
 			can :read, AdvicePage
-			#can [:read, :update], Investor, :id => user.id
       
     else # not logged in
       can :create, Recipient

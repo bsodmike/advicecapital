@@ -24,7 +24,6 @@ class Admin::InvestorsController < AdminController
 		@stocks_current_year = Stock.where(date: startOfYear..endOfYear)
     @stocks_chart = Stock.where("date >= ?", @investor.entry_date)
 
-    @profile = @investor.users
     @throwoff = @investor.current_rate.to_i - @investor.entry_rate.to_i# * @investor.entry_stock_count
     @throwoffValue = (@stocks.last.value - @stocks.first.value) * @investor.entry_stock_count
 		@throwoffPercent = ((@stocks.last.value - @stocks.first.value) / @stocks.first.value * 100)

@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
 
 	def after_sign_in_path_for(resource)
 		if current_user.investor?
-			admin_investor_path(current_user.investor_profiles.map(&:investor_id))
+			admin_investor_path(current_user.investor_id)
 		elsif current_user.admin?
 			admin_root_path
 		end

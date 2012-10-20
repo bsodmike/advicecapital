@@ -15,8 +15,8 @@
 			%td= user_role(user.role)# user.role
 			%td= user.last_sign_in_at.strftime('%d/%m/%y - %H:%M:%S') if user.last_sign_in_at
 			%td= user.updated_at.strftime('%d/%m/%y - %H:%M:%S')
-			- if !user.investor_profiles.empty?
-				%td= link_to user.investors.map(&:name), admin_investor_path(user.investor_profiles.map(&:investor_id))
+			- if !user.investor_id.nil?
+				%td= link_to Investor.find_by_id(user.investor_id).name, admin_investor_path(user.investor_id) unless user.investor_id.nil?
 			- else
 				%td
 					%i Ingen

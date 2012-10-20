@@ -6,7 +6,9 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :name, :email, :password, :password_confirmation, :remember_me, :role
+  attr_accessible :name, :email, :password, :password_confirmation, :remember_me, :role, :investor_id
+
+	validates :investor_id, :uniqueness => true
 
   def admin?
     ['admin', 'super_admin'].include? self.role
@@ -20,6 +22,5 @@ class User < ActiveRecord::Base
     self.role == 'investor'
   end
 
-  has_many :investor_profiles
-  has_many :investors, :through => :investor_profiles      
+  has_one :investor
 end

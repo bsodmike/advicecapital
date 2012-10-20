@@ -29,6 +29,11 @@
       - roles = ['super_admin', 'admin', 'investor']
       = f.label :role, "Rolle:"
       %br/
-      = f.select :role, options_for_select(roles)
+      = f.select :role, options_for_select(roles, (@user.role unless @user.role.nil?))
+
+  .field
+    = f.label :investor_id, "Investor ID tilknytning:"
+    %br/
+    = f.select :investor_id, options_for_select(Investor.all.map {|i| [i.name, i.id]}, (@user.investor_id unless @user.investor_id.nil?))
   .actions
     = f.submit "Gem"
