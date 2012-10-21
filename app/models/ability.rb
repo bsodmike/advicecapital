@@ -35,8 +35,7 @@ class Ability
       can :read, User, :id => user.id
 			can :read, Event
 			can :read, Investor, :id => user.investor_id
-			can :view, :tax_account
-			#can :read, Investor, :id => Investor { |i| user.investors.where(investor_id: i.id).exists? }
+			can :tax_account, Investor, :id => user.investor_id
 			can :read, AdvicePage
       
     else # not logged in

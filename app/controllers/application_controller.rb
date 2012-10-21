@@ -4,7 +4,9 @@ class ApplicationController < ActionController::Base
   rescue_from CanCan::AccessDenied do |exception|
     flash[:error] = "Du har ikke rettigheder til dette."
     redirect_to root_url
-  end
+
+		Rails.logger.debug "Access denied on #{exception.action} #{exception.subject.inspect}"
+	end
   
   before_filter :set_locale
 

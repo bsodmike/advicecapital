@@ -74,8 +74,8 @@ class Admin::InvestorsController < AdminController
 	end
 
 	def tax_account
-		authorize! :view, :tax_account
 		@investor = get_investor(params[:id])
+		authorize!(:tax_account, @investor || Investor)
 
 		respond_to do |format|
 			format.html
