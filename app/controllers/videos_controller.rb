@@ -24,14 +24,16 @@ class VideosController < ApplicationController
   end
 
   def destroy
-    @video = get_video(params[:id])
-    @video.destroy
+		Panda::Video.delete(@video.id)
+		@video = Video.where(:panda_video_id => params[:id])
+		@video.destroy if @video.exists?
+
 
     redirect_to videos_path, :notice => "Video blev slettet."
   end
   
   private
   def get_video(video_id)
-    Video.find(video_id)
+    Panda::Video.find(video_id)
   end
 end
