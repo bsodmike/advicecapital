@@ -1,7 +1,9 @@
 %div{:style=>"float:left;"}
-	%h3 Velkommen #{@investor.name + " - " + @investor.email} 
+	%h3 Velkommen #{@investor.name}
 	%br/
-	%br
+	= @investor.email
+	%br/
+	%br/
 	- if current_user.super_admin?
 		%b Kundetype:
 		%br/
