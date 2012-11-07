@@ -22,7 +22,6 @@
 	%br/
 
 	- unless @stocks.first.nil? && @stocks.last.nil?
-
 		%b Aktiekurs ved indtrædelse:
 		%br/
 		= @stocks.first.value
@@ -36,12 +35,13 @@
 		%br/
 		%br/
 
-	%b Investeret beløb:
-	%br/
-	- count = @investor.entry_stock_count * @stocks.first.value
-	= number_with_delimiter(count) + " kr."
-	%br/
-	%br/
+	- unless @stocks.first.nil?
+		%b Investeret beløb:
+		%br/
+		- count = @investor.entry_stock_count * @stocks.first.value
+		= number_with_delimiter(count) + " kr."
+		%br/
+		%br/
 
 	%b Aktuelt afkast:
 	%br/
