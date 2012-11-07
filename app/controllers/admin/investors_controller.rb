@@ -25,8 +25,11 @@ class Admin::InvestorsController < AdminController
     @stocks_chart = Stock.where("date >= ?", @investor.entry_date)
 
     @throwoff = @investor.current_rate.to_i - @investor.entry_rate.to_i# * @investor.entry_stock_count
-    @throwoffValue = (@stocks.last.value - @stocks.first.value) * @investor.entry_stock_count
-		@throwoffPercent = ((@stocks.last.value - @stocks.first.value) / @stocks.first.value * 100) unless @stocks.nil?
+
+		unless @stocks.nil?
+    	@throwoffValue = (@stocks.last.value - @stocks.first.value) * @investor.entry_stock_count
+			@throwoffPercent = ((@stocks.last.value - @stocks.first.value) / @stocks.first.value * 100)
+		end
 
     respond_to do |format|
       format.html
