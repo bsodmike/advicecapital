@@ -26,7 +26,7 @@ class Admin::InvestorsController < AdminController
 
     @throwoff = @investor.current_rate.to_i - @investor.entry_rate.to_i# * @investor.entry_stock_count
 
-		unless @stocks.nil?
+		unless @stocks.first.nil? && @stocks.last.nil?
     	@throwoffValue = (@stocks.last.value - @stocks.first.value) * @investor.entry_stock_count
 			@throwoffPercent = ((@stocks.last.value - @stocks.first.value) / @stocks.first.value * 100)
 		end
