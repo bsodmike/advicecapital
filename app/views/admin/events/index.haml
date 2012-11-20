@@ -12,7 +12,7 @@
 			- @events.each do |event|
 				%tr
 					%td= event.title
-					%td= event.content
+					%td= truncate(raw(event.content), :length => 150)
 					%td= event.date
 					%td
 						.notice.actions

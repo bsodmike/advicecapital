@@ -1,12 +1,13 @@
 <p>
-  <b>Titel:</b>
-	<br/>
-  <%= @event.title %>
+	<b>
+		<h1>
+			<%= @event.title %>
+		</h1>
+	</b>
+
 </p>
 
 <p>
-  <b>Beskrivelse:</b>
-	<br/>
   <%= raw @event.content %>
 </p>
 
@@ -18,7 +19,7 @@
 
 <% if can? :manage, @event %>
 	<div class="action notice">
-		<%= link_to 'Edit', edit_admin_event_path(@event) %> |
-		<%= link_to 'Back', admin_events_path %>
+		<%= link_to 'Rediger', edit_admin_event_path(@event) %> |
+		<%= link_to 'Tilbage', admin_events_path %>
 	</div>
 <% end %>
