@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :name, :email, :password, :password_confirmation, :remember_me, :role, :investor_id
 
-	validates :investor_id, :uniqueness => true
+	validates :investor_id, :uniqueness => true, :allow_blank => true, :allow_nil => true
 
   def admin?
     ['admin', 'super_admin'].include? self.role
