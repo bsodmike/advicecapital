@@ -3,7 +3,7 @@ class Admin::StocksController < AdminController
 	load_and_authorize_resource
 
   def index
-    @stocks = Stock.order(:year, :month).page(params[:page]).per(12)
+    @stocks = Stock.order("date ASC").page(params[:page]).per(12)
 
     respond_to do |format|
       format.html # index.html.erb
