@@ -16,9 +16,9 @@ set :admin_runner, "root"
 #set :whenever_command, "bundle exec whenever"
 #require "whenever/capistrano"
 
-role :web, "znow.dk"                          # Your HTTP server, Apache/etc
-role :app, "znow.dk"                          # This may be the same as your `Web` server
-role :db,  "znow.dk", :primary => true        # This is where Rails migrations will run
+role :web, "danielg.dk"                          # Your HTTP server, Apache/etc
+role :app, "danielg.dk"                          # This may be the same as your `Web` server
+role :db,  "danielg.dk", :primary => true        # This is where Rails migrations will run
 
 
 require 'capistrano-unicorn'
