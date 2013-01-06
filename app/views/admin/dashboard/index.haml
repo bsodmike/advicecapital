@@ -51,21 +51,20 @@
     .span-4
       %h3= link_to 'Medarbejdere', employees_path
       = link_to 'Opret medarbejder', new_employee_path
-    .span-4
+    .span-4.colborder
       %h3= link_to 'Investorer', admin_investors_path
       = link_to 'Opret investor', new_admin_investor_path
 
-  %hr/
-
   #investment
     %h3 Investering
-    %br/    
+    %br/
     .span-3
       %h3= link_to 'Aktier', admin_stocks_path
       = link_to 'Opret aktie(r)', new_admin_stock_path
     .span-4
       %h3= link_to 'Firmaværdier', admin_company_stock_path(1)
       =# link_to 'Opret firmaværdi', new_admin_company_stock_path
+
 
   %hr/
 
