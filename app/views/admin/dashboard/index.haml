@@ -36,8 +36,9 @@
     .span-4
       %h3= link_to 'Nyhedsmodtagere', recipients_path
     .span-4
-      %h3= link_to 'Forside video', edit_admin_box_path(Box.find_by_name("frontpage_video"))
-      %i Denne video bliver kun vist, vis ingen video er sat til "Vis på forside"
+      - unless @video_box.nil?
+        %h3= link_to 'Forside video', edit_admin_box_path(@video_box)
+        %i Denne video bliver kun vist, vis ingen video er sat til "Vis på forside"
   
   %hr/
 
