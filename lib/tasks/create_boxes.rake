@@ -52,6 +52,11 @@ namespace :boxes do
 				:title => "Blic kunde 2.",
 				:name => "pages_become_customer_second",
 				:content => "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+			},
+			'Video Box' => {
+				:title => "",
+			  :name => "video_box",
+			  :content => ""
 			}
 		}
 

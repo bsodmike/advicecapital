@@ -1,5 +1,7 @@
 class Video < ActiveRecord::Base
-  attr_accessible :title, :panda_video_id
+  attr_accessible :title, :panda_video_id, :frontpage
+
+  validates :frontpage, :uniqueness => true
   
   validates :panda_video_id, :presence => true
 

@@ -11,6 +11,13 @@
   #upload_progress.panda_upload_progress
   %br/
   %br/
+
+  %p
+    = f.label :frontpage, "Vis på forsiden:"
+    %br/
+    = f.check_box :frontpage
+
   = f.submit "Upload video"
+
 
 = render "script"

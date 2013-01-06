@@ -1,8 +1,8 @@
 %h3 Boxe
 
 - @boxes.each do |box|
-  .span-8
-    %h3= box.title
+  .span-7
+    %h3= link_to box.title, edit_admin_box_path(box)
     %br/
     .box_content_admin
       = raw box.content

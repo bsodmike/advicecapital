@@ -2,7 +2,7 @@ class Admin::BoxesController < AdminController
 	load_and_authorize_resource
 
   def index
-    @boxes = Box.all
+    @boxes = Box.all(:conditions => ["name != ?", "frontpage_video"])
   end
 
   def show

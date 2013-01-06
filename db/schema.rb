@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121020091459) do
+ActiveRecord::Schema.define(:version => 20130106161552) do
 
   create_table "advice_page_translations", :force => true do |t|
     t.integer  "advice_page_id"
@@ -197,6 +197,9 @@ ActiveRecord::Schema.define(:version => 20121020091459) do
     t.string   "panda_video_id"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
+    t.boolean  "frontpage"
   end
+
+  add_index "videos", ["frontpage"], :name => "index_videos_on_frontpage", :unique => true
 
 end

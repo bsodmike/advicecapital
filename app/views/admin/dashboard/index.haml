@@ -26,16 +26,17 @@
     .span-3
       %h3= link_to 'Nyheder', news_index_path
       = link_to 'Opret nyhed', new_news_path
-    .span-3
+    .span-2
       %h3= link_to 'Sider', admin_advice_pages_path  
-    .span-3
+    .span-2
       %h3= link_to 'Boxe', admin_boxes_path
-      %i Vises på forsiden
     .span-3
       %h3= link_to 'Video-arkiv', videos_path
       = link_to 'Upload video', new_video_path
-    .span-3
+    .span-4
       %h3= link_to 'Nyhedsmodtagere', recipients_path
+    .span-4
+      %h3= link_to 'Forside video', edit_admin_box_path(Box.find_by_name("frontpage_video"))
   
   %hr/
 
@@ -45,10 +46,10 @@
     .span-3
       %h3= link_to 'Brugere', admin_users_path
       = link_to 'Opret bruger', new_admin_user_path
-    .span-3
+    .span-4
       %h3= link_to 'Medarbejdere', employees_path
       = link_to 'Opret medarbejder', new_employee_path
-    .span-3
+    .span-4
       %h3= link_to 'Investorer', admin_investors_path
       = link_to 'Opret investor', new_admin_investor_path
 

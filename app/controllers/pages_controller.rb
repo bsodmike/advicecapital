@@ -14,8 +14,9 @@ class PagesController < ApplicationController
     @box_choose = get_box_id(box_choose)
     #@rss = SimpleRSS.parse open('http://borsen.dk/rss/investor/')
 		@rss = Feedzirra::Feed.fetch_and_parse('http://borsen.dk/rss/investor/')
-    @video = Video.first
-    
+    @video = Video.where("frontpage", true).first
+    @frontpage_video = get_box_id("frontpage_video")
+
     unless @video.nil? 
       @original_video = @video.panda_video
       @h264_encoding = @original_video.encodings["h264"] 
