@@ -7,4 +7,4 @@
 			%source{:src => @ogg_encoding.url, :type => "video/ogg"}
 
 - else
-	= raw @frontpage_video.content
+	= raw @frontpage_video.content unless @frontpage_video.nil?
