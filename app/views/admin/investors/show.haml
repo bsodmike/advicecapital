@@ -52,15 +52,6 @@
 	%br/
 	%br/
 
-	%b Primo / Ultimo Kurs
-	%br/
-	- unless CompanyStock.first.nil?
-		= CompanyStock.first.primo
-		\/
-		= CompanyStock.first.ultimo
-	%br/
-	%br/
-
 	%h3 Aktie udvikling
 	%table{:style => "width:300px;"}
 		%tr

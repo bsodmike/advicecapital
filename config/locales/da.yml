@@ -73,8 +73,8 @@ da:
       strategy: Strategi
     
       # Products
-      products: Produkter
-      ac_company_bonds: Advice Capital - Virksomhedsobligationer A/S
+      product: Produkt
+      # ac_company_bonds: Advice Capital - Virksomhedsobligationer A/S
     
       # Organization
       organization: Organisation
