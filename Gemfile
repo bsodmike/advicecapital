@@ -1,5 +1,5 @@
 source 'http://rubygems.org'
-gem 'rails', '3.2.8'
+gem 'rails', '3.2.11'
 gem 'bcrypt-ruby'
 
 # Asset template engines
@@ -24,18 +24,13 @@ gem 'fog'
 gem 'prawn'
 gem 'capistrano'
 gem 'rest-open-uri'
-gem 'clockwork'
-gem 'god'
-gem 'nested_form'#, :git => 'https://github.com/ryanb/nested_form.git'
 gem 'globalize3'
 gem 'httparty'
 gem 'mysql2'
-gem 'daemons'
 gem 'unicorn'
 gem 'feedzirra', '0.2.0.rc2'
 gem 'whenever', :require => false
 gem 'turbolinks'
-
   
 group :production do
  #gem 'pg'
@@ -44,6 +39,7 @@ end
 
 
 group :development do
+	gem 'better_errors'
   gem 'taps'
   gem 'foreman'
   gem 'therubyracer'
@@ -53,8 +49,8 @@ end
 group :test do
   gem 'webrat'
   gem 'factory_girl_rails'
-	gem "capybara"
-	gem "guard-rspec"
+	gem 'capybara'
+	gem 'guard-rspec'
 end
 
 group :development, :test do

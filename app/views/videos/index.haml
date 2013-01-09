@@ -1,11 +1,18 @@
 %h2 Video-arkiv
 
+=# debug @videos
+
 - @videos.each do |video|
 	.video
-		%video#movie{:controls => "controls", :height => "240", :width => "320"}
+		%video#movie{:controls => "controls", :height => "240", :width => "320", :preload => "auto"}
+
+
 			%source{:src => video.url, :type => "video/mp4"}
 
+
+
 		=# debug video
-		- if can? :manage, video
+		-# if can? :manage, video
 			.notice.actions
-				= link_to 'Slet', video_path(video.video_id), :confirm => 'Er du sikker?', :method => :delete
+				=# debug video.id
+				=# link_to 'Slet', video_path(video.video_id), :confirm => 'Er du sikker?', :method => :delete

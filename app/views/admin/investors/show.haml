@@ -66,14 +66,16 @@
 
 %div{:style=>"float:right;margin-top:80px;"}
 
-	%h3 I år
-	= content_tag :div, "", id: "stocks_chart_current_year", data: {stocks: @stocks_current_year}, :style => "width: 600px"
+	- unless @stocks_current_year.nil?
+		%h3 I år
+		= content_tag :div, "", id: "stocks_chart_current_year", data: {stocks: @stocks_current_year}, :style => "width: 600px"
 
 	%br/
 	%br/
 
-	%h3 Samlet investeringsperiode
-	= content_tag :div, "", id: "stocks_chart", data: {stocks: @stocks_chart}, :style => "width: 600px"
+	- unless @stocks_chart.nil?
+		%h3 Samlet investeringsperiode
+		= content_tag :div, "", id: "stocks_chart", data: {stocks: @stocks_chart}, :style => "width: 600px"
 
 	%br/
 	= button_to 'Skatteregnskab', tax_account_admin_investor_path(@investor), :method => "get"
