@@ -42,7 +42,7 @@ group :development do
 	gem 'better_errors'
   gem 'taps'
   gem 'foreman'
-  gem 'therubyracer', '~> 0.11.0beta8'
+  gem 'therubyracer', '0.11.0beta8'
 	gem 'capistrano-unicorn', :require => false
 end
 
