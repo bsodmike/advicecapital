@@ -345,7 +345,7 @@ DEPENDENCIES
   sass-rails
   sqlite3
   taps
-  therubyracer
+  therubyracer (~> 0.11.0beta7)
   turbolinks
   uglifier
   unicorn
