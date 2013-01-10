@@ -1,6 +1,6 @@
 # encode UTF-8
 class PagesController < ApplicationController
-  caches_page :index
+  #caches_page :index
   respond_to :html, :json, :js
 
   def index

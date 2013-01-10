@@ -1,6 +1,6 @@
 Advicecapital::Application.routes.draw do
 
-  scope "(:locale)", :locale => /da|en/ do #{I18n.available_locales.join("|")}
+  #scope "(:locale)", :locale => /da|en/ do #{I18n.available_locales.join("|")}
     devise_for :users, :controllers => { :registrations => "registrations" }
   
     resources :news
@@ -27,7 +27,7 @@ Advicecapital::Application.routes.draw do
     match '/contact' => 'contact#new',    :as => 'contact', :via => :get
     match '/contact' => 'contact#create', :as => 'contact', :via => :post
 
-    match '/:locale' => 'pages#index'  
+    #match '/:locale' => 'pages#index'
     root :to => "pages#index"
   
     match '/receive_news', :to => 'recipients#new'
@@ -42,6 +42,6 @@ Advicecapital::Application.routes.draw do
     # AdvicePage.all.each do |r|
     #   match r.slug, :to => "pages#show"
     # end
-  end
+  #end
 
 end

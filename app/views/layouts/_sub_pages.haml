@@ -33,27 +33,18 @@
         %div
           = link_to t('.strategy'), '/about_ac/strategy'
 
-- elsif current_page?('/products') || current_page?('/products/ai') || current_page?('/products/ac_company_bonds')
+- elsif current_page?('/product') || current_page?('/product/ai') || current_page?('/product/ac_company_bonds')
   .sub_pages
     .head
       = image_tag 'arrow_white.png'
-      %h3=t ('.products')
+      %h3=t ('.product')
     .content
-      - if current_page?('/products/ai')
+      - if current_page?('/product/ai')
         .sub_page_selected
-          = link_to t('.advice_invest'), '/products/ai'
-        %div
-          = link_to t('.ac_company_bonds'), '/products/ac_company_bonds'
-      - elsif current_page?('/products/ac_company_bonds')
-        %div
-          = link_to t('.advice_invest'), '/products/ai'
-        .sub_page_selected
-          = link_to t('.ac_company_bonds'), '/products/ac_company_bonds'
+          = link_to t('.advice_invest'), '/product/ai'
       - else
         %div
-          = link_to t('.advice_invest'), '/products/ai'
-        %div
-          = link_to t('.ac_company_bonds'), '/products/ac_company_bonds'
+          = link_to t('.advice_invest'), '/product/ai'
 
 - elsif current_page?(organisation_path) || current_page?('/organisation/employees') || current_page?('/organisation/structure')
   .sub_pages

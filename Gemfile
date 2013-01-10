@@ -33,8 +33,6 @@ gem 'whenever', :require => false
 gem 'turbolinks'
   
 group :production do
- #gem 'pg'
- #gem 'therubyracer-heroku'
 end
 
 

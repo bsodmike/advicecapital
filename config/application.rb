@@ -31,7 +31,7 @@ module Advicecapital
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}')]
     config.i18n.default_locale = :da
 		config.i18n.locale = :da
-    config.i18n.fallbacks = true
+    config.i18n.fallbacks = false
     
     # Enforce whitelist mode for mass assignment
     config.active_record.whitelist_attributes = true

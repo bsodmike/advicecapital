@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
 		Rails.logger.debug "Access denied on #{exception.action} #{exception.subject.inspect}"
 	end
   
-  before_filter :set_locale
+  #before_filter :set_locale
 
 	def after_sign_in_path_for(resource)
 		if current_user.investor?
@@ -18,10 +18,10 @@ class ApplicationController < ActionController::Base
 		end
 	end
 
-  def default_url_options(options={})
-    logger.debug "default_url_options is passed options: #{options.inspect}\n"
-    { :locale => I18n.locale }
-	end
+	#def default_url_options(options={})
+   # logger.debug "default_url_options is passed options: #{options.inspect}\n"
+   # { :locale => I18n.locale }
+	#end
   
 	private
 	def set_locale
