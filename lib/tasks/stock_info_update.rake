@@ -12,7 +12,7 @@ task :stock_info_update  => :environment do
     'FLS.CO',      # FLSmidth & Co
     'GN.CO',       # GN Store Nord
     'LUN.CO',      # H. Lundbeck
-    'NKT.CO',      # NKT Holding
+    'JYSK.CO',     # Jyske Bank
     'NDA-DKK.CO',  # Nordea Bank
     'NOVO-B.CO',   # Novo Nordisk
     'NZYM-B.CO',   # Novozymes
