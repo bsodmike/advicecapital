@@ -15,7 +15,7 @@ namespace :stock_table do
       {:symbol=>"FLS.CO", :price=>"322.80", :change=>"+5.10", :volume=>"509116"},
       {:symbol=>"GN.CO", :price=>"36.87", :change=>"+0.50", :volume=>"589297"},
       {:symbol=>"LUN.CO", :price=>"115.60", :change=>"+0.80", :volume=>"301292"},
-      {:symbol=>"NKT.CO", :price=>"193.90", :change=>"-3.50", :volume=>"208805"},
+      {:symbol=>"JYSK.CO", :price=>"157.20", :change=>"+1.40", :volume=>"564354"},
       {:symbol=>"NDA-DKK.CO", :price=>"100.00", :change=>"-1.00", :volume=>"200100"},
       {:symbol=>"NOVO-B.CO", :price=>"560.50", :change=>"+7.00", :volume=>"901981"},
       {:symbol=>"NZYM-B.CO",:price=>"744.00", :change=>"-15.50", :volume=>"100456"},
@@ -27,7 +27,7 @@ namespace :stock_table do
       {:symbol=>"WDH.CO", :price=>"424.60", :change=>"-3.80", :volume=>"262782"}
     ]
       
-    stock.each do |hash|
+    stock.each do |key, hash|
       StockData.create(:symbol => hash[:symbol],:price => hash[:price], :change => hash[:change],:volume => hash[:volume])
     end
 

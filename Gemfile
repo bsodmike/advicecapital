@@ -26,13 +26,13 @@ gem 'capistrano'
 gem 'rest-open-uri'
 gem 'globalize3'
 gem 'httparty'
-gem 'mysql2'
 gem 'unicorn'
 gem 'feedzirra', '0.2.0.rc2'
 gem 'whenever', :require => false
 gem 'turbolinks'
   
 group :production do
+  gem 'mysql2'
 end
 
 
