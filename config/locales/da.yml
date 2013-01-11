@@ -126,6 +126,10 @@ da:
       bonds: Obligationer
       company_bonds: Virksomhedsobligationer
       valuta: Valuta
+
+      # News
+      news: Nyheder
+      receive_news: Modtag nyheder
       
     
   pages:      
