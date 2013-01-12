@@ -64,14 +64,9 @@
         = link_to t('.contact'), contact_path
     %li
       #cse-search-form{:style => "width: 100px;"} Loading
-      %script{:src => "http://www.google.com/jsapi", :type => "text/javascript"}
       :javascript
-        google.load('search', '1', {language : 'da'});
-        //google.load('', '1');
         google.setOnLoadCallback(function() {
-          var customSearchControl = new google.search.CustomSearchControl(
-            '010629835534026407651:wbgznkl70us');
-
+          var customSearchControl = new google.search.CustomSearchControl('010629835534026407651:wbgznkl70us');
           customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
           var options = new google.search.DrawOptions();
           options.enableSearchboxOnly("http://www.google.com/cse?cx=010629835534026407651:wbgznkl70us");
