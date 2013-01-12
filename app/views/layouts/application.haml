@@ -17,10 +17,11 @@
 
     = javascript_include_tag 'application'
     = javascript_include_tag '//maps.googleapis.com/maps/api/js?sensor=false'    
-    = javascript_include_tag '//google.com/jsapi'
+    = javascript_include_tag 'https://google.com/jsapi'
     :javascript
       google.load('visualization', '1.0', {'packages':['corechart']});
-    = javascript_include_tag '//cdn.pandastream.com/u/1.4/jquery.panda-uploader.min.js'
+    =# javascript_include_tag '//cdn.pandastream.com/u/1.4/jquery.panda-uploader.min.js'
+    = javascript_include_tag '//d21qbsp9m249bi.cloudfront.net/u/1.4/jquery.panda-uploader.min.js'
 
     // LOCAL SCRIPTS
     = javascript_include_tag '/assets/swfobject/swfobject.js'
