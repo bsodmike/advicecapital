@@ -173,14 +173,14 @@
     $("#news_feed").jCarouselLite({
       vertical: true,
       auto: 1,
-      visible: 3,
+      visible: 5,
       start: 0,
       speed: 5000,
       beforeStart: function(a) {
-        $(a).parent().fadeTo(800, 0);
+        $(a).parent().fadeTo(1000, 0);
       },
       afterEnd: function(a) {
-        $(a).parent().fadeTo(800, 1);
+        $(a).parent().fadeTo(1000, 1);
       }
     });
     
